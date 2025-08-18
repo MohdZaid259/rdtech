@@ -10,7 +10,7 @@ import SectionHeader from "./section-header";
 export default function ClientsSection() {
   // Define categories & logos
   const clientCategories: Record<string, string[]> = {
-    commercial: [
+    Commercial: [
       "bakerHughes.webp",
       "lulu.webp",
       "maiDubai.webp",
