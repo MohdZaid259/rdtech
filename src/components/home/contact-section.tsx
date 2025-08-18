@@ -34,7 +34,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center py-20 bg-gray-100"
+      className="min-h-screen flex flex-col items-center py-8 md:py-20 bg-gray-100"
     >
       <div className="w-full max-w-7xl mx-auto">
         {/* Heading */}
@@ -51,7 +51,7 @@ export default function ContactSection() {
           <FadeIn direction="left" className="h-full">
             <form
               onSubmit={handleSubmit}
-              className="p-8 rounded-xl border border-gray-200 bg-white/80 backdrop-blur-sm shadow-md space-y-6 h-full"
+              className="p-4 md:p-8 rounded-xl border border-gray-200 bg-white/80 backdrop-blur-sm shadow-md space-y-6 h-full"
             >
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>

@@ -25,14 +25,14 @@ export default function ClientsSection({
   rows,
 }: Readonly<ClientsSectionProps>) {
   return (
-    <section className="py-10 max-sm:px-4 bg-gray-100">
+    <section className="py-8 md:py-16 max-sm:px-4 bg-gray-100">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-12 items-center">
         {/* Left Content */}
-        <div className="p-4">
-          <h3 className="font-heading text-4xl font-bold text-gray-900 mb-6">
+        <div className="md:p-4 p-0">
+          <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-6">
             {title}
           </h3>
-          <p className="text-gray-600 text-lg leading-relaxed">{subTitle}</p>
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed">{subTitle}</p>
         </div>
 
         {/* Logos with scroll velocity */}
@@ -52,7 +52,7 @@ export default function ClientsSection({
                   return (
                     <div
                       key={`${idx}-${i}`}
-                      className="flex-shrink-0 w-40 h-20 relative mx-2 flex items-center justify-center bg-white rounded-md p-2 overflow-hidden"
+                      className="flex-shrink-0 w-34 h-17 md:w-40 md:h-20 relative mx-2 flex items-center justify-center bg-white rounded-md p-2 overflow-hidden"
                     >
                       <SafeImage
                         src={`/clients/${src}`}

@@ -21,7 +21,7 @@ export default function CompaniesSection() {
       href: "/rdtech-fze",
       image: "/general/rdtech/controlRoom.webp",
       services: [
-        "Access Control Systems",
+        "Access Control System",
         "CCTV & Surveillance",
         "Fire Alarm Systems",
         "Network Infrastructure",
@@ -66,7 +66,7 @@ export default function CompaniesSection() {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col py-20 bg-gray-100">
+    <section className="min-h-screen flex flex-col py-8 md:py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <SectionHeader
@@ -98,7 +98,7 @@ export default function CompaniesSection() {
                     </div>
                   </div>
 
-                  <CardContent className="px-8">
+                  <CardContent className="px-4 md:px-8">
                     <div className="space-y-4">
                       <div>
                         <h3 className="font-heading text-2xl font-bold text-gray-900">

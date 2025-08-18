@@ -57,13 +57,14 @@ const companies = [
 
 export function Header() {
   const [showOverview, setShowOverview] = useState(false);
+  const [open, setOpen] = useState(false)
 
   const linkClass = () =>
     `relative text-sm font-medium after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full bg-transparent hover:bg-transparent px-1 py-1.5 text-white hover:text-white`;
 
   return (
     <header className="fixed top-0 z-[99] w-full bg-black/40 backdrop-blur-md">
-      <div className="container md:px-8">
+      <div className="max-w-7xl mx-auto max-md:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
@@ -146,20 +147,21 @@ export function Header() {
 
           {/* Mobile Menu */}
           <div className="md:hidden">
-            <Sheet>
+            <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Menu className="h-6 w-6 text-white" />
               </SheetTrigger>
               <SheetContent side="right" className="p-6 gap-6 z-[100]">
                 <div className="flex flex-col h-full">
                   {/* Logo */}
-                  <Link href="/" className="flex items-center mb-6">
+                  <Link href="/"  onClick={() => setOpen(false)} className="flex items-center mb-6">
                     <RDTechGroupLogo iconSize={30} textSize={65} />
                   </Link>
 
                   <nav className="flex flex-col gap-4 flex-1">
                     <Link
                       href="/about"
+                      onClick={() => setOpen(false)}
                       className="text-lg font-medium hover:text-accent transition"
                     >
                       About
@@ -168,7 +170,7 @@ export function Header() {
                     {/* Group Overview Accordion */}
                     <Accordion type="single" collapsible>
                       <AccordionItem value="group" className="border-b">
-                        <AccordionTrigger className="py-0 text-lg font-medium hover:text-accent transition">
+                        <AccordionTrigger className="py-0 text-lg font-medium hover:text-accent focus:outline-none focus:ring-0 transition">
                           Group Overview
                         </AccordionTrigger>
                         <AccordionContent aria-describedby="group-overview">
@@ -177,6 +179,7 @@ export function Header() {
                               const Logo = company.logo;
                               return (
                                 <Link
+                                  onClick={() => setOpen(false)}
                                   key={company.name}
                                   href={company.href}
                                   className="flex items-center space-x-3 rounded-lg p-2 hover:bg-accent/10 transition"
@@ -201,6 +204,7 @@ export function Header() {
                     </Accordion>
 
                     <Link
+                      onClick={() => setOpen(false)}
                       href="/projects"
                       className="text-lg font-medium hover:text-accent transition"
                     >
@@ -211,6 +215,7 @@ export function Header() {
                   {/* Footer CTA inside sheet */}
                   <div className="pt-6 border-t mt-auto">
                     <Link
+                      onClick={() => setOpen(false)}
                       href="/#contact"
                       className="block w-full text-center bg-primary text-white py-2 rounded-lg font-medium hover:bg-accent/90 transition"
                     >

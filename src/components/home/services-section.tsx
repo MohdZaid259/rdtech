@@ -65,7 +65,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="min-h-screen flex flex-col py-20 max-w-7xl mx-auto "
+      className="min-h-screen flex flex-col py-8 md:py-20 max-w-7xl mx-auto "
     >
       {/* Heading row */}
       <SectionHeader
@@ -90,7 +90,7 @@ export default function ServicesSection() {
               <div className="absolute inset-0 text-shadow-2xs text-shadow-black bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-6">
                 <service.icon className="w-10 h-10 mb-4" />
                 <h3 className="text-xl  font-semibold mb-2">{service.title}</h3>
-                <p className="text-sm text-center">{service.description}</p>
+                <p className="text-base text-center">{service.description}</p>
               </div>
             </div>
           </FadeIn>

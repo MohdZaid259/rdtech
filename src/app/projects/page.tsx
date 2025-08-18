@@ -40,9 +40,8 @@ function page() {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-shadow-2xs text-shadow-black">
             Turning Vision Into Reality
           </h1>
-          <p className="text-white max-w-4xl text-lg text-shadow-2xs text-shadow-black">
-            For over 30 years, RDTech Group has executed projects that redefine
-            industries and elevate standards. From government institutions to
+          <p className="text-white max-w-4xl text-base md:text-lg text-shadow-2xs text-shadow-black">
+            From government institutions to
             private enterprises, our track record reflects excellence,
             innovation, and trust across every sector we serve.
           </p>

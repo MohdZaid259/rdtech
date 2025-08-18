@@ -29,15 +29,15 @@ export default function ServicesSection({
           />
         </div>
 
-        <div className="py-4">
-          <h3 className="font-heading text-4xl font-bold text-gray-600 mb-6">
+        <div className="md:py-4 py-0">
+          <h3 className="font-heading text-3xl md:text-4xl font-bold text-black mb-2 md:mb-6">
             {title}
           </h3>
           <div className="flex flex-col items-start gap-2">
             {services.map((service) => (
               <p
                 key={service}
-                className="text-gray-600 text-lg leading-relaxed flex items-center gap-1"
+                className="text-gray-600 text-base md:text-lg leading-relaxed flex items-center gap-1"
               >
                 <CircleCheck className="mr-2 h-4 w-4 text-accent" />
                 {service}

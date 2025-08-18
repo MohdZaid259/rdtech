@@ -19,10 +19,10 @@ export default function ProjectsGrid() {
       : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <section className="py-20 pt-12 px-6 bg-muted/30">
+    <section className="py-12 px-6 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
             Our Projects
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto leading-relaxed">
@@ -31,12 +31,12 @@ export default function ProjectsGrid() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex justify-center md:gap-4 gap-0 mb-6 md:mb-12">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-1 cursor-pointer rounded-full transition-colors ${
+              className={`px-3 py-0 md:px-6 md:py-1 cursor-pointer rounded-full transition-colors ${
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-card border-transparent border-2 hover:border-primary"
@@ -54,7 +54,7 @@ export default function ProjectsGrid() {
               href={`/projects/${project.slug}`}
               className="h-full"
             >
-              <Card className="group hover:shadow-xl hover:scale-105 duration-500 py-0 flex flex-col h-full">
+              <Card className="group hover:shadow-xl hover:scale-105 duration-500 py-0 flex gap-2 md:gap-6 flex-col h-full">
                 <div className="relative rounded-t-xl overflow-hidden">
                   <SafeImage
                     src={project.thumbnail}
@@ -81,7 +81,7 @@ export default function ProjectsGrid() {
                     </div>
                   </div>
                 </div>
-                <div className="p-6 pt-0 flex-1 flex flex-col justify-between">
+                <div className="p-4 md:p-6 pt-0 flex-1 flex flex-col justify-between">
                   <div>
                     <h3 className="font-bold text-xl mb-2">{project.title}</h3>
                     <p className="text-muted-foreground mb-4">

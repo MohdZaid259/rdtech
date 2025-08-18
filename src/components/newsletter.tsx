@@ -3,7 +3,7 @@ import React from 'react'
 export default function Newsletter() {
   return (
     <>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+        <div className="grid grid-cols-1 -mb-1 lg:grid-cols-3 gap-6 items-center">
           {/* CTA */}
           <div className="lg:col-span-2">
             <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-3">
@@ -16,11 +16,11 @@ export default function Newsletter() {
 
           {/* Newsletter */}
           <form className="lg:col-span-1 lg:justify-self-end">
-            <div className="flex w-full md:w-auto max-w-md">
+            <div className="flex w-[80%] md:w-auto max-w-md">
               <input
                 type="email"
                 placeholder="Enter your Email"
-                className="flex-1 border w-28 md:w-80 border-accent text-sm placeholder:text-amber-100 px-2 md:px-6 py-1 md:py-2 rounded-l-full focus:outline-none text-gray-800"
+                className="flex-1 border w-36 md:w-80 border-accent text-sm placeholder:text-amber-100 px-2 md:px-6 py-1 md:py-2 rounded-l-full focus:outline-none text-gray-800"
               />
               <button
                 type="submit"

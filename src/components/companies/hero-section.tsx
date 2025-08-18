@@ -38,7 +38,7 @@ export default function HeroSection({
           {/* Company Logo */}
           {companyLogo && (
             <FadeIn delay={150}>
-              <div className="bg-white/50 rounded-full flex items-center justify-center aspect-square">
+              <div className="bg-white/50 w-[70%] md:w-full rounded-full flex items-center justify-center aspect-square">
                 {companyLogo}
               </div>
             </FadeIn>
@@ -46,21 +46,21 @@ export default function HeroSection({
 
           {/* Company Name */}
           <FadeIn delay={200}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-shadow-lg text-shadow-black/20">
+            <h1 className="text-4xl md:text-7xl font-bold mt-2 mb-0 md:mb-4 text-shadow-lg text-shadow-black/20">
               {companyName}
             </h1>
           </FadeIn>
 
           {/* Slogan */}
           <FadeIn delay={300}>
-            <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-accent animate-pulse-glow text-shadow-lg text-shadow-black/20">
+            <h2 className="text-xl md:text-4xl font-semibold mb-6 text-accent animate-pulse-glow text-shadow-lg text-shadow-black/20">
               {slogan}
             </h2>
           </FadeIn>
 
           {/* Description */}
           <FadeIn delay={400}>
-            <p className="text-lg md:text-xl mb-8 text-muted max-w-2xl mx-auto font-medium text-shadow-lg text-shadow-black/40">
+            <p className="text-base md:text-xl mb-8 text-muted max-w-2xl mx-auto font-medium text-shadow-lg text-shadow-black/40">
               {description}
             </p>
           </FadeIn>
@@ -76,7 +76,6 @@ export default function HeroSection({
                 >
                   <Link href={projectsLink}>
                     Explore Projects
-                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
               )}
@@ -86,7 +85,7 @@ export default function HeroSection({
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white px-8 py-4 text-lg bg-transparent hover-lift cursor-pointer shadow-lg shadow-black/15"
+                  className="border-white w-full text-white hover:bg-white px-8 py-4 text-lg bg-transparent hover-lift cursor-pointer shadow-lg shadow-black/15"
                 >
                   <Link
                     href={websiteLink}

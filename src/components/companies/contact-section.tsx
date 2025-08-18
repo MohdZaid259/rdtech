@@ -16,14 +16,14 @@ export default function ContactSection({
   address,
 }: Readonly<ContactSectionProps>) {
   return (
-    <section className="py-16 max-md:px-6 bg-white">
+    <section className="py-8 md:py-16 bg-white">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="font-heading text-4xl font-bold mb-3 text-gray-900">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-2 text-gray-900">
             {title}
           </h2>
-          <p className="text-lg leading-relaxed text-gray-600">{subtitle}</p>
+          <p className="text-base md:text-lg leading-relaxed text-gray-600">{subtitle}</p>
         </div>
 
         {/* Contact Info Grid */}

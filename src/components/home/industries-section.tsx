@@ -69,7 +69,7 @@ const industries = [
 
 export function IndustriesSection() {
   return (
-    <section className="py-24 pb-0 bg-white ">
+    <section className="py-8 md:py-24  pb-0 bg-white ">
       <div className="container mx-auto px-4 max-w-7xl ">
         {/* Section Header */}
         <SectionHeader
@@ -85,7 +85,7 @@ export function IndustriesSection() {
             return (
               <Card
                 key={industry.name}
-                className="group overflow-hidden border-0 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 pt-0 pb-6"
+                className="group overflow-hidden border-0 shadow-md hover:shadow-xl gap-2 md:gap-6 transition-all duration-300 hover:-translate-y-1 pt-0 pb-6"
               >
                 <div className="relative h-48 overflow-hidden">
                   <SafeImage
@@ -101,8 +101,8 @@ export function IndustriesSection() {
                   </div>
                 </div>
 
-                <CardContent className="px-6">
-                  <h3 className="font-heading text-lg font-semibold text-gray-900 mb-2">
+                <CardContent className="md:px-6 pl-2">
+                  <h3 className="font-heading text-lg font-semibold text-gray-900 mb-0 md:mb-2">
                     {industry.name}
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">

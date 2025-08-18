@@ -25,12 +25,12 @@ export default function AboutSection({
   image,
 }: Readonly<AboutSectionProps>) {
   return (
-    <section className="py-14 md:py-24 bg-gray-100">
+    <section className="py-12 md:py-24 bg-gray-100">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
           {/* Left Content */}
           <div className="order-2 lg:order-1 ">
-            <h2 className="font-heading text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-6">
               {title}
             </h2>
 
@@ -38,17 +38,17 @@ export default function AboutSection({
             {description.map((para, idx) => (
               <p
                 key={idx}
-                className="text-lg text-gray-600 leading-relaxed mb-6 last:mb-8"
+                className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 last:mb-8"
               >
                 {para}
               </p>
             ))}
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-3 md:gap-6 ">
               {stats.map((stat, idx) => (
                 <div key={idx} className="text-start">
-                  <div className="font-heading text-3xl font-bold text-accent">
+                  <div className="font-heading text-2xl md:text-3xl font-bold text-accent">
                     {stat.value}
                   </div>
                   <div className="text-sm text-muted-foreground">

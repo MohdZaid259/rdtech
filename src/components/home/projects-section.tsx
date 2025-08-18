@@ -2,7 +2,6 @@
 
 import { Award, Building, Calendar, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
-
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Card } from "@/components/ui/card";
@@ -46,8 +45,8 @@ const flagshipProjects = [
     category: "CoreGrid",
     location: "Lusail, Qatar",
     year: "2021",
-    thumbnail: "/projects/coregrid/lusailHero.jpg",
-    heroImage: "/projects/coregrid/lusailHero.jpg",
+    thumbnail: "/projects/coregrid/lusailHero.jpeg",
+    heroImage: "/projects/coregrid/lusailHero.jpeg",
     gallery: [
       "/projects/coregrid/lusailG1.webp",
       "/projects/coregrid/lusailG2.jpg",
@@ -77,8 +76,8 @@ const flagshipProjects = [
     category: "Al Ausus",
     location: "Al Ain – Al Sanaiya",
     year: "2020",
-    thumbnail: "/projects/alAusus/alAinHero.webp",
-    heroImage: "/projects/alAusus/alAinHero.webp",
+    thumbnail: "/projects/alAusus/alAinHero.jpeg",
+    heroImage: "/projects/alAusus/alAinHero.jpeg",
     gallery: [
       "/projects/alAusus/alAinG1.webp",
       "/projects/alAusus/alAinG2.webp",
@@ -113,7 +112,7 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col py-20 bg-gray-100">
+    <section className="min-h-screen flex flex-col py-8 md:py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <SectionHeader
@@ -124,33 +123,33 @@ export default function ProjectsSection() {
 
         {/* Project showcase */}
         <div className="container mx-auto px-4 mt-12">
-          <Card className="relative overflow-hidden rounded-3xl shadow-lg border-none bg-white">
+          <Card className="relative overflow-hidden rounded-2xl py-0 md:py-6 shadow-lg border-none bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-2 ">
               {/* Image */}
-              <div className="relative h-80 lg:h-auto max-lg:px-4 lg:pl-6">
+              <div className="relative h-60 md:h-80 lg:h-auto md:pl-6">
                 <SafeImage
                   src={project.heroImage}
                   alt={project.title}
                   width={1600}
                   height={1200}
-                  className="w-full h-full object-cover rounded-sm"
+                  className="w-full h-full object-cover md:rounded-sm"
                 />
+                <Badge
+                  variant="outline"
+                  className="border-primary absolute top-2 right-2 text-primary font-semibold"
+                >
+                  {project.category}
+                </Badge>
               </div>
 
               {/* Details */}
-              <div className="p-8 py-0">
+              <div className="p-4 pb-0 md:p-8 md:py-0">
                 <div className="space-y-6">
                   <div>
                     <div className="flex justify-between items-start">
                       <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                         {project.title}
                       </h3>
-                      <Badge
-                        variant="outline"
-                        className="border-primary px-2 py-1 text-primary font-semibold"
-                      >
-                        {project.category}
-                      </Badge>
                     </div>
 
                     <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
@@ -178,24 +177,24 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Stats */}
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-3 gap-2">
                     <div className="text-center">
-                      <div className="text-xl font-bold text-primary">
+                      <div className="md:text-base text-sm text-gray-600">Duration</div>
+                      <div className="text-base md:text-xl font-semibold text-primary">
                         {project.duration}
                       </div>
-                      <div className="text-xs text-gray-600">Duration</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xl font-bold text-primary">
+                      <div className="md:text-base text-sm text-gray-600">Size</div>
+                      <div className="text-base md:text-xl font-semibold text-primary">
                         {project.size}
                       </div>
-                      <div className="text-xs text-gray-600">Size</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xl font-bold text-primary">
+                      <div className="md:text-base text-sm text-gray-600">Budget</div>
+                      <div className="text-base md:text-xl font-semibold text-primary">
                         {project.budget}
                       </div>
-                      <div className="text-xs text-gray-600">Budget</div>
                     </div>
                   </div>
 
@@ -229,7 +228,7 @@ export default function ProjectsSection() {
                   </div>
                   <Button
                     variant="default"
-                    className="absolute bottom-10 right-10 cursor-pointer"
+                    className="absolute md:block hidden bottom-5 right-5 md:bottom-10 md:right-10 cursor-pointer"
                   >
                     View Project
                   </Button>

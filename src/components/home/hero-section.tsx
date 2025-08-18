@@ -57,7 +57,7 @@ export default function HeroSection() {
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto flex flex-col mt-18 sm:mt-10 items-center justify-center">
           <FadeIn delay={200}>
-            <h1 className="font-mono text-5xl md:text-7xl font-bold mb-6 text-shadow-lg text-shadow-black/20">
+            <h1 className="font-mono text-4xl md:text-7xl font-bold mb-6 text-shadow-lg text-shadow-black/20">
               Leading Technology{" "}
               <span className="block text-accent animate-pulse-glow">
                 Solutions Provider

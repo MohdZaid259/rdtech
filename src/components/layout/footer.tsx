@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-300 pt-16 pb-6">
+    <footer className="bg-black text-gray-300 pt-8 md:pt-16 pb-6">
   {/* Top Section */}
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="mt-0 grid grid-cols-1 gap-8 lg:grid-cols-5">
@@ -25,11 +25,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-3">Navigation</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-white">Home</a></li>
-            <li><a href="#" className="hover:text-white">About</a></li>
-            <li><a href="#" className="hover:text-white">Services</a></li>
-            <li><a href="#" className="hover:text-white">Blog</a></li>
-            <li><a href="#" className="hover:text-white">Contact</a></li>
+            <li><a href="/" className="hover:text-white">Home</a></li>
+            <li><a href="/about" className="hover:text-white">About</a></li>
+            <li><a href="#services" className="hover:text-white">Services</a></li>
+            <li><a href="#contact" className="hover:text-white">Contact</a></li>
           </ul>
         </div>
 
@@ -37,10 +36,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-3">Utility Pages</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-white">Our Companies</a></li>
-            <li><a href="#" className="hover:text-white">Our Mission</a></li>
-            <li><a href="#" className="hover:text-white">Our Vision</a></li>
-            <li><a href="#" className="hover:text-white">Flagship Projects</a></li>
+            <li><a href="/companies/aa-contracting" className="hover:text-white">Our Companies</a></li>
+            <li><a href="/about" className="hover:text-white">Our Mission</a></li>
+            <li><a href="/about" className="hover:text-white">Our Vision</a></li>
+            <li><a href="/projects" className="hover:text-white">Flagship Projects</a></li>
           </ul>
         </div>
 
@@ -49,7 +48,7 @@ export default function Footer() {
           <h3 className="text-white font-semibold mb-3">Contact</h3>
           <ul className="space-y-2 text-sm">
             <li className="hover:text-white">+971 555-0121</li>
-            <li className="hover:text-white">info@rdtechgroup.com</li>
+            <li className="hover:text-white"><a href="mailto:info@rdtechgroup.com">info@rdtechgroup.com</a></li>
             <li className="hover:text-white">8502 Preston Rd.</li>
             <li className="hover:text-white">Abu Dhabi, UAE</li>
           </ul>

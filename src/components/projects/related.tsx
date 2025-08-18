@@ -15,9 +15,9 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
     .slice(0, 3);
 
   return (
-    <section className="py-16 px-6 bg-muted/30">
+    <section className="py-8 md:py-16 px-6 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-3xl font-bold mb-4 md:mb-8 text-center">
           Related Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
@@ -27,7 +27,7 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
               href={`/projects/${project.slug}`}
               className="h-full"
             >
-              <Card className="group hover:shadow-xl hover:scale-105 duration-500 py-0 flex flex-col h-full">
+              <Card className="group hover:shadow-xl hover:scale-105 duration-500 py-0 flex gap-2 md:gap-6 flex-col h-full">
                 <div className="relative rounded-t-xl overflow-hidden">
                   <SafeImage
                     src={project.thumbnail}
@@ -54,7 +54,7 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
                     </div>
                   </div>
                 </div>
-                <div className="p-6 pt-0 flex-1 flex flex-col justify-between">
+                <div className="p-4 md:p-6 pt-0 flex-1 flex flex-col justify-between">
                   <div>
                     <h3 className="font-bold text-xl mb-2">{project.title}</h3>
                     <p className="text-muted-foreground mb-4">
