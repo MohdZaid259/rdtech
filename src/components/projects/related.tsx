@@ -27,7 +27,7 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
               href={`/projects/${project.slug}`}
               className="h-full"
             >
-              <Card className="group hover:shadow-xl hover:scale-105 duration-500 py-0 flex gap-2 md:gap-6 flex-col h-full">
+              <Card className="group hover:shadow-xl hover:scale-105 duration-500 py-0 flex gap-2 md:gap-0 flex-col h-full">
                 <div className="relative rounded-t-xl overflow-hidden">
                   <SafeImage
                     src={project.thumbnail}
@@ -54,7 +54,7 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
                     </div>
                   </div>
                 </div>
-                <div className="p-4 md:p-6 pt-0 flex-1 flex flex-col justify-between">
+                <div className="p-4 max-md:pt-0 flex-1 flex flex-col justify-between">
                   <div>
                     <h3 className="font-bold text-xl mb-2">{project.title}</h3>
                     <p className="text-muted-foreground mb-4">
