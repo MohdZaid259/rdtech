@@ -216,7 +216,7 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Features */}
-                  <div>
+                  <div className="mb-2">
                     <div className="text-sm font-semibold text-gray-900 mb-2">
                       Key Features
                     </div>
@@ -228,7 +228,7 @@ export default function ProjectsSection() {
                   </div>
                   <Button
                     variant="default"
-                    className="absolute md:block hidden bottom-5 right-5 md:bottom-10 md:right-10 cursor-pointer"
+                    className="float-right mb-4 md:bottom-10 md:right-10 cursor-pointer"
                   >
                     View Project
                   </Button>

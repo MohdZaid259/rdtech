@@ -101,7 +101,7 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-8 md:py-16 bg-gray-100">
+      <section id="mission" className="py-8 md:py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-start">
             <div>
@@ -159,7 +159,7 @@ export default function About() {
       </section>
 
       {/* Vision Section */}
-      <section className="py-8 md:py-16 bg-white">
+      <section id="vision" className="py-8 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="order-2 md:order-1">

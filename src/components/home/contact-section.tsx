@@ -34,7 +34,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center py-8 md:py-20 bg-gray-100"
+      className="min-h-screen flex flex-col items-center py-8 md:py-20 bg-gray-100 overflow-x-hidden"
     >
       <div className="w-full max-w-7xl mx-auto">
         {/* Heading */}

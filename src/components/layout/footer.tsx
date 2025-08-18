@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-300 pt-8 md:pt-16 pb-6">
@@ -25,10 +27,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-3">Navigation</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="/" className="hover:text-white">Home</a></li>
-            <li><a href="/about" className="hover:text-white">About</a></li>
-            <li><a href="#services" className="hover:text-white">Services</a></li>
-            <li><a href="#contact" className="hover:text-white">Contact</a></li>
+            <li><Link href="/" className="hover:text-white">Home</Link></li>
+            <li><Link href="/about" className="hover:text-white">About</Link></li>
+            <li><Link href="/#services" className="hover:text-white">Services</Link></li>
+            <li><Link href="/#contact" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>
 
@@ -36,15 +38,15 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-3">Utility Pages</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="/companies/aa-contracting" className="hover:text-white">Our Companies</a></li>
-            <li><a href="/about" className="hover:text-white">Our Mission</a></li>
-            <li><a href="/about" className="hover:text-white">Our Vision</a></li>
-            <li><a href="/projects" className="hover:text-white">Flagship Projects</a></li>
+            <li><Link href="/companies/aa-contracting" className="hover:text-white">Our Companies</Link></li>
+            <li><Link href="/about#mission" className="hover:text-white">Our Mission</Link></li>
+            <li><Link href="/about#vision" className="hover:text-white">Our Vision</Link></li>
+            <li><Link href="/projects" className="hover:text-white">Flagship Projects</Link></li>
           </ul>
         </div>
 
         {/* Contact */}
-        <div>
+        <div className="mt-6 md:mt-0">
           <h3 className="text-white font-semibold mb-3">Contact</h3>
           <ul className="space-y-2 text-sm">
             <li className="hover:text-white">+971 555-0121</li>

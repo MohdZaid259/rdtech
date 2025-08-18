@@ -155,10 +155,18 @@ export function Header() {
                 <div className="flex flex-col h-full">
                   {/* Logo */}
                   <Link href="/"  onClick={() => setOpen(false)} className="flex items-center mb-6">
-                    <RDTechGroupLogo iconSize={30} textSize={65} />
+                    <RDTechGroupLogo iconSize={35} textSize={65} />
                   </Link>
 
                   <nav className="flex flex-col gap-4 flex-1">
+                    <Link
+                      href="/"
+                      onClick={() => setOpen(false)}
+                      className="text-lg font-medium hover:text-accent transition"
+                    >
+                      Home
+                    </Link>
+
                     <Link
                       href="/about"
                       onClick={() => setOpen(false)}
@@ -210,10 +218,7 @@ export function Header() {
                     >
                       Projects
                     </Link>
-                  </nav>
 
-                  {/* Footer CTA inside sheet */}
-                  <div className="pt-6 border-t mt-auto">
                     <Link
                       onClick={() => setOpen(false)}
                       href="/#contact"
@@ -221,7 +226,7 @@ export function Header() {
                     >
                       Get in Touch
                     </Link>
-                  </div>
+                  </nav>
                 </div>
               </SheetContent>
             </Sheet>

@@ -24,7 +24,7 @@ export default function RDTechGroupLogo({
         alt="Logo"
         width={textSize}
         height={textSize}
-        className={className}
+        className={`${className} brightness-0`}
       />
     </div>
   );

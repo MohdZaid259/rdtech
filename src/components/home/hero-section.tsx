@@ -56,22 +56,19 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto flex flex-col mt-18 sm:mt-10 items-center justify-center">
-          <FadeIn delay={200}>
+          
             <h1 className="font-mono text-4xl md:text-7xl font-bold mb-6 text-shadow-lg text-shadow-black/20">
               Leading Technology{" "}
               <span className="block text-accent animate-pulse-glow">
                 Solutions Provider
               </span>
             </h1>
-          </FadeIn>
-
-          <FadeIn delay={400}>
+          
             <p className="text-xl md:text-2xl mb-8 text-muted max-w-2xl mx-auto font-medium text-shadow-lg text-shadow-black/20">
               Over 30 years at the forefront of technological innovation in ICT
               and ELV, serving enterprises across UAE and beyond.
             </p>
-          </FadeIn>
-
+          
           <FadeIn delay={600}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Button
