@@ -1,3 +1,4 @@
+
 import { CheckCircle, Leaf, Lightbulb, ShieldCheck, Users } from "lucide-react";
 
 import Newsletter from "./newsletter";
@@ -38,7 +39,6 @@ export default function About() {
       <section
         className="relative h-[80vh] bg-fixed bg-bottom bg-cover"
         style={{ backgroundImage: "url('/about/dubai_1.jpg')" }}
-        data-header-theme="light"
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
@@ -161,7 +161,7 @@ export default function About() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
+            <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Our Vision
               </h2>
@@ -202,7 +202,7 @@ export default function About() {
                 </li>
               </ul>
             </div>
-            <div className="order-1 lg:order-2">
+            <div>
               <SafeImage
                 src="/about/crane.jpg"
                 alt="Modern construction site with workers"
@@ -211,36 +211,6 @@ export default function About() {
                 className="rounded-lg shadow-lg w-full"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How We Work Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Heading */}
-          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-2">
-            How We do Work
-          </h2>
-          <p className="text-gray-500 text-sm sm:text-base mb-8 max-w-2xl mx-auto">
-            We follow a collaborative and transparent process, ensuring clear
-            communication and expert execution at every stage of the project.
-            From initial concept to final delivery.
-          </p>
-
-          {/* Video Thumbnail with Play Button */}
-          <div className="relative w-full mx-auto rounded-xl overflow-hidden shadow-lg">
-            <video
-              className="w-full h-auto object-cover"
-              poster="/about/construction-thumbnail.jpg"
-              muted
-              loop
-              autoPlay
-              playsInline
-            >
-              <source src="/about/construction.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
           </div>
         </div>
       </section>
