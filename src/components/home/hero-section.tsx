@@ -55,7 +55,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <div className="max-w-4xl mx-auto flex flex-col mt-18 sm:mt-10 items-center justify-center">
+        <div className="max-w-4xl mx-auto flex flex-col mt-18 md:mt-24 items-center justify-center">
           
             <h1 className="font-mono text-4xl md:text-7xl font-bold mb-6 text-shadow-lg text-shadow-black/20">
               Leading Technology{" "}
@@ -69,7 +69,6 @@ export default function HeroSection() {
               and ELV, serving enterprises across UAE and beyond.
             </p>
           
-          <FadeIn delay={600}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Button
                 asChild
@@ -83,7 +82,6 @@ export default function HeroSection() {
                 </Link>
               </Button>
             </div>
-          </FadeIn>
         </div>
       </div>
 
