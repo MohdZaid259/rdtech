@@ -113,7 +113,7 @@ export default function ProjectsSection() {
 
   return (
     <section className="min-h-screen flex flex-col py-8 md:py-20 bg-gray-100">
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto">
         {/* Section Header */}
         <SectionHeader
           title="Our Projects"

@@ -27,7 +27,7 @@ const features = [
   {
     icon: DollarSign,
     title: "Cost-Effective",
-    subtitle: "Most optimized, effective and value-driven solutions",
+    subtitle: "Optimized & value-driven solutions",
   },
   {
     icon: Layers,
@@ -47,7 +47,7 @@ const features = [
   {
     icon: Cable,
     title: "In-House Cabling",
-    subtitle: "Civil, MEP, networking & compliance expertise",
+    subtitle: "Civil, MEP, networking expertise",
   },
   {
     icon: Users,
@@ -59,7 +59,7 @@ const features = [
 
 export default function WhyRDTechGroup() {
   return (
-    <section className="md:py-20 py-8 w-full max-w-7xl mx-auto px-2 ">
+    <section className="md:py-20 py-8 w-full container mx-auto px-2 ">
       {/* Section Header */}
       <SectionHeader
         title="Why RDTech Group"
@@ -72,7 +72,7 @@ export default function WhyRDTechGroup() {
         {features.map((feature, i) => (
           <FadeIn key={i} delay={i * 80}>
             <Card className="h-full group relative overflow-hidden rounded-xl md:rounded-3xl border border-gray-200 bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 py-0">
-              <CardContent className="md:p-6 p-2 pb-6 flex flex-col items-start">
+              <CardContent className="md:p-6 md:pt-4 p-2 pb-6 flex flex-col items-start">
                 {/* Icon with gradient background */}
                 <div className="md:mb-4 mb-2 flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-indigo-600 text-white shadow-md group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-5 w-5" />

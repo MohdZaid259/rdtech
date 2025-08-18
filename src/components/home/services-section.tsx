@@ -65,7 +65,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="min-h-screen flex flex-col py-8 md:py-20 max-w-7xl mx-auto "
+      className="min-h-screen flex flex-col py-8 md:py-20 container mx-auto "
     >
       {/* Heading row */}
       <SectionHeader

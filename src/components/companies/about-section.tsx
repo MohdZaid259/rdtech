@@ -60,7 +60,7 @@ export default function AboutSection({
           </div>
 
           {/* Right Image */}
-          <div className="relative order-1 lg:order-2">
+          <div className="relative self-end order-1 lg:order-2">
             <SafeImage
               src={image.src}
               alt={image.alt}

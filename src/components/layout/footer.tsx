@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-gray-300 pt-8 md:pt-16 pb-6">
   {/* Top Section */}
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
     <div className="mt-0 grid grid-cols-1 gap-8 lg:grid-cols-5">
       {/* Logo & About - custom span */}
       <div className="lg:col-span-2">

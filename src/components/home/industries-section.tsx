@@ -70,7 +70,7 @@ const industries = [
 export function IndustriesSection() {
   return (
     <section className="py-8 md:py-24  pb-0 bg-white ">
-      <div className="container mx-auto px-4 max-w-7xl ">
+      <div className="container mx-auto px-4 container ">
         {/* Section Header */}
         <SectionHeader
           title="Industries We Serve"

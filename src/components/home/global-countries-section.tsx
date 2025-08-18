@@ -112,7 +112,7 @@ export default function GlobalCountriesSection() {
   ];
 
   return (
-    <section className="flex flex-col items-center py-8 md:py-20 max-w-7xl mx-auto">
+    <section className="flex flex-col items-center py-8 md:py-20 container mx-auto">
       {/* Heading */}
       <SectionHeader
         title="Global Reach"

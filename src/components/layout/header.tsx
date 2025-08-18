@@ -64,7 +64,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 z-[99] w-full bg-black/40 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto max-md:px-8">
+      <div className="container mx-auto max-md:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">

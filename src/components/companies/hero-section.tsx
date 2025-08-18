@@ -85,7 +85,7 @@ export default function HeroSection({
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-white w-full text-white hover:bg-white px-8 py-4 text-lg bg-transparent hover-lift cursor-pointer shadow-lg shadow-black/15"
+                  className="border-white w-full md:w-[70%] text-white hover:bg-white px-8 py-4 text-lg bg-transparent hover-lift cursor-pointer shadow-lg shadow-black/15"
                 >
                   <Link
                     href={websiteLink}

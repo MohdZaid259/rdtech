@@ -41,9 +41,6 @@ export default function page() {
     "Preparation of Contract Documents",
     "Project Management",
     "Construction Supervision",
-    "Maintenance Planning",
-    "Technical Assistance",
-    "Training",
   ];
 
   return (

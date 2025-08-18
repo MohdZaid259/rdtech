@@ -62,7 +62,7 @@ export default function About() {
 
       {/* Stats Section */}
       <section className="py-10 pb-0 md:pb-10 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="md:text-4xl text-3xl font-bold text-shadow-black/30 text-shadow-sm text-accent mb-2">
@@ -102,7 +102,7 @@ export default function About() {
 
       {/* Mission Section */}
       <section id="mission" className="py-8 md:py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-start">
             <div>
               <SafeImage
@@ -160,7 +160,7 @@ export default function About() {
 
       {/* Vision Section */}
       <section id="vision" className="py-8 md:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="order-2 md:order-1">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-6">
@@ -218,7 +218,7 @@ export default function About() {
 
       {/* Value Section */}
       <section className="py-8 md:py-16 mb-8 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
             Our Values
           </h2>
@@ -249,7 +249,7 @@ export default function About() {
       </section>
 
       <div className="bg-black text-gray-300 pt-8 md:pt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Newsletter />
         </div>
       </div>

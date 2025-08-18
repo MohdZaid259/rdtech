@@ -11,7 +11,7 @@ export function ProjectDetail({ project }: { project: Project }) {
     <div className="min-h-screen">
       {/* Header */}
       <div className="bg-card">
-        <div className="max-w-7xl mx-auto px-6 py-6">
+        <div className="container mx-auto px-6 py-6">
           <Link
             href="/projects"
             className="flex text-sm items-center py-4 pt-2 hover:text-primary"
@@ -33,7 +33,7 @@ export function ProjectDetail({ project }: { project: Project }) {
       </div>
 
       {/* Hero Image */}
-      <div className="relative max-w-7xl mx-auto md:rounded-xl h-full md:h-[600px] overflow-hidden">
+      <div className="relative container mx-auto md:rounded-xl h-full md:h-[600px] overflow-hidden">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-xl transform scale-110"
           style={{ backgroundImage: `url(${project.heroImage || ""})` }}
@@ -47,7 +47,7 @@ export function ProjectDetail({ project }: { project: Project }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
       </div>
-      <div className="max-w-7xl mx-auto px-6 py-8 md:py-16">
+      <div className="container mx-auto px-6 py-8 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Project Details */}
           <div className="lg:col-span-2">

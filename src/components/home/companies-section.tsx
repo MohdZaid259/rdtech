@@ -67,7 +67,7 @@ export default function CompaniesSection() {
 
   return (
     <section className="min-h-screen flex flex-col py-8 md:py-20 bg-gray-100">
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto">
         {/* Heading */}
         <SectionHeader
           title="Our Companies"
