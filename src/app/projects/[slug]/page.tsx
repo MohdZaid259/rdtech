@@ -5,15 +5,17 @@ import { notFound } from "next/navigation";
 import { projects } from "../../../../public/projectData";
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
-  const project = projects.find((p) => p.slug === params.slug);
+  const slug = await params;
+
+  const project = projects.find((p) => p.slug === slug.slug);
 
   if (!project) {
     return {
@@ -48,8 +50,12 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProjectPage({ params }: Readonly<ProjectPageProps>) {
-  const project = projects.find(async (p) => p.slug === (await params).slug);
+export default async function ProjectPage({
+  params,
+}: Readonly<ProjectPageProps>) {
+  const slug = await params;
+
+  const project = projects.find((p) => p.slug === slug.slug);
 
   if (!project) {
     notFound();
