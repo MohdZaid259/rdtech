@@ -96,7 +96,7 @@ export default function ClientsSection() {
         subTitle="Trusted by leading organizations across industries for mission-critical technology solutions."
       />
 
-      <div className="container mx-auto px-4 relative z-10 mt-12">
+      <div className="mx-auto px-4 md:px-0 relative z-10 mt-12">
         <ScrollVelocityContainer className="space-y-4">
           {clientRows.map((logos, rowIndex) => (
             <ScrollVelocityRow
