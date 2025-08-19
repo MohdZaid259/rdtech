@@ -52,7 +52,7 @@ export default function CompaniesSection() {
       description:
         "Transforming buildings into intelligent, efficient spaces through cutting-edge automation and control systems.",
       icon: CoreGridLogo,
-      href: "/coregrid",
+      href: "/core-grid",
       image: "/general/rdtech/facial.webp",
       services: [
         "Lighting Control",

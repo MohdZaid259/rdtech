@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FadeIn } from "@/components/ui/fade-in";
 import Link from "next/link";
 import { Play } from "lucide-react";
 
@@ -15,73 +14,61 @@ export default function HeroSection() {
 
   const [current, setCurrent] = useState(0);
 
-  // Auto-slide every 5s
+  // Auto-slide every 4s
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000);
+    }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <section
-      className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-fixed bg-cover ${
-        current === 2 ? "bg-bottom" : "bg-top"
-      }`}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
       data-header-theme="light"
-      style={{
-        backgroundImage: `url('${images[current]}')`,
-      }}
     >
-      <div className="absolute inset-0 bg-black/50" />
+      {/* Background images layered */}
+      {images.map((src, idx) => (
+        <div
+          key={idx}
+          className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 ${
+            current === idx ? "opacity-100" : "opacity-0"
+          } ${idx === 2 ? "bg-bottom" : "bg-top"}`}
+          style={{ backgroundImage: `url('${src}')` }}
+        />
+      ))}
 
-      {/* Background Carousel */}
-      {/* <div className="absolute inset-0">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 ${
-              index === current ? "opacity-100" : "opacity-0"
-            } ${index === 2 ? "bg-bottom" : "bg-top"}
-            `}
-            style={{
-              backgroundImage: `url('${img}')`,
-            }}
-          >
-            <div className="absolute inset-0 bg-black/45" />
-          </div>
-        ))}
-      </div> */}
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto flex flex-col mt-18 md:mt-24 items-center justify-center">
-          
-            <h1 className="font-mono text-4xl md:text-7xl font-bold mb-6 text-shadow-lg text-shadow-black/20">
-              Leading Technology{" "}
-              <span className="block text-accent animate-pulse-glow">
-                Solutions Provider
-              </span>
-            </h1>
-          
-            <p className="text-xl md:text-2xl mb-8 text-muted max-w-2xl mx-auto font-medium text-shadow-lg text-shadow-black/20">
-              Over 30 years at the forefront of technological innovation in ICT
-              and ELV, serving enterprises across UAE and beyond.
-            </p>
-          
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-primary hover:text-white hover:border-transparent px-8 py-4 text-lg bg-transparent hover-lift cursor-pointer shadow-lg shadow-black/15 flex items-center"
-              >
-                <Link className="flex items-center gap-2" href="/#services">
-                  <span>Explore Our Services</span>
-                  <Play className="h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
+          <h1 className="font-mono text-4xl md:text-7xl font-bold mb-6 text-shadow-lg text-shadow-black/20">
+            Leading Technology{" "}
+            <span className="block text-accent animate-pulse-glow">
+              Solutions Provider
+            </span>
+          </h1>
+
+          <p className="text-xl md:text-2xl mb-8 text-muted max-w-2xl mx-auto font-medium text-shadow-lg text-shadow-black/20">
+            Over 30 years at the forefront of technological innovation in ICT
+            and ELV, serving enterprises across UAE and beyond.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-primary hover:text-white hover:border-transparent px-8 py-4 text-lg bg-transparent hover-lift cursor-pointer shadow-lg shadow-black/15 flex items-center"
+            >
+              <Link className="flex items-center gap-2" href="/#services">
+                <span>Explore Our Services</span>
+                <Play className="h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
 
