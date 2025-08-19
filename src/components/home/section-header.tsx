@@ -8,7 +8,7 @@ export default function SectionHeader({
   readonly subTitle: string;
 }) {
   return (
-    <div className="p-4 flex flex-col items-center mb-2 md:mb-16 text-center">
+    <div className="p-4 flex flex-col items-center mb-2 md:mb-8 text-center">
       <FadeIn>
         <h2 className="text-xl md:text-3xl font-bold text-white bg-primary backdrop-blur-md py-2 px-6 rounded-full shadow-lg">
           {title}

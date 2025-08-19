@@ -20,11 +20,6 @@ const flagshipProjects = [
     year: "2022",
     thumbnail: "/projects/rdtech/ajmanHero.jpg",
     heroImage: "/projects/rdtech/ajmanHero.jpg",
-    gallery: [
-      "/projects/rdtech/ajmanG1.webp",
-      "/projects/rdtech/ajmanG2.webp",
-      "/projects/rdtech/ajmanG3.jpg",
-    ],
     duration: "12 months",
     size: "2,600 vehicles",
     client: "Ajman Public Transport Corporation",
@@ -47,11 +42,6 @@ const flagshipProjects = [
     year: "2021",
     thumbnail: "/projects/coregrid/lusailHero.jpeg",
     heroImage: "/projects/coregrid/lusailHero.jpeg",
-    gallery: [
-      "/projects/coregrid/lusailG1.webp",
-      "/projects/coregrid/lusailG2.jpg",
-      "/projects/coregrid/lusailG3.webp",
-    ],
     duration: "20 months",
     size: "45,000 sq m",
     client: "Government of Qatar",
@@ -78,11 +68,6 @@ const flagshipProjects = [
     year: "2020",
     thumbnail: "/projects/alAusus/alAinHero.jpeg",
     heroImage: "/projects/alAusus/alAinHero.jpeg",
-    gallery: [
-      "/projects/alAusus/alAinG1.webp",
-      "/projects/alAusus/alAinG2.webp",
-      "/projects/alAusus/alAinG3.webp",
-    ],
     duration: "10 months",
     size: "3,500 sq m",
     client: "Al Ain Sports Club",
@@ -106,17 +91,18 @@ export default function ProjectsSection() {
       setCurrentProject((prev) =>
         prev === flagshipProjects.length - 1 ? 0 : prev + 1
       );
-    }, 10000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
+  console.log('pr',project.heroImage)
 
   return (
     <section className="min-h-screen flex flex-col py-8 md:py-20 bg-gray-100">
       <div className="container mx-auto">
         {/* Section Header */}
         <SectionHeader
-          title="Our Projects"
+          title="Flagship Projects"
           subTitle="Showcasing our expertise in delivering mission-critical technology
               solutions across diverse industries"
         />
@@ -128,8 +114,10 @@ export default function ProjectsSection() {
               {/* Image */}
               <div className="relative h-60 md:h-80 lg:h-auto md:pl-6">
                 <SafeImage
+                  key={project.id}
                   src={project.heroImage}
                   alt={project.title}
+                  quality={100}
                   width={1600}
                   height={1200}
                   className="w-full h-full object-cover md:rounded-sm"
