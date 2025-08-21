@@ -1,4 +1,3 @@
-
 "use client";
 
 import {
@@ -8,13 +7,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import CoreGridLogo from "../logos/core-grid-logo";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import RDTechGroupLogo from "../logos/rdtech-group-logo";
 import RDTechLogo from "../logos/rdtech-logo";
+import { usePathname } from "next/navigation";
 
 const companies = [
   {
@@ -57,18 +58,43 @@ const companies = [
 
 export function Header() {
   const [showOverview, setShowOverview] = useState(false);
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const pathname = usePathname();
+
+  // Track scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > window.innerHeight * 0.7); // 80vh
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // condition: remove bg for /projects/something (dynamic) or if not scrolled past 80vh
+  const isProjectsPage =
+    pathname.startsWith("/projects/") && pathname !== "/projects";
+
+  const showBg = isProjectsPage ? true : isScrolled;
 
   const linkClass = () =>
-    `relative text-sm font-medium after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full bg-transparent hover:bg-transparent px-1 py-1.5 text-white hover:text-white`;
+    `relative text-sm font-medium after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full bg-transparent hover:bg-transparent px-1 py-1.5 ${
+      showBg ? "text-black" : "text-white"
+    }`;
 
   return (
-    <header className="fixed top-0 z-[99] w-full bg-black/40 backdrop-blur-md">
-      <div className="container mx-auto max-md:px-8">
+    <header className="fixed top-0 z-[99] w-full">
+      <div className="container mx-auto max-sm:px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <RDTechGroupLogo iconSize={35} textSize={70} className="invert" />
+            <RDTechGroupLogo
+              iconSize={45}
+              textSize={90}
+              className={`${!showBg && "invert"}`}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -110,7 +136,7 @@ export function Header() {
             onMouseLeave={() => setShowOverview(false)}
             className={`max-md:hidden absolute  ${
               showOverview ? "top-0" : "-top-70"
-            } left-0 w-full shadow-lg bg-gradient-to-b from-black from-[0%] via-black/80 via-[90%] to-black/60 to-[100%] backdrop-blur-xs -z-[10] duration-300 transform`}
+            } left-0 w-full shadow-lg bg-primary/30 backdrop-blur-sm -z-[10] duration-300 transform`}
           >
             <div className="w-full grid grid-cols-3 gap-6 max-w-3xl mx-auto mt-10 pt-4">
               {companies.map((company) => {
@@ -119,7 +145,7 @@ export function Header() {
                   <Link
                     key={company.name}
                     href={company.href}
-                    className="relative group space-y-2 rounded-lg p-4 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full"
+                    className="relative group space-y-2 rounded-lg p-4 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-0 after:bg-accent after:transition-all duration-300 hover:after:w-full"
                   >
                     <div className="flex items-center space-x-3">
                       <div className="flex-shrink-0 w-12 h-12 rounded-md bg-muted flex items-center justify-center">
@@ -154,7 +180,11 @@ export function Header() {
               <SheetContent side="right" className="p-6 gap-6 z-[100]">
                 <div className="flex flex-col h-full">
                   {/* Logo */}
-                  <Link href="/"  onClick={() => setOpen(false)} className="flex items-center mb-6">
+                  <Link
+                    href="/"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center mb-6"
+                  >
                     <RDTechGroupLogo iconSize={35} textSize={65} />
                   </Link>
 
