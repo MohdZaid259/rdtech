@@ -7,8 +7,8 @@ export default function CoreGridLogo({
   return (
     <div>
       <SafeImage
-        src="/logos/core-grid-logo.png"
-        alt="Logo"
+        src="/Logos/core-grid-logo.png?updatedAt=1755860934559"
+        alt="CoreGrid Logo"
         width={size}
         height={size}
       />

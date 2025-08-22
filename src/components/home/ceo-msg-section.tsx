@@ -16,7 +16,7 @@ export default function CEOMessageSection() {
     <section
       className="relative py-8 md:py-20 flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/home/ceo/image.png')",
+        backgroundImage: `url('${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/Home/ceo.png')`,
         backgroundAttachment: "fixed",
         backgroundPositionY: `50% ${scrollY * 0.5}px`,
         backgroundSize: "cover",

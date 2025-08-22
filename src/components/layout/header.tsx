@@ -85,7 +85,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 z-[99] w-full ${
-        showBg && "bg-primary/60 backdrop-blur-sm shadow-xs"
+        showBg && "bg-primary shadow-xs"
       }`}
     >
       <div className="container mx-auto max-sm:px-4">

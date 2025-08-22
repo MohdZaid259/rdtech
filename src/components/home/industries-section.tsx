@@ -1,9 +1,10 @@
 import {
   Briefcase,
-  Factory,
+  Fingerprint,
   Home,
   Plane,
   Shield,
+  ShieldUser,
   Users,
   Zap,
 } from "lucide-react";
@@ -16,56 +17,56 @@ const industries = [
   {
     name: "Energy & Utilities / Industry / Ministries",
     icon: Zap,
-    image: "",
+    image: "/Home/Industries/industry1.jpg?updatedAt=1755862753917",
     description:
       "Secure and efficient solutions for energy providers, industries, and public ministries.",
   },
   {
     name: "Public Safety",
     icon: Shield,
-    image: "",
+    image: "/Home/Industries/industry2.webp?updatedAt=1755863390682",
     description:
       "Management solutions for security, emergency response, and urban governance.",
   },
   {
     name: "Airports / Transportation / Critical Infrastructures",
     icon: Plane,
-    image: "",
+    image: "/Home/Industries/industry3.jpg?updatedAt=1755864184603",
     description:
       "Safety and monitoring systems for airports, transport authorities, and vital infrastructures.",
   },
   {
     name: "Enterprise",
     icon: Briefcase,
-    image: "",
+    image: "/Home/Industries/industry4.jpg?updatedAt=1755864297063",
     description:
       "Integrated products and services for smarter, safer business operations.",
   },
   {
     name: "NGOs / Educational Institutions",
     icon: Users,
-    image: "",
+    image: "/Home/Industries/industry5.webp?updatedAt=1755864357507",
     description:
       "Technology support for NGOs and secure solutions for schools and universities.",
   },
   {
     name: "SMB",
-    icon: Factory,
-    image: "",
+    icon: Fingerprint,
+    image: "/Home/Industries/industry6.webp?updatedAt=1755864482637",
     description:
       "Security products and cloud services tailored for small and medium businesses.",
   },
   {
     name: "Civil Defenses",
-    icon: Shield,
-    image: "",
+    icon: ShieldUser,
+    image: "/Home/Industries/industry7.jpg?updatedAt=1755864739390",
     description:
       "Defense and emergency readiness solutions for civil protection agencies.",
   },
   {
     name: "Consumer",
     icon: Home,
-    image: "",
+    image: "/Home/Industries/industry8.png?updatedAt=1755864813500",
     description:
       "Smart-home and lifestyle products that make everyday living safer and easier.",
   },

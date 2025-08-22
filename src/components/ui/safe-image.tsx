@@ -1,7 +1,7 @@
 "use client";
 
-import { ImageProps } from "next/image";
 import { Image } from "@imagekit/next";
+import { ImageProps } from "next/image";
 import { useState } from "react";
 
 export function SafeImage({
@@ -16,7 +16,7 @@ export function SafeImage({
   return (
     <Image
       urlEndpoint={process.env.NEXT_PUBLIC_URL_ENDPOINT}
-      src={imgSrc}
+      src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}${imgSrc}`}
       alt={alt}
       {...props}
       onError={() => setImgSrc("/placeholder.png")}

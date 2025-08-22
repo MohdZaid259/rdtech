@@ -3,10 +3,10 @@ import {
   Factory,
   GraduationCap,
   Hospital,
-  House,
   Landmark,
   Plane,
   Store,
+  Users,
   Zap,
 } from "lucide-react";
 
@@ -19,47 +19,52 @@ export default function WeCareSection() {
     {
       icon: Building,
       title: "Safe City",
-      thumbnail: "/general/rdtech/cctv.png",
+      thumbnail: "/Home/We%20Care/care1.webp?updatedAt=1755865152632",
     },
     {
       icon: Plane,
       title: "Transportation",
-      thumbnail: "/general/rdtech/fiber.webp",
+      thumbnail: "/Home/We%20Care/wp3704688.jpg?updatedAt=1755865886429",
     },
     {
       icon: Zap,
       title: "Utilities, Energy and Mining",
-      thumbnail: "/general/aa/plan_3.webp",
+      thumbnail:
+        "/Home/We%20Care/Climate-Adaptation-Renewable-Energy-Mining-Biodiversity.jpg?updatedAt=1755865886595",
     },
     {
       icon: Store,
       title: "Retail",
-      thumbnail: "/general/aa/worker.webp",
+      thumbnail: "/Home/We%20Care/download.webp?updatedAt=1755865886363",
     },
     {
       icon: Landmark,
       title: "Banking & Finance",
-      thumbnail: "/general/coregrid/realState_2.webp",
+      thumbnail:
+        "/Home/We%20Care/digital-finance-banking-investment-service-futuristic-bank-building-with-online-growth-graph_251139-785.avif?updatedAt=1755865886379",
     },
     {
       icon: Factory,
       title: "Manufacturing",
-      thumbnail: "/general/rdtech/dataCenter_2.webp",
+      thumbnail: "/Home/We%20Care/OIP.webp?updatedAt=1755865886344",
     },
     {
       icon: GraduationCap,
       title: "Education",
-      thumbnail: "/general/rdtech/dataCenter_2.webp",
+      thumbnail:
+        "/Home/We%20Care/Virtual-IT-lab-2048x1365.jpg?updatedAt=1755865886326",
     },
     {
       icon: Hospital,
       title: "Healthcare",
-      thumbnail: "/general/rdtech/dataCenter_2.webp",
+      thumbnail:
+        "/Home/We%20Care/doctor-with-globe-in-hand-hd-medical-dff7ahiwc5xsfjm0.jpg?updatedAt=1755865886505",
     },
     {
-      icon: House,
+      icon: Users,
       title: "Community",
-      thumbnail: "/general/rdtech/dataCenter_2.webp",
+      thumbnail:
+        "/Home/We%20Care/team-building-workplace-camaraderie-business-people-having-fun-engaging-teamwork_892235-25411.avif?updatedAt=1755865886292",
     },
   ];
 
