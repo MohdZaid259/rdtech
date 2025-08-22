@@ -108,7 +108,7 @@ export default function ClientsSection() {
               {logos.map((logo, i) => (
                 <div
                   key={`${rowIndex}-${i}`}
-                  className="flex-shrink-0 w-34 h-17 md:w-40 md:h-20 relative mx-2 flex items-center justify-center bg-white rounded-md p-2 overflow-hidden"
+                  className="flex-shrink-0 w-34 h-17 md:w-40 md:h-20 relative mx-2 flex shadow shadow-black/60 items-center justify-center  bg-white rounded-md p-2 overflow-hidden"
                 >
                   <SafeImage
                     src={logo.src}
@@ -117,7 +117,7 @@ export default function ClientsSection() {
                     height={80}
                     loading="lazy"
                     quality={100}
-                    className="object-contain"
+                    className="object-contain "
                   />
                 </div>
               ))}

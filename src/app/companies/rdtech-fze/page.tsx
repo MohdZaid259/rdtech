@@ -8,13 +8,13 @@ import React from "react";
 import ServicesSection from "@/components/companies/services-section";
 
 export const metadata: Metadata = {
-  title: "RDTech FZE | Security Systems & ELV/ICT Solutions",
+  title: "RDTech | Security Systems & ELV/ICT Solutions",
   description:
-    "RDTech FZE delivers advanced security and ELV/ICT solutions across the UAE. From access control to surveillance, we safeguard critical infrastructure.",
+    "RDTech delivers advanced security and ELV/ICT solutions across the UAE. From access control to surveillance, we safeguard critical infrastructure.",
   openGraph: {
-    title: "RDTech FZE | Security Systems & ELV/ICT Solutions",
+    title: "RDTech | Security Systems & ELV/ICT Solutions",
     description:
-      "Discover RDTech FZE’s expertise in delivering cutting-edge security and ELV/ICT solutions to protect critical infrastructure in the UAE.",
+      "Discover RDTech's expertise in delivering cutting-edge security and ELV/ICT solutions to protect critical infrastructure in the UAE.",
     url: "https://www.rdtechgroup.com/companies/rdtech-fze",
     siteName: "RDTech Group",
     images: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         url: "https://www.rdtechgroup.com/og-rdtech-fze.jpg",
         width: 1200,
         height: 630,
-        alt: "RDTech FZE Security Solutions",
+        alt: "RDTech Security Solutions",
       },
     ],
     type: "website",
@@ -41,7 +41,7 @@ export default function page() {
   return (
     <main className="min-h-screen">
       <HeroSection
-        companyName="RDTech FZE"
+        companyName="RDTech"
         slogan="Security Systems & ELV/ICT Solutions"
         description="Pioneering advanced security technology to safeguard critical infrastructure across the UAE. From access control to comprehensive surveillance systems."
         backgroundImage="/general/rdtech/controlRoom.webp"
@@ -51,9 +51,9 @@ export default function page() {
       />
 
       <AboutSection
-        title="About RDTech FZE"
+        title="About RDTech"
         description={[
-          "RDTech FZE is the security and technology arm of RDTech Group, specializing in cutting-edge security systems and ELV/ICT solutions. With over a decade of experience, we've secured some of the UAE's most critical infrastructure.",
+          "RDTech is the security and technology arm of RDTech Group, specializing in cutting-edge security systems and ELV/ICT solutions. With over a decade of experience, we've secured some of the UAE's most critical infrastructure.",
           "Our team of certified engineers and security specialists work with the latest technology from global leaders to deliver solutions that exceed industry standards and client expectations.",
         ]}
         stats={[
@@ -63,7 +63,7 @@ export default function page() {
         ]}
         image={{
           src: "/general/rdtech/cardReader.webp",
-          alt: "RDTech FZE Team",
+          alt: "RDTech Team",
         }}
       />
 
@@ -72,7 +72,7 @@ export default function page() {
         services={services}
         image={{
           src: "/general/rdtech/dataCenter.webp",
-          alt: "RDTech FZE Services",
+          alt: "RDTech Services",
         }}
       />
 

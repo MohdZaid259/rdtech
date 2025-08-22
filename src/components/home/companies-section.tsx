@@ -13,7 +13,7 @@ import SectionHeader from "./section-header";
 export default function CompaniesSection() {
   const companies = [
     {
-      name: "RDTech FZE",
+      name: "RDTech",
       tagline: "Security Systems & ELV/ICT Solutions",
       description:
         "Pioneering advanced security technology to safeguard critical infrastructure across the UAE. From access control to comprehensive surveillance systems.",
@@ -27,7 +27,7 @@ export default function CompaniesSection() {
         "Network Infrastructure",
       ],
       color: "bg-green-600",
-      buttonLabel: "RDTech FZE",
+      buttonLabel: "RDTech",
     },
     {
       name: "Al Ausus Al Arbaa General Contracting",

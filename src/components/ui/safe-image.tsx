@@ -1,7 +1,7 @@
 "use client";
 
-import NextImage, { ImageProps } from "next/image";
-
+import { ImageProps } from "next/image";
+import { Image } from "@imagekit/next";
 import { useState } from "react";
 
 export function SafeImage({
@@ -14,7 +14,8 @@ export function SafeImage({
   );
 
   return (
-    <NextImage
+    <Image
+      urlEndpoint={process.env.NEXT_PUBLIC_URL_ENDPOINT}
       src={imgSrc}
       alt={alt}
       {...props}
