@@ -1,4 +1,3 @@
-
 import {
   ScrollVelocityContainer,
   ScrollVelocityRow,
@@ -90,10 +89,12 @@ export default function ClientsSection() {
   );
 
   return (
-    <section className="relative py-8 md:py-20 bg-blue-950 overflow-hidden ">
+    <section className="relative py-8 md:py-20 overflow-hidden bg-primary">
       <SectionHeader
         title="Our Clients"
         subTitle="Trusted by leading organizations across industries for mission-critical technology solutions."
+        titleColor="text-primary bg-white"
+        subTitleColor="text-muted"
       />
 
       <div className="mx-auto px-4 md:px-0 relative z-10 mt-12">

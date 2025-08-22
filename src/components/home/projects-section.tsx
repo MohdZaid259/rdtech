@@ -2,6 +2,7 @@
 
 import { Award, Building, Calendar, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
+
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Card } from "@/components/ui/card";
@@ -95,16 +96,17 @@ export default function ProjectsSection() {
 
     return () => clearInterval(interval);
   }, []);
-  console.log('pr',project.heroImage)
 
   return (
-    <section className="min-h-screen flex flex-col py-8 md:py-20 bg-gray-100">
+    <section className="min-h-screen flex flex-col py-8 md:py-20 bg-primary">
       <div className="container mx-auto">
         {/* Section Header */}
         <SectionHeader
           title="Flagship Projects"
           subTitle="Showcasing our expertise in delivering mission-critical technology
               solutions across diverse industries"
+          titleColor="text-primary bg-white"
+          subTitleColor="text-muted"
         />
 
         {/* Project showcase */}
@@ -167,19 +169,25 @@ export default function ProjectsSection() {
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-2">
                     <div className="text-center">
-                      <div className="md:text-base text-sm text-gray-600">Duration</div>
+                      <div className="md:text-base text-sm text-gray-600">
+                        Duration
+                      </div>
                       <div className="text-base md:text-xl font-semibold text-primary">
                         {project.duration}
                       </div>
                     </div>
                     <div className="text-center">
-                      <div className="md:text-base text-sm text-gray-600">Size</div>
+                      <div className="md:text-base text-sm text-gray-600">
+                        Size
+                      </div>
                       <div className="text-base md:text-xl font-semibold text-primary">
                         {project.size}
                       </div>
                     </div>
                     <div className="text-center">
-                      <div className="md:text-base text-sm text-gray-600">Budget</div>
+                      <div className="md:text-base text-sm text-gray-600">
+                        Budget
+                      </div>
                       <div className="text-base md:text-xl font-semibold text-primary">
                         {project.budget}
                       </div>

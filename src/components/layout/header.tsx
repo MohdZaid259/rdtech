@@ -66,7 +66,7 @@ export function Header() {
   // Track scroll
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > window.innerHeight * 0.7); // 80vh
+      setIsScrolled(window.scrollY > window.innerHeight * 0.8); // 80vh
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll);
@@ -80,21 +80,19 @@ export function Header() {
   const showBg = isProjectsPage ? true : isScrolled;
 
   const linkClass = () =>
-    `relative text-sm font-medium after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full bg-transparent hover:bg-transparent px-1 py-1.5 ${
-      showBg ? "text-black" : "text-white"
-    }`;
+    `relative text-sm font-medium after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full bg-transparent hover:bg-transparent px-1 py-1.5 text-white`;
 
   return (
-    <header className="fixed top-0 z-[99] w-full">
+    <header
+      className={`fixed top-0 z-[99] w-full ${
+        showBg && "bg-primary/60 backdrop-blur-sm shadow-xs"
+      }`}
+    >
       <div className="container mx-auto max-sm:px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <RDTechGroupLogo
-              iconSize={45}
-              textSize={90}
-              className={`${!showBg && "invert"}`}
-            />
+            <RDTechGroupLogo iconSize={45} textSize={90} className="invert" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -136,7 +134,7 @@ export function Header() {
             onMouseLeave={() => setShowOverview(false)}
             className={`max-md:hidden absolute  ${
               showOverview ? "top-0" : "-top-70"
-            } left-0 w-full shadow-lg bg-primary/30 backdrop-blur-sm -z-[10] duration-300 transform`}
+            } left-0 w-full shadow-lg bg-primary/90 backdrop-blur-lg -z-[10] duration-300 transform`}
           >
             <div className="w-full grid grid-cols-3 gap-6 max-w-3xl mx-auto mt-10 pt-4">
               {companies.map((company) => {

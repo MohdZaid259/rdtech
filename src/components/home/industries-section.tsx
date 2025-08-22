@@ -1,81 +1,84 @@
 import {
-  Building,
+  Briefcase,
   Factory,
-  GraduationCap,
-  Hotel,
-  Landmark,
+  Home,
   Plane,
-  ShoppingBag,
+  Shield,
+  Users,
   Zap,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "../ui/button";
-import { FadeIn } from "../ui/fade-in";
-import Link from "next/link";
+
 import { SafeImage } from "../ui/safe-image";
 import SectionHeader from "./section-header";
 
 const industries = [
   {
-    name: "Airports & Transportation",
-    icon: Plane,
-    image: "/industry/airport.webp",
-    description: "Mission-critical security, communication, and automation for safe travel.",
-  },
-  {
-    name: "Banking & Finance",
-    icon: Landmark,
-    image: "/industry/banking.webp",
-    description: "High-reliability surveillance and access solutions for financial institutions.",
-  },
-  {
-    name: "Energy & Utilities",
+    name: "Energy & Utilities / Industry / Ministries",
     icon: Zap,
-    image: "/industry/power.webp",
-    description: "Intelligent systems for power plants, utilities, and critical infrastructure.",
+    image: "",
+    description:
+      "Secure and efficient solutions for energy providers, industries, and public ministries.",
   },
   {
-    name: "Hospitality & Tourism",
-    icon: Hotel,
-    image: "/industry/hospitality.webp",
-    description: "Smart building management and security for hotels, resorts, and attractions.",
+    name: "Public Safety",
+    icon: Shield,
+    image: "",
+    description:
+      "Management solutions for security, emergency response, and urban governance.",
   },
   {
-    name: "Government & Public Sector",
-    icon: Building,
-    image: "/industry/government.webp",
-    description: "Secure, connected, and efficient solutions for ministries and public services.",
+    name: "Airports / Transportation / Critical Infrastructures",
+    icon: Plane,
+    image: "",
+    description:
+      "Safety and monitoring systems for airports, transport authorities, and vital infrastructures.",
   },
   {
-    name: "Industrial & Manufacturing",
+    name: "Enterprise",
+    icon: Briefcase,
+    image: "",
+    description:
+      "Integrated products and services for smarter, safer business operations.",
+  },
+  {
+    name: "NGOs / Educational Institutions",
+    icon: Users,
+    image: "",
+    description:
+      "Technology support for NGOs and secure solutions for schools and universities.",
+  },
+  {
+    name: "SMB",
     icon: Factory,
-    image: "/industry/industry.webp",
-    description: "Automation, monitoring, and safety systems for production environments.",
+    image: "",
+    description:
+      "Security products and cloud services tailored for small and medium businesses.",
   },
   {
-    name: "Education & Healthcare",
-    icon: GraduationCap,
-    image: "/industry/healthcare.webp",
-    description: "Safe, secure, and connected environments for schools, universities, and hospitals.",
+    name: "Civil Defenses",
+    icon: Shield,
+    image: "",
+    description:
+      "Defense and emergency readiness solutions for civil protection agencies.",
   },
   {
-    name: "Retail & Commercial",
-    icon: ShoppingBag,
-    image: "/industry/retail.webp",
-    description: "End-to-end technology solutions for malls, offices, and commercial hubs.",
+    name: "Consumer",
+    icon: Home,
+    image: "",
+    description:
+      "Smart-home and lifestyle products that make everyday living safer and easier.",
   },
 ];
 
-
 export function IndustriesSection() {
   return (
-    <section className="py-8 md:py-20  pb-0 bg-white ">
-      <div className="container mx-auto px-4 container ">
+    <section className="py-8 md:py-20 bg-gray-100">
+      <div className="container mx-auto px-4">
         {/* Section Header */}
         <SectionHeader
           title="Industries We Serve"
-          subTitle=" Delivering specialized solutions across diverse sectors, from
-              critical infrastructure to commercial spaces."
+          subTitle="Delivering specialized solutions across sectors — from critical infrastructure to consumers."
         />
 
         {/* Industries Grid */}
@@ -105,34 +108,15 @@ export function IndustriesSection() {
                   <h3 className="font-heading text-lg font-semibold text-gray-900 mb-0 md:mb-2">
                     {industry.name}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {industry.description}
-                  </p>
+                  {industry.description !== "—" && (
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {industry.description}
+                    </p>
+                  )}
                 </CardContent>
               </Card>
             );
           })}
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="text-center mt-16">
-        <div className="bg-primary/10 p-8 md:p-12">
-          <h3 className="font-heading text-3xl font-bold text-gray-900 mb-4">
-            Don&#39;t See Your Industry?
-          </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We work across many sectors and are always ready to tackle new
-            challenges. Contact us to discuss your specific requirements.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild variant="default">
-              <Link href="/#contact">Contact Our Team</Link>
-            </Button>
-            <Button asChild variant="outline" className="hover:bg-white/5">
-              <Link href="/projects">View All Projects</Link>
-            </Button>
-          </div>
         </div>
       </div>
     </section>

@@ -18,13 +18,13 @@ export default function CEOMessageSection() {
       style={{
         backgroundImage: "url('/home/ceo/image.png')",
         backgroundAttachment: "fixed",
-        backgroundPositionY: "50% ${scrollY * 0.5}px",
+        backgroundPositionY: `50% ${scrollY * 0.5}px`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>w
+      {/* <div className="absolute inset-0 bg-black/30"></div> */}
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6">
@@ -38,27 +38,18 @@ export default function CEOMessageSection() {
 
             {/* Content */}
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
-                Our CEO Message
-              </h1>
 
               <div className="space-y-4 text-lg md:text-xl leading-relaxed">
                 <p className="text-white/90">
-                  We have set Principles and Objectives tailored coincide with
-                  our mission.
-                </p>
-
-                <p className="text-white/90">
-                  In AA, our clients are our priority. Our prosperity and
-                  success is owned to our creative engineers. We can assure you,
-                  you're in good hands once you choose AA
+                  More than projects, we create relationships rooted in trust and integrity.
+                  Excellence is not just a goal—it is the standard we live by.
                 </p>
               </div>
 
               {/* CEO Attribution */}
               <div className="mt-8 pt-6 border-t border-white/20">
                 <p className="text-right font-semibold text-white">
-                  Eng. Khaled Akhozahaya - General Manager
+                  Eng. Khaled Akhozahaya - CEO
                 </p>
               </div>
             </div>

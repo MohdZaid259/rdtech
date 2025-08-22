@@ -1,9 +1,9 @@
 "use client";
 
 import DottedMap from "dotted-map";
+import { SafeImage } from "./safe-image";
 import { motion } from "motion/react";
 import { useRef } from "react";
-import { SafeImage } from "./safe-image";
 
 interface MapProps {
   dots?: Array<{
@@ -15,7 +15,7 @@ interface MapProps {
 
 export default function WorldMap({
   dots = [],
-  lineColor = "#0ea5e9",
+  lineColor = "#172554",
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const map = new DottedMap({ height: 100, grid: "diagonal" });
