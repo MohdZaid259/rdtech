@@ -1,4 +1,4 @@
-import { ArrowRight, Globe } from "lucide-react";
+import { ArrowRight, Globe, MoveRightIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/fade-in";
@@ -27,7 +27,9 @@ export default function HeroSection({
   return (
     <section
       className="relative min-h-screen flex items-center bg-fixed bg-cover justify-center overflow-hidden py-12"
-      style={{ backgroundImage: `url('${backgroundImage}')` }}
+      style={{
+        backgroundImage: `url('${process.env.NEXT_PUBLIC_IMAGEKIT_URL}${backgroundImage}')`,
+      }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
@@ -72,10 +74,11 @@ export default function HeroSection({
                 <Button
                   asChild
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg btn-primary cursor-pointer shadow-lg shadow-black/15 flex items-center"
+                  className="text-base text-white font-semibold bg-primary hover:bg-primary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
                 >
-                  <Link href={projectsLink}>
-                    Explore Projects
+                  <Link href={projectsLink} className="flex items-center gap-2">
+                    <span>Explore Projects</span>
+                    <MoveRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
               )}
@@ -85,14 +88,14 @@ export default function HeroSection({
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-white w-full md:w-[70%] text-white hover:bg-white px-8 py-4 text-lg bg-transparent hover-lift cursor-pointer shadow-lg shadow-black/15"
+                  className="min-w-[200px] text-base text-blue-950 font-semibold bg-white hover:bg-white backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   <Link
                     href={websiteLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Globe className="h-5 w-5 mr-2" />
+                    <Globe className="h-5 w-5" />
                     Go to Site
                   </Link>
                 </Button>

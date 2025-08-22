@@ -1,4 +1,3 @@
-
 import { SafeImage } from "../ui/safe-image";
 
 interface Stat {

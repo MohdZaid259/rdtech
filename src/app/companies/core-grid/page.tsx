@@ -30,14 +30,54 @@ export const metadata: Metadata = {
 
 export default function page() {
   const services = [
-    "User Interface",
-    "Room Automation",
-    "Lightning Control",
-    "HAVC Control",
-    "I/O Controller",
-    "Energy Management Metering",
-    "Gateways",
-    "Network Infrastructure",
+    {
+      title: "User Interface",
+      description:
+        "Intuitive and user-friendly interfaces that provide seamless interaction and control of automation systems across devices.",
+      image: "",
+    },
+    {
+      title: "Room Automation",
+      description:
+        "Smart solutions for lighting, temperature, and appliance control, enhancing comfort, convenience, and energy efficiency in any room.",
+      image: "",
+    },
+    {
+      title: "Lighting Control",
+      description:
+        "Advanced lighting management systems enabling dimming, scheduling, and mood-setting for residential, commercial, or industrial spaces.",
+      image: "",
+    },
+    {
+      title: "HVAC Control",
+      description:
+        "Integrated heating, ventilation, and air conditioning control for optimized climate management, improved efficiency, and reduced energy costs.",
+      image: "",
+    },
+    {
+      title: "I/O Controller",
+      description:
+        "Reliable input/output control devices that manage communication between field equipment and central automation systems.",
+      image: "",
+    },
+    {
+      title: "Energy Management & Metering",
+      description:
+        "Smart metering and monitoring systems that track energy consumption, reduce waste, and ensure sustainable energy usage.",
+      image: "",
+    },
+    {
+      title: "Gateways",
+      description:
+        "Secure and scalable gateways enabling seamless integration between different automation devices and communication protocols.",
+      image: "",
+    },
+    {
+      title: "Network Infrastructure",
+      description:
+        "Robust networking solutions designed to support high-performance automation systems with reliability and security.",
+      image: "",
+    },
   ];
 
   return (
@@ -46,7 +86,7 @@ export default function page() {
         companyName="CoreGrid Solutions"
         slogan="Building Automation & Smart Solutions"
         description="Transforming buildings into intelligent, efficient spaces through cutting-edge automation and control systems. Creating smarter environments for better living and working."
-        backgroundImage="/general/coregrid/realState.png"
+        backgroundImage="/Companies/Core%20Grid/realState.png"
         companyLogo={<CoreGridLogo />}
         projectsLink="/companies/core-grid/#projects"
         websiteLink="https://www.loytec.com"
@@ -64,7 +104,7 @@ export default function page() {
           { value: "30+", label: "Automation Experts" },
         ]}
         image={{
-          src: "/general/coregrid/control.webp",
+          src: "/Companies/Core%20Grid/control.webp",
           alt: "CoreGrid Smart Building",
         }}
       />
@@ -72,10 +112,7 @@ export default function page() {
       <ServicesSection
         title="Our Smart Solutions"
         services={services}
-        image={{
-          src: "/general/coregrid/thermostate.webp",
-          alt: "CoreGrid Services",
-        }}
+        companyName="Core%20Grid"
       />
 
       <ClientsSection
@@ -86,22 +123,22 @@ export default function page() {
             baseVelocity: 5,
             direction: 1,
             logos: [
-              "Commercial/bakerHughes.webp",
-              "Commercial/lulu.webp",
-              "Commercial/nakheel.png",
-              "Commercial/vfs.webp",
-              "Commercial/warnerBros.webp",
+              "/Commercial/bakerHughes.webp",
+              "/Commercial/lulu.webp",
+              "/Commercial/nakheel.png",
+              "/Commercial/vfs.webp",
+              "/Commercial/warnerBros.webp",
             ],
           },
           {
             baseVelocity: 5,
             direction: -1,
             logos: [
-              "infrastructure/abuDhabiPolice.webp",
-              "infrastructure/rta.webp",
-              "infrastructure/twofour54.webp",
-              "infrastructure/tdic.webp",
-              "Commercial/nmc.webp",
+              "/infrastructure/abuDhabiPolice.webp",
+              "/infrastructure/rta.webp",
+              "/infrastructure/twofour54.webp",
+              "/infrastructure/tdic.webp",
+              "/Commercial/nmc.webp",
             ],
           },
         ]}

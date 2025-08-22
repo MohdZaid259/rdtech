@@ -32,7 +32,7 @@ export default function HeroSection() {
     <section
       className="relative min-h-[155vh] xs:min-h-[140vh] md:min-h-screen text-white flex flex-col overflow-hidden"
       style={{
-        backgroundImage: `url('/home/hero/dubai_2.png')`,
+        backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/Home/dubai_2.png)`,
         backgroundPosition: "top",
       }}
     >
