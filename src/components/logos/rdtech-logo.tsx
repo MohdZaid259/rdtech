@@ -7,8 +7,8 @@ export default function RDTechLogo({
   return (
     <div>
       <SafeImage
-        src="/logos/rdtech-logo.png"
-        alt="Logo"
+        src="/Logos/rdtech-logo.png?updatedAt=1755860934597"
+        alt="RDTech Logo"
         width={size}
         height={size}
       />

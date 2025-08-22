@@ -83,8 +83,8 @@ export default function ClientsSection() {
   // Convert categories into rows
   const clientRows = Object.entries(clientCategories).map(([category, logos]) =>
     logos.map((logo) => ({
-      name: logo.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()), // Format name
-      src: `/clients/${category}/${logo}`,
+      name: logo.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+      src: `/Clients/${category}/${logo}`,
     }))
   );
 
@@ -117,7 +117,7 @@ export default function ClientsSection() {
                     height={80}
                     loading="lazy"
                     quality={100}
-                    className="object-contain "
+                    className="object-contain"
                   />
                 </div>
               ))}

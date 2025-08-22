@@ -35,7 +35,7 @@ export default function GlobalCountriesSection() {
             {/* Left Side (Map) */}
             <div className="md:col-span-2">
               <SafeImage
-                src="/uae-map-new.jpg"
+                src="/Home/uae-map.jpg?updatedAt=1755860716884"
                 alt="UAE Map"
                 width={900}
                 height={500}

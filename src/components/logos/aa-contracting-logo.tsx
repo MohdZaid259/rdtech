@@ -7,8 +7,8 @@ export default function AAContractingLogo({
   return (
     <div>
       <SafeImage
-        src="/logos/aa-contracting-logo.png"
-        alt="Logo"
+        src="/Logos/aa-contracting-logo.png?updatedAt=1755860934774"
+        alt="AA Contracting Logo"
         width={size}
         height={size}
       />

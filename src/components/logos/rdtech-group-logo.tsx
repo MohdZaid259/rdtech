@@ -13,15 +13,15 @@ export default function RDTechGroupLogo({
   return (
     <div className="flex items-center gap-1">
       <SafeImage
-        src="/logos/rdtech-group-logo1.png"
-        alt="Logo"
+        src="/Logos/rdtech-group-1.png?updatedAt=1755860934739"
+        alt="RDTech Group Logo"
         width={iconSize}
         height={iconSize}
         className="text-shadow-lg"
       />
       <SafeImage
-        src="/logos/rdtech-group-logo2.png"
-        alt="Logo"
+        src="/Logos/rdtech-group-2.png?updatedAt=1755860934693"
+        alt="RDTech Group Text Logo"
         width={textSize}
         height={textSize}
         className={`brightness-0 text-shadow-lg ${className}`}

@@ -1,4 +1,5 @@
-'use client'
+"use client";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 
 function HeroSection() {
@@ -11,7 +12,7 @@ function HeroSection() {
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url("https://ik.imagekit.io/or8msinzg/rdtech/aboutBg.jpg?tr=q-auto")`,
+          backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/aboutBg.jpg?tr=q-auto)`,
           y,
         }}
       />

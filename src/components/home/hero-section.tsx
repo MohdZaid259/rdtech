@@ -1,10 +1,12 @@
 import { MoveRightIcon, PhoneCallIcon } from "lucide-react";
 
+import AAContractingLogo from "../logos/aa-contracting-logo";
 import { Button } from "@/components/ui/button";
+import CoreGridLogo from "../logos/core-grid-logo";
 import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
+import RDTechLogo from "../logos/rdtech-logo";
 import React from "react";
-import { SafeImage } from "@/components/ui/safe-image";
 
 export default function HeroSection() {
   const words = ["Technology", "Innovation", "Sustainability"];
@@ -12,17 +14,17 @@ export default function HeroSection() {
     {
       name: "AA Contracting",
       description: "Multi-disciplinary Contracting Excellence",
-      logo: "aa-contracting-logo.png",
+      Logo: AAContractingLogo,
     },
     {
       name: "Core Grid",
       description: "Building Automation & Smart Solutions",
-      logo: "core-grid-logo.png",
+      Logo: CoreGridLogo,
     },
     {
       name: "RD Tech",
       description: "Security Systems & ELV/ICT Solutions",
-      logo: "rdtech-logo.png",
+      Logo: RDTechLogo,
     },
   ];
 
@@ -109,13 +111,7 @@ export default function HeroSection() {
                 className="flex flex-col items-center text-center"
               >
                 <div className="h-16 w-16 bg-muted rounded-full flex items-center justify-center p-1">
-                  <SafeImage
-                    src={`/logos/${company.logo}`}
-                    alt={`${company.name} Logo`}
-                    width={100}
-                    height={100}
-                    className="h-full w-full object-contain object-center"
-                  />
+                  <company.Logo />
                 </div>
                 <h3 className="font-semibold mb-2">{company.name}</h3>
                 <p className="text-sm text-gray-500">{company.description}</p>
