@@ -1,10 +1,13 @@
 
+import BackgroundSection from "@/components/about/background";
 import HeroSection from "@/components/about/hero-section";
 import MissionSection from "@/components/about/mission-section";
 import Newsletter from "@/components/about/newsletter";
 import StatsSection from "@/components/about/stats-section";
 import ValuesSection from "@/components/about/values-section";
 import VisionSection from "@/components/about/vision-section";
+import WorkingSection from "@/components/about/working";
+import CEOMessageSection from "@/components/home/ceo-msg-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,8 +30,11 @@ function page() {
     <>
       <HeroSection/>
       <StatsSection/>
+      <BackgroundSection/>
       <MissionSection/>
       <VisionSection/>
+      <CEOMessageSection/>
+      <WorkingSection/>
       <ValuesSection/>
       <Newsletter/>
     </>

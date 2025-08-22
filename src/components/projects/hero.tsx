@@ -1,5 +1,5 @@
-"use client";
-
+'use client' 
+import React from 'react'
 import { motion, useScroll, useTransform } from "framer-motion";
 
 function HeroSection() {
@@ -12,7 +12,7 @@ function HeroSection() {
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/aboutBg.jpg?tr=q-auto)`,
+          backgroundImage: `url("https://ik.imagekit.io/or8msinzg/rdtech/projectBg.jpg?updatedAt=1755849879953")`,
           y,
         }}
       />
@@ -23,16 +23,16 @@ function HeroSection() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-shadow-lg text-shadow-black/50">
-          Building a Legacy of Innovation
+          Turning Vision Into Reality
         </h1>
         <p className="text-white max-w-3xl text-base md:text-lg text-shadow-lg text-shadow-black/50">
-          For over three decades, RDTech Group has been at the forefront of
-          technological innovation, infrastructure excellence, and secure
-          operations in the UAE and beyond.
+            From government institutions to
+            private enterprises, our track record reflects excellence,
+            innovation, and trust across every sector we serve.
         </p>
       </div>
     </section>
-  );
+  )
 }
 
-export default HeroSection;
+export default HeroSection

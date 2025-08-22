@@ -1,6 +1,8 @@
+
 import { Metadata } from "next";
 import ProjectsGrid from "@/components/projects/grid";
 import React from "react";
+import HeroSection from "@/components/projects/hero";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -27,27 +29,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-      {/* Parallex Section */}
-      <section
-        className="relative h-[80vh] bg-fixed bg-center bg-cover"
-        style={{ backgroundImage: "url('/projects/skyline.jpg')" }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
-
-        {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 ">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-shadow-2xs text-shadow-black">
-            Turning Vision Into Reality
-          </h1>
-          <p className="text-white max-w-4xl text-base md:text-lg text-shadow-2xs text-shadow-black">
-            From government institutions to
-            private enterprises, our track record reflects excellence,
-            innovation, and trust across every sector we serve.
-          </p>
-        </div>
-      </section>
-
+      <HeroSection/>
       <ProjectsGrid />
     </>
   );

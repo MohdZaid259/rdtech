@@ -1,7 +1,6 @@
-import { CheckCircle } from "lucide-react";
-import { Image } from "@imagekit/next";
 import React from "react";
 import { SafeImage } from "../ui/safe-image";
+import { CheckCircle } from "lucide-react";
 
 function VisionSection() {
   return (
@@ -12,7 +11,7 @@ function VisionSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-6">
               Our Vision
             </h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-800 mb-6 leading-relaxed">
               To be the most trusted and respected partner for delivering
               innovative, reliable, and future-ready solutions that drive
               safety, efficiency, and performance across industries. We envision
@@ -25,25 +24,25 @@ function VisionSection() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-accent" />
-                <span className="text-sm md:text-base text-gray-700">
+                <span className="text-sm md:text-base text-gray-800">
                   Becoming the Most Trusted Industry Partner
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-accent" />
-                <span className="text-sm md:text-base text-gray-700">
+                <span className="text-sm md:text-base text-gray-800">
                   Setting New Standards of Excellence
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-accent" />
-                <span className="text-sm md:text-base text-gray-700">
+                <span className="text-sm md:text-base text-gray-800">
                   Driving Innovation and Sustainable Growth
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-accent" />
-                <span className="text-sm md:text-base text-gray-700">
+                <span className="text-sm md:text-base text-gray-800">
                   Anticipating and Adapting to Future Needs
                 </span>
               </li>
@@ -52,21 +51,13 @@ function VisionSection() {
           <div className="order-1 md:order-2">
             <div className="relative">
               <SafeImage
-                src="/mission.jpg?updatedAt=1755786638173"
+                src="/mission.jpg"
                 alt="Construction planning"
                 width={600}
                 height={500}
                 quality={100}
                 className="rounded-2xl"
               />
-              {/* <SafeImage
-                  src="/plan.jpg?updatedAt=1755786638241"
-                  alt="Office"
-                  width={300}
-                  height={300}
-                  quality={100}
-                  className="absolute top-1/2 -translate-y-1/2 -right-14 rounded-xl border-8 border-white "
-                /> */}
             </div>
           </div>
         </div>

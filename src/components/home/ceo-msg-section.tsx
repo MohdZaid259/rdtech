@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
 import { Quote } from "lucide-react";
 
 export default function CEOMessageSection() {
@@ -24,49 +23,38 @@ export default function CEOMessageSection() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6">
+      <div className="relative z-10 max-w-4xl mx-auto py-12 px-6">
         <div className="relative">
           {/* Quote Frame - Transparent Background */}
-          <div className="relative bg-transparent border-2 rounded-3xl p-12 backdrop-blur-xs shadow-2xl">
+          <div className="relative bg-transparent border-2 rounded-3xl p-6 px-12 backdrop-blur-xs shadow-2xl">
             {/* Opening Quote Mark */}
-            <div className="absolute -top-2 -left-2 text-6xl font-bold text-white">
-              <Quote className="fill-white rotate-y-180" />
+            <div className="absolute -top-6 -left-8 text-6xl font-bold text-white">
+              <Quote className="fill-white size-16 rotate-y-180" />
             </div>
 
             {/* Content */}
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
-                Our CEO Message
-              </h1>
+            <div className="space-y-2">
 
               <div className="space-y-4 text-lg md:text-xl leading-relaxed">
                 <p className="text-white/90">
-                  We have set Principles and Objectives tailored coincide with
-                  our mission.
-                </p>
-
-                <p className="text-white/90">
-                  In AA, our clients are our priority. Our prosperity and
-                  success is owned to our creative engineers. We can assure you,
-                  you're in good hands once you choose AA
+                  More than projects, we create relationships rooted in trust and integrity.
+                  Excellence is not just a goal—it is the standard we live by.
                 </p>
               </div>
 
               {/* CEO Attribution */}
               <div className="mt-8 pt-6 border-t border-white/20">
                 <p className="text-right font-semibold text-white">
-                  Eng. Khaled Akhozahaya - General Manager
+                  Eng. Khaled Akhozahaya - CEO
                 </p>
               </div>
             </div>
 
             {/* Closing Quote Mark */}
-            <div className="absolute -bottom-2 -right-2 text-6xl font-bold text-white">
-              <Quote className="fill-white" />
+            <div className="absolute -bottom-6 -right-8 text-6xl font-bold text-white">
+              <Quote className="size-16 fill-white" />
             </div>
           </div>
 

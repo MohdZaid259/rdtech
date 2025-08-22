@@ -12,7 +12,7 @@ function MissionSection() {
         <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-start">
           <div className="relative">
             <SafeImage
-              src="https://ik.imagekit.io/or8msinzg/planning.png?updatedAt=1755837494228"
+              src="/planning.png"
               alt="Construction planning"
               width={500}
               height={300}
@@ -20,7 +20,7 @@ function MissionSection() {
               className="rounded-2xl"
             />
             <SafeImage
-              src="/office.jpg?updatedAt=1755838457044"
+              src="/office.jpg"
               alt="Office"
               width={350}
               height={350}
