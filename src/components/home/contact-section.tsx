@@ -44,7 +44,7 @@ export default function ContactSection() {
         {/* Left Side - Contact Info */}
         <div>
           <SafeImage
-            src='https://ik.imagekit.io/or8msinzg/rdtech/contact.jpg?updatedAt=1755849320754'
+            src='/contact.jpg'
             width={400}
             height={400}
             alt="contact img"
