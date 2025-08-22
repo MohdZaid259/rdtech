@@ -1,13 +1,7 @@
 "use client";
 
-import { Mail, MapPin, Phone } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import { FadeIn } from "../ui/fade-in";
-import { Input } from "@/components/ui/input";
 import type React from "react";
-import SectionHeader from "./section-header";
-import { Textarea } from "@/components/ui/textarea";
+import { SafeImage } from "../ui/safe-image";
 
 export default function ContactSection() {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -32,138 +26,69 @@ export default function ContactSection() {
   }
 
   return (
-    <section
-      id="contact"
-      className="min-h-screen flex flex-col items-center py-8 md:py-20 bg-gray-100 overflow-x-hidden"
-    >
-      <div className="w-full container mx-auto">
-        {/* Heading */}
-        <SectionHeader
-          title="Get in Touch"
-          subTitle="Ready to transform your business with cutting-edge technology
-              solutions?
-              <br /> We’re here to help."
-        />
+    <section id="contact" className="relative bg-gradient-to-tr from-blue-950 via-blue-900 to-blue-950 text-white py-16">
+      <div className="absolute -top-14 right-10 ">
+        <h1 
+          className="text-8xl font-bold uppercase tracking-wider inline-block"
+          style={{
+            background: 'linear-gradient(to top, white 0%, white 42%, #172554 42%, #172554 100%)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}
+        >
+          CONTACT US
+        </h1>
+      </div>
+      <div className="max-w-7xl mx-auto px-6 pt-10 grid md:grid-cols-2 gap-12">
+        {/* Left Side - Contact Info */}
+        <div>
+          <SafeImage
+            src='https://ik.imagekit.io/or8msinzg/rdtech/contact.jpg?updatedAt=1755849320754'
+            width={400}
+            height={400}
+            alt="contact img"
+            className="rounded-lg shadow-2xl"
+          />
 
-        {/* Layout */}
-        <div className="px-4 mt-12 w-full grid lg:grid-cols-2 gap-8 items-start">
-          {/* Contact Form */}
-          <FadeIn direction="left" className="h-full">
-            <form
-              onSubmit={handleSubmit}
-              className="p-4 md:p-8 rounded-xl border border-gray-200 bg-white/80 backdrop-blur-sm shadow-md space-y-6 h-full"
-            >
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-slate-600 mb-1"
-                  >
-                    Name
-                  </label>
-                  <Input id="name" required placeholder="Jane Smith" />
-                </div>
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="block text-sm font-medium text-slate-600 mb-1"
-                  >
-                    Company
-                  </label>
-                  <Input id="company" required placeholder="Acme Corp" />
-                </div>
-              </div>
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-slate-600 mb-1"
-                  >
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    required
-                    placeholder="jane@company.com"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-slate-600 mb-1"
-                  >
-                    Phone
-                  </label>
-                  <Input id="phone" placeholder="+971 4 XXX XXXX" />
-                </div>
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-slate-600 mb-1"
-                >
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  required
-                  placeholder="Tell us about your project or requirements..."
-                />
-              </div>
-              <div className="flex justify-end">
-                <Button type="submit" className="px-6">
-                  Send Message
-                </Button>
-              </div>
-            </form>
-          </FadeIn>
-
-          {/* Contact Info & Map */}
-          <FadeIn direction="right">
-            <div className="space-y-6">
-              {/* Info Card */}
-              <div className="p-6 rounded-xl border border-gray-200 bg-white/80 backdrop-blur-sm shadow-md space-y-4">
-                <div className="flex items-center gap-3 text-slate-800">
-                  <Mail className="h-5 w-5 text-primary" />
-                  <a
-                    href="mailto:info@rdtechgroup.ae"
-                    className="tracking-wider hover:underline"
-                  >
-                    info@rdtechgroup.ae
-                  </a>
-                </div>
-                <div className="flex items-center gap-3 text-slate-800">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <a
-                    href="tel:+971426669974"
-                    className="tracking-wide hover:underline"
-                  >
-                    +971 4 XXX XXXX
-                  </a>
-                </div>
-                <div className="flex items-start gap-3 text-slate-800">
-                  <MapPin className="h-5 w-5 text-primary mt-1" />
-                  <div>
-                    Dubai, United Arab Emirates
-                    <br />
-                    Abu Dhabi Office Available
-                  </div>
-                </div>
-              </div>
-
-              {/* Map */}
-              <div className="rounded-xl overflow-hidden border border-gray-200 shadow-md">
-                <iframe
-                  title="RDTech Group Office Map"
-                  src="https://www.google.com/maps?q=AFZ%20Office%201038,%20Ajman%20Free%20Zone,%20UAE&output=embed"
-                  className="w-full h-[280px]"
-                  loading="lazy"
-                ></iframe>
-              </div>
-            </div>
-          </FadeIn>
         </div>
+
+        {/* Right Side - Form */}
+        <form className="space-y-6" onSubmit={handleSubmit}>
+          <div>
+            <label className="block mb-1 text-sm">NAME</label>
+            <input
+              type="text"
+              className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-white py-2"
+            />
+          </div>
+          <div>
+            <label className="block mb-1 text-sm">PHONE NUMBER</label>
+            <input
+              type="text"
+              className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-white py-2"
+            />
+          </div>
+          <div>
+            <label className="block mb-1 text-sm">EMAIL</label>
+            <input
+              type="email"
+              className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-white py-2"
+            />
+          </div>
+          <div>
+            <label className="block mb-1 text-sm">MESSAGE</label>
+            <textarea
+              className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-white py-2 resize-none"
+            />
+          </div>
+          <button
+            type="submit"
+            className="bg-white text-black font-bold px-8 py-2 rounded-full hover:bg-gray-200"
+          >
+            SUBMIT
+          </button>
+        </form>
       </div>
     </section>
   );

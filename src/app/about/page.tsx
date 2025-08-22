@@ -5,6 +5,7 @@ import Newsletter from "@/components/about/newsletter";
 import StatsSection from "@/components/about/stats-section";
 import ValuesSection from "@/components/about/values-section";
 import VisionSection from "@/components/about/vision-section";
+import CEOMessageSection from "@/components/home/ceo-msg-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ function page() {
       <StatsSection/>
       <MissionSection/>
       <VisionSection/>
+      <CEOMessageSection/>
       <ValuesSection/>
       <Newsletter/>
     </>

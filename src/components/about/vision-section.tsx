@@ -57,7 +57,7 @@ function VisionSection() {
                   width={600}
                   height={500}
                   quality={100}
-                  className="rounded-2xl"
+                  className="rounded-2xl shadow-2xl"
                 />
                 {/* <SafeImage
                   src="https://ik.imagekit.io/or8msinzg/rdtech/plan.jpg?updatedAt=1755786638241"
