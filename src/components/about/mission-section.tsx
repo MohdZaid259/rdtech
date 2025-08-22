@@ -1,6 +1,6 @@
 import React from 'react'
 import { CheckCircle } from "lucide-react";
-import { Image } from '@imagekit/next';
+import { SafeImage } from '../ui/safe-image';
 
 function MissionSection() {
   return (
@@ -8,8 +8,7 @@ function MissionSection() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-start">
             <div className="relative">
-              <Image
-                urlEndpoint={process.env.NEXT_PUBLIC_URL_ENDPOINT}
+              <SafeImage
                 src="https://ik.imagekit.io/or8msinzg/planning.png?updatedAt=1755837494228"
                 alt="Construction planning"
                 width={500}
@@ -17,8 +16,7 @@ function MissionSection() {
                 quality={100}
                 className="rounded-2xl"
               />
-              <Image
-                urlEndpoint={process.env.NEXT_PUBLIC_URL_ENDPOINT}
+              <SafeImage
                 src="https://ik.imagekit.io/or8msinzg/rdtech/office.jpg?updatedAt=1755838457044"
                 alt="Office"
                 width={350}
