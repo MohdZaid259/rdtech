@@ -1,4 +1,3 @@
-
 import React from "react";
 import { SafeImage } from "../ui/safe-image";
 
@@ -18,13 +17,14 @@ export default function RDTechGroupLogo({
         alt="Logo"
         width={iconSize}
         height={iconSize}
+        className="text-shadow-lg"
       />
       <SafeImage
         src="/logos/rdtech-group-logo2.png"
         alt="Logo"
         width={textSize}
         height={textSize}
-        className={`${className} brightness-0`}
+        className={`brightness-0 text-shadow-lg ${className}`}
       />
     </div>
   );

@@ -1,4 +1,3 @@
-
 import "./globals.css";
 
 import { Inter, Poppins } from "next/font/google";

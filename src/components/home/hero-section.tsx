@@ -1,87 +1,118 @@
-"use client";
+import { MoveRightIcon, PhoneCallIcon } from "lucide-react";
 
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
-import { Play } from "lucide-react";
+import React from "react";
+import { SafeImage } from "@/components/ui/safe-image";
 
 export default function HeroSection() {
-  const images = [
-    "/home/hero/alAususHero.png",
-    "/home/hero/dubai_2.png",
-    "/home/hero/rdTechHero.png",
+  const words = ["Technology", "Innovation", "Sustainability"];
+  const companies = [
+    {
+      name: "AA Contracting",
+      description: "Multi-disciplinary Contracting Excellence",
+      logo: "aa-contracting-logo.png",
+    },
+    {
+      name: "Core Grid",
+      description: "Building Automation & Smart Solutions",
+      logo: "core-grid-logo.png",
+    },
+    {
+      name: "RD Tech",
+      description: "Security Systems & ELV/ICT Solutions",
+      logo: "rdtech-logo.png",
+    },
   ];
-
-  const [current, setCurrent] = useState(0);
-
-  // Auto-slide every 4s
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [images.length]);
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      data-header-theme="light"
+      className="relative min-h-screen text-white flex flex-col overflow-hidden"
+      style={{
+        backgroundImage: `url('/home/hero/dubai_2.png')`,
+        backgroundPosition: "top",
+      }}
     >
-      {/* Background images layered */}
-      {images.map((src, idx) => (
-        <div
-          key={idx}
-          className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 ${
-            current === idx ? "opacity-100" : "opacity-0"
-          } ${idx === 2 ? "bg-bottom" : "bg-top"}`}
-          style={{ backgroundImage: `url('${src}')` }}
-        />
-      ))}
+      {/* Color Overlay */}
+      <div className="absolute z-10 inset-0 bg-gradient-to-br from-blue-800 via-blue-900 to-blue-950 opacity-75" />
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
-
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <div className="max-w-4xl mx-auto flex flex-col mt-18 md:mt-24 items-center justify-center">
-          <h1 className="font-mono text-4xl md:text-6xl font-bold mb-6 text-shadow-lg text-shadow-black/20">
-            Shaping the Future of{" "}
-            <span className="block text-accent animate-pulse-glow">
-              Infrastructure & Technology
-            </span>
+      <div className="h-full w-full top-0 absolute z-20 flex flex-col items-center justify-start max-md:mt-20">
+        {/* Hero Section */}
+        <div className="h-[40%] sm:h-full flex flex-col items-center justify-center text-center px-6">
+          <h1 className="text-accent font-bold text-xl px-0 mt-2 tracking-wide">
+            Shaping the Future of
           </h1>
-
-          <p className="text-xl md:text-2xl mb-8 text-muted max-w-3xl mx-auto font-medium text-shadow-lg text-shadow-black/20">
-            From world-class contracting to intelligent buildings and advanced security, RT Tech Group delivers integrated solutions that power progress across the UAE and beyond.
+          <FlipWords
+            words={words}
+            className="text-3xl xs:text-5xl sm:text-6xl font-extrabold tracking-wide"
+          />
+          <p className="max-w-2xl mt-4 text-muted">
+            One vision, three powers — ICT, ELV & enterprise solutions shaping
+            the future for 30+ years.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Button
               asChild
-              variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-primary hover:text-white hover:border-transparent px-8 py-4 text-lg bg-transparent hover-lift cursor-pointer shadow-lg shadow-black/15 flex items-center"
+              className="text-base font-semibold bg-accent hover:bg-accent shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
             >
-              <Link className="flex items-center gap-2" href="/#services">
+              <Link href="/#services" className="flex items-center gap-2">
                 <span>Explore Our Services</span>
-                <Play className="h-5 w-5" />
+                <MoveRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              variant="default"
+              size="lg"
+              className="text-base text-blue-950 font-semibold bg-white hover:bg-white backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              <Link href="/#contact" className="flex items-center gap-2">
+                <span>Contact Us</span>
+                <PhoneCallIcon className="h-5 w-5" />
               </Link>
             </Button>
           </div>
         </div>
-      </div>
 
-      {/* Dash Navigation */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 sm:left-20 flex gap-2 z-20">
-        {images.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrent(idx)}
-            className={`h-1 rounded-full transition-all duration-300 cursor-pointer ${
-              current === idx ? "bg-white w-6 sm:w-8" : "bg-white/50 w-3 sm:w-5"
-            }`}
-          />
-        ))}
+        {/* Companies Section */}
+        <div className="relative w-full max-md:mt-20">
+          {/* Wave Shape */}
+          {/* <svg
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            className="absolute -top-20 left-0 w-full fill-white h-30 z-30"
+          >
+            <path
+              d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z"
+              className="fill-inherit"
+            ></path>
+          </svg> */}
+
+          {/* White Box with content */}
+          <div className="relative bg-white text-gray-800 pt-10 pb-8 px-10 grid grid-cols-1 md:grid-cols-3 gap-10 z-10">
+            {companies.map((company) => (
+              <div
+                key={company.name}
+                className="flex flex-col items-center text-center"
+              >
+                <div className="h-16 w-16 bg-muted rounded-full flex items-center justify-center p-1">
+                  <SafeImage
+                    src={`/logos/${company.logo}`}
+                    alt={`${company.name} Logo`}
+                    width={100}
+                    height={100}
+                    className="h-full w-full object-contain object-center"
+                  />
+                </div>
+                <h3 className="font-semibold mb-2">{company.name}</h3>
+                <p className="text-sm text-gray-500">{company.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
