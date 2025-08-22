@@ -44,16 +44,15 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto flex flex-col mt-18 md:mt-24 items-center justify-center">
-          <h1 className="font-mono text-4xl md:text-7xl font-bold mb-6 text-shadow-lg text-shadow-black/20">
-            Leading Technology{" "}
+          <h1 className="font-mono text-4xl md:text-6xl font-bold mb-6 text-shadow-lg text-shadow-black/20">
+            Shaping the Future of{" "}
             <span className="block text-accent animate-pulse-glow">
-              Solutions Provider
+              Infrastructure & Technology
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl mb-8 text-muted max-w-2xl mx-auto font-medium text-shadow-lg text-shadow-black/20">
-            Over 30 years at the forefront of technological innovation in ICT
-            and ELV, serving enterprises across UAE and beyond.
+          <p className="text-xl md:text-2xl mb-8 text-muted max-w-3xl mx-auto font-medium text-shadow-lg text-shadow-black/20">
+            From world-class contracting to intelligent buildings and advanced security, RT Tech Group delivers integrated solutions that power progress across the UAE and beyond.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">

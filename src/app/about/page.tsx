@@ -1,5 +1,10 @@
 
-import About from "@/components/about";
+import HeroSection from "@/components/about/hero-section";
+import MissionSection from "@/components/about/mission-section";
+import Newsletter from "@/components/about/newsletter";
+import StatsSection from "@/components/about/stats-section";
+import ValuesSection from "@/components/about/values-section";
+import VisionSection from "@/components/about/vision-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,9 +24,14 @@ export const metadata: Metadata = {
 
 function page() {
   return (
-    <main>
-      <About />
-    </main>
+    <>
+      <HeroSection/>
+      <StatsSection/>
+      <MissionSection/>
+      <VisionSection/>
+      <ValuesSection/>
+      <Newsletter/>
+    </>
   );
 }
 

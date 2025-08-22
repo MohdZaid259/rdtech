@@ -18,7 +18,7 @@ import RDTechLogo from "../logos/rdtech-logo";
 
 const companies = [
   {
-    name: "RDTech FZE",
+    name: "RDTech",
     description: "Security Systems & ELV/ICT Solutions",
     logo: RDTechLogo,
     href: "/companies/rdtech-fze",

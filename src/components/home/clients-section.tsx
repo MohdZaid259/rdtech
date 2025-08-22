@@ -90,7 +90,7 @@ export default function ClientsSection() {
   );
 
   return (
-    <section className="relative py-8 md:py-20 overflow-hidden bg-gray-100">
+    <section className="relative py-8 md:py-20 bg-blue-950 overflow-hidden ">
       <SectionHeader
         title="Our Clients"
         subTitle="Trusted by leading organizations across industries for mission-critical technology solutions."
@@ -107,7 +107,7 @@ export default function ClientsSection() {
               {logos.map((logo, i) => (
                 <div
                   key={`${rowIndex}-${i}`}
-                  className="flex-shrink-0 w-34 h-17 md:w-40 md:h-20 relative mx-2 flex items-center justify-center bg-white rounded-md p-2 overflow-hidden"
+                  className="flex-shrink-0 w-34 h-17 md:w-40 md:h-20 relative mx-2 flex shadow shadow-black/60 items-center justify-center  bg-white rounded-md p-2 overflow-hidden"
                 >
                   <SafeImage
                     src={logo.src}
@@ -116,7 +116,7 @@ export default function ClientsSection() {
                     height={80}
                     loading="lazy"
                     quality={100}
-                    className="object-contain"
+                    className="object-contain "
                   />
                 </div>
               ))}
