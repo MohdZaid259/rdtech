@@ -28,7 +28,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative min-h-screen text-white flex flex-col overflow-hidden"
+      className="relative min-h-[155vh] xs:min-h-[140vh] md:min-h-screen text-white flex flex-col overflow-hidden"
       style={{
         backgroundImage: `url('/home/hero/dubai_2.png')`,
         backgroundPosition: "top",
@@ -39,7 +39,7 @@ export default function HeroSection() {
 
       <div className="h-full w-full top-0 absolute z-20 flex flex-col items-center justify-start max-md:mt-20">
         {/* Hero Section */}
-        <div className="h-[40%] sm:h-full flex flex-col items-center justify-center text-center px-6">
+        <div className="h-[30%] md:h-full max-md:max-h-[60vh] flex flex-col items-center justify-center text-center px-6">
           <h1 className="text-accent font-bold text-xl px-0 mt-2 tracking-wide">
             Shaping the Future of
           </h1>
@@ -55,7 +55,7 @@ export default function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="text-base font-semibold bg-accent hover:bg-accent shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+              className="text-base text-primary font-semibold bg-accent hover:bg-accent shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
             >
               <Link href="/#services" className="flex items-center gap-2">
                 <span>Explore Our Services</span>
@@ -90,6 +90,16 @@ export default function HeroSection() {
               className="fill-inherit"
             ></path>
           </svg> */}
+          <svg
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            className="absolute -top-8 left-0 w-full fill-white h-10 z-30"
+          >
+            <path
+              d="M0,80 L1200,0 L1200,120 L0,120 Z"
+              className="fill-inherit"
+            ></path>
+          </svg>
 
           {/* White Box with content */}
           <div className="relative bg-white text-gray-800 pt-10 pb-8 px-10 grid grid-cols-1 md:grid-cols-3 gap-10 z-10">

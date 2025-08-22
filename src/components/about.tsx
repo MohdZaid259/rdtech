@@ -1,5 +1,12 @@
+import {
+  CheckCircle,
+  Heart,
+  Leaf,
+  Lightbulb,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 
-import { CheckCircle, Leaf, Lightbulb, ShieldCheck, Users, Heart } from "lucide-react";
 import Newsletter from "./newsletter";
 import { SafeImage } from "./ui/safe-image";
 
@@ -55,7 +62,7 @@ export default function About() {
           <p className="text-white max-w-4xl text-base md:text-lg text-shadow-2xs text-shadow-black">
             For over three decades, RDTech Group has been at the forefront of
             technological innovation, infrastructure excellence, and secure
-            operations in the UAE and beyond. 
+            operations in the UAE and beyond.
           </p>
         </div>
       </section>
@@ -68,25 +75,33 @@ export default function About() {
               <div className="md:text-4xl text-3xl font-bold text-shadow-black/30 text-shadow-sm text-accent mb-2">
                 150+
               </div>
-              <div className="text-black text-base md:text-lg">Complete Projects</div>
+              <div className="text-black text-base md:text-lg">
+                Complete Projects
+              </div>
             </div>
             <div className="text-center">
               <div className="md:text-4xl text-3xl font-bold text-shadow-black/30 text-shadow-sm text-accent mb-2">
                 100+
               </div>
-              <div className="text-black text-base md:text-lg">Team Members</div>
+              <div className="text-black text-base md:text-lg">
+                Team Members
+              </div>
             </div>
             <div className="text-center">
               <div className="md:text-4xl text-3xl font-bold text-shadow-black/30 text-shadow-sm text-accent mb-2">
                 200+
               </div>
-              <div className="text-black text-base md:text-lg">Customer Reviews</div>
+              <div className="text-black text-base md:text-lg">
+                Customer Reviews
+              </div>
             </div>
             <div className="text-center">
               <div className="md:text-4xl text-3xl font-bold text-shadow-black/30 text-shadow-sm text-accent mb-2">
                 30+
               </div>
-              <div className="text-black text-base md:text-lg">Wining Award</div>
+              <div className="text-black text-base md:text-lg">
+                Wining Award
+              </div>
             </div>
           </div>
           <div className="text-center my-10">
@@ -241,7 +256,9 @@ export default function About() {
                 <h3 className="text-lg font-semibold text-gray-800">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 -mt-2 md:-mt-0 text-sm">{value.description}</p>
+                <p className="text-gray-600 -mt-2 md:-mt-0 text-sm">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>

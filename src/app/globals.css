@@ -44,7 +44,7 @@ html {
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --breakpoint-xs: 25rem;
+  --breakpoint-xs: 20rem;
 }
 
 :root {
@@ -63,7 +63,7 @@ html {
   --popover-foreground: #000000; /* Black text */
 
   /* Primary & Secondary */
-  --primary: #007cf7; /* Blue */
+  --primary: #172554; /* Blue */
   --primary-foreground: #ffffff; /* White text on blue */
   --secondary: #e5e7eb; /* Light gray */
   --secondary-foreground: #000000; /* Black text */
@@ -71,7 +71,7 @@ html {
   /* Muted & Accent */
   --muted: #f3f4f6; /* Light gray background */
   --muted-foreground: #4b5563; /* Dark gray text */
-  --accent: #d4af37; /* Gold */
+  --accent: oklch(79.5% 0.184 86.047); /* Gold */
   --accent-foreground: #ffffff;
 
   /* Status Colors */
@@ -80,11 +80,11 @@ html {
   /* Borders & Inputs */
   --border: #e5e7eb;
   --input: #e5e7eb;
-  --ring: #007cf7;
+  --ring: #172554;
 
   /* Charts */
-  --chart-1: #007cf7; /* Blue */
-  --chart-2: #d4af37; /* Gold */
+  --chart-1: #172554; /* Blue */
+  --chart-2: oklch(79.5% 0.184 86.047); /* Gold */
   --chart-3: #e5e7eb; /* Light gray */
   --chart-4: #60a5fa; /* Light blue */
   --chart-5: #facc15; /* Yellow */
@@ -92,12 +92,12 @@ html {
   /* Sidebar */
   --sidebar: #ffffff;
   --sidebar-foreground: #000000; /* Black text */
-  --sidebar-primary: #007cf7;
+  --sidebar-primary: #172554;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #d4af37;
+  --sidebar-accent: oklch(79.5% 0.184 86.047);
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #e5e7eb;
-  --sidebar-ring: #007cf7;
+  --sidebar-ring: #172554;
 }
 
 @layer base {
@@ -147,6 +147,6 @@ html {
 
 /* blue + gold + white
 Background: #FFFFFF
-Primary Blue: #007cf7 (or your brand blue)
-Accent Gold: #D4AF37
-Secondary Elements: #E5E7EB */
+Primary Blue: #172554 (or your brand blue)
+Accent Gold: oklch(79.5% 0.184 86.047)
+Secondary Elements: #E5E7EB */
