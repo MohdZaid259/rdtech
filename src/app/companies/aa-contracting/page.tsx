@@ -4,7 +4,9 @@ import ClientsSection from "@/components/companies/clients-section";
 import ContactSection from "@/components/companies/contact-section";
 import HeroSection from "@/components/companies/hero-section";
 import { Metadata } from "next";
+import ProjectsSection from "@/components/companies/projects-section";
 import ServicesSection from "@/components/companies/services-section";
+import { title } from "process";
 
 export const metadata: Metadata = {
   title: "AA Contracting | Al Ausus Al Arbaa General Contracting",
@@ -34,61 +36,124 @@ export default function page() {
       title: "Civil Works",
       description:
         "Comprehensive civil engineering solutions including structural, road, and infrastructure development with a focus on durability and safety.",
-      image: "",
+      image: "civil.jpg",
     },
     {
       title: "Electromechanical Works",
       description:
         "Expertise in electrical and mechanical systems, covering installation, commissioning, and maintenance of essential building services.",
-      image: "",
+      image: "electromechanical-works.jpg",
     },
     {
       title: "Preliminary Investigations",
       description:
         "Thorough site surveys, feasibility studies, and initial assessments to ensure well-informed decision-making before project initiation.",
-      image: "",
+      image: "investigation.webp",
     },
     {
       title: "Environment Assessment",
       description:
         "Detailed environmental impact studies and sustainability evaluations to ensure compliance with regulations and eco-friendly practices.",
-      image: "",
+      image: "environment.jpg",
     },
     {
       title: "Detailed Designs",
       description:
         "Precise architectural and engineering designs tailored to project needs, ensuring efficiency, accuracy, and innovation.",
-      image: "",
+      image: "design.jpg",
     },
     {
       title: "Quality Assurance",
       description:
         "Rigorous testing, monitoring, and control measures to maintain the highest standards of quality across all project phases.",
-      image: "",
+      image: "quality.jpg",
     },
     {
       title: "Quantity Surveying and Estimating",
       description:
         "Accurate cost estimation, budgeting, and financial planning to deliver projects on time and within budget constraints.",
-      image: "",
+      image: "surveying.jpg",
     },
     {
       title: "Preparation of Contract Documents",
       description:
         "Comprehensive contract documentation including tender preparation, specifications, and legal compliance to support smooth execution.",
-      image: "",
+      image: "preparation-documents.jpg",
     },
     {
       title: "Project Management",
       description:
         "End-to-end project planning, execution, monitoring, and delivery with a focus on efficiency, risk management, and timely completion.",
-      image: "",
+      image: "project-management.webp",
     },
     {
       title: "Construction Supervision",
       description:
         "On-site supervision and oversight ensuring that all construction activities meet design specifications, safety standards, and deadlines.",
-      image: "",
+      image: "supervision.webp",
+    },
+  ];
+
+  const projects = [
+    {
+      name: "UAEU",
+      image: "uaeu.png",
+    },
+    {
+      name: "university",
+      image: "university.webp",
+    },
+    {
+      name: "tawam",
+      image: "tawam.png",
+    },
+    {
+      name: "school",
+      image: "school.png",
+    },
+    {
+      name: "post Office",
+      image: "postOffice.webp",
+    },
+    {
+      name: "Islamic",
+      image: "islamic.png",
+    },
+    {
+      name: "Abu Dhabi",
+      image: "abudhabi.png",
+    },
+    {
+      name: "challet",
+      image: "challet.png",
+    },
+    {
+      name: "alain",
+      image: "alain.png",
+    },
+    {
+      name: "mosque",
+      image: "mosque.png",
+    },
+    {
+      name: "alsanaiya",
+      image: "alsanaiya.png",
+    },
+    {
+      name: "cultural",
+      image: "cultural.png",
+    },
+    {
+      name: "minors",
+      image: "minors.png",
+    },
+    {
+      name: "almarkhaniya",
+      image: "almarkhaniya.png",
+    },
+    {
+      name: "aldhaher",
+      image: "aldhaher.webp",
     },
   ];
 
@@ -98,7 +163,7 @@ export default function page() {
         companyName="AA Contracting"
         slogan="Al Ausus Al Arbaa General Contracting"
         description="Delivering comprehensive construction and contracting services with precision and reliability. Building the infrastructure of tomorrow across the UAE."
-        backgroundImage="/Companies/AA%20Contracting/crane_2.jpg"
+        backgroundImage="/Companies/AA%20Contracting/crane_2.jpg?updatedAt=1755876243488"
         companyLogo={<AAContractingLogo />}
         projectsLink="/companies/aa-contracting/#projects"
         websiteLink=""
@@ -126,6 +191,8 @@ export default function page() {
         services={services}
         companyName="AA%20Contracting"
       />
+
+      <ProjectsSection companyName="aaProjects" projects={projects} />
 
       <ClientsSection
         title="Building Trust With Every Project"

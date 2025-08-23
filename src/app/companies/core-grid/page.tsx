@@ -4,6 +4,7 @@ import ContactSection from "@/components/companies/contact-section";
 import CoreGridLogo from "@/components/logos/core-grid-logo";
 import HeroSection from "@/components/companies/hero-section";
 import { Metadata } from "next";
+import ProjectsSection from "@/components/companies/projects-section";
 import ServicesSection from "@/components/companies/services-section";
 
 export const metadata: Metadata = {
@@ -34,49 +35,100 @@ export default function page() {
       title: "User Interface",
       description:
         "Intuitive and user-friendly interfaces that provide seamless interaction and control of automation systems across devices.",
-      image: "",
+      image: "user-interface.webp",
     },
     {
       title: "Room Automation",
       description:
         "Smart solutions for lighting, temperature, and appliance control, enhancing comfort, convenience, and energy efficiency in any room.",
-      image: "",
+      image: "room-automation.webp",
     },
     {
       title: "Lighting Control",
       description:
         "Advanced lighting management systems enabling dimming, scheduling, and mood-setting for residential, commercial, or industrial spaces.",
-      image: "",
+      image: "lightning-control.jpg",
     },
     {
       title: "HVAC Control",
       description:
         "Integrated heating, ventilation, and air conditioning control for optimized climate management, improved efficiency, and reduced energy costs.",
-      image: "",
+      image: "HAVC.webp",
     },
     {
       title: "I/O Controller",
       description:
         "Reliable input/output control devices that manage communication between field equipment and central automation systems.",
-      image: "",
+      image: "io-control.png",
     },
     {
       title: "Energy Management & Metering",
       description:
         "Smart metering and monitoring systems that track energy consumption, reduce waste, and ensure sustainable energy usage.",
-      image: "",
+      image: "energy-management.webp",
     },
     {
       title: "Gateways",
       description:
         "Secure and scalable gateways enabling seamless integration between different automation devices and communication protocols.",
-      image: "",
+      image: "gateways.webp",
     },
     {
       title: "Network Infrastructure",
       description:
         "Robust networking solutions designed to support high-performance automation systems with reliability and security.",
-      image: "",
+      image: "network-infrastructure.webp",
+    },
+  ];
+
+  const projects = [
+    {
+      name: "sharjah",
+      image: "sharjah.webp",
+    },
+    {
+      name: "residence",
+      image: "residence.webp",
+    },
+    {
+      name: "homes",
+      image: "homes.webp",
+    },
+    {
+      name: "expo",
+      image: "expo.webp",
+    },
+    {
+      name: "ministry",
+      image: "ministry.webp",
+    },
+    {
+      name: "azizi",
+      image: "azizi.webp",
+    },
+    {
+      name: "platinum",
+      image: "platinum.webp",
+    },
+    {
+      name: "conrad",
+      image: "conrad.webp",
+    },
+    {
+      name: "celia",
+      image: "celia.webp",
+    },
+    {
+      name: "regalia",
+      image: "regalia.webp",
+    },
+    {
+      name: "miramar",
+      image: "miramar.webp",
+    },
+    {
+      name: "abu",
+      image: "abu.webp",
     },
   ];
 
@@ -114,6 +166,8 @@ export default function page() {
         services={services}
         companyName="Core%20Grid"
       />
+
+      <ProjectsSection companyName="coreProjects" projects={projects} />
 
       <ClientsSection
         title="Empowering Smart Partnerships"

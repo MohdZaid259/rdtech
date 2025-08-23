@@ -3,6 +3,7 @@ import ClientsSection from "@/components/companies/clients-section";
 import ContactSection from "@/components/companies/contact-section";
 import HeroSection from "@/components/companies/hero-section";
 import { Metadata } from "next";
+import ProjectsSection from "@/components/companies/projects-section";
 import RDTechLogo from "@/components/logos/rdtech-logo";
 import React from "react";
 import ServicesSection from "@/components/companies/services-section";
@@ -35,31 +36,98 @@ export default function page() {
       title: "Security & RMS",
       description:
         "Comprehensive security systems and Remote Monitoring Solutions (RMS) to ensure safety, surveillance, and centralized control for enterprises and facilities.",
-      image: "/securityRMS.webp",
+      image: "/security.webp",
     },
     {
       title: "Audio Visuals & IP TV",
       description:
         "State-of-the-art audio-visual systems and IPTV solutions delivering immersive experiences for entertainment, corporate communication, and hospitality sectors.",
-      image: "",
+      image: "audio-visuals.webp",
     },
     {
       title: "Network & Communication",
       description:
         "Robust networking and communication infrastructure providing seamless connectivity, high-speed data transfer, and reliable communication channels.",
-      image: "",
+      image: "network-communication.webp",
     },
     {
       title: "Structured Cabling",
       description:
         "Standardized cabling systems that support data, voice, and multimedia, ensuring scalability, flexibility, and easy maintenance for businesses.",
-      image: "",
+      image: "structured-cabling.webp",
     },
     {
       title: "Enterprise Computing",
       description:
         "High-performance computing solutions including servers, storage, and virtualization technologies to power enterprise applications and operations.",
-      image: "",
+      image: "enterprise-computing.png",
+    },
+  ];
+
+  const projects = [
+    {
+      name: "rta",
+      image: "rta.webp",
+    },
+    {
+      name: "zayed",
+      image: "zayed.webp",
+    },
+    {
+      name: "trade",
+      image: "trade.webp",
+    },
+    {
+      name: "palace",
+      image: "palace.webp",
+    },
+    {
+      name: "palm",
+      image: "palm.webp",
+    },
+    {
+      name: "mazagon",
+      image: "mazagon.webp",
+    },
+    {
+      name: "khalidiya",
+      image: "khalidiya.webp",
+    },
+    {
+      name: "ferrari",
+      image: "ferrari.webp",
+    },
+    {
+      name: "marina",
+      image: "marina.webp",
+    },
+    {
+      name: "cargo",
+      image: "cargo.webp",
+    },
+    {
+      name: "dubai mall",
+      image: "dubaiMall.webp",
+    },
+    {
+      name: "emirates",
+      image: "emirates.webp",
+    },
+    {
+      name: "etehad",
+      image: "etehad.webp",
+    },
+    {
+      name: "burj Al Arab",
+      image: "burjAlArab.webp",
+    },
+    {
+      name: "atlantis",
+      image: "atlantis.webp",
+    },
+    {
+      name: "burj khalifa",
+      image: "burjKhalifa.webp",
     },
   ];
 
@@ -97,6 +165,8 @@ export default function page() {
         services={services}
         companyName="RDTech"
       />
+
+      <ProjectsSection companyName="rdProjects" projects={projects} />
 
       <ClientsSection
         title="Trusted By Industry Leaders"
