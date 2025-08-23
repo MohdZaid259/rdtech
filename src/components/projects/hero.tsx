@@ -12,7 +12,7 @@ function HeroSection() {
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url("https://ik.imagekit.io/or8msinzg/rdtech/projectBg.jpg?updatedAt=1755849879953")`,
+          backgroundImage: `url("https://ik.imagekit.io/or8msinzg/rdtech/projectPage/skyline.jpg")`,
           y,
         }}
       />

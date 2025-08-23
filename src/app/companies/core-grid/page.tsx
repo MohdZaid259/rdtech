@@ -5,6 +5,7 @@ import CoreGridLogo from "@/components/logos/core-grid-logo";
 import HeroSection from "@/components/companies/hero-section";
 import { Metadata } from "next";
 import ServicesSection from "@/components/companies/services-section";
+import CoreGridOverview from "@/components/companies/overview";
 
 export const metadata: Metadata = {
   title: "CoreGrid | Building Automation & Smart Solutions",
@@ -46,12 +47,12 @@ export default function page() {
         companyName="CoreGrid Solutions"
         slogan="Building Automation & Smart Solutions"
         description="Transforming buildings into intelligent, efficient spaces through cutting-edge automation and control systems. Creating smarter environments for better living and working."
-        backgroundImage="/general/coregrid/realState.png"
+        backgroundImage="https://ik.imagekit.io/or8msinzg/rdtech/rdtechBg2.jpeg?updatedAt=1755870280828"
         companyLogo={<CoreGridLogo />}
         projectsLink="/companies/core-grid/#projects"
         websiteLink="https://www.loytec.com"
       />
-
+      <CoreGridOverview/>
       <AboutSection
         title="About CoreGrid Solutions"
         description={[

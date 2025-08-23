@@ -59,7 +59,7 @@ const features = [
 
 export default function WhyRDTechGroup() {
   return (
-    <section className="md:py-20 py-8 w-full bg-gray-100">
+    <section className="md:py-20 py-8 w-full bg-blue-50">
       {/* Section Header */}
       <SectionHeader
         title="Why RDTech Group"

@@ -30,28 +30,27 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative min-h-[155vh] xs:min-h-[140vh] md:min-h-screen text-white flex flex-col overflow-hidden"
+      className="relative min-h-[155vh] xs:min-h-[140vh] md:min-h-screen text-white flex flex-col overflow-hidden bg-cover bg-fixed"
       style={{
-        backgroundImage: `url('/home/hero/dubai_2.png')`,
-        backgroundPosition: "top",
+        backgroundImage: `url('https://ik.imagekit.io/or8msinzg/rdtech/aaBg.jpeg?updatedAt=1755786638153')`,
+        // backgroundPosition: "top",
       }}
     >
       {/* Color Overlay */}
-      <div className="absolute z-10 inset-0 bg-gradient-to-br from-blue-800 via-blue-900 to-blue-950 opacity-75" />
+      {/* <div className="absolute z-10 inset-0 bg-gradient-to-br from-blue-800 via-blue-900 to-blue-950 opacity-75" /> */}
 
       <div className="h-full w-full top-0 absolute z-20 flex flex-col items-center justify-start max-md:mt-20">
         {/* Hero Section */}
         <div className="h-[30%] md:h-full max-md:max-h-[60vh] flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-accent font-bold text-xl px-0 mt-2 tracking-wide">
+          <h1 className="text-accent font-bold text-xl px-0 mt-2 text-shadow-xs text-shadow-black/20 tracking-wide">
             Shaping the Future of
           </h1>
           <FlipWords
             words={words}
-            className="text-3xl xs:text-5xl sm:text-6xl font-extrabold tracking-wide"
+            className="text-3xl xs:text-5xl sm:text-6xl text-shadow-xs text-shadow-black/20 font-extrabold tracking-wide"
           />
-          <p className="max-w-2xl mt-4 text-muted">
-            One vision, three powers — ICT, ELV & enterprise solutions shaping
-            the future for 30+ years.
+          <p className="max-w-2xl mt-4 text-muted  text-shadow-xs text-shadow-black/20">
+            Constructing, Protecting, and Connecting the Future through Technology and Expertise
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Button
@@ -82,7 +81,7 @@ export default function HeroSection() {
         {/* Companies Section */}
         <div className="relative w-full max-md:mt-20">
           {/* Wave Shape */}
-          {/* <svg
+          <svg
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
             className="absolute -top-20 left-0 w-full fill-white h-30 z-30"
@@ -91,17 +90,17 @@ export default function HeroSection() {
               d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z"
               className="fill-inherit"
             ></path>
-          </svg> */}
-          <svg
+          </svg>
+          {/* <svg
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
-            className="absolute -top-8 left-0 w-full fill-white h-10 z-30"
+            className="absolute -top-0 left-0 w-full fill-white h-10 z-30"
           >
             <path
               d="M0,80 L1200,0 L1200,120 L0,120 Z"
               className="fill-inherit"
             ></path>
-          </svg>
+          </svg> */}
 
           {/* White Box with content */}
           <div className="relative bg-white text-gray-800 pt-10 pb-8 px-10 grid grid-cols-1 md:grid-cols-3 gap-10 z-10">

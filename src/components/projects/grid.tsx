@@ -65,9 +65,9 @@ export default function ProjectsGrid() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                    <h3 className="text-white text-shadow-2xs text-shadow-black font-bold text-lg">
+                    {/* <h3 className="text-white text-shadow-2xs text-shadow-black font-bold text-lg">
                       {project.title.split(" – ")[0]}
-                    </h3>
+                    </h3> */}
                     <div className="flex text-shadow-2xs text-shadow-black justify-between items-center">
                       <p className="text-white/80 text-sm">
                         {project.location}
@@ -83,7 +83,7 @@ export default function ProjectsGrid() {
                 </div>
                 <div className="p-4 max-md:pt-0 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-bold text-xl mb-2">{project.title}</h3>
+                    <h3 className="font-bold text-xl mb-2">{project.title.split(" – ")[0]}</h3>
                     <p className="text-muted-foreground mb-4">
                       {project.description}
                     </p>

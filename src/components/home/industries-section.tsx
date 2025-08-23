@@ -74,7 +74,7 @@ const industries = [
 
 export function IndustriesSection() {
   return (
-    <section className="py-8 md:py-20 bg-gray-100">
+    <section className="py-8 md:py-20 bg-blue-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <SectionHeader

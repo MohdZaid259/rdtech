@@ -26,7 +26,7 @@ export default function HeroSection({
 }: Readonly<HeroSectionProps>) {
   return (
     <section
-      className="relative min-h-screen flex items-center bg-fixed bg-cover justify-center overflow-hidden py-12"
+      className="relative min-h-screen flex items-center bg-fixed bg-cover bg-bottom bg-no-repeat justify-center overflow-hidden py-12"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       {/* Overlay */}

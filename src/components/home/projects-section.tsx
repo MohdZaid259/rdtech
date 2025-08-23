@@ -203,7 +203,7 @@ export default function ProjectsSection() {
                       {project.services.map((service) => (
                         <span
                           key={service}
-                          className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                          className="bg-blue-50 text-gray-700 px-3 py-1 rounded-full text-xs"
                         >
                           {service}
                         </span>

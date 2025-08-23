@@ -19,7 +19,7 @@ export default function WeCareSection() {
     {
       icon: Building,
       title: "Safe City",
-      thumbnail: "/Home/We%20Care/care1.webp?updatedAt=1755865152632",
+      thumbnail: "/mep.jpg",
     },
     {
       icon: Plane,

@@ -36,7 +36,7 @@ export function ProjectDetail({ project }: { project: Project }) {
       <div className="relative container mx-auto md:rounded-xl h-full md:h-[600px] overflow-hidden">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-xl transform scale-110"
-          style={{ backgroundImage: `url(${project.heroImage || ""})` }}
+          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGEKIT_URL}${project.heroImage})` }}
         />
         <SafeImage
           src={project.heroImage || ""}
