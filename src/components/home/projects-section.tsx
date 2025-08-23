@@ -110,7 +110,7 @@ export default function ProjectsSection() {
         />
 
         {/* Project showcase */}
-        <div className="container mx-auto px-4 mt-12">
+        <div className="relative container mx-auto px-4 mt-12">
           <Card className="relative overflow-hidden rounded-2xl py-0 md:py-6 shadow-lg border-none bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-2 ">
               {/* Image */}
@@ -233,6 +233,32 @@ export default function ProjectsSection() {
             </div>
           </Card>
 
+          {/* Prev / Next buttons */}
+          <div className="absolute -bottom-4 right-4 flex gap-2 z-20">
+            <Button
+              variant="ghost"
+              onClick={() =>
+                setCurrentProject((prev) =>
+                  prev === 0 ? flagshipProjects.length - 1 : prev - 1
+                )
+              }
+              className="bg-white text-primary shadow-md px-3"
+            >
+              Prev
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() =>
+                setCurrentProject((prev) =>
+                  prev === flagshipProjects.length - 1 ? 0 : prev + 1
+                )
+              }
+              className="bg-white text-primary shadow-md"
+            >
+              Next
+            </Button>
+          </div>
+
           {/* Navigation */}
           <div className="flex items-center justify-center gap-2 mt-8">
             {flagshipProjects.map((_, idx) => (
@@ -241,8 +267,8 @@ export default function ProjectsSection() {
                 onClick={() => setCurrentProject(idx)}
                 className={`h-1 rounded-full transition-all duration-300 cursor-pointer ${
                   currentProject === idx
-                    ? "bg-primary w-6 sm:w-8"
-                    : "bg-primary/30 w-3 sm:w-5"
+                    ? "bg-white w-6 sm:w-8"
+                    : "bg-white/30 w-3 sm:w-5"
                 }`}
               />
             ))}
