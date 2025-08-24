@@ -10,6 +10,13 @@ import {
   Shield,
   Wifi,
   Zap,
+  Server,
+  Video,
+  Flame,
+  Megaphone,
+  Clock,
+  Speaker,
+  Lock,
 } from "lucide-react";
 import {
   Card,
@@ -55,31 +62,89 @@ const services = [
     color: "bg-indigo-50 text-indigo-600 dark:bg-blue-100 dark:text-indigo-400",
     features: [
       "Secure Corporate Wireless Coverage",
-      "Supports: Wireless Internet, VoWLAN, Handheld Devices",
+      "Wireless Internet for corporate networks",
+      "Voice over WLAN for mobile staff",
+      "Handheld device integration",
       "Location Tracking (People & Equipment)",
       "Location-based Service Delivery",
     ],
   },
+  {
+    title: "Enterprise Systems, Storage & Security",
+    description: "Reliable enterprise systems with backup and protection",
+    icon: Server,
+    color: "bg-green-50 text-green-600 dark:bg-blue-100 dark:text-indigo-400",
+    features: [
+      "Enterprise Servers & Systems",
+      "Disaster Recovery & Backup Solutions",
+      "Multifunction & Large Format Printers",
+      "Advanced Spam & Security Protections",
+    ],
+  },
+  {
+    title: "Audio-Visual Solutions",
+    description: "Smart AV systems for seamless experiences",
+    icon: Speaker,
+    color: "bg-yellow-50 text-yellow-600 dark:bg-blue-100 dark:text-indigo-400",
+    features: [
+      "Background Music Systems",
+      "Professional AV Solutions",
+      "Centralized Music Servers",
+    ],
+  },
+  {
+    title: "Security Solutions",
+    description: "Comprehensive security for safer environments",
+    icon: Shield,
+    color: "bg-red-50 text-red-600 dark:bg-blue-100 dark:text-indigo-400",
+    features: [
+      "CCTV & Video Surveillance",
+      "Access Control & Gate Barriers",
+      "Intrusion & Threat Detection Systems",
+      "Fire Alarm & Public Address Systems",
+      "Nurse Call & Emergency Alerts",
+      "Biometric Time & Attendance",
+      "Centralized Clock Systems",
+    ],
+  },
 ];
+
 
 export default function CoreGridOverview() {
   const getFeatureIcon = (feature: string) => {
-    if (feature.includes("Telephony") || feature.includes("VoWLAN"))
-      return Phone;
-    if (feature.includes("Security") || feature.includes("Spam")) return Shield;
-    if (feature.includes("Database") || feature.includes("Storage"))
-      return Database;
-    if (feature.includes("Monitoring") || feature.includes("Load Balancing"))
-      return Monitor;
-    if (feature.includes("Backup") || feature.includes("Recovery"))
-      return HardDrive;
-    if (feature.includes("Printer")) return Printer;
-    if (feature.includes("Location") || feature.includes("Tracking"))
-      return MapPin;
-    if (feature.includes("failover") || feature.includes("Redundant"))
-      return Zap;
-    return Network;
-  };
+  if (feature.includes("Telephony") || feature.includes("VoWLAN"))
+    return Phone;
+  if (feature.includes("Security") || feature.includes("Spam"))
+    return Shield;
+  if (feature.includes("Database") || feature.includes("Storage") || feature.includes("Server"))
+    return Database;
+  if (feature.includes("Monitoring") || feature.includes("Load Balancing"))
+    return Monitor;
+  if (feature.includes("Backup") || feature.includes("Recovery"))
+    return HardDrive;
+  if (feature.includes("Printer"))
+    return Printer;
+  if (feature.includes("Location") || feature.includes("Tracking"))
+    return MapPin;
+  if (feature.includes("failover") || feature.includes("Redundant"))
+    return Zap;
+  if (feature.includes("Music") || feature.includes("AV"))
+    return Speaker;
+  if (feature.includes("CCTV") || feature.includes("Surveillance"))
+    return Video;
+  if (feature.includes("Access Control") || feature.includes("Biometric"))
+    return Lock;
+  if (feature.includes("Fire Alarm"))
+    return Flame;
+  if (feature.includes("Public Address") || feature.includes("Nurse Call"))
+    return Megaphone;
+  if (feature.includes("Clock"))
+    return Clock;
+  
+  // default
+  return Network;
+};
+
 
   return (
     <div className="min-h-screen bg-primary">
@@ -128,7 +193,7 @@ export default function CoreGridOverview() {
                       return (
                         <div
                           key={featureIndex}
-                          className="flex items-center gap-3 p-2 rounded-lg group/feature"
+                          className="flex items-center gap-3 p-1 rounded-lg group/feature"
                         >
                           <FeatureIcon className="w-4 h-4 text-slate-400 dark:text-slate-500 group-hover/feature:text-blue-500 transition-colors flex-shrink-0" />
                           <span className="text-slate-800 text-sm leading-relaxed">

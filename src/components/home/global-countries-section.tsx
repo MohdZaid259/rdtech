@@ -15,9 +15,8 @@ export default function GlobalCountriesSection() {
   ];
 
   const stats = [
-    { label: "Countries", value: 20 },
     { label: "Projects", value: 500 },
-    { label: "Clients", value: 100 },
+    { label: "Clients", value: 200 },
   ];
 
   return (
@@ -25,7 +24,7 @@ export default function GlobalCountriesSection() {
       {/* Heading */}
       <SectionHeader
         title="Global Reach"
-        subTitle="Serving clients across the UAE, GCC, and through strong partnerships with technology vendors in Europe, North America, and Asia."
+        subTitle="Serving clients across the UAE and through strong partnerships with technology vendors in Europe, North America, and Asia."
       />
 
       {/* Content Grid */}
@@ -63,7 +62,7 @@ export default function GlobalCountriesSection() {
               </div>
 
               {/* Stats Section */}
-              <div className="w-[40%] sm:w-full grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="w-[40%] sm:w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {stats.map((stat, i) => (
                   <div
                     key={i}

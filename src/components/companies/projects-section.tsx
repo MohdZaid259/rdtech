@@ -13,7 +13,7 @@ export default function ProjectsSection({
   companyName,
 }: Readonly<ProjectsSectionProps>) {
   return (
-    <section className="py-16 pb-24 bg-primary ">
+    <section id="projects" className="py-16 pb-24 bg-primary ">
       <div className="container mx-auto flex flex-col gap-4 ">
         <div className="mb-6">
         <h3 className="font-heading text-center text-3xl md:text-4xl font-bold text-white mb-2">

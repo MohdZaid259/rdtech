@@ -170,19 +170,13 @@ export default function page() {
         backgroundImage="/Companies/AA%20Contracting/crane_2.jpg?updatedAt=1755876243488"
         companyLogo={<AAContractingLogo />}
         projectsLink="/companies/aa-contracting/#projects"
-        websiteLink=""
       />
 
       <AboutSection
         title="About AA Contracting"
         description={[
-          "Al Ausus Al Arbaa General Contracting is the construction arm of RDTech Group, specializing in multi-disciplinary contracting services. We combine traditional craftsmanship with modern construction techniques to deliver exceptional results.",
+          "Al Ausus Al Arbaa General Contracting is the construction arm of RDTech Group, specializing in multi-disciplinary contracting services. Guided by the values of integrity, safety, success, and teamwork, we combine traditional craftsmanship with modern construction techniques to deliver exceptional results.",
           "From commercial buildings to residential complexes, our experienced team manages every aspect of construction with attention to detail, quality, and timely delivery.",
-        ]}
-        stats={[
-          { value: "300+", label: "Projects Completed" },
-          { value: "12+", label: "Years Experience" },
-          { value: "120+", label: "Construction Experts" },
         ]}
         image={{
           src: "/Companies/AA%20Contracting/crane.jpg?updatedAt=1755875324718",

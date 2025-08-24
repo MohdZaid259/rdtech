@@ -7,6 +7,8 @@ import ProjectsSection from "@/components/companies/projects-section";
 import RDTechLogo from "@/components/logos/rdtech-logo";
 import React from "react";
 import ServicesSection from "@/components/companies/services-section";
+import CoreGridOverview from "@/components/companies/overview";
+import RefrenceSection from "@/components/companies/reference";
 
 export const metadata: Metadata = {
   title: "RDTech | Security Systems & ELV/ICT Solutions",
@@ -61,6 +63,12 @@ export default function page() {
       description:
         "High-performance computing solutions including servers, storage, and virtualization technologies to power enterprise applications and operations.",
       image: "enterprise-computing.png",
+    },
+    {
+      title: "AI, IoT & Command Control Center",
+      description: 
+        "Smart solutions combining AI and IoT for real-time monitoring, automation, and centralized command centers that enhance security and operational efficiency.",
+        image: "ai.jpg"
     },
   ];
 
@@ -140,7 +148,6 @@ export default function page() {
         backgroundImage="/Companies/RDTech/controlRoom.webp"
         companyLogo={<RDTechLogo />}
         projectsLink="/companies/rdtech/#projects"
-        websiteLink="https://www.site-technology.com"
       />
 
       <AboutSection
@@ -149,16 +156,13 @@ export default function page() {
           "RDTech is the security and technology arm of RDTech Group, specializing in cutting-edge security systems and ELV/ICT solutions. With over a decade of experience, we've secured some of the UAE's most critical infrastructure.",
           "Our team of certified engineers and security specialists work with the latest technology from global leaders to deliver solutions that exceed industry standards and client expectations.",
         ]}
-        stats={[
-          { value: "500+", label: "Projects Secured" },
-          { value: "15+", label: "Years Experience" },
-          { value: "50+", label: "Security Experts" },
-        ]}
         image={{
           src: "/facial.jpg?updatedAt=1755786638264",
           alt: "RDTech Team",
         }}
       />
+
+      <CoreGridOverview/>
 
       <ServicesSection
         title="Our Security Solutions"
@@ -196,7 +200,8 @@ export default function page() {
           },
         ]}
       />
-
+      
+      <RefrenceSection/>
       <ContactSection
         title="Secure Your Future Today"
         subtitle="Ready to implement world-class security solutions? Our experts are here to help."

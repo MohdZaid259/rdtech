@@ -15,6 +15,7 @@ import { Menu } from "lucide-react";
 import RDTechGroupLogo from "../logos/rdtech-group-logo";
 import RDTechLogo from "../logos/rdtech-logo";
 import { usePathname } from "next/navigation";
+import {ChevronDown} from 'lucide-react'
 
 const companies = [
   {
@@ -91,11 +92,20 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <RDTechGroupLogo iconSize={45} textSize={90} className="invert" />
+            <RDTechGroupLogo iconSize={55} textSize={110} className="invert" />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
+            <Link
+              href="/"
+              onMouseEnter={() => setShowOverview(false)}
+              className={linkClass()}
+            >
+              Home
+            </Link>
+
+
             <Link
               href="/about"
               onMouseEnter={() => setShowOverview(false)}
@@ -106,9 +116,10 @@ export function Header() {
 
             <button
               onMouseEnter={() => setShowOverview(true)}
-              className={`${linkClass()} ${showOverview && "after:w-full"}`}
+              className={`${linkClass()} flex justify-center items-center gap-2 ${showOverview && "after:w-full"}`}
             >
               Group Overview
+              <ChevronDown className="w-4 -mb-1"/>
             </button>
 
             <Link

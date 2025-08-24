@@ -17,7 +17,7 @@ export default function RDTechGroupLogo({
         alt="RDTech Group Logo"
         width={iconSize}
         height={iconSize}
-        className="text-shadow-lg"
+        className="text-shadow-lg brightness-110"
       />
       <SafeImage
         src="/Logos/rdtech-group-2.png?updatedAt=1755860934693"

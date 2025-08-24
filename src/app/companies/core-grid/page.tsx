@@ -6,7 +6,7 @@ import HeroSection from "@/components/companies/hero-section";
 import { Metadata } from "next";
 import ProjectsSection from "@/components/companies/projects-section";
 import ServicesSection from "@/components/companies/services-section";
-import CoreGridOverview from "@/components/companies/overview";
+import RefrenceSection from "@/components/companies/reference";
 
 export const metadata: Metadata = {
   title: "CoreGrid | Building Automation & Smart Solutions",
@@ -142,18 +142,12 @@ export default function page() {
         backgroundImage="/rdtechBg2.jpeg"
         companyLogo={<CoreGridLogo />}
         projectsLink="/companies/core-grid/#projects"
-        websiteLink="https://www.loytec.com"
       />
       <AboutSection
         title="About CoreGrid Solutions"
         description={[
           "CoreGrid Solutions is the smart building and automation division of RDTech Group, specializing in intelligent building management systems, home automation, and energy optimization solutions.",
           " We leverage IoT technology, AI-driven analytics, and advanced control systems to create environments that are not only smart but also sustainable, efficient, and user-friendly.",
-        ]}
-        stats={[
-          { value: "500+", label: "Smart Buildings" },
-          { value: "32+", label: "Years Innovation" },
-          { value: "120+", label: "Automation Experts" },
         ]}
         image={{
           src: "/Companies/Core%20Grid/control.webp",
@@ -198,7 +192,7 @@ export default function page() {
         ]}
       />
 
-      <CoreGridOverview/>
+      <RefrenceSection/>
 
       <ContactSection
         title="Make Your Building Smart"
