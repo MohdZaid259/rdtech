@@ -1,32 +1,12 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import { MoveRightIcon, PhoneCallIcon } from "lucide-react";
-import AAContractingLogo from "../logos/aa-contracting-logo";
 import { Button } from "@/components/ui/button";
-import CoreGridLogo from "../logos/core-grid-logo";
-import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
-import RDTechLogo from "../logos/rdtech-logo";
+import { WordRotate } from "../magicui/word-rotate";
 
 export default function HeroSection() {
   const words = ["Technology", "Innovation", "Sustainability"];
-  const companies = [
-    {
-      name: "AA Contracting",
-      description: "Multi-disciplinary Contracting Excellence",
-      Logo: AAContractingLogo,
-    },
-    {
-      name: "Core Grid",
-      description: "Building Automation & Smart Solutions",
-      Logo: CoreGridLogo,
-    },
-    {
-      name: "RD Tech",
-      description: "Security Systems & ELV/ICT Solutions",
-      Logo: RDTechLogo,
-    },
-  ];
 
   // Background images
   const bgImages = [
@@ -61,7 +41,7 @@ export default function HeroSection() {
         />
       ))}
       {/* Overlay */}
-      <div className="absolute z-10 inset-0 bg-black opacity-20" />
+      <div className="absolute z-10 inset-0 bg-black opacity-30" />
 
       <div className="h-full w-full top-0 absolute z-20 flex flex-col items-center justify-start max-md:mt-20">
         {/* Hero Section */}
@@ -69,9 +49,9 @@ export default function HeroSection() {
           <h1 className="text-white font-bold text-3xl xs:text-5xl sm:text-6xl px-0 mt-2 text-shadow-xs text-shadow-black/20 tracking-wider">
             Shaping the Future of
           </h1>
-          <FlipWords
+          <WordRotate
+            className="text-3xl xs:text-5xl sm:text-6xl font-extrabold  text-accent tracking-wide"
             words={words}
-            className="text-3xl xs:text-5xl text-accent sm:text-6xl text-shadow-xs text-shadow-black/20 font-extrabold tracking-wide"
           />
           <p className="max-w-2xl mt-4 text-muted text-shadow-xs text-shadow-black/20">
             Constructing, Protecting, and Connecting the Future through Technology and Expertise
@@ -103,36 +83,21 @@ export default function HeroSection() {
         </div>
 
         {/* Companies Section */}
-        <div className="relative w-full max-md:mt-20">
-          {/* Wave Shape */}
-          <svg
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-            className="absolute -top-20 left-0 w-full fill-white h-30 z-30"
-          >
-            <path
-              d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z"
-              className="fill-inherit"
-            ></path>
-          </svg>
-
-          {/* White Box with content */}
-          <div className="relative bg-white text-gray-800 pt-10 pb-8 px-10 grid grid-cols-1 md:grid-cols-3 gap-10 z-10">
-            {companies.map((company) => (
-              <div
-                key={company.name}
-                className="flex flex-col items-center text-center"
-              >
-                <div className="h-16 w-16 bg-muted rounded-full flex items-center justify-center p-1">
-                  <company.Logo />
-                </div>
-                <h3 className="font-semibold mb-2">{company.name}</h3>
-                <p className="text-sm text-gray-500">{company.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
+      {/* <style jsx>{`
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style> */}
     </section>
   );
 }
