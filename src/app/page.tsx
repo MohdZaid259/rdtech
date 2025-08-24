@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <QuickCompany/>
+      {/* <QuickCompany/> */}
       <IndustriesSection />
       <CompaniesSection/>
       <ProjectsSection />

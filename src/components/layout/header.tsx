@@ -87,7 +87,7 @@ export function Header() {
         showBg && "bg-primary shadow-xs"
       }`}
     >
-      <div className="container mx-auto mt-3 max-sm:px-4">
+      <div className="container mx-auto  max-sm:px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">

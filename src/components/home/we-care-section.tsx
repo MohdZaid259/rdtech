@@ -77,10 +77,10 @@ export default function WeCareSection() {
       />
 
       {/* Services Grid */}
-      <div className="relative container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div className="relative container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
         {services.map((service, index) => (
           <FadeIn key={index} delay={index * 100}>
-            <div className="relative w-full h-52 overflow-hidden group cursor-pointer rounded-4xl shadow-lg">
+            <div className="relative w-full h-64 overflow-hidden group cursor-pointer rounded-xl shadow-lg">
               <SafeImage
                 src={service.thumbnail}
                 alt={service.title}
