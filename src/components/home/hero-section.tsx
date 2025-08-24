@@ -1,8 +1,5 @@
-"use client";
-
+import React from "react";
 import { ChevronRight, MoveRightIcon, PhoneCallIcon } from "lucide-react";
-import React, { useEffect, useState } from "react";
-
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import { Button } from "@/components/ui/button";
 import CoreGridLogo from "../logos/core-grid-logo";
@@ -38,18 +35,6 @@ export default function HeroSection() {
       delay: "0.2s",
     },
   ];
-
-  // Background images
-  const bgImages = ["https://ik.imagekit.io/or8msinzg/rdtech/aaBg.jpeg"];
-
-  const [currentBg, setCurrentBg] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBg((prev) => (prev + 1) % bgImages.length);
-    }, 3000); // change every 3 secs
-    return () => clearInterval(interval);
-  }, [bgImages.length]);
 
   return (
     <section
