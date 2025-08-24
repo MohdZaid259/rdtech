@@ -55,27 +55,17 @@ export default function HeroSection() {
   
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url(${bgImages[currentBg]})`,
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden
+    bg-[url('https://ik.imagekit.io/or8msinzg/rdtech/aaBg.jpeg')] bg-[20%_center] md:bg-top"
+      
     >
-      {bgImages.map((src, idx) => (
-        <div
-          key={idx}
-          className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 ${
-            currentBg === idx ? "opacity-100" : "opacity-0"
-          } ${idx === 1 ? "bg-center" : "bg-top"}`}
-          style={{ backgroundImage: `url('${src}')` }}
-        />
-      ))}
       {/* Overlay */}
       <div className="absolute z-10 inset-0 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-950 opacity-80" />
 
       <div className="absolute z-20 h-full flex flex-col items-center">
         <div className="w-full h-full flex flex-col items-center justify-start md:mt-20">
           {/* Hero Section */}
-          <div className="h-[30%] md:h-full max-md:max-h-[60vh] flex flex-col items-center justify-center text-center px-6">
+          <div className="h-full flex flex-col items-center justify-center text-center px-6">
             <h1 className="text-white font-bold text-3xl xs:text-5xl sm:text-6xl px-0 mt-2 text-shadow-xs text-shadow-black/20 tracking-wider">
               Shaping the Future of
             </h1>
@@ -116,7 +106,7 @@ export default function HeroSection() {
         </div>
         {/* Companies Section */}
         <div className="w-full mt-auto md:mt-4 mb-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 justify-items-center">
+          <div className="grid grid-cols-3 gap-8 md:gap-12 justify-items-center">
             {companies.map((company, index) => (
               <Link
                 href={company.href}
@@ -126,14 +116,14 @@ export default function HeroSection() {
               >
                 {/* Circle logo container */}
                 <div
-                  className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-500 p-3"
+                  className="w-18 h-18 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-500 p-3"
                 >
                   <company.Logo />
                 </div>
 
                 {/* Company Info */}
                 <div className="mt-4 space-y-3 group-hover:transform group-hover:-translate-y-1 transition-all duration-300">
-                  <h3 className="text-xl font-bold text-white group-hover:text-accent transition-colors duration-300">
+                  <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-accent transition-colors duration-300">
                     {company.name}
                   </h3>
                   <div className="w-12 h-0.5 bg-accent mx-auto opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-x-0 group-hover:scale-x-100"></div>

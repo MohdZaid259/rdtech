@@ -36,7 +36,7 @@ export default function WorkingSection () {
       </h2>
       <p className='text-gray-800 mb-8 leading-relaxed text-center'> A simple, structured process to turn ideas into results.</p>
       
-      <div className="flex flex-wrap gap-4 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-center">
         {steps.map((step, index) => (
           <div 
             key={step.number}
@@ -46,8 +46,10 @@ export default function WorkingSection () {
               p-6 
               rounded-lg 
               flex-1 
-              min-w-[250px] 
-              max-w-[300px] 
+              min-w-[25px] 
+              max-w-[100%]
+              mx-4 
+              md:mx-0
               relative 
               shadow-lg 
               hover:shadow-xl 

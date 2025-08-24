@@ -25,7 +25,7 @@ function MissionSection() {
               width={350}
               height={350}
               quality={100}
-              className="absolute -bottom-12 right-6 rounded-xl border-8 border-blue-900"
+              className="absolute hidden md:block -bottom-12 right-6 rounded-xl border-8 border-blue-900"
             />
           </div>
           <div>
