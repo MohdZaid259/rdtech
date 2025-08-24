@@ -1,47 +1,46 @@
-'use client'
-import React, { useState, useEffect } from "react";
-import { ChevronRight ,MoveRightIcon, PhoneCallIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { WordRotate } from "../magicui/word-rotate";
+"use client";
+
+import { ChevronRight, MoveRightIcon, PhoneCallIcon } from "lucide-react";
+import React, { useEffect, useState } from "react";
+
 import AAContractingLogo from "../logos/aa-contracting-logo";
+import { Button } from "@/components/ui/button";
 import CoreGridLogo from "../logos/core-grid-logo";
+import Link from "next/link";
 import RDTechLogo from "../logos/rdtech-logo";
+import { WordRotate } from "../magicui/word-rotate";
 
 export default function HeroSection() {
   const words = ["Technology", "Innovation", "Sustainability"];
   const companies = [
-      {
-        name: "AA Contracting",
-        description: "Multi-disciplinary Contracting Excellence",
-        Logo: AAContractingLogo,
-        shape: "hexagon",
-        href: "/companies/aa-contracting",
-        delay: "0s",
-      },
-      {
-        name: "RDTech",
-        description: "Security Systems & ELV/ICT Solutions",
-        Logo: RDTechLogo,
-        shape: "diamond",
-        href: "/companies/rdtech",
-        delay: "0.4s",
-      },
-      {
-        name: "CoreGrid Solutions",
-        description: "Building Automation & Smart Solutions",
-        Logo: CoreGridLogo,
-        shape: "circle",
-        href: "/companies/core-grid",
-        delay: "0.2s",
-      },
-    ];
-  
-  // Background images
-  const bgImages = [
-    "https://ik.imagekit.io/or8msinzg/rdtech/aaBg.jpeg",
-
+    {
+      name: "AA Contracting",
+      description: "Multi-disciplinary Contracting Excellence",
+      Logo: AAContractingLogo,
+      shape: "hexagon",
+      href: "/companies/aa-contracting",
+      delay: "0s",
+    },
+    {
+      name: "RDTech",
+      description: "Security Systems & ELV/ICT Solutions",
+      Logo: RDTechLogo,
+      shape: "diamond",
+      href: "/companies/rdtech",
+      delay: "0.4s",
+    },
+    {
+      name: "CoreGrid Solutions",
+      description: "Building Automation & Smart Solutions",
+      Logo: CoreGridLogo,
+      shape: "circle",
+      href: "/companies/core-grid",
+      delay: "0.2s",
+    },
   ];
+
+  // Background images
+  const bgImages = ["https://ik.imagekit.io/or8msinzg/rdtech/aaBg.jpeg"];
 
   const [currentBg, setCurrentBg] = useState(0);
 
@@ -52,7 +51,6 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, [bgImages.length]);
 
-  
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden
@@ -88,30 +86,28 @@ export default function HeroSection() {
                 </Link>
               </Button>
 
-              <Button
-                asChild
-                variant="default"
-                size="lg"
-                className="text-base text-blue-950 font-semibold bg-white hover:bg-white backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
-              >
-                <Link href="/#contact" className="flex items-center gap-2">
-                  <span>Contact Us</span>
-                  <PhoneCallIcon className="h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
+            <Button
+              asChild
+              variant="default"
+              size="lg"
+              className="text-base text-blue-950 font-semibold bg-white hover:bg-white backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              <Link href="/#contact" className="flex items-center gap-2">
+                <span>Contact Us</span>
+                <PhoneCallIcon className="h-5 w-5" />
+              </Link>
+            </Button>
           </div>
-
-          {/* Companies Section */}
         </div>
+
         {/* Companies Section */}
         <div className="w-full mt-auto md:mt-4 mb-10">
-          <div className="grid grid-cols-3 gap-8 md:gap-12 justify-items-center">
+          <div className="grid grid-cols-3 gap-4 md:gap-12 justify-items-center">
             {companies.map((company, index) => (
               <Link
                 href={company.href}
                 key={company.name}
-                className="group relative flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105"
+                className={`group relative flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 }`}
                 style={{ animationDelay: company.delay }}
               >
                 {/* Circle logo container */}
@@ -132,7 +128,7 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
-
+        </div>
       </div>
     </section>
   );

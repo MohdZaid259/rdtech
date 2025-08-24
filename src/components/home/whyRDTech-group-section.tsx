@@ -93,9 +93,6 @@ export default function WhyRDTechGroup() {
                           {feature.subtitle}
                         </p>
                       )}
-
-                      {/* Decorative gradient underline */}
-                      {/* <div className="mt-4 absolute bottom-2 h-1 w-2/3 rounded-full bg-gradient-to-r from-blue-900 to-primary opacity-90 group-hover:opacity-100 transition-opacity" /> */}
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -133,9 +130,9 @@ export default function WhyRDTechGroup() {
           ))}
         </div>
 
-        <div className="lg:hidden grid grid-cols-2 gap-4">
+        <div className="lg:hidden grid grid-cols-2 gap-4 max-sm:px-4">
           {features.map((feature, i) => (
-            <div key={i} className="relative">
+            <div key={i} className="max-sm:h-full relative">
               <FadeIn delay={i * 80}>
                 <Card className="h-full group relative overflow-hidden rounded-xl border border-gray-200 bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 py-0">
                   <CardContent className="p-4 flex flex-col items-start">
@@ -155,9 +152,6 @@ export default function WhyRDTechGroup() {
                         {feature.subtitle}
                       </p>
                     )}
-
-                    {/* Decorative gradient underline */}
-                    <div className="mt-3 absolute bottom-2 h-1 w-2/3 rounded-full bg-gradient-to-r from-blue-900 to-primary opacity-70 group-hover:opacity-100 transition-opacity" />
                   </CardContent>
                 </Card>
               </FadeIn>

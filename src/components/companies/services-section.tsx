@@ -21,7 +21,7 @@ export default function ServicesSection({
   return (
     <section className="py-16 bg-white max-sm:px-4">
       <div className="flex flex-col container mx-auto max-sm:px-4">
-        <h3 className="font-heading text-3xl md:text-4xl font-bold text-black mb-6">
+        <h3 className="font-heading text-center text-3xl md:text-4xl font-bold text-black mb-6">
           {title}
         </h3>
 
@@ -32,7 +32,7 @@ export default function ServicesSection({
               className="w-full group p-5 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-accent transition-all duration-300 bg-white flex flex-col md:flex-row items-center gap-4"
             >
               {/* Image wrapper for consistent size */}
-              <div className="relative flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden shadow-md">
+              <div className="relative flex-shrink-0 w-full h-36 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden shadow-md">
                 <SafeImage
                   src={`/Companies/${companyName}/Services/${service.image}`}
                   alt={

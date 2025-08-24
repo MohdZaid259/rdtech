@@ -39,12 +39,12 @@ export default function GlobalCountriesSection() {
                 alt="UAE Map"
                 width={900}
                 height={500}
-                className="object-contain h-[450px] w-full"
+                className="object-contain h-[300px] sm:h-[450px] w-full"
               />
             </div>
 
             {/* Right Side (Emirates List + Stats) */}
-            <div className="flex flex-col justify-center space-y-6">
+            <div className="w-full flex sm:flex-col justify-center gap-6">
               {/* Emirates */}
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">
@@ -63,7 +63,7 @@ export default function GlobalCountriesSection() {
               </div>
 
               {/* Stats Section */}
-              <div className="grid grid-cols-3 gap-4">
+              <div className="w-[40%] sm:w-full grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {stats.map((stat, i) => (
                   <div
                     key={i}
