@@ -13,30 +13,13 @@ import SectionHeader from "./section-header";
 export default function CompaniesSection() {
   const companies = [
     {
-      name: "RDTech",
-      tagline: "Security Systems & ELV/ICT Solutions",
-      description:
-        "Pioneering advanced security technology to safeguard critical infrastructure across the UAE. From access control to comprehensive surveillance systems.",
-      icon: RDTechLogo,
-      href: "/rdtech",
-      image: "/general/rdtech/controlRoom.webp",
-      services: [
-        "Access Control System",
-        "CCTV & Surveillance",
-        "Fire Alarm Systems",
-        "Network Infrastructure",
-      ],
-      color: "bg-green-600",
-      buttonLabel: "RDTech",
-    },
-    {
       name: "Al Ausus Al Arbaa General Contracting",
       tagline: "Multi-disciplinary Contracting Excellence",
       description:
         "Delivering comprehensive construction and contracting services with precision and reliability.",
       icon: AAContractingLogo,
-      href: "/aa-contracting",
-      image: "/general/aa/mep.webp",
+      href: "/mep.jpg?updatedAt=1755786638239",
+      image: "/mep.jpg?updatedAt=1755786638239",
       services: [
         "Civil Construction",
         "MEP Services",
@@ -47,13 +30,30 @@ export default function CompaniesSection() {
       buttonLabel: "AA Contracting",
     },
     {
+      name: "RDTech",
+      tagline: "Security Systems & ELV/ICT Solutions",
+      description:
+        "Pioneering advanced security technology to safeguard critical infrastructure across the UAE. From access control to comprehensive surveillance systems.",
+      icon: RDTechLogo,
+      href: "/Companies/RDTech/controlRoom.webp?updatedAt=1755876470382",
+      image: "/Companies/RDTech/controlRoom.webp?updatedAt=1755876470382",
+      services: [
+        "Access Control System",
+        "CCTV & Surveillance",
+        "Fire Alarm Systems",
+        "Network Infrastructure",
+      ],
+      color: "bg-green-600",
+      buttonLabel: "RDTech",
+    },
+    {
       name: "CoreGrid Solutions",
       tagline: "Building Automation & Smart Solutions",
       description:
         "Transforming buildings into intelligent, efficient spaces through cutting-edge automation and control systems.",
       icon: CoreGridLogo,
-      href: "/core-grid",
-      image: "/general/rdtech/facial.webp",
+      href: "/facial.jpg?updatedAt=1755786638264",
+      image: "/facial.jpg?updatedAt=1755786638264",
       services: [
         "Lighting Control",
         "Home Automation",
@@ -66,11 +66,11 @@ export default function CompaniesSection() {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col py-8 md:py-20 bg-blue-50">
+    <section className="min-h-screen flex flex-col py-8 md:py-20 bg-white">
       <div className="container mx-auto">
         {/* Heading */}
         <SectionHeader
-          title="Our Companies"
+          title="Our Ecosystem of Excellence"
           subTitle="Three specialized companies working together to deliver comprehensive solutions across security, construction, and automation sectors."
         />
 

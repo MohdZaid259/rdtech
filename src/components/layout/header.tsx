@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/accordion";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useEffect, useState } from "react";
-
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import CoreGridLogo from "../logos/core-grid-logo";
 import Link from "next/link";
@@ -31,18 +30,6 @@ const companies = [
     ],
   },
   {
-    name: "CoreGrid Solutions",
-    description: "Building Automation & Smart Solutions",
-    logo: CoreGridLogo,
-    href: "/companies/core-grid",
-    services: [
-      "BMS Systems",
-      "Lighting Control",
-      "Home Automation",
-      "Energy Management",
-    ],
-  },
-  {
     name: "RDTech",
     description: "Security Systems & ELV/ICT Solutions",
     logo: RDTechLogo,
@@ -52,6 +39,18 @@ const companies = [
       "CCTV Systems",
       "Fire Alarm",
       "Network Infrastructure",
+    ],
+  },
+  {
+    name: "CoreGrid Solutions",
+    description: "Building Automation & Smart Solutions",
+    logo: CoreGridLogo,
+    href: "/companies/core-grid",
+    services: [
+      "BMS Systems",
+      "Lighting Control",
+      "Home Automation",
+      "Energy Management",
     ],
   },
 ];
@@ -88,7 +87,7 @@ export function Header() {
         showBg && "bg-primary shadow-xs"
       }`}
     >
-      <div className="container mx-auto max-sm:px-4">
+      <div className="container mx-auto mt-3 max-sm:px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">

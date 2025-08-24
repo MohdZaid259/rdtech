@@ -35,7 +35,7 @@ export default function WeCareSection() {
     {
       icon: Store,
       title: "Retail",
-      thumbnail: "/Home/We%20Care/download.webp?updatedAt=1755865886363",
+      thumbnail: "/Home/We%20Care/retail.jpg?updatedAt=1756009182198",
     },
     {
       icon: Landmark,

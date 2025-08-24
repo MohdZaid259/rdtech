@@ -1,8 +1,8 @@
 "use client";
 
-import { Award, Building, Calendar, MapPin } from "lucide-react";
+import { Award, Building, Calendar, ChevronLeft, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
-
+import {ChevronRight} from 'lucide-react'
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Card } from "@/components/ui/card";
@@ -19,8 +19,8 @@ const flagshipProjects = [
     category: "RDTech",
     location: "Ajman, UAE",
     year: "2022",
-    thumbnail: "/projects/rdtech/ajmanHero.jpg",
-    heroImage: "/projects/rdtech/ajmanHero.jpg",
+    thumbnail: "/projectPage/rdtech/ajmanHero.jpg",
+    heroImage: "/projectPage/rdtech/ajmanHero.jpg",
     duration: "12 months",
     size: "2,600 vehicles",
     client: "Ajman Public Transport Corporation",
@@ -33,29 +33,25 @@ const flagshipProjects = [
     ],
   },
   {
-    id: "2",
-    slug: "lusail-palace-bms",
-    title: "Lusail Palace – Building Management System",
+    id: "6",
+    slug: "sharjah-sustainable-city-automation",
+    title: "Sharjah Sustainable City ",
     description:
-      "Deployment of a cutting-edge Building Management System (BMS) for Lusail Palace.",
+      "Home automation and smart metering for 280 villas in the first Net Zero energy community of Sharjah.",
     category: "CoreGrid",
-    location: "Lusail, Qatar",
+    location: "Sharjah, UAE",
     year: "2021",
-    thumbnail: "/projects/coregrid/lusailHero.jpeg",
-    heroImage: "/projects/coregrid/lusailHero.jpeg",
-    duration: "20 months",
-    size: "45,000 sq m",
-    client: "Government of Qatar",
-    budget: "$15M+",
-    services: [
-      "Building Management System",
-      "Energy Optimization",
-      "Lighting Control",
-    ],
+    thumbnail: "/projectPage/coregrid/SharjahHero.jpg",
+    heroImage: "/projectPage/coregrid/SharjahHero.jpg",
+    duration: "24 months",
+    size: "280 Villas",
+    client: "Sharjah Sustainable City",
+    budget: "$25M+",
+    services: ["Home Automation", "Smart Metering", "Energy Optimization"],
     features: [
-      "Centralized HVAC monitoring",
-      "Intelligent lighting automation",
-      "Energy-efficient operation",
+      "280 smart villas with home automation",
+      "Smart metering and energy monitoring",
+      "Sustainable and future-ready housing"
     ],
   },
   {
@@ -67,8 +63,8 @@ const flagshipProjects = [
     category: "Al Ausus",
     location: "Al Ain – Al Sanaiya",
     year: "2020",
-    thumbnail: "/projects/alAusus/alAinHero.jpeg",
-    heroImage: "/projects/alAusus/alAinHero.jpeg",
+    thumbnail: "/projectPage/alAusus/alAinHero.jpeg",
+    heroImage: "/projectPage/alAusus/alAinHero.jpeg",
     duration: "10 months",
     size: "3,500 sq m",
     client: "Al Ain Sports Club",
@@ -77,7 +73,6 @@ const flagshipProjects = [
     features: [
       "High-quality dining facilities",
       "Structural construction",
-      "Modern finishes",
       "Durable and sustainable building solutions",
     ],
   },
@@ -111,10 +106,10 @@ export default function ProjectsSection() {
 
         {/* Project showcase */}
         <div className="relative container mx-auto px-4 mt-12">
-          <Card className="relative overflow-hidden rounded-2xl py-0 md:py-6 shadow-lg border-none bg-white">
+          <Card className="relative overflow-hidden rounded-2xl py-0 md:py-6 md:pb-0 shadow-lg border-none bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-2 ">
               {/* Image */}
-              <div className="relative h-60 md:h-80 lg:h-auto md:pl-6">
+              <div className="relative h-80 md:h-[450px] md:pl-6">
                 <SafeImage
                   key={project.id}
                   src={project.heroImage}
@@ -224,7 +219,7 @@ export default function ProjectsSection() {
                   </div>
                   <Button
                     variant="default"
-                    className="float-right mb-4 md:bottom-10 md:right-10 cursor-pointer"
+                    className="float-right mb-4 md:bottom-16 md:right-10 cursor-pointer"
                   >
                     View Project
                   </Button>
@@ -234,7 +229,7 @@ export default function ProjectsSection() {
           </Card>
 
           {/* Prev / Next buttons */}
-          <div className="absolute -bottom-4 right-4 flex gap-2 z-20">
+          <div className="absolute -bottom-4 right-8 flex gap-2 z-20">
             <Button
               variant="ghost"
               onClick={() =>
@@ -244,7 +239,7 @@ export default function ProjectsSection() {
               }
               className="bg-white text-primary shadow-md px-3"
             >
-              Prev
+              <ChevronLeft/>
             </Button>
             <Button
               variant="ghost"
@@ -255,7 +250,7 @@ export default function ProjectsSection() {
               }
               className="bg-white text-primary shadow-md"
             >
-              Next
+              <ChevronRight/>
             </Button>
           </div>
 

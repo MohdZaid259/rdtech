@@ -66,67 +66,67 @@ export default function page() {
 
   const projects = [
     {
-      name: "rta",
+      name: "RTA Dubai",
       image: "rta.webp",
     },
     {
-      name: "zayed",
+      name: "Zayed University",
       image: "zayed.webp",
     },
     {
-      name: "trade",
+      name: "DXB World Trade Centre",
       image: "trade.webp",
     },
     {
-      name: "palace",
+      name: "Emirates Palace Hotel",
       image: "palace.webp",
     },
     {
-      name: "palm",
+      name: "Palm Jumeirah",
       image: "palm.webp",
     },
     {
-      name: "mazagon",
+      name: "Mazagon Resort",
       image: "mazagon.webp",
     },
     {
-      name: "khalidiya",
+      name: "Khalidiya Palace",
       image: "khalidiya.webp",
     },
     {
-      name: "ferrari",
+      name: "Ferrari World",
       image: "ferrari.webp",
     },
     {
-      name: "marina",
+      name: "Yas Marina Hotel",
       image: "marina.webp",
     },
     {
-      name: "cargo",
+      name: "Dubai Cargo Terminal",
       image: "cargo.webp",
     },
     {
-      name: "dubai mall",
+      name: "Dubai Mall",
       image: "dubaiMall.webp",
     },
     {
-      name: "emirates",
+      name: "Jumeirah Emirates Towers Dubai",
       image: "emirates.webp",
     },
     {
-      name: "etehad",
+      name: "Etehad Towers",
       image: "etehad.webp",
     },
     {
-      name: "burj Al Arab",
+      name: "Burj Al Arab",
       image: "burjAlArab.webp",
     },
     {
-      name: "atlantis",
+      name: "Atlantis Hotel",
       image: "atlantis.webp",
     },
     {
-      name: "burj khalifa",
+      name: "Burj Khalifa",
       image: "burjKhalifa.webp",
     },
   ];
@@ -155,7 +155,7 @@ export default function page() {
           { value: "50+", label: "Security Experts" },
         ]}
         image={{
-          src: "/Companies/RDTech/cardReader.webp",
+          src: "/facial.jpg?updatedAt=1755786638264",
           alt: "RDTech Team",
         }}
       />

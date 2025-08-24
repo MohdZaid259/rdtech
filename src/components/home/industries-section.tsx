@@ -36,7 +36,7 @@ const industries = [
       "Safety and monitoring systems for airports, transport authorities, and vital infrastructures.",
   },
   {
-    name: "Enterprise",
+    name: "Business Enterprise",
     icon: Briefcase,
     image: "/Home/Industries/industry4.jpg?updatedAt=1755864297063",
     description:
@@ -50,7 +50,7 @@ const industries = [
       "Technology support for NGOs and secure solutions for schools and universities.",
   },
   {
-    name: "SMB",
+    name: "Server Message Block",
     icon: Fingerprint,
     image: "/Home/Industries/industry6.webp?updatedAt=1755864482637",
     description:
@@ -59,12 +59,12 @@ const industries = [
   {
     name: "Civil Defenses",
     icon: ShieldUser,
-    image: "/Home/Industries/industry7.jpg?updatedAt=1755864739390",
+    image: "/Home/Industries/industry7.jpg",
     description:
       "Defense and emergency readiness solutions for civil protection agencies.",
   },
   {
-    name: "Consumer",
+    name: "Smart Lifestyle",
     icon: Home,
     image: "/Home/Industries/industry8.png?updatedAt=1755864813500",
     description:

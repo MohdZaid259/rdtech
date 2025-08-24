@@ -39,13 +39,13 @@ export default function page() {
       image: "user-interface.webp",
     },
     {
-      title: "Room Automation",
+      title: "Home Automation",
       description:
         "Smart solutions for lighting, temperature, and appliance control, enhancing comfort, convenience, and energy efficiency in any room.",
       image: "room-automation.webp",
     },
     {
-      title: "Lighting Control",
+      title: "Lighting Control System",
       description:
         "Advanced lighting management systems enabling dimming, scheduling, and mood-setting for residential, commercial, or industrial spaces.",
       image: "lightning-control.jpg",
@@ -84,19 +84,19 @@ export default function page() {
 
   const projects = [
     {
-      name: "sharjah",
+      name: "Sharjah sustainable City",
       image: "sharjah.webp",
     },
     {
-      name: "residence",
+      name: "Residence Inn by Marriot",
       image: "residence.webp",
     },
     {
-      name: "homes",
+      name: "Sustainable homes Hotel",
       image: "homes.webp",
     },
     {
-      name: "expo",
+      name: "Dubai Expo 2020",
       image: "expo.webp",
     },
     {
@@ -104,31 +104,31 @@ export default function page() {
       image: "ministry.webp",
     },
     {
-      name: "azizi",
+      name: "Azizi Creek View",
       image: "azizi.webp",
     },
     {
-      name: "platinum",
+      name: "Platinum Hotel Dubai",
       image: "platinum.webp",
     },
     {
-      name: "conrad",
+      name: "Hilton Conrad Arzana",
       image: "conrad.webp",
     },
     {
-      name: "celia",
+      name: "Celia Residence - Abou Eid",
       image: "celia.webp",
     },
     {
-      name: "regalia",
+      name: "Regalia Tower- Deyaar",
       image: "regalia.webp",
     },
     {
-      name: "miramar",
+      name: "Miramar Hotel - Al Fujairah",
       image: "miramar.webp",
     },
     {
-      name: "abu",
+      name: "Abu Dhabi Quality and Conformity Council",
       image: "abu.webp",
     },
   ];
@@ -144,7 +144,6 @@ export default function page() {
         projectsLink="/companies/core-grid/#projects"
         websiteLink="https://www.loytec.com"
       />
-      <CoreGridOverview/>
       <AboutSection
         title="About CoreGrid Solutions"
         description={[
@@ -152,9 +151,9 @@ export default function page() {
           " We leverage IoT technology, AI-driven analytics, and advanced control systems to create environments that are not only smart but also sustainable, efficient, and user-friendly.",
         ]}
         stats={[
-          { value: "200+", label: "Smart Buildings" },
-          { value: "8+", label: "Years Innovation" },
-          { value: "30+", label: "Automation Experts" },
+          { value: "500+", label: "Smart Buildings" },
+          { value: "32+", label: "Years Innovation" },
+          { value: "120+", label: "Automation Experts" },
         ]}
         image={{
           src: "/Companies/Core%20Grid/control.webp",
@@ -199,12 +198,14 @@ export default function page() {
         ]}
       />
 
+      <CoreGridOverview/>
+
       <ContactSection
         title="Make Your Building Smart"
         subtitle="Ready to transform your space with intelligent automation? Let's create a smarter future together."
         phone="+971 X XXX XXXX"
         email="info@example.com"
-        address="Dubai, UAE"
+        address="Abu Dhabi, UAE"
       />
     </main>
   );

@@ -96,64 +96,68 @@ export default function page() {
 
   const projects = [
     {
-      name: "UAEU",
+      name: "Al Ain - UAEU Playground",
       image: "uaeu.png",
     },
     {
-      name: "university",
+      name: "University of Sharjah - UAE",
       image: "university.webp",
     },
     {
-      name: "tawam",
+      name: "Tawam Hospital A/C Maintenance",
       image: "tawam.png",
     },
     {
-      name: "school",
+      name: "Al Ain - United School",
       image: "school.png",
     },
     {
-      name: "post Office",
+      name: "Emirates post Office Construction",
       image: "postOffice.webp",
     },
     {
-      name: "Islamic",
+      name: "Al Aim - Islamic Institute UAEU",
       image: "islamic.png",
     },
     {
-      name: "Abu Dhabi",
+      name: "Abu Dhabi Distillation Plant",
       image: "abudhabi.png",
     },
     {
-      name: "challet",
+      name: "Al Ain - Rotana Challet",
       image: "challet.png",
     },
     {
-      name: "alain",
+      name: "Al Ain Villa Building Construction",
       image: "alain.png",
     },
     {
-      name: "mosque",
+      name: "Al Ain - Sheikha Hessa Mosque",
       image: "mosque.png",
     },
     {
-      name: "alsanaiya",
+      name: "Al Ain - Al Sanaiya Restaurant",
       image: "alsanaiya.png",
     },
     {
-      name: "cultural",
+      name: "Al Ain - Dar Zayed Cultural House",
       image: "cultural.png",
     },
     {
-      name: "minors",
+      name: "Minors Affairs Building A/C Maintenance",
       image: "minors.png",
     },
     {
-      name: "almarkhaniya",
+      name: "Al Ain - Al Markhaniya School",
       image: "almarkhaniya.png",
     },
     {
-      name: "aldhaher",
+      name: "Al Dhafra Private Schools",
       image: "aldhaher.webp",
+    },
+    {
+      name: "Al Ain - UAEU Playground",
+      image: "uaeu.png",
     },
   ];
 
@@ -178,7 +182,7 @@ export default function page() {
         stats={[
           { value: "300+", label: "Projects Completed" },
           { value: "12+", label: "Years Experience" },
-          { value: "80+", label: "Construction Experts" },
+          { value: "120+", label: "Construction Experts" },
         ]}
         image={{
           src: "/Companies/AA%20Contracting/crane.jpg?updatedAt=1755875324718",

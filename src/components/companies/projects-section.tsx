@@ -13,12 +13,12 @@ export default function ProjectsSection({
   companyName,
 }: Readonly<ProjectsSectionProps>) {
   return (
-    <section className="py-16 bg-primary max-sm:px-4">
+    <section className="py-16 pb-24 bg-primary max-sm:px-4">
       <div className="container mx-auto flex flex-col gap-4 max-sm:px-4">
         <h3 className="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
           Our Projects
         </h3>
-        <div className="grid grid-cols-4 grid-rows-4 gap-0">
+        <div className={`grid grid-cols-4 ${companyName=='coreProjects'?'grid-rows-3':'grid-rows-4'} gap-0`}>
           {projects.map((project, index) => (
             <div
               key={`project.name-${index}`}

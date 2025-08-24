@@ -26,7 +26,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative bg-gradient-to-tr from-blue-950 via-blue-900 to-blue-950 text-white py-16">
+    <section id="contact" className="relative bg-gradient-to-tr from-blue-950 via-blue-900 to-blue-950 text-white mt-16 py-16">
       <div className="absolute -top-14 right-10 ">
         <h1 
           className="text-8xl font-bold uppercase tracking-wider inline-block"
@@ -44,11 +44,11 @@ export default function ContactSection() {
         {/* Left Side - Contact Info */}
         <div>
           <SafeImage
-            src='/contact.jpg'
+            src='/contact.png'
             width={400}
             height={400}
             alt="contact img"
-            className="rounded-lg shadow-2xl"
+            className=""
           />
 
         </div>
