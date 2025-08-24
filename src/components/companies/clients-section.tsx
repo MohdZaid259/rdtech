@@ -28,7 +28,7 @@ export default function ClientsSection({
     <section className="py-8 md:py-24 max-sm:px-4 bg-blue-50">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-12 items-center">
         {/* Left Content */}
-        <div className="md:p-4 p-0">
+        <div className="px-4 md:p-0">
           <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-6">
             {title}
           </h3>
