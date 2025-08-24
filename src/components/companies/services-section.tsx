@@ -19,8 +19,8 @@ export default function ServicesSection({
   companyName,
 }: Readonly<ServicesSectionProps>) {
   return (
-    <section className="py-16 bg-white max-sm:px-4">
-      <div className="flex flex-col container mx-auto max-sm:px-4">
+    <section className="py-16 bg-white">
+      <div className="flex flex-col container mx-auto">
         <h3 className="font-heading text-center text-3xl md:text-4xl font-bold text-black mb-6">
           {title}
         </h3>
