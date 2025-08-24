@@ -19,18 +19,6 @@ import { usePathname } from "next/navigation";
 
 const companies = [
   {
-    name: "RDTech",
-    description: "Security Systems & ELV/ICT Solutions",
-    logo: RDTechLogo,
-    href: "/companies/rdtech-fze",
-    services: [
-      "Access Control",
-      "CCTV Systems",
-      "Fire Alarm",
-      "Network Infrastructure",
-    ],
-  },
-  {
     name: "AA Contracting",
     description: "Multi-disciplinary General Contracting",
     logo: AAContractingLogo,
@@ -52,6 +40,18 @@ const companies = [
       "Lighting Control",
       "Home Automation",
       "Energy Management",
+    ],
+  },
+  {
+    name: "RDTech",
+    description: "Security Systems & ELV/ICT Solutions",
+    logo: RDTechLogo,
+    href: "/companies/rdtech",
+    services: [
+      "Access Control",
+      "CCTV Systems",
+      "Fire Alarm",
+      "Network Infrastructure",
     ],
   },
 ];

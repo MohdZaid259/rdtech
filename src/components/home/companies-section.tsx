@@ -18,7 +18,7 @@ export default function CompaniesSection() {
       description:
         "Pioneering advanced security technology to safeguard critical infrastructure across the UAE. From access control to comprehensive surveillance systems.",
       icon: RDTechLogo,
-      href: "/rdtech-fze",
+      href: "/rdtech",
       image: "/general/rdtech/controlRoom.webp",
       services: [
         "Access Control System",

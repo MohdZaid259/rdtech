@@ -4,6 +4,7 @@ import ContactSection from "@/components/companies/contact-section";
 import CoreGridLogo from "@/components/logos/core-grid-logo";
 import HeroSection from "@/components/companies/hero-section";
 import { Metadata } from "next";
+import ProjectsSection from "@/components/companies/projects-section";
 import ServicesSection from "@/components/companies/services-section";
 import CoreGridOverview from "@/components/companies/overview";
 
@@ -31,14 +32,105 @@ export const metadata: Metadata = {
 
 export default function page() {
   const services = [
-    "User Interface",
-    "Room Automation",
-    "Lightning Control",
-    "HAVC Control",
-    "I/O Controller",
-    "Energy Management Metering",
-    "Gateways",
-    "Network Infrastructure",
+    {
+      title: "User Interface",
+      description:
+        "Intuitive and user-friendly interfaces that provide seamless interaction and control of automation systems across devices.",
+      image: "user-interface.webp",
+    },
+    {
+      title: "Room Automation",
+      description:
+        "Smart solutions for lighting, temperature, and appliance control, enhancing comfort, convenience, and energy efficiency in any room.",
+      image: "room-automation.webp",
+    },
+    {
+      title: "Lighting Control",
+      description:
+        "Advanced lighting management systems enabling dimming, scheduling, and mood-setting for residential, commercial, or industrial spaces.",
+      image: "lightning-control.jpg",
+    },
+    {
+      title: "HVAC Control",
+      description:
+        "Integrated heating, ventilation, and air conditioning control for optimized climate management, improved efficiency, and reduced energy costs.",
+      image: "HAVC.webp",
+    },
+    {
+      title: "I/O Controller",
+      description:
+        "Reliable input/output control devices that manage communication between field equipment and central automation systems.",
+      image: "io-control.png",
+    },
+    {
+      title: "Energy Management & Metering",
+      description:
+        "Smart metering and monitoring systems that track energy consumption, reduce waste, and ensure sustainable energy usage.",
+      image: "energy-management.webp",
+    },
+    {
+      title: "Gateways",
+      description:
+        "Secure and scalable gateways enabling seamless integration between different automation devices and communication protocols.",
+      image: "gateways.webp",
+    },
+    {
+      title: "Network Infrastructure",
+      description:
+        "Robust networking solutions designed to support high-performance automation systems with reliability and security.",
+      image: "network-infrastructure.webp",
+    },
+  ];
+
+  const projects = [
+    {
+      name: "sharjah",
+      image: "sharjah.webp",
+    },
+    {
+      name: "residence",
+      image: "residence.webp",
+    },
+    {
+      name: "homes",
+      image: "homes.webp",
+    },
+    {
+      name: "expo",
+      image: "expo.webp",
+    },
+    {
+      name: "ministry",
+      image: "ministry.webp",
+    },
+    {
+      name: "azizi",
+      image: "azizi.webp",
+    },
+    {
+      name: "platinum",
+      image: "platinum.webp",
+    },
+    {
+      name: "conrad",
+      image: "conrad.webp",
+    },
+    {
+      name: "celia",
+      image: "celia.webp",
+    },
+    {
+      name: "regalia",
+      image: "regalia.webp",
+    },
+    {
+      name: "miramar",
+      image: "miramar.webp",
+    },
+    {
+      name: "abu",
+      image: "abu.webp",
+    },
   ];
 
   return (
@@ -47,7 +139,7 @@ export default function page() {
         companyName="CoreGrid Solutions"
         slogan="Building Automation & Smart Solutions"
         description="Transforming buildings into intelligent, efficient spaces through cutting-edge automation and control systems. Creating smarter environments for better living and working."
-        backgroundImage="https://ik.imagekit.io/or8msinzg/rdtech/rdtechBg2.jpeg?updatedAt=1755870280828"
+        backgroundImage="/rdtechBg2.jpeg"
         companyLogo={<CoreGridLogo />}
         projectsLink="/companies/core-grid/#projects"
         websiteLink="https://www.loytec.com"
@@ -65,7 +157,7 @@ export default function page() {
           { value: "30+", label: "Automation Experts" },
         ]}
         image={{
-          src: "/general/coregrid/control.webp",
+          src: "/Companies/Core%20Grid/control.webp",
           alt: "CoreGrid Smart Building",
         }}
       />
@@ -73,11 +165,10 @@ export default function page() {
       <ServicesSection
         title="Our Smart Solutions"
         services={services}
-        image={{
-          src: "/general/coregrid/thermostate.webp",
-          alt: "CoreGrid Services",
-        }}
+        companyName="Core%20Grid"
       />
+
+      <ProjectsSection companyName="coreProjects" projects={projects} />
 
       <ClientsSection
         title="Empowering Smart Partnerships"
@@ -87,22 +178,22 @@ export default function page() {
             baseVelocity: 5,
             direction: 1,
             logos: [
-              "Commercial/bakerHughes.webp",
-              "Commercial/lulu.webp",
-              "Commercial/nakheel.png",
-              "Commercial/vfs.webp",
-              "Commercial/warnerBros.webp",
+              "/Commercial/bakerHughes.webp",
+              "/Commercial/lulu.webp",
+              "/Commercial/nakheel.png",
+              "/Commercial/vfs.webp",
+              "/Commercial/warnerBros.webp",
             ],
           },
           {
             baseVelocity: 5,
             direction: -1,
             logos: [
-              "infrastructure/abuDhabiPolice.webp",
-              "infrastructure/rta.webp",
-              "infrastructure/twofour54.webp",
-              "infrastructure/tdic.webp",
-              "Commercial/nmc.webp",
+              "/infrastructure/abuDhabiPolice.webp",
+              "/infrastructure/rta.webp",
+              "/infrastructure/twofour54.webp",
+              "/infrastructure/tdic.webp",
+              "/Commercial/nmc.webp",
             ],
           },
         ]}

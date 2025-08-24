@@ -1,12 +1,12 @@
+'use client'
+import React, { useState, useEffect } from "react";
 import { MoveRightIcon, PhoneCallIcon } from "lucide-react";
-
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import { Button } from "@/components/ui/button";
 import CoreGridLogo from "../logos/core-grid-logo";
 import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
 import RDTechLogo from "../logos/rdtech-logo";
-import React from "react";
 
 export default function HeroSection() {
   const words = ["Technology", "Innovation", "Sustainability"];
@@ -28,31 +28,55 @@ export default function HeroSection() {
     },
   ];
 
+  // Background images
+  const bgImages = [
+    "https://ik.imagekit.io/or8msinzg/rdtech/aaBg.jpeg",
+    "https://ik.imagekit.io/or8msinzg/rdtech/Companies/RDTech/controlRoom.webp",
+    "https://ik.imagekit.io/or8msinzg/rdtech/rdtechBg2.jpeg",
+  ];
+
+  const [currentBg, setCurrentBg] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % bgImages.length);
+    }, 3000); // change every 3 secs
+    return () => clearInterval(interval);
+  }, [bgImages.length]);
+
   return (
     <section
-      className="relative min-h-[155vh] xs:min-h-[140vh] md:min-h-screen text-white flex flex-col overflow-hidden bg-cover bg-fixed"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `url('https://ik.imagekit.io/or8msinzg/rdtech/aaBg.jpeg?updatedAt=1755786638153')`,
-        // backgroundPosition: "top",
+        backgroundImage: `url(${bgImages[currentBg]})`,
       }}
     >
-      {/* Color Overlay */}
-      {/* <div className="absolute z-10 inset-0 bg-gradient-to-br from-blue-800 via-blue-900 to-blue-950 opacity-75" /> */}
+      {bgImages.map((src, idx) => (
+        <div
+          key={idx}
+          className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 ${
+            currentBg === idx ? "opacity-100" : "opacity-0"
+          } ${idx === 1 ? "bg-center" : "bg-top"}`}
+          style={{ backgroundImage: `url('${src}')` }}
+        />
+      ))}
+      {/* Overlay */}
+      <div className="absolute z-10 inset-0 bg-black opacity-20" />
 
       <div className="h-full w-full top-0 absolute z-20 flex flex-col items-center justify-start max-md:mt-20">
         {/* Hero Section */}
         <div className="h-[30%] md:h-full max-md:max-h-[60vh] flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-accent font-bold text-xl px-0 mt-2 text-shadow-xs text-shadow-black/20 tracking-wide">
+          <h1 className="text-white font-bold text-3xl xs:text-5xl sm:text-6xl px-0 mt-2 text-shadow-xs text-shadow-black/20 tracking-wider">
             Shaping the Future of
           </h1>
           <FlipWords
             words={words}
-            className="text-3xl xs:text-5xl sm:text-6xl text-shadow-xs text-shadow-black/20 font-extrabold tracking-wide"
+            className="text-3xl xs:text-5xl text-accent sm:text-6xl text-shadow-xs text-shadow-black/20 font-extrabold tracking-wide"
           />
-          <p className="max-w-2xl mt-4 text-muted  text-shadow-xs text-shadow-black/20">
+          <p className="max-w-2xl mt-4 text-muted text-shadow-xs text-shadow-black/20">
             Constructing, Protecting, and Connecting the Future through Technology and Expertise
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+          <div className="flex flex-col sm:flex-row gap-4 my-6">
             <Button
               asChild
               size="lg"
@@ -91,16 +115,6 @@ export default function HeroSection() {
               className="fill-inherit"
             ></path>
           </svg>
-          {/* <svg
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-            className="absolute -top-0 left-0 w-full fill-white h-10 z-30"
-          >
-            <path
-              d="M0,80 L1200,0 L1200,120 L0,120 Z"
-              className="fill-inherit"
-            ></path>
-          </svg> */}
 
           {/* White Box with content */}
           <div className="relative bg-white text-gray-800 pt-10 pb-8 px-10 grid grid-cols-1 md:grid-cols-3 gap-10 z-10">

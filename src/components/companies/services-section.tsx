@@ -1,49 +1,66 @@
 import { CircleCheck } from "lucide-react";
 import { SafeImage } from "../ui/safe-image";
 
+interface ServiceItem {
+  title: string;
+  description: string;
+  image: string;
+}
+
 interface ServicesSectionProps {
   title: string;
-  services: string[];
-  image: {
-    src: string;
-    alt: string;
-  };
+  services: ServiceItem[];
+  companyName: string;
 }
 
 export default function ServicesSection({
   title,
   services,
-  image,
+  companyName,
 }: Readonly<ServicesSectionProps>) {
   return (
-    <section className="py-10 bg-white max-sm:px-4">
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
-        <div className="relative min-h-[300px] lg:min-h-[400px] w-full">
-          <SafeImage
-            src={image.src}
-            alt={image.alt}
-            fill
-            quality={80}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-            className="rounded-xl shadow-lg object-cover"
-          />
-        </div>
+    <section className="py-16 bg-white max-sm:px-4">
+      <div className="flex flex-col container mx-auto max-sm:px-4">
+        <h3 className="font-heading text-3xl md:text-4xl font-bold text-black mb-6">
+          {title}
+        </h3>
 
-        <div className="md:py-4 py-0">
-          <h3 className="font-heading text-3xl md:text-4xl font-bold text-black mb-2 md:mb-6">
-            {title}
-          </h3>
-          <div className="flex flex-col items-start gap-2">
-            {services.map((service) => (
-              <p
-                key={service}
-                className="text-gray-600 text-base md:text-lg leading-relaxed flex items-center gap-1"
-              >
-                <CircleCheck className="mr-2 h-4 w-4 text-accent" />
-                {service}
-              </p>
-            ))}
-          </div>
+        <div className="w-full grid sm:grid-cols-2 gap-6">
+          {services.map((service, idx) => (
+            <div
+              key={idx}
+              className="w-full group p-5 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-accent transition-all duration-300 bg-white flex flex-col md:flex-row items-center gap-4"
+            >
+              {/* Image wrapper for consistent size */}
+              <div className="relative flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden shadow-md">
+                <SafeImage
+                  src={`/Companies/${companyName}/Services/${service.image}`}
+                  alt={
+                    service.image.split("/").pop()?.split(".")[0] ||
+                    "Service Image"
+                  }
+                  fill
+                  sizes="(100vw)"
+                  loading="lazy"
+                  quality={100}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Text Section */}
+              <div className="flex flex-col items-start gap-1 text-center md:text-left">
+                <div className="flex items-center gap-2">
+                  <CircleCheck className="h-5 w-5 text-accent" />
+                  <h4 className="font-semibold text-lg text-gray-900">
+                    {service.title}
+                  </h4>
+                </div>
+                <p className="text-muted-foreground text-sm md:text-base text-start leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
