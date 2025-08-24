@@ -206,8 +206,8 @@ export function Header() {
 
                     {/* Group Overview Accordion */}
                     <Accordion type="single" collapsible>
-                      <AccordionItem value="group" className="border-b border-white/10">
-                        <AccordionTrigger className="py-0 text-lg font-medium hover:text-accent focus:outline-none transition">
+                      <AccordionItem value="group">
+                        <AccordionTrigger className="py-0 text-lg font-medium hover:text-accent focus:outline-none outline-none transition">
                           Group Overview
                         </AccordionTrigger>
                         <AccordionContent aria-describedby="group-overview">
