@@ -204,8 +204,8 @@ export const projects: Project[] = [
     thumbnail: "/projectPage/coregrid/SharjahHero.jpg",
     heroImage: "/projectPage/coregrid/SharjahHero.jpg",
     gallery: [
-      "/projectPage/coregrid/SharjahG1.jpg",
-      "/projectPage/coregrid/SharjahG2.jpg",
+      "/projectPage/coregrid/sharjahG1.jpg",
+      "/projectPage/coregrid/SharjahG3.jpg",
       "/projectPage/coregrid/expoG2.jpg"
     ],
     duration: "24 months",
