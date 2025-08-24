@@ -33,7 +33,56 @@ const flagshipProjects = [
     ],
   },
   {
-    id: "6",
+    id: "2",
+    slug: "burj-khalifa-security-systems",
+    title: "Burj Khalifa – Security Systems",
+    description:
+      "Comprehensive security integration at the tallest building in the world, including surveillance, access control, and monitoring systems.",
+    category: "RDTech",
+    location: "Dubai, UAE",
+    year: "2018",
+    thumbnail: "/projectPage/rdtech/burjHero.webp",
+    heroImage: "/projectPage/rdtech/burjHero.webp",
+    duration: "24 months",
+    size: "mixed-use facility",
+    client: "Emaar Properties",
+    budget: "$20M+",
+    services: [
+      "CCTV Systems",
+      "Access Control",
+      "Centralized Monitoring",
+      "Intrusion Detection",
+    ],
+    features: [
+      "Advanced surveillance coverage",
+      "Centralized security command center",
+      "Biometric access control",
+    ],
+  },
+  {
+  id: "3",
+  slug: "expo-2020-dubai-bms",
+  title: "Expo 2020 Dubai – Lighting Control",
+  description:
+    "KNX-based automation for 10 pavilions at Expo 2020 Dubai, integrating BMS, lighting, and energy efficiency systems.",
+  category: "CoreGrid",
+  location: "Dubai, UAE",
+  year: "2020",
+  thumbnail: "/projectPage/coregrid/expoHero.jpg",
+  heroImage: "/projectPage/coregrid/expoHero.jpg",
+  duration: "18 months",
+  size: "10 Pavilions",
+  client: "Expo 2020 Dubai",
+  budget: "$20M+",
+  services: ["BMS", "Lighting Control", "Facade Lighting", "Energy Optimization"],
+  features: [
+    "Integration with DMX, DALI & BACnet",
+    "Up to 60% energy savings",
+    "Future-proof automation for District 2020"
+  ],
+  },
+  {
+    id: "5",
     slug: "sharjah-sustainable-city-automation",
     title: "Sharjah Sustainable City ",
     description:
@@ -55,7 +104,7 @@ const flagshipProjects = [
     ],
   },
   {
-    id: "3",
+    id: "6",
     slug: "al-ain-club-restaurants",
     title: "Al Ain Club – Restaurants",
     description:
@@ -106,29 +155,81 @@ export default function ProjectsSection() {
 
         {/* Project showcase */}
         <div className="relative container mx-auto px-4 mt-12">
-          <Card className="relative overflow-hidden rounded-2xl py-0 md:py-6 md:pb-0 shadow-lg border-none bg-white">
-            <div className="grid grid-cols-1 lg:grid-cols-2 ">
-              {/* Image */}
-              <div className="relative h-80 md:h-[450px] md:pl-6">
-                <SafeImage
-                  key={project.id}
-                  src={project.heroImage}
-                  alt={project.title}
-                  quality={100}
-                  width={1600}
-                  height={1200}
-                  className="w-full h-full object-cover md:rounded-sm"
-                />
-                <Badge
-                  variant="outline"
-                  className="border-primary absolute top-2 right-2 text-primary font-semibold"
-                >
-                  {project.category}
-                </Badge>
-              </div>
+          {/* Mobile: Horizontal scrollable cards */}
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory md:hidden pb-4">
+            {flagshipProjects.map((proj) => (
+              <Card
+                key={proj.id}
+                className="min-w-[85%] snap-center py-0 gap-0 overflow-hidden rounded-2xl shadow-lg border-none bg-white flex flex-col"
+              >
+                {/* Image */}
+                <div className="relative h-56">
+                  <SafeImage
+                    src={proj.heroImage}
+                    alt={proj.title}
+                    quality={100}
+                    width={1200}
+                    height={900}
+                    className="w-full h-full object-cover"
+                  />
+                  <Badge
+                    variant="outline"
+                    className="border-white absolute top-2 right-2 text-white font-semibold"
+                  >
+                    {proj.category}
+                  </Badge>
+                </div>
 
-              {/* Details */}
-              <div className="p-4 pb-0 md:p-8 md:py-0">
+                {/* Content */}
+                <div className="p-4 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold text-gray-900">{proj.title}</h3>
+                  <p className="text-sm text-gray-600">{proj.description}</p>
+
+                  <div className="flex flex-wrap gap-2 my-2">
+                    {proj.services.map((service) => (
+                      <span
+                        key={service}
+                        className="bg-blue-50 text-gray-700 px-2 py-1 rounded-full text-xs"
+                      >
+                        {service}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Push button to bottom */}
+                  <Button asChild className="w-full mt-auto">
+                    <a href={`/projects/${proj.slug}`}>View Project</a>
+                  </Button>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          {/* Desktop: Keep current slideshow layout */}
+          <div className="hidden md:block">
+            <Card className="relative overflow-hidden rounded-2xl py-0 md:py-6 md:pb-0 shadow-lg border-none bg-white">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Image */}
+                <div className="relative h-80 md:h-[450px] md:pl-6">
+                  <SafeImage
+                    key={project.id}
+                    src={project.heroImage}
+                    alt={project.title}
+                    quality={100}
+                    width={1600}
+                    height={1200}
+                    className="w-full h-full object-cover md:rounded-sm"
+                  />
+                  <Badge
+                    variant="outline"
+                    className="border-white absolute top-2 right-2 text-white font-semibold"
+                  >
+                    {project.category}
+                  </Badge>
+                </div>
+
+                {/* Details */}
+                <div className="p-4 pb-0 md:p-8 md:py-0">
                 <div className="space-y-6">
                   <div>
                     <div className="flex justify-between items-start">
@@ -225,12 +326,12 @@ export default function ProjectsSection() {
                   </Button>
                 </div>
               </div>
-            </div>
-          </Card>
+              </div>
+            </Card>
 
-          {/* Prev / Next buttons */}
-          <div className="absolute hidden md:flex -bottom-4 right-8 gap-2 z-20">
-            <Button
+            {/* Prev / Next buttons */}
+            <div className="absolute hidden md:flex -bottom-4 right-8 gap-2 z-20">
+              <Button
               variant="ghost"
               onClick={() =>
                 setCurrentProject((prev) =>
@@ -252,21 +353,22 @@ export default function ProjectsSection() {
             >
               <ChevronRight/>
             </Button>
-          </div>
+            </div>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-2 mt-8">
-            {flagshipProjects.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentProject(idx)}
-                className={`h-1 rounded-full transition-all duration-300 cursor-pointer ${
-                  currentProject === idx
-                    ? "bg-white w-6 sm:w-8"
-                    : "bg-white/30 w-3 sm:w-5"
-                }`}
-              />
-            ))}
+            {/* Navigation dots */}
+            <div className="flex items-center justify-center gap-2 mt-8">
+              {flagshipProjects.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentProject(idx)}
+                  className={`h-1 rounded-full transition-all duration-300 cursor-pointer ${
+                    currentProject === idx
+                      ? "bg-white w-6 sm:w-8"
+                      : "bg-white/30 w-3 sm:w-5"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
