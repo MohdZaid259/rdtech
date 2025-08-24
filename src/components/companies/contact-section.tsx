@@ -26,7 +26,7 @@ export default function ContactSection({
   address,
 }: Readonly<ContactSectionProps>) {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section className="py-20 max-md:pb-6 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -39,7 +39,7 @@ export default function ContactSection({
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-4 md:gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-12">
           {/* Left Side - Trio with line dividers */}
           <div className="flex flex-col divide-y divide-gray-200">
             {/* Phone */}
