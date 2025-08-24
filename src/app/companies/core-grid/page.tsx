@@ -197,9 +197,9 @@ export default function page() {
       <ContactSection
         title="Make Your Building Smart"
         subtitle="Ready to transform your space with intelligent automation? Let's create a smarter future together."
-        phone="+971 X XXX XXXX"
-        email="info@example.com"
-        address="Abu Dhabi, UAE"
+        phone="+971 3733 0116"
+        email="info@coregridsystems.com "
+        address="PO : 23113, Abu Dhabi, UAE"
       />
     </main>
   );

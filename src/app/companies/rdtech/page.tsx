@@ -205,9 +205,9 @@ export default function page() {
       <ContactSection
         title="Secure Your Future Today"
         subtitle="Ready to implement world-class security solutions? Our experts are here to help."
-        phone="+971 X XXX XXXX"
-        email="info@example.com"
-        address="Dubai, UAE"
+        phone="+971 6524 1842"
+        email=" info@rdtech-group.com"
+        address="PO 23113, Sharjah, UAE"
       />
     </main>
   );

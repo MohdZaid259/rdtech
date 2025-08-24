@@ -84,11 +84,11 @@ export default function Footer() {
             <div className="mt-6 md:mt-0">
               <h3 className="text-white font-semibold mb-3">Contact</h3>
               <ul className="space-y-2 text-sm">
-                <li className="hover:text-white">+971 555-0121</li>
+                <li className="hover:text-white">+971 3733 0116 </li>
                 <li className="hover:text-white">
-                  <a href="mailto:info@rdtechgroup.com">info@rdtechgroup.com</a>
+                  <a href="mailto:info@alaususgencont.com ">info@alaususgencont.com </a>
                 </li>
-                <li className="hover:text-white">8502 Preston Rd.</li>
+                <li className="hover:text-white">PO : 23113</li>
                 <li className="hover:text-white">Abu Dhabi, UAE</li>
               </ul>
             </div>

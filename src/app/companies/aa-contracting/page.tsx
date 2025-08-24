@@ -224,9 +224,9 @@ export default function page() {
       <ContactSection
         title="Build Your Vision With Us"
         subtitle=" Ready to start your construction project? Let's discuss how we can bring your vision to life."
-        phone="+971 X XXX XXXX"
-        email="info@example.com"
-        address="Dubai, UAE"
+        phone="+971 3733 0116"
+        email="info@alaususgencont.com "
+        address="PO : 23113, Abu Dhabi, UAE"
       />
     </main>
   );
