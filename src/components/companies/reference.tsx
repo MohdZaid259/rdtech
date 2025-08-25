@@ -38,7 +38,7 @@ const clients = [
 
 export default function RefrenceSection() {
   return (
-    <section id="clients" className="py-16 pb-24 bg-primary ">
+    <section id="clients" className="py-16 pb-24 px-2 bg-primary ">
       <div className="container mx-auto flex flex-col gap-4 ">
         <div className="mb-6">
         <h3 className="font-heading text-center text-3xl md:text-4xl font-bold text-white mb-2">
@@ -51,7 +51,7 @@ export default function RefrenceSection() {
         >
           {clients.map((client, index) => (
   <FadeIn key={index} delay={index * 100}>
-    <div className="relative w-full h-64 overflow-hidden group cursor-pointer rounded-xl shadow-lg bg-white hover:scale-110 duration-300 transition-all">
+    <div className="relative w-full md:h-64 h-48 overflow-hidden group cursor-pointer rounded-xl shadow-lg bg-white hover:scale-110 duration-300 transition-all">
       <SafeImage
         src={`/Companies/RDTech/clients/${client.image}`}
         alt={client.name}
