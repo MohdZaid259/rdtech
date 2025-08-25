@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function NotFoundPage() {
+export default function Page() {
   return (
     <StatusPage
       code="404"

@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, MoveRightIcon, PhoneCallIcon } from "lucide-react";
+import { ChevronRight, PhoneCallIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 import AAContractingLogo from "../logos/aa-contracting-logo";
@@ -9,9 +9,13 @@ import CoreGridLogo from "../logos/core-grid-logo";
 import Link from "next/link";
 import RDTechLogo from "../logos/rdtech-logo";
 import { WordRotate } from "../magicui/word-rotate";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
-  const words = ["Technology", "Innovation", "Sustainability"];
+  const t = useTranslations("Home.Hero");
+
+  console.log(t('title'));
+
   const companies = [
     {
       name: "AA Contracting",
@@ -74,15 +78,14 @@ export default function HeroSection() {
         {/* Hero Section */}
         <div className="h-full flex flex-col items-center justify-center text-center mt-32 md:mt-28 px-4">
           <h1 className="text-white font-bold text-3xl xs:text-5xl sm:text-6xl px-0 text-shadow-xs text-shadow-black/20 tracking-wider">
-            Shaping the Future of
+            {t("title")}
           </h1>
-          <WordRotate
+          {/* <WordRotate
             className="text-3xl xs:text-5xl sm:text-6xl font-extrabold  text-accent tracking-wide"
-            words={words}
-          />
+            words={[""]}
+          /> */}
           <p className="max-w-2xl mt-4 text-muted text-shadow-xs text-shadow-black/20">
-            Constructing, Protecting, and Connecting the Future through
-            Technology and Expertise
+            {t("subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Button

@@ -1,9 +1,9 @@
 import React from 'react'
-import { termsOfService } from '../../../public/footer'
+import { privacyPolicy } from '../../../../public/footer'
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | RDTech Group",
+  title: "Privacy Policy | RDTech Group",
   openGraph: {
     images: [
       {
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 function page() {
   return (
     <div className='mx-2 md:mx-16 my-16 md:mt-24'>
-      <h1 className='font-bold text-3xl mb-4'>Terms of Service</h1>
-      <div dangerouslySetInnerHTML={{ __html: termsOfService }} />
+      <h1 className='font-bold text-3xl mb-4'>Privacy Policy</h1>
+      <div dangerouslySetInnerHTML={{ __html: privacyPolicy }} />
     </div>
   )
 }
