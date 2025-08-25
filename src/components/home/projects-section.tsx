@@ -229,7 +229,7 @@ export default function ProjectsSection() {
           </Card>
 
           {/* Prev / Next buttons */}
-          <div className="absolute -bottom-4 right-8 flex gap-2 z-20">
+          <div className="absolute hidden md:flex -bottom-4 right-8 gap-2 z-20">
             <Button
               variant="ghost"
               onClick={() =>

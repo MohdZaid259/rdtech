@@ -27,9 +27,9 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="relative bg-gradient-to-tr from-blue-950 via-blue-900 to-blue-950 text-white mt-16 py-16">
-      <div className="absolute -top-14 right-10 ">
+      <div className="absolute -top-7 md:-top-14 right-10 ">
         <h1 
-          className="text-8xl font-bold uppercase tracking-wider inline-block"
+          className="text-5xl md:text-8xl font-bold uppercase tracking-wider inline-block"
           style={{
             background: 'linear-gradient(to top, white 0%, white 42%, #172554 42%, #172554 100%)',
             WebkitBackgroundClip: 'text',

@@ -33,7 +33,7 @@ const features = [
   {
     icon: Layers,
     title: "Modular & Scalable",
-    subtitle: "Future-ready system upgrades",
+    subtitle: "Future-ready system level upgrades",
   },
   {
     icon: Cpu,

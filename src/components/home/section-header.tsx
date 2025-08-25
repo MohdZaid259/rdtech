@@ -12,7 +12,7 @@ export default function SectionHeader({
   readonly subTitleColor?: string;
 }) {
   return (
-    <div className="p-4 flex flex-col items-center mb-2 md:mb-8 text-center">
+    <div className="p-4 flex flex-col items-center mb-0 md:mb-4 text-center">
       <FadeIn>
         <h2
           className={`text-xl md:text-3xl font-bold backdrop-blur-md py-2 px-6 rounded-full shadow-lg ${titleColor}`}

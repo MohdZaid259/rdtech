@@ -97,7 +97,7 @@ export default function ClientsSection() {
         subTitleColor="text-muted"
       />
 
-      <div className="mx-auto px-4 md:px-0 relative z-10 mt-12">
+      <div className="mx-auto px-0 relative z-10 mt-12">
         <ScrollVelocityContainer className="space-y-4">
           {clientRows.map((logos, rowIndex) => (
             <ScrollVelocityRow

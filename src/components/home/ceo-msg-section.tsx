@@ -30,8 +30,8 @@ export default function CEOMessageSection() {
           {/* Quote Frame - Transparent Background */}
           <div className="relative bg-transparent border-2 rounded-3xl p-6 px-12 backdrop-blur-xs shadow-2xl">
             {/* Opening Quote Mark */}
-            <div className="absolute -top-6 -left-8 text-6xl font-bold text-white">
-              <Quote className="fill-white size-16 rotate-y-180" />
+            <div className="absolute -top-6 md:-left-8 -left-2 text-6xl font-bold text-white">
+              <Quote className="fill-white size-8 md:size-16 rotate-y-180" />
             </div>
 
             {/* Content */}
@@ -53,8 +53,8 @@ export default function CEOMessageSection() {
             </div>
 
             {/* Closing Quote Mark */}
-            <div className="absolute -bottom-6 -right-8 text-6xl font-bold text-white">
-              <Quote className="size-16 fill-white" />
+            <div className="absolute -bottom-6 -right-2 md:-right-8 text-6xl font-bold text-white">
+              <Quote className="size-8 md:size-16 fill-white" />
             </div>
           </div>
 
