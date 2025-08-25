@@ -13,11 +13,14 @@ export default function ProjectsSection({
   companyName,
 }: Readonly<ProjectsSectionProps>) {
   return (
-    <section className="py-16 pb-24 bg-primary max-sm:px-4">
-      <div className="container mx-auto flex flex-col gap-4 max-sm:px-4">
-        <h3 className="font-heading text-center text-3xl md:text-4xl font-bold text-white mb-6">
+    <section id="projects" className="py-16 pb-24 bg-primary ">
+      <div className="container mx-auto flex flex-col gap-4 ">
+        <div className="mb-6">
+        <h3 className="font-heading text-center text-3xl md:text-4xl font-bold text-white mb-2">
           Our Projects
         </h3>
+        <p className="text-gray-400 text-center">A glimpse into the landmarks we’ve shaped.</p>
+        </div>
         <div
           className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ${
             companyName == "coreProjects" ? "grid-rows-3" : "grid-rows-4"

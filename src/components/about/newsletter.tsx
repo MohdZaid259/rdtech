@@ -21,7 +21,7 @@ export default function Newsletter() {
               <input
                 type="email"
                 placeholder="Enter your Email"
-                className="flex-1 border w-36 md:w-80 border-accent text-sm placeholder:text-amber-100 px-2 md:px-6 py-1 md:py-2 rounded-l-full focus:outline-none text-gray-800"
+                className="flex-1 border w-36 md:w-80 border-accent text-sm text-accent placeholder:text-amber-100 px-2 md:px-6 py-1 md:py-2 rounded-l-full focus:outline-none"
               />
               <button
                 type="submit"

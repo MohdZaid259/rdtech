@@ -70,7 +70,9 @@ export default async function ProjectPage({
 }
 
 export function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
+  return projects
+    .filter((project) => typeof project.slug === "string" && project.slug.length > 0)
+    .map((project) => ({
+      slug: project.slug,
+    }));
 }

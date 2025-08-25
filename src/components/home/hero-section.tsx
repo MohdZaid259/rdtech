@@ -1,20 +1,16 @@
-"use client";
-
-import { ChevronRight, PhoneCallIcon } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { ChevronRight, MoveRightIcon, PhoneCallIcon } from "lucide-react";
 
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import { Button } from "@/components/ui/button";
 import CoreGridLogo from "../logos/core-grid-logo";
 import Link from "next/link";
 import RDTechLogo from "../logos/rdtech-logo";
+import React from "react";
 import { WordRotate } from "../magicui/word-rotate";
 import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
   const t = useTranslations("Home.Hero");
-
-  console.log(t('title'));
 
   const companies = [
     {
@@ -43,28 +39,14 @@ export default function HeroSection() {
     },
   ];
 
-  // Background images
-  const bgImages = ["https://ik.imagekit.io/or8msinzg/rdtech/aaBg.jpeg"];
-
-  const [currentBg, setCurrentBg] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBg((prev) => (prev + 1) % bgImages.length);
-    }, 3000); // change every 3 secs
-    return () => clearInterval(interval);
-  }, [bgImages.length]);
-
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden
     bg-[url('https://ik.imagekit.io/or8msinzg/rdtech/aaBg.jpeg')] bg-[20%_center] md:bg-top"
-      
     >
       {/* Overlay */}
       <div className="absolute z-10 inset-0 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-950 opacity-80" />
 
-<<<<<<< HEAD
       <div className="absolute z-20 h-full flex flex-col items-center gap-10">
         {/* Hero Section */}
         <div className="h-full flex flex-col items-center justify-center text-center mt-32 md:mt-28 px-4">
@@ -89,33 +71,6 @@ export default function HeroSection() {
                 <ChevronRight className="h-6 w-6 font-bold transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-=======
-      <div className="absolute z-20 h-full flex flex-col items-center">
-        <div className="w-full h-full flex flex-col items-center justify-start md:mt-20">
-          {/* Hero Section */}
-          <div className="h-full flex flex-col items-center justify-center text-center px-6">
-            <h1 className="text-white font-bold text-3xl xs:text-5xl sm:text-6xl px-0 mt-2 text-shadow-xs text-shadow-black/20 tracking-wider">
-              Shaping the Future of
-            </h1>
-            <WordRotate
-              className="text-3xl xs:text-5xl sm:text-6xl font-extrabold  text-accent tracking-wide"
-              words={words}
-            />
-            <p className="max-w-2xl mt-4 text-muted text-shadow-xs text-shadow-black/20">
-              Constructing, Protecting, and Connecting the Future through Technology and Expertise
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 my-6">
-              <Button
-                asChild
-                size="lg"
-                className="text-base text-primary font-semibold bg-accent hover:bg-accent shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
-              >
-                <Link href="/#services" className="flex items-center gap-2">
-                  <span>Explore Our Services</span>
-                  <ChevronRight className="h-6 w-6 font-bold transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
->>>>>>> a1041edd1eeeca8dbe490e62642a7dbd41e16278
 
             <Button
               asChild
@@ -142,9 +97,7 @@ export default function HeroSection() {
                 style={{ animationDelay: company.delay }}
               >
                 {/* Circle logo container */}
-                <div
-                  className="w-18 h-18 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-500 p-3"
-                >
+                <div className="w-18 h-18 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-500 p-3">
                   <company.Logo />
                 </div>
 
@@ -158,7 +111,6 @@ export default function HeroSection() {
               </Link>
             ))}
           </div>
-        </div>
         </div>
       </div>
     </section>

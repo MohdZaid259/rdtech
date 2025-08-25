@@ -8,7 +8,6 @@ interface Stat {
 interface AboutSectionProps {
   title: string;
   description: string[];
-  stats: Stat[];
   image: {
     src: string;
     alt: string;
@@ -20,7 +19,6 @@ interface AboutSectionProps {
 export default function AboutSection({
   title,
   description,
-  stats,
   image,
 }: Readonly<AboutSectionProps>) {
   return (
@@ -42,20 +40,6 @@ export default function AboutSection({
                 {para}
               </p>
             ))}
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-3 md:gap-6 ">
-              {stats.map((stat, idx) => (
-                <div key={idx} className="text-start">
-                  <div className="font-heading text-2xl md:text-3xl font-bold text-accent">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right Image */}
@@ -65,7 +49,7 @@ export default function AboutSection({
               alt={image.alt}
               width={600}
               height={400}
-              className="rounded-xl shadow-lg"
+              className={`rounded-xl ${image.alt.includes('AA')?'h-[400px]':''} shadow-lg`}
             />
           </div>
         </div>

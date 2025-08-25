@@ -23,7 +23,7 @@ const features = [
   {
     icon: Clock,
     title: "24/7 Availability",
-    subtitle: "Round-the-clock support",
+    subtitle: "Round-the-clock support always",
   },
   {
     icon: DollarSign,
@@ -43,7 +43,7 @@ const features = [
   {
     icon: Gauge,
     title: "Fast Implementation",
-    subtitle: "Zero-downtime delivery",
+    subtitle: "Providing Zero-downtime delivery",
   },
   {
     icon: Cable,

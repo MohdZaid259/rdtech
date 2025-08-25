@@ -18,7 +18,7 @@ export default function CompaniesSection() {
       description:
         "Delivering comprehensive construction and contracting services with precision and reliability.",
       icon: AAContractingLogo,
-      href: "/mep.jpg?updatedAt=1755786638239",
+      href: "aa-contracting",
       image: "/mep.jpg?updatedAt=1755786638239",
       services: [
         "Civil Construction",
@@ -35,7 +35,7 @@ export default function CompaniesSection() {
       description:
         "Pioneering advanced security technology to safeguard critical infrastructure across the UAE. From access control to comprehensive surveillance systems.",
       icon: RDTechLogo,
-      href: "/Companies/RDTech/controlRoom.webp?updatedAt=1755876470382",
+      href: "rdtech",
       image: "/Companies/RDTech/controlRoom.webp?updatedAt=1755876470382",
       services: [
         "Access Control System",
@@ -52,7 +52,7 @@ export default function CompaniesSection() {
       description:
         "Transforming buildings into intelligent, efficient spaces through cutting-edge automation and control systems.",
       icon: CoreGridLogo,
-      href: "/facial.jpg?updatedAt=1755786638264",
+      href: "core-grid",
       image: "/facial.jpg?updatedAt=1755786638264",
       services: [
         "Lighting Control",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SafeImage } from "../ui/safe-image";
 
 export default function Footer() {
   return (
@@ -9,11 +10,12 @@ export default function Footer() {
           {/* Logo & About - custom span */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-3">
+              <SafeImage src="/Logos/rdtech-group-1.png?updatedAt=1755860934739" width={36} height={36} alt="logo"/>
               <span className="text-lg font-semibold text-white">
                 RDTech Group
               </span>
             </div>
-            <p className="text-gray-400 mb-4 w-[80%] text-sm">
+            <p className="text-gray-400 mb-4 md:w-[80%] w-full text-sm">
               Uniting three industry leaders — RDTech Security Solutions, AL
               AUSUS AL ARBAA Contracting, and CoreGrid Automation — to deliver
               innovative, reliable, and future-ready solutions across security,
@@ -84,11 +86,11 @@ export default function Footer() {
             <div className="mt-6 md:mt-0">
               <h3 className="text-white font-semibold mb-3">Contact</h3>
               <ul className="space-y-2 text-sm">
-                <li className="hover:text-white">+971 555-0121</li>
+                <li className="hover:text-white">+971 3733 0116 </li>
                 <li className="hover:text-white">
-                  <a href="mailto:info@rdtechgroup.com">info@rdtechgroup.com</a>
+                  <a href="mailto:info@alaususgencont.com ">info@alaususgencont.com </a>
                 </li>
-                <li className="hover:text-white">8502 Preston Rd.</li>
+                <li className="hover:text-white">PO : 23113</li>
                 <li className="hover:text-white">Abu Dhabi, UAE</li>
               </ul>
             </div>

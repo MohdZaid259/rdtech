@@ -15,6 +15,7 @@ import { Menu } from "lucide-react";
 import RDTechGroupLogo from "../logos/rdtech-group-logo";
 import RDTechLogo from "../logos/rdtech-logo";
 import { usePathname } from "next/navigation";
+import {ChevronDown} from 'lucide-react'
 
 const companies = [
   {
@@ -87,15 +88,24 @@ export function Header() {
         showBg && "bg-primary shadow-xs"
       }`}
     >
-      <div className="container md:mx-0 mt-3 md:mt-0 max-sm:px-6">
+      <div className="container md:mx-0 max-sm:px-6 py-2">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <RDTechGroupLogo iconSize={45} textSize={90} className="invert" />
+            <RDTechGroupLogo iconSize={55} textSize={110} className="invert" />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
+            <Link
+              href="/"
+              onMouseEnter={() => setShowOverview(false)}
+              className={linkClass()}
+            >
+              Home
+            </Link>
+
+
             <Link
               href="/about"
               onMouseEnter={() => setShowOverview(false)}
@@ -106,9 +116,10 @@ export function Header() {
 
             <button
               onMouseEnter={() => setShowOverview(true)}
-              className={`${linkClass()} ${showOverview && "after:w-full"}`}
+              className={`${linkClass()} flex justify-center items-center gap-2 ${showOverview && "after:w-full"}`}
             >
               Group Overview
+              <ChevronDown className="w-4 -mb-1"/>
             </button>
 
             <Link
@@ -174,7 +185,9 @@ export function Header() {
               <SheetTrigger asChild>
                 <Menu className="h-6 w-6 text-white" />
               </SheetTrigger>
-              <SheetContent side="right" className="p-6 gap-6 z-[100]">
+
+              {/* 👇 Slide from LEFT instead of RIGHT */}
+              <SheetContent side="right" className="p-6 gap-6 z-[100] bg-primary text-white">
                 <div className="flex flex-col h-full">
                   {/* Logo */}
                   <Link
@@ -182,7 +195,7 @@ export function Header() {
                     onClick={() => setOpen(false)}
                     className="flex items-center mb-6"
                   >
-                    <RDTechGroupLogo iconSize={35} textSize={65} />
+                    <RDTechGroupLogo iconSize={45} textSize={80} className="invert" />
                   </Link>
 
                   <nav className="flex flex-col gap-4 flex-1">
@@ -204,12 +217,12 @@ export function Header() {
 
                     {/* Group Overview Accordion */}
                     <Accordion type="single" collapsible>
-                      <AccordionItem value="group" className="border-b">
-                        <AccordionTrigger className="py-0 text-lg font-medium hover:text-accent focus:outline-none focus:ring-0 transition">
+                      <AccordionItem value="group">
+                        <AccordionTrigger className="py-0 text-lg font-medium hover:text-accent focus:outline-none outline-none transition">
                           Group Overview
                         </AccordionTrigger>
                         <AccordionContent aria-describedby="group-overview">
-                          <div className="space-y-4 pl-2">
+                          <div className="space-y-4 pl-2 mt-4">
                             {companies.map((company) => {
                               const Logo = company.logo;
                               return (
@@ -217,16 +230,16 @@ export function Header() {
                                   onClick={() => setOpen(false)}
                                   key={company.name}
                                   href={company.href}
-                                  className="flex items-center space-x-3 rounded-lg p-2 hover:bg-accent/10 transition"
+                                  className="flex items-center space-x-3 rounded-lg p-2 hover:bg-accent/20 transition"
                                 >
                                   <div className="w-10 h-10 flex items-center justify-center rounded-md border bg-muted">
                                     <Logo />
                                   </div>
                                   <div>
-                                    <h3 className="text-sm font-semibold">
+                                    <h3 className="text-sm font-semibold text-white">
                                       {company.name}
                                     </h3>
-                                    <p className="text-xs text-muted-foreground">
+                                    <p className="text-xs text-zinc-200">
                                       {company.description}
                                     </p>
                                   </div>
@@ -249,7 +262,7 @@ export function Header() {
                     <Link
                       onClick={() => setOpen(false)}
                       href="/#contact"
-                      className="block w-full text-center bg-primary text-white py-2 rounded-lg font-medium hover:bg-accent/90 transition"
+                      className="block w-full mt-4 text-center bg-accent text-white py-2 rounded-lg font-medium hover:bg-accent/90 transition"
                     >
                       Get in Touch
                     </Link>

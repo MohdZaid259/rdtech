@@ -12,7 +12,6 @@ interface HeroSectionProps {
   backgroundImage: string;
   companyLogo?: React.ReactNode;
   projectsLink?: string;
-  websiteLink?: string;
 }
 
 export default function HeroSection({
@@ -22,7 +21,6 @@ export default function HeroSection({
   backgroundImage,
   companyLogo,
   projectsLink = "#projects",
-  websiteLink,
 }: Readonly<HeroSectionProps>) {
   return (
     <section
@@ -73,30 +71,13 @@ export default function HeroSection({
               {projectsLink && (
                 <Button
                   asChild
-                  size="lg"
-                  className="text-base text-white font-semibold bg-primary hover:bg-primary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
-                >
-                  <Link href={projectsLink} className="flex items-center gap-2">
-                    <span>Explore Projects</span>
-                    <MoveRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </Button>
-              )}
-
-              {websiteLink && (
-                <Button
-                  asChild
                   variant="outline"
                   size="lg"
                   className="min-w-[200px] text-base text-blue-950 font-semibold bg-white hover:bg-white backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
                 >
-                  <Link
-                    href={websiteLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Globe className="h-5 w-5" />
-                    Go to Site
+                  <Link href={projectsLink} className="flex items-center gap-2">
+                    <span>Explore Projects</span>
+                    <MoveRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
               )}

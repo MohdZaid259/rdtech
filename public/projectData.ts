@@ -1,6 +1,6 @@
 export interface Project {
   id: string;
-  slug: string;
+  slug?: string;
   title: string;
   description: string;
   fullDescription: string;
@@ -58,37 +58,6 @@ export const projects: Project[] = [
       "Coordinating installation in a fully operational luxury hotel without disturbing guest experience was the key challenge. Work was scheduled in phases and executed with minimal disruption.",
   },
   {
-    id: "2",
-    slug: "ajman-transport-vehicle-surveillance",
-    title: "Ajman Transport – Vehicle Surveillance",
-    description:
-      "Deployment of advanced surveillance systems for over 2,600 public transport vehicles in Ajman.",
-    fullDescription:
-      "RDTech implemented a large-scale surveillance project for Ajman Transport, equipping 2,600 vehicles with robust CCTV and monitoring systems. This ensured passenger safety, operational efficiency, and compliance with regulatory standards.",
-    category: "RDTech",
-    location: "Ajman, UAE",
-    year: "2022",
-    thumbnail: "/projectPage/rdtech/ajmanHero.jpg",
-    heroImage: "/projectPage/rdtech/ajmanHero.jpg",
-    gallery: [
-      "/projectPage/rdtech/ajmanG1.webp",
-      "/projectPage/rdtech/ajmanG2.webp",
-      "/projectPage/rdtech/ajmanG3.jpg",
-    ],
-    duration: "12 months",
-    size: "2,600 vehicles",
-    client: "Ajman Public Transport Corporation",
-    budget: "$3M+",
-    services: ["Vehicle Surveillance", "Fleet Security Systems"],
-    features: [
-      "Onboard CCTV for 2,600 vehicles",
-      "Live monitoring integration",
-      "Tamper-proof recording",
-    ],
-    challenges:
-      "The project required simultaneous retrofitting of multiple vehicles while ensuring fleet availability. A phased rollout minimized downtime.",
-  },
-  {
     id: "3",
     slug: "burj-khalifa-security-systems",
     title: "Burj Khalifa – Integrated Security Systems",
@@ -124,6 +93,28 @@ export const projects: Project[] = [
     ],
     challenges:
       "Due to the size and global prominence of the project, RDTech had to ensure zero downtime and seamless integration of multiple systems with ongoing daily operations.",
+  },
+  {
+    id: "0",
+    title: "Atlantis Hotel",
+    description:
+      "Comprehensive security integration at one of Dubai’s most iconic luxury resorts, including CCTV surveillance, access control, and advanced monitoring systems to ensure guest safety and operational reliability.",
+    fullDescription:
+      "",
+    category: "RDTech",
+    location: "Dubai, UAE",
+    year: "2022",
+    thumbnail: "/rdProjects/atlantis.webp",
+    heroImage: "/rdProjects/atlantis.webp",
+    gallery: [],
+    duration: "",
+    size: "",
+    client: "",
+    budget: "$6M+",
+    services: [],
+    features: [],
+    challenges:
+      "",
   },
   // CoreGrid
   {
@@ -204,8 +195,8 @@ export const projects: Project[] = [
     thumbnail: "/projectPage/coregrid/SharjahHero.jpg",
     heroImage: "/projectPage/coregrid/SharjahHero.jpg",
     gallery: [
-      "/projectPage/coregrid/SharjahG1.jpg",
-      "/projectPage/coregrid/SharjahG2.jpg",
+      "/projectPage/coregrid/sharjahG1.jpg",
+      "/projectPage/coregrid/SharjahG3.jpg",
       "/projectPage/coregrid/expoG2.jpg"
     ],
     duration: "24 months",
@@ -315,5 +306,93 @@ export const projects: Project[] = [
     ],
     challenges:
       "The project required careful alignment with cultural guidelines and delivering within tight deadlines to coincide with public events.",
+  },
+  {
+    id: "10",
+    title: "University of Sharjah",
+    description:
+      "Construction works for academic facilities at the University of Sharjah, delivering high-quality structural, finishing, and MEP works to support modern education infrastructure.",
+    fullDescription:
+      "",
+    category: "Al Ausus",
+    location: "Sharjah, UAE",
+    year: "2019",
+    thumbnail: "/aaProjects/university.webp",
+    heroImage: "/aaProjects/university.webp",
+    gallery: [],
+    duration: "",
+    size: "",
+    client: "",
+    budget: "$6M+",
+    services: [],
+    features: [],
+    challenges:
+      "",
+  },
+  {
+    id: "11",
+    title: "Al Dhafra Private Schools",
+    description:
+      "General contracting and civil works for Al Dhafra Private Schools, including classrooms, administrative blocks, and supporting facilities to create a safe and functional learning environment.",
+    fullDescription:
+      "",
+    category: "Al Ausus",
+    location: "Abu Dhabi, UAE",
+    year: "2020",
+    thumbnail: "/aaProjects/aldhaher.webp",
+    heroImage: "/aaProjects/aldhaher.webp",
+    gallery: [],
+    duration: "",
+    size: "",
+    client: "",
+    budget: "$6M+",
+    services: [],
+    features: [],
+    challenges:
+      "",
+  },
+  {
+    id: "12",
+    title: "Al Markhaniya Center",
+    description:
+      "Execution of construction and finishing works at Al Markhaniya Center, ensuring durable structures and high-quality finishes for government and public use.",
+    fullDescription:
+      "",
+    category: "Al Ausus",
+    location: "Al Ain, UAE",
+    year: "2018",
+    thumbnail: "/aaProjects/almarkhaniya.png",
+    heroImage: "/aaProjects/almarkhaniya.png",
+    gallery: [],
+    duration: "",
+    size: "",
+    client: "",
+    budget: "$6M+",
+    services: [],
+    features: [],
+    challenges:
+      "",
+  },
+  {
+    id: "13",
+    title: "Al Ain Residential Villa",
+    description:
+      "Execution of construction and finishing works at Al Markhaniya Center, ensuring durable structures and high-quality finishes for government and public use.",
+    fullDescription:
+      "",
+    category: "Al Ausus",
+    location: "Al Ain, UAE",
+    year: "2021",
+    thumbnail: "/aaProjects/alain.png",
+    heroImage: "/aaProjects/alain.png",
+    gallery: [],
+    duration: "",
+    size: "",
+    client: "",
+    budget: "$6M+",
+    services: [],
+    features: [],
+    challenges:
+      "",
   },
 ];
