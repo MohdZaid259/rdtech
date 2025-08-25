@@ -14,9 +14,9 @@ export function ProjectDetail({ project }: { project: Project }) {
         <div className="container mx-auto px-6 py-6">
           <Link
             href="/projects"
-            className="flex text-sm items-center py-4 pt-2 hover:text-primary"
+            className="flex text-sm items-center py-4 pt-2 mt-2 hover:text-primary"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2"  />
             Back to Projects
           </Link>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">

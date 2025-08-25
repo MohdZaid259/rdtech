@@ -1,6 +1,6 @@
 export interface Project {
   id: string;
-  slug: string;
+  slug?: string;
   title: string;
   description: string;
   fullDescription: string;
@@ -96,7 +96,6 @@ export const projects: Project[] = [
   },
   {
     id: "0",
-    slug: "atlantis-the-palm",
     title: "Atlantis Hotel",
     description:
       "Comprehensive security integration at one of Dubai’s most iconic luxury resorts, including CCTV surveillance, access control, and advanced monitoring systems to ensure guest safety and operational reliability.",
@@ -310,7 +309,6 @@ export const projects: Project[] = [
   },
   {
     id: "10",
-    slug: "university-of-sharjah",
     title: "University of Sharjah",
     description:
       "Construction works for academic facilities at the University of Sharjah, delivering high-quality structural, finishing, and MEP works to support modern education infrastructure.",
@@ -333,7 +331,6 @@ export const projects: Project[] = [
   },
   {
     id: "11",
-    slug: "al-dhafra-private-schools",
     title: "Al Dhafra Private Schools",
     description:
       "General contracting and civil works for Al Dhafra Private Schools, including classrooms, administrative blocks, and supporting facilities to create a safe and functional learning environment.",
@@ -356,7 +353,6 @@ export const projects: Project[] = [
   },
   {
     id: "12",
-    slug: "al-markhaniya-center",
     title: "Al Markhaniya Center",
     description:
       "Execution of construction and finishing works at Al Markhaniya Center, ensuring durable structures and high-quality finishes for government and public use.",
@@ -379,7 +375,6 @@ export const projects: Project[] = [
   },
   {
     id: "13",
-    slug: "al-ain-residential-villa",
     title: "Al Ain Residential Villa",
     description:
       "Execution of construction and finishing works at Al Markhaniya Center, ensuring durable structures and high-quality finishes for government and public use.",
