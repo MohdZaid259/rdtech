@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { SafeImage } from "../ui/safe-image";
 
 interface ProjectsSectionProps {
@@ -12,14 +13,16 @@ export default function ProjectsSection({
   projects,
   companyName,
 }: Readonly<ProjectsSectionProps>) {
+  const t = useTranslations('Project')
+
   return (
     <section id="projects" className="py-16 pb-24 bg-primary ">
       <div className="container mx-auto flex flex-col gap-4 ">
         <div className="mb-6">
         <h3 className="font-heading text-center text-3xl md:text-4xl font-bold text-white mb-2">
-          Our Projects
+          {t('ProjectsGrid.heading')}
         </h3>
-        <p className="text-gray-400 text-center">A glimpse into the landmarks we’ve shaped.</p>
+        <p className="text-gray-400 text-center">{t('ProjectsGrid.subheading')}</p>
         </div>
         <div
           className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ${

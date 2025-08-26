@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Briefcase,
   Fingerprint,
@@ -9,77 +11,71 @@ import {
   Zap,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
 import { SafeImage } from "../ui/safe-image";
 import SectionHeader from "./section-header";
-
-const industries = [
-  {
-    name: "Energy & Utilities / Industry / Ministries",
-    icon: Zap,
-    image: "/Home/Industries/industry1.jpg?updatedAt=1755862753917",
-    description:
-      "Secure and efficient solutions for energy providers, industries, and public ministries.",
-  },
-  {
-    name: "Public Safety",
-    icon: Shield,
-    image: "/Home/Industries/industry2.webp?updatedAt=1755863390682",
-    description:
-      "Management solutions for security, emergency response, and urban governance.",
-  },
-  {
-    name: "Airports / Transportation / Critical Infrastructures",
-    icon: Plane,
-    image: "/Home/Industries/industry3.jpg?updatedAt=1755864184603",
-    description:
-      "Safety and monitoring systems for airports, transport authorities, and vital infrastructures.",
-  },
-  {
-    name: "Business Enterprise",
-    icon: Briefcase,
-    image: "/Home/Industries/industry4.jpg?updatedAt=1755864297063",
-    description:
-      "Integrated products and services for smarter, safer business operations.",
-  },
-  {
-    name: "NGOs / Educational Institutions",
-    icon: Users,
-    image: "/Home/Industries/industry5.webp?updatedAt=1755864357507",
-    description:
-      "Technology support for NGOs and secure solutions for schools and universities.",
-  },
-  {
-    name: "Server Message Block",
-    icon: Fingerprint,
-    image: "/Home/Industries/industry6.webp?updatedAt=1755864482637",
-    description:
-      "Security products and cloud services tailored for small and medium businesses.",
-  },
-  {
-    name: "Civil Defenses",
-    icon: ShieldUser,
-    image: "/Home/Industries/industry7.jpg",
-    description:
-      "Defense and emergency readiness solutions for civil protection agencies.",
-  },
-  {
-    name: "Smart Lifestyle",
-    icon: Home,
-    image: "/Home/Industries/industry8.png?updatedAt=1755864813500",
-    description:
-      "Smart-home and lifestyle products that make everyday living safer and easier.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export function IndustriesSection() {
+  const t = useTranslations("Home.IndustriesSection");
+
+  const industries = [
+    {
+      name: t("industries.energy.name"),
+      icon: Zap,
+      image: "/Home/Industries/industry1.jpg?updatedAt=1755862753917",
+      description: t("industries.energy.description"),
+    },
+    {
+      name: t("industries.publicSafety.name"),
+      icon: Shield,
+      image: "/Home/Industries/industry2.webp?updatedAt=1755863390682",
+      description: t("industries.publicSafety.description"),
+    },
+    {
+      name: t("industries.airports.name"),
+      icon: Plane,
+      image: "/Home/Industries/industry3.jpg?updatedAt=1755864184603",
+      description: t("industries.airports.description"),
+    },
+    {
+      name: t("industries.business.name"),
+      icon: Briefcase,
+      image: "/Home/Industries/industry4.jpg?updatedAt=1755864297063",
+      description: t("industries.business.description"),
+    },
+    {
+      name: t("industries.ngo.name"),
+      icon: Users,
+      image: "/Home/Industries/industry5.webp?updatedAt=1755864357507",
+      description: t("industries.ngo.description"),
+    },
+    {
+      name: t("industries.smb.name"),
+      icon: Fingerprint,
+      image: "/Home/Industries/industry6.webp?updatedAt=1755864482637",
+      description: t("industries.smb.description"),
+    },
+    {
+      name: t("industries.civilDefense.name"),
+      icon: ShieldUser,
+      image: "/Home/Industries/industry7.jpg",
+      description: t("industries.civilDefense.description"),
+    },
+    {
+      name: t("industries.smartLife.name"),
+      icon: Home,
+      image: "/Home/Industries/industry8.png?updatedAt=1755864813500",
+      description: t("industries.smartLife.description"),
+    },
+  ];
+
   return (
-    <section id='services' className="py-8 md:py-20 bg-blue-50">
+    <section id="services" className="py-8 md:py-20 bg-blue-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <SectionHeader
-          title="Industries We Serve"
-          subTitle="Delivering specialized solutions across sectors — from critical infrastructure to consumers."
+          title={t("title")}
+          subTitle={t("subtitle")}
         />
 
         {/* Industries Grid */}
@@ -109,11 +105,9 @@ export function IndustriesSection() {
                   <h3 className="font-heading text-lg font-semibold text-gray-900 mb-0 md:mb-2">
                     {industry.name}
                   </h3>
-                  {industry.description !== "—" && (
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {industry.description}
-                    </p>
-                  )}
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {industry.description}
+                  </p>
                 </CardContent>
               </Card>
             );

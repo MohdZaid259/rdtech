@@ -1,8 +1,10 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 function HeroSection() {
+  const t = useTranslations("About.Hero");
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 200]); // slower movement
 
@@ -23,12 +25,12 @@ function HeroSection() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-shadow-lg text-shadow-black/50">
-          Building a Legacy of <span className="text-accent">Innovation</span>
+          {t.rich("title", {
+            span: (children) => <span className="text-accent">{children}</span>,
+          })}
         </h1>
         <p className="text-white max-w-3xl text-base md:text-lg text-shadow-lg text-shadow-black/50">
-          For over three decades, RDTech Group has been at the forefront of
-          technological innovation, infrastructure excellence, and secure
-          operations in the UAE and beyond.
+          {t("subtitle")}
         </p>
       </div>
     </section>

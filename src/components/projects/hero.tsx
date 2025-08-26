@@ -1,8 +1,10 @@
-'use client' 
-import React from 'react'
+'use client';
+import React from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 function HeroSection() {
+  const t = useTranslations("Project.HeroSection");
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 200]); // slower movement
 
@@ -23,16 +25,14 @@ function HeroSection() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-shadow-lg text-shadow-black/50">
-          Turning Vision Into <span className='text-accent'>Reality</span>
+          {t.rich("heading", { accent: (children) => <span className="text-accent">{children}</span> })}
         </h1>
         <p className="text-white max-w-3xl text-base md:text-lg text-shadow-lg text-shadow-black/50">
-            From government institutions to
-            private enterprises, our track record reflects excellence,
-            innovation, and trust across every sector we serve.
+          {t("description")}
         </p>
       </div>
     </section>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;

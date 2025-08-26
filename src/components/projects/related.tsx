@@ -1,15 +1,18 @@
-
+'use client';
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { SafeImage } from "../ui/safe-image";
 import { projects } from "../../../public/projectData";
+import { useTranslations } from "next-intl";
 
 interface RelatedProjectsProps {
   currentProjectId: string;
 }
 
 export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
+  const t = useTranslations("Project.RelatedProjects");
+
   const relatedProjects = projects
     .filter((project) => project.id !== currentProjectId)
     .slice(0, 3);
@@ -18,7 +21,7 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
     <section className="py-8 md:py-16 px-6 bg-muted/30">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-4 md:mb-8 text-center">
-          Related Projects
+          {t("relatedProjects")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {relatedProjects.map((project) => (

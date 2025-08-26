@@ -10,53 +10,16 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useEffect, useState } from "react";
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import CoreGridLogo from "../logos/core-grid-logo";
-import Link from "next/link";
-import { Menu } from "lucide-react";
 import RDTechGroupLogo from "../logos/rdtech-group-logo";
 import RDTechLogo from "../logos/rdtech-logo";
 import { usePathname } from "next/navigation";
-import {ChevronDown} from 'lucide-react'
-
-const companies = [
-  {
-    name: "AA Contracting",
-    description: "Multi-disciplinary General Contracting",
-    logo: AAContractingLogo,
-    href: "/companies/aa-contracting",
-    services: [
-      "Civil Construction",
-      "MEP Services",
-      "Project Management",
-      "Maintenance",
-    ],
-  },
-  {
-    name: "RDTech",
-    description: "Security Systems & ELV/ICT Solutions",
-    logo: RDTechLogo,
-    href: "/companies/rdtech",
-    services: [
-      "Access Control",
-      "CCTV Systems",
-      "Fire Alarm",
-      "Network Infrastructure",
-    ],
-  },
-  {
-    name: "CoreGrid Solutions",
-    description: "Building Automation & Smart Solutions",
-    logo: CoreGridLogo,
-    href: "/companies/core-grid",
-    services: [
-      "BMS Systems",
-      "Lighting Control",
-      "Home Automation",
-      "Energy Management",
-    ],
-  },
-];
+import { ChevronDown, Menu } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import LocaleSwitcher from "../localSwitcher";
 
 export function Header() {
+  const t = useTranslations("Header");
   const [showOverview, setShowOverview] = useState(false);
   const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,21 +29,58 @@ export function Header() {
   // Track scroll
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > window.innerHeight * 0.8); // 80vh
+      setIsScrolled(window.scrollY > window.innerHeight * 0.8);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // condition: remove bg for /projects/something (dynamic) or if not scrolled past 80vh
   const isProjectsPage =
     pathname.startsWith("/projects/") && pathname !== "/projects";
-
   const showBg = isProjectsPage ? true : isScrolled;
 
   const linkClass = () =>
     `relative text-sm font-medium after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full bg-transparent hover:bg-transparent px-1 py-1.5 text-white`;
+
+  const companies = [
+    {
+      name: t("aaContracting.name"),
+      description: t("aaContracting.description"),
+      logo: AAContractingLogo,
+      href: "/companies/aa-contracting",
+      services: [
+        t("aaContracting.services.civilConstruction"),
+        t("aaContracting.services.mepServices"),
+        t("aaContracting.services.projectManagement"),
+        t("aaContracting.services.maintenance"),
+      ],
+    },
+    {
+      name: t("rdTech.name"),
+      description: t("rdTech.description"),
+      logo: RDTechLogo,
+      href: "/companies/rdtech",
+      services: [
+        t("rdTech.services.accessControl"),
+        t("rdTech.services.cctvSystems"),
+        t("rdTech.services.fireAlarm"),
+        t("rdTech.services.networkInfrastructure"),
+      ],
+    },
+    {
+      name: t("coreGrid.name"),
+      description: t("coreGrid.description"),
+      logo: CoreGridLogo,
+      href: "/companies/core-grid",
+      services: [
+        t("coreGrid.services.bmsSystems"),
+        t("coreGrid.services.lightingControl"),
+        t("coreGrid.services.homeAutomation"),
+        t("coreGrid.services.energyManagement"),
+      ],
+    },
+  ];
 
   return (
     <header
@@ -97,52 +97,35 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link
-              href="/"
-              onMouseEnter={() => setShowOverview(false)}
-              className={linkClass()}
-            >
-              Home
+            <Link href="/" onMouseEnter={() => setShowOverview(false)} className={linkClass()}>
+              {t("nav.home")}
             </Link>
-
-
-            <Link
-              href="/about"
-              onMouseEnter={() => setShowOverview(false)}
-              className={linkClass()}
-            >
-              About
+            <Link href="/about" onMouseEnter={() => setShowOverview(false)} className={linkClass()}>
+              {t("nav.about")}
             </Link>
-
             <button
               onMouseEnter={() => setShowOverview(true)}
-              className={`${linkClass()} flex justify-center items-center gap-2 ${showOverview && "after:w-full"}`}
+              className={`${linkClass()} flex justify-center items-center gap-2 ${
+                showOverview && "after:w-full"
+              }`}
             >
-              Group Overview
-              <ChevronDown className="w-4 -mb-1"/>
+              {t("nav.groupOverview")}
+              <ChevronDown className="w-4 -mb-1" />
             </button>
-
-            <Link
-              href="/projects"
-              onMouseEnter={() => setShowOverview(false)}
-              className={linkClass()}
-            >
-              Projects
+            <Link href="/projects" onMouseEnter={() => setShowOverview(false)} className={linkClass()}>
+              {t("nav.projects")}
             </Link>
-
-            <Link
-              href="/#contact"
-              onMouseEnter={() => setShowOverview(false)}
-              className={linkClass()}
-            >
-              Contact
+            <Link href="/#contact" onMouseEnter={() => setShowOverview(false)} className={linkClass()}>
+              {t("nav.contact")}
             </Link>
+            <LocaleSwitcher />
           </nav>
 
+          {/* Dropdown for Desktop */}
           <div
             onMouseEnter={() => setShowOverview(true)}
             onMouseLeave={() => setShowOverview(false)}
-            className={`max-md:hidden absolute  ${
+            className={`max-md:hidden absolute ${
               showOverview ? "top-0" : "-top-70"
             } left-0 w-full shadow-lg bg-primary/90 backdrop-blur-lg -z-[10] duration-300 transform`}
           >
@@ -160,12 +143,8 @@ export function Header() {
                         <Logo />
                       </div>
                       <div>
-                        <h3 className="font-semibold group-hover:text-accent text-white">
-                          {company.name}
-                        </h3>
-                        <p className="text-sm text-zinc-50">
-                          {company.description}
-                        </p>
+                        <h3 className="font-semibold group-hover:text-accent text-white">{company.name}</h3>
+                        <p className="text-sm text-zinc-50">{company.description}</p>
                       </div>
                     </div>
                     <ul className="space-y-1 text-sm text-zinc-50">
@@ -186,40 +165,25 @@ export function Header() {
                 <Menu className="h-6 w-6 text-white" />
               </SheetTrigger>
 
-              {/* 👇 Slide from LEFT instead of RIGHT */}
               <SheetContent side="right" className="p-6 gap-6 z-[100] bg-primary text-white">
                 <div className="flex flex-col h-full">
-                  {/* Logo */}
-                  <Link
-                    href="/"
-                    onClick={() => setOpen(false)}
-                    className="flex items-center mb-6"
-                  >
+                  <Link href="/" onClick={() => setOpen(false)} className="flex items-center mb-6">
                     <RDTechGroupLogo iconSize={45} textSize={80} className="invert" />
                   </Link>
 
                   <nav className="flex flex-col gap-4 flex-1">
-                    <Link
-                      href="/"
-                      onClick={() => setOpen(false)}
-                      className="text-lg font-medium hover:text-accent transition"
-                    >
-                      Home
+                    <Link href="/" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-accent transition">
+                      {t("nav.home")}
                     </Link>
-
-                    <Link
-                      href="/about"
-                      onClick={() => setOpen(false)}
-                      className="text-lg font-medium hover:text-accent transition"
-                    >
-                      About
+                    <Link href="/about" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-accent transition">
+                      {t("nav.about")}
                     </Link>
 
                     {/* Group Overview Accordion */}
                     <Accordion type="single" collapsible>
                       <AccordionItem value="group">
                         <AccordionTrigger className="py-0 text-lg font-medium hover:text-accent focus:outline-none outline-none transition">
-                          Group Overview
+                          {t("nav.groupOverview")}
                         </AccordionTrigger>
                         <AccordionContent aria-describedby="group-overview">
                           <div className="space-y-4 pl-2 mt-4">
@@ -236,12 +200,8 @@ export function Header() {
                                     <Logo />
                                   </div>
                                   <div>
-                                    <h3 className="text-sm font-semibold text-white">
-                                      {company.name}
-                                    </h3>
-                                    <p className="text-xs text-zinc-200">
-                                      {company.description}
-                                    </p>
+                                    <h3 className="text-sm font-semibold text-white">{company.name}</h3>
+                                    <p className="text-xs text-zinc-200">{company.description}</p>
                                   </div>
                                 </Link>
                               );
@@ -251,12 +211,8 @@ export function Header() {
                       </AccordionItem>
                     </Accordion>
 
-                    <Link
-                      onClick={() => setOpen(false)}
-                      href="/projects"
-                      className="text-lg font-medium hover:text-accent transition"
-                    >
-                      Projects
+                    <Link href="/projects" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-accent transition">
+                      {t("nav.projects")}
                     </Link>
 
                     <Link
@@ -264,8 +220,9 @@ export function Header() {
                       href="/#contact"
                       className="block w-full mt-4 text-center bg-accent text-white py-2 rounded-lg font-medium hover:bg-accent/90 transition"
                     >
-                      Get in Touch
+                      {t("nav.contact")}
                     </Link>
+                    <LocaleSwitcher />
                   </nav>
                 </div>
               </SheetContent>

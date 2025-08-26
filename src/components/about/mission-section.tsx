@@ -1,8 +1,11 @@
 import { CheckCircle } from "lucide-react";
 import React from "react";
 import { SafeImage } from "../ui/safe-image";
+import { useTranslations } from "next-intl";
 
 function MissionSection() {
+  const t = useTranslations("About.Mission");
+  const points = t.raw('points')
   return (
     <section
       id="mission"
@@ -13,7 +16,7 @@ function MissionSection() {
           <div className="relative">
             <SafeImage
               src="/planning.png"
-              alt="Construction planning"
+              alt={t("images.planningAlt")}
               width={500}
               height={300}
               quality={100}
@@ -21,7 +24,7 @@ function MissionSection() {
             />
             <SafeImage
               src="/office.jpg"
-              alt="Office"
+              alt={t("images.officeAlt")}
               width={350}
               height={350}
               quality={100}
@@ -30,43 +33,16 @@ function MissionSection() {
           </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 md:mb-6">
-              Our Mission
+              {t("title")}
             </h2>
-            <p className="text-gray-200 mb-6 leading-relaxed">
-              To empower clients with innovative, reliable, and future-ready
-              solutions that enhance safety, efficiency, and performance across
-              diverse industries. We are dedicated to helping organizations stay
-              ahead in a rapidly evolving world by blending human expertise with
-              cutting-edge technology. Through our commitment to quality,
-              innovation, and customer success, we ensure that every solution is
-              designed to meet present needs while anticipating future
-              challenges.
-            </p>
+            <p className="text-gray-200 mb-6 leading-relaxed">{t("description")}</p>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3">
-                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-accent" />
-                <span className="text-sm md:text-base text-gray-200">
-                  Delivering Future-Ready Solutions Across Sectors
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-accent" />
-                <span className="text-sm md:text-base text-gray-200">
-                  Enhancing Safety, Efficiency, and Performance
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-accent" />
-                <span className="text-sm md:text-base text-gray-200">
-                  Combining Human Expertise with Technology
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-accent" />
-                <span className="text-sm md:text-base text-gray-200">
-                  Adapting to Evolving Industry Challenges
-                </span>
-              </li>
+              {points.map((point:any, i:any) => (
+                <li key={i} className="flex items-center gap-3">
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+                  <span className="text-sm md:text-base text-gray-200">{point}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

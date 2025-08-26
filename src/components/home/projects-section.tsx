@@ -1,180 +1,45 @@
 "use client";
 
-import { Award, Building, Calendar, ChevronLeft, MapPin } from "lucide-react";
+import {
+  Award,
+  Building,
+  Calendar,
+  ChevronLeft,
+  ChevronRight,
+  MapPin,
+} from "lucide-react";
 import { useEffect, useState } from "react";
-import {ChevronRight} from 'lucide-react'
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Card } from "@/components/ui/card";
 import { SafeImage } from "../ui/safe-image";
 import SectionHeader from "./section-header";
-
-const flagshipProjects = [
-  {
-    id: "1",
-    slug: "jw-marriott-marquis-security",
-    title: "JW Marriott Marquis",
-    description:
-      "Installation of over 2,200 CCTV cameras and a state-of-the-art control room at one of the world’s tallest 5-star hotels.",
-    category: "RDTech",
-    location: "Dubai, UAE",
-    year: "2021",
-    thumbnail: "/projectPage/rdtech/jwHero.jpeg",
-    heroImage: "/projectPage/rdtech/jwHero.jpeg",
-    duration: "18 months",
-    size: "1,608 rooms ",
-    client: "JW Marriott Marquis",
-    budget: "$5M+",
-    services: [
-      "CCTV Installation",
-      "Centralized Control Room",
-      "Access Control Systems",
-    ],
-    features: [
-      "Over 2,200 CCTV cameras",
-      "Centralized surveillance and monitoring",
-      "Advanced threat detection",
-    ],
-  },
-  {
-    id: "2",
-    slug: "burj-khalifa-security-systems",
-    title: "Burj Khalifa – Security Systems",
-    description:
-      "Comprehensive security integration at the tallest building in the world, including surveillance, access control, and monitoring systems.",
-    category: "RDTech",
-    location: "Dubai, UAE",
-    year: "2018",
-    thumbnail: "/projectPage/rdtech/burjHero.webp",
-    heroImage: "/projectPage/rdtech/burjHero.webp",
-    duration: "24 months",
-    size: "mixed-use facility",
-    client: "Emaar Properties",
-    budget: "$20M+",
-    services: [
-      "CCTV Systems",
-      "Access Control",
-      "Centralized Monitoring",
-      "Intrusion Detection",
-    ],
-    features: [
-      "Advanced surveillance coverage",
-      "Centralized security command center",
-      "Biometric access control",
-    ],
-  },
-  {
-  id: "3",
-  slug: "expo-2020-dubai-bms",
-  title: "Expo 2020 Dubai – Lighting Control",
-  description:
-    "KNX-based automation for 10 pavilions at Expo 2020 Dubai, integrating BMS, lighting, and energy efficiency systems.",
-  category: "CoreGrid",
-  location: "Dubai, UAE",
-  year: "2020",
-  thumbnail: "/projectPage/coregrid/expoHero.jpg",
-  heroImage: "/projectPage/coregrid/expoHero.jpg",
-  duration: "18 months",
-  size: "10 Pavilions",
-  client: "Expo 2020 Dubai",
-  budget: "$20M+",
-  services: ["BMS", "Lighting Control", "Facade Lighting", "Energy Optimization"],
-  features: [
-    "Integration with DMX, DALI & BACnet",
-    "Up to 60% energy savings",
-    "Future-proof automation for District 2020"
-  ],
-  },
-  {
-    id: "5",
-    slug: "sharjah-sustainable-city-automation",
-    title: "Sharjah Sustainable City ",
-    description:
-      "Home automation and smart metering for 280 villas in the first Net Zero energy community of Sharjah.",
-    category: "CoreGrid",
-    location: "Sharjah, UAE",
-    year: "2021",
-    thumbnail: "/projectPage/coregrid/SharjahHero.jpg",
-    heroImage: "/projectPage/coregrid/SharjahHero.jpg",
-    duration: "24 months",
-    size: "280 Villas",
-    client: "Sharjah Sustainable City",
-    budget: "$25M+",
-    services: ["Home Automation", "Smart Metering", "Energy Optimization"],
-    features: [
-      "280 smart villas with home automation",
-      "Smart metering and energy monitoring",
-      "Sustainable and future-ready housing"
-    ],
-  },
-  {
-    id: "6",
-    slug: "al-ain-club-restaurants",
-    title: "Al Ain Club – Restaurants",
-    description:
-      "Development of a stylish, state-of-the-art restaurant located inside the Al Ain Sports Club premises.",
-    category: "Al Ausus",
-    location: "Al Ain – Al Sanaiya",
-    year: "2020",
-    thumbnail: "/projectPage/alAusus/alAinHero.jpeg",
-    heroImage: "/projectPage/alAusus/alAinHero.jpeg",
-    duration: "10 months",
-    size: "3,500 sq m",
-    client: "Al Ain Sports Club",
-    budget: "$4M+",
-    services: ["Civil Works", "Fit-out"],
-    features: [
-      "High-quality dining facilities",
-      "Structural construction",
-      "Durable and sustainable building solutions",
-    ],
-  },
-  {
-    id: "7",
-    slug: "emirates-post-office-construction",
-    title: "Emirates Post Office Construction",
-    description:
-      "Civil works and building construction for Emirates Post Office facilities and infrastructure.",
-    category: "Al Ausus",
-    location: "Al Amera-Alhayar-Al Qoua-AlWagan",
-    year: "2019",
-    thumbnail: "/projectPage/alAusus/emiratesHero.webp",
-    heroImage: "/projectPage/alAusus/emiratesHero.webp",
-    duration: "16 months",
-    size: "12,000 sq m",
-    client: "Emirates Post",
-    budget: "$12M+",
-    services: ["Civil Works", "Structural Engineering", "Project Management"],
-    features: [
-      "Modern postal facilities",
-      "High-quality building construction",
-      "Integrated MEP systems",
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function ProjectsSection() {
+  const t = useTranslations("Home.ProjectsSection");
+  const projects = t.raw("flagshipProjects"); // `raw` lets you fetch arrays/objects directly from JSON
+
   const [currentProject, setCurrentProject] = useState(0);
-  const project = flagshipProjects[currentProject];
+  const project = projects[currentProject];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentProject((prev) =>
-        prev === flagshipProjects.length - 1 ? 0 : prev + 1
+        prev === projects.length - 1 ? 0 : prev + 1
       );
     }, 8000);
-
     return () => clearInterval(interval);
-  }, []);
-
+  }, [projects.length]);
+console.log('p',project)
   return (
     <section className="min-h-screen flex flex-col py-8 md:py-20 bg-primary">
       <div className="container mx-auto">
         {/* Section Header */}
         <SectionHeader
-          title="Flagship Projects"
-          subTitle="Showcasing our expertise in delivering mission-critical technology
-              solutions across diverse industries"
+          title={t("title")}
+          subTitle={t("subtitle")}
           titleColor="text-primary bg-white"
           subTitleColor="text-muted"
         />
@@ -183,7 +48,7 @@ export default function ProjectsSection() {
         <div className="relative container mx-auto px-4 mt-12">
           {/* Mobile: Horizontal scrollable cards */}
           <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory md:hidden pb-4">
-            {flagshipProjects.map((proj) => (
+            {projects.map((proj: any) => (
               <Card
                 key={proj.id}
                 className="min-w-[85%] snap-center py-0 gap-0 overflow-hidden rounded-2xl shadow-lg border-none bg-white flex flex-col"
@@ -212,7 +77,7 @@ export default function ProjectsSection() {
                   <p className="text-sm text-gray-600">{proj.description}</p>
 
                   <div className="flex flex-wrap gap-2 my-2">
-                    {proj.services.map((service) => (
+                    {proj.services.map((service: string) => (
                       <span
                         key={service}
                         className="bg-blue-50 text-gray-700 px-2 py-1 rounded-full text-xs"
@@ -222,16 +87,15 @@ export default function ProjectsSection() {
                     ))}
                   </div>
 
-                  {/* Push button to bottom */}
                   <Button asChild className="w-full mt-auto">
-                    <a href={`/projects/${proj.slug}`}>View Project</a>
+                    <a href={`/projects/${proj.slug}`}>{t("viewProject")}</a>
                   </Button>
                 </div>
               </Card>
             ))}
           </div>
 
-          {/* Desktop: Keep current slideshow layout */}
+          {/* Desktop: Slideshow */}
           <div className="hidden md:block">
             <Card className="relative overflow-hidden rounded-2xl py-0 md:py-6 md:pb-0 shadow-lg border-none bg-white">
               <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -256,134 +120,133 @@ export default function ProjectsSection() {
 
                 {/* Details */}
                 <div className="p-4 pb-0 md:p-8 md:py-0">
-                <div className="space-y-6">
-                  <div>
-                    <div className="flex justify-between items-start">
+                  <div className="space-y-6">
+                    <div>
                       <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                         {project.title}
                       </h3>
+
+                      <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
+                        <div className="flex items-center">
+                          <Calendar className="h-4 w-4 mr-2" />
+                          {project.year}
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="h-4 w-4 mr-2" />
+                          {project.location}
+                        </div>
+                        <div className="flex items-center">
+                          <Building className="h-4 w-4 mr-2" />
+                          {project.client}
+                        </div>
+                        <div className="flex items-center">
+                          <Award className="h-4 w-4 mr-2" />
+                          {project.budget}
+                        </div>
+                      </div>
+
+                      <p className="text-gray-600 leading-relaxed">
+                        {project.description}
+                      </p>
                     </div>
 
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
-                      <div className="flex items-center">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        {project.year}
+                    {/* Stats */}
+                    <div className="grid grid-cols-3 gap-2">
+                      <div className="text-center">
+                        <div className="md:text-base text-sm text-gray-600">
+                          {t("duration")}
+                        </div>
+                        <div className="text-base md:text-xl font-semibold text-primary">
+                          {project.duration}
+                        </div>
                       </div>
-                      <div className="flex items-center">
-                        <MapPin className="h-4 w-4 mr-2" />
-                        {project.location}
+                      <div className="text-center">
+                        <div className="md:text-base text-sm text-gray-600">
+                          {t("size")}
+                        </div>
+                        <div className="text-base md:text-xl font-semibold text-primary">
+                          {project.size}
+                        </div>
                       </div>
-                      <div className="flex items-center">
-                        <Building className="h-4 w-4 mr-2" />
-                        {project.client}
-                      </div>
-                      <div className="flex items-center">
-                        <Award className="h-4 w-4 mr-2" />
-                        {project.budget}
+                      <div className="text-center">
+                        <div className="md:text-base text-sm text-gray-600">
+                          {t("budget")}
+                        </div>
+                        <div className="text-base md:text-xl font-semibold text-primary">
+                          {project.budget}
+                        </div>
                       </div>
                     </div>
 
-                    <p className="text-gray-600 leading-relaxed">
-                      {project.description}
-                    </p>
+                    {/* Services */}
+                    <div>
+                      <div className="text-sm font-semibold text-gray-900 mb-2">
+                        {t("services")}
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {project.services.map((service: string) => (
+                          <span
+                            key={service}
+                            className="bg-blue-50 text-gray-700 px-3 py-1 rounded-full text-xs"
+                          >
+                            {service}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Features */}
+                    <div className="mb-2">
+                      <div className="text-sm font-semibold text-gray-900 mb-2">
+                        {t("features")}
+                      </div>
+                      <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+                        {project.features.map((feature: string) => (
+                          <li key={feature}>{feature}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <Button
+                      variant="default"
+                      className="float-right mb-4 md:bottom-16 md:right-10 cursor-pointer"
+                    >
+                      <a href={`/projects/${project.slug}`}>{t("viewProject")}</a>
+                    </Button>                    
                   </div>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-2">
-                    <div className="text-center">
-                      <div className="md:text-base text-sm text-gray-600">
-                        Duration
-                      </div>
-                      <div className="text-base md:text-xl font-semibold text-primary">
-                        {project.duration}
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <div className="md:text-base text-sm text-gray-600">
-                        Size
-                      </div>
-                      <div className="text-base md:text-xl font-semibold text-primary">
-                        {project.size}
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <div className="md:text-base text-sm text-gray-600">
-                        Budget
-                      </div>
-                      <div className="text-base md:text-xl font-semibold text-primary">
-                        {project.budget}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Services */}
-                  <div>
-                    <div className="text-sm font-semibold text-gray-900 mb-2">
-                      Services
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {project.services.map((service) => (
-                        <span
-                          key={service}
-                          className="bg-blue-50 text-gray-700 px-3 py-1 rounded-full text-xs"
-                        >
-                          {service}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Features */}
-                  <div className="mb-2">
-                    <div className="text-sm font-semibold text-gray-900 mb-2">
-                      Key Features
-                    </div>
-                    <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
-                      {project.features.map((feature) => (
-                        <li key={feature}>{feature}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <Button
-                    variant="default"
-                    className="float-right mb-4 md:bottom-16 md:right-10 cursor-pointer"
-                  >
-                    View Project
-                  </Button>
                 </div>
-              </div>
               </div>
             </Card>
 
-            {/* Prev / Next buttons */}
+            {/* Prev / Next */}
             <div className="absolute hidden md:flex -bottom-4 right-8 gap-2 z-20">
               <Button
-              variant="ghost"
-              onClick={() =>
-                setCurrentProject((prev) =>
-                  prev === 0 ? flagshipProjects.length - 1 : prev - 1
-                )
-              }
-              className="bg-white text-primary shadow-md px-3"
-            >
-              <ChevronLeft/>
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() =>
-                setCurrentProject((prev) =>
-                  prev === flagshipProjects.length - 1 ? 0 : prev + 1
-                )
-              }
-              className="bg-white text-primary shadow-md"
-            >
-              <ChevronRight/>
-            </Button>
+                variant="ghost"
+                onClick={() =>
+                  setCurrentProject((prev) =>
+                    prev === 0 ? projects.length - 1 : prev - 1
+                  )
+                }
+                className="bg-white text-primary shadow-md px-3"
+              >
+                <ChevronLeft />
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={() =>
+                  setCurrentProject((prev) =>
+                    prev === projects.length - 1 ? 0 : prev + 1
+                  )
+                }
+                className="bg-white text-primary shadow-md"
+              >
+                <ChevronRight />
+              </Button>
             </div>
 
             {/* Navigation dots */}
             <div className="flex items-center justify-center gap-2 mt-8">
-              {flagshipProjects.map((_, idx) => (
+              {projects.map((_: any, idx: number) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentProject(idx)}

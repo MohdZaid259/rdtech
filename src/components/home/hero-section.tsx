@@ -1,5 +1,4 @@
-import { ChevronRight, MoveRightIcon, PhoneCallIcon } from "lucide-react";
-
+import { ChevronRight, PhoneCallIcon } from "lucide-react";
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import { Button } from "@/components/ui/button";
 import CoreGridLogo from "../logos/core-grid-logo";
@@ -12,26 +11,30 @@ import { useTranslations } from "next-intl";
 export default function HeroSection() {
   const t = useTranslations("Home.Hero");
 
+  // words for rotation
+  const words = t.raw("words"); // expects an array in messages.json
+
+  // companies info
   const companies = [
     {
-      name: "AA Contracting",
-      description: "Multi-disciplinary Contracting Excellence",
+      name: t("companies.aa.name"),
+      description: t("companies.aa.description"),
       Logo: AAContractingLogo,
       shape: "hexagon",
       href: "/companies/aa-contracting",
       delay: "0s",
     },
     {
-      name: "RDTech",
-      description: "Security Systems & ELV/ICT Solutions",
+      name: t("companies.rdtech.name"),
+      description: t("companies.rdtech.description"),
       Logo: RDTechLogo,
       shape: "diamond",
       href: "/companies/rdtech",
       delay: "0.4s",
     },
     {
-      name: "CoreGrid Solutions",
-      description: "Building Automation & Smart Solutions",
+      name: t("companies.coregrid.name"),
+      description: t("companies.coregrid.description"),
       Logo: CoreGridLogo,
       shape: "circle",
       href: "/companies/core-grid",
@@ -53,10 +56,10 @@ export default function HeroSection() {
           <h1 className="text-white font-bold text-3xl xs:text-5xl sm:text-6xl px-0 text-shadow-xs text-shadow-black/20 tracking-wider">
             {t("title")}
           </h1>
-          {/* <WordRotate
-            className="text-3xl xs:text-5xl sm:text-6xl font-extrabold  text-accent tracking-wide"
-            words={[""]}
-          /> */}
+          <WordRotate
+            className="text-3xl xs:text-5xl sm:text-6xl font-extrabold text-accent tracking-wide"
+            words={words}
+          />
           <p className="max-w-2xl mt-4 text-muted text-shadow-xs text-shadow-black/20">
             {t("subtitle")}
           </p>
@@ -67,7 +70,7 @@ export default function HeroSection() {
               className="text-base text-primary font-semibold bg-accent hover:bg-accent shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
             >
               <Link href="/#services" className="flex items-center gap-2">
-                <span>Explore Our Services</span>
+                <span>{t("exploreServices")}</span>
                 <ChevronRight className="h-6 w-6 font-bold transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -79,7 +82,7 @@ export default function HeroSection() {
               className="text-base text-blue-950 font-semibold bg-white hover:bg-white backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
             >
               <Link href="/#contact" className="flex items-center gap-2">
-                <span>Contact Us</span>
+                <span>{t("contactUs")}</span>
                 <PhoneCallIcon className="h-5 w-5" />
               </Link>
             </Button>
@@ -89,11 +92,11 @@ export default function HeroSection() {
         {/* Companies Section */}
         <div className="w-full mt-auto md:mt-4 mb-10">
           <div className="grid grid-cols-3 gap-4 md:gap-12 justify-items-center">
-            {companies.map((company, index) => (
+            {companies.map((company) => (
               <Link
                 href={company.href}
                 key={company.name}
-                className={`group relative flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 }`}
+                className="group relative flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105"
                 style={{ animationDelay: company.delay }}
               >
                 {/* Circle logo container */}

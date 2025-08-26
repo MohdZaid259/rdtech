@@ -7,10 +7,12 @@ import Link from "next/link";
 import { SafeImage } from "../ui/safe-image";
 import { projects } from "../../../public/projectData";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const categories = ["All", "Al Ausus", "RDTech", "CoreGrid"];
 
 export default function ProjectsGrid() {
+  const t = useTranslations('Project.ProjectsGrid')
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =
@@ -23,11 +25,10 @@ export default function ProjectsGrid() {
       <div className="container mx-auto">
         <div className="text-center mb-8 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Our Projects
+            {t("heading")}
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto leading-relaxed">
-            Discover our portfolio of exceptional construction projects, each
-            showcasing our commitment to quality and innovation.
+            {t("description")}
           </p>
         </div>
 

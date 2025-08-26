@@ -1,5 +1,4 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
 import AAContractingLogo from "@/components/logos/aa-contracting-logo";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,59 +8,44 @@ import Link from "next/link";
 import RDTechLogo from "@/components/logos/rdtech-logo";
 import { SafeImage } from "../ui/safe-image";
 import SectionHeader from "./section-header";
+import { useTranslations } from "next-intl";
 
 export default function CompaniesSection() {
+  const t = useTranslations("Home.Companies");
+
   const companies = [
     {
-      name: "Al Ausus Al Arbaa General Contracting",
-      tagline: "Multi-disciplinary Contracting Excellence",
-      description:
-        "Delivering comprehensive construction and contracting services with precision and reliability.",
+      name: t("aa.name"),
+      tagline: t("aa.tagline"),
+      description: t("aa.description"),
       icon: AAContractingLogo,
       href: "aa-contracting",
       image: "/mep.jpg?updatedAt=1755786638239",
-      services: [
-        "Civil Construction",
-        "MEP Services",
-        "Project Management",
-        "Facility Maintenance",
-      ],
+      services: t.raw("aa.services"), // array of strings
       color: "bg-blue-600",
-      buttonLabel: "AA Contracting",
+      buttonLabel: t("aa.buttonLabel"),
     },
     {
-      name: "RDTech",
-      tagline: "Security Systems & ELV/ICT Solutions",
-      description:
-        "Pioneering advanced security technology to safeguard critical infrastructure across the UAE. From access control to comprehensive surveillance systems.",
+      name: t("rdtech.name"),
+      tagline: t("rdtech.tagline"),
+      description: t("rdtech.description"),
       icon: RDTechLogo,
       href: "rdtech",
       image: "/Companies/RDTech/controlRoom.webp?updatedAt=1755876470382",
-      services: [
-        "Access Control System",
-        "CCTV & Surveillance",
-        "Fire Alarm Systems",
-        "Network Infrastructure",
-      ],
+      services: t.raw("rdtech.services"),
       color: "bg-green-600",
-      buttonLabel: "RDTech",
+      buttonLabel: t("rdtech.buttonLabel"),
     },
     {
-      name: "CoreGrid Solutions",
-      tagline: "Building Automation & Smart Solutions",
-      description:
-        "Transforming buildings into intelligent, efficient spaces through cutting-edge automation and control systems.",
+      name: t("coregrid.name"),
+      tagline: t("coregrid.tagline"),
+      description: t("coregrid.description"),
       icon: CoreGridLogo,
       href: "core-grid",
       image: "/facial.jpg?updatedAt=1755786638264",
-      services: [
-        "Lighting Control",
-        "Home Automation",
-        "Energy Management",
-        "Building Management",
-      ],
+      services: t.raw("coregrid.services"),
       color: "bg-purple-600",
-      buttonLabel: "CoreGrid Solutions",
+      buttonLabel: t("coregrid.buttonLabel"),
     },
   ];
 
@@ -70,8 +54,8 @@ export default function CompaniesSection() {
       <div className="container mx-auto">
         {/* Heading */}
         <SectionHeader
-          title="Our Ecosystem of Excellence"
-          subTitle="Three specialized companies working together to deliver comprehensive solutions across security, construction, and automation sectors."
+          title={t("title")}
+          subTitle={t("subTitle")}
         />
 
         {/* Cards */}
@@ -115,10 +99,10 @@ export default function CompaniesSection() {
 
                       <div className="space-y-2">
                         <h4 className="font-semibold text-foreground">
-                          Key Services:
+                          {t("keyServices")}
                         </h4>
                         <div className="grid grid-cols-2 gap-1">
-                          {company.services.map((service) => (
+                          {company.services.map((service: string) => (
                             <div
                               key={service}
                               className="text-sm text-muted-foreground"
@@ -136,7 +120,7 @@ export default function CompaniesSection() {
                       className="w-full group-hover:bg-primary/90 transition-colors duration-300"
                     >
                       <Link href={`/companies/${company.href}`}>
-                        Explore {company.buttonLabel}
+                        {t("explore")} {company.buttonLabel}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>

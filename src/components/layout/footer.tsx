@@ -1,52 +1,60 @@
-import Link from "next/link";
+"use client";
+
 import { SafeImage } from "../ui/safe-image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="bg-primary text-gray-300 pt-8 md:pt-16 pb-6">
-      {/* Top Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mt-0 grid grid-cols-1 gap-8 lg:grid-cols-5">
-          {/* Logo & About - custom span */}
+          {/* Logo & About */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-3">
-              <SafeImage src="/Logos/rdtech-group-1.png?updatedAt=1755860934739" width={36} height={36} alt="logo"/>
+              <SafeImage
+                src="/Logos/rdtech-group-1.png?updatedAt=1755860934739"
+                width={36}
+                height={36}
+                alt={t("logoAlt")}
+              />
               <span className="text-lg font-semibold text-white">
-                RDTech Group
+                {t("groupName")}
               </span>
             </div>
             <p className="text-gray-400 mb-4 md:w-[80%] w-full text-sm">
-              Uniting three industry leaders — RDTech Security Solutions, AL
-              AUSUS AL ARBAA Contracting, and CoreGrid Automation — to deliver
-              innovative, reliable, and future-ready solutions across security,
-              construction, and smart building technologies.
+              {t("description")}
             </p>
           </div>
 
-          {/* Wrapper for other 3 columns */}
+          {/* Navigation & Utility & Contact */}
           <div className="col-span-1 lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-8">
             {/* Navigation */}
             <div>
-              <h3 className="text-white font-semibold mb-3">Navigation</h3>
+              <h3 className="text-white font-semibold mb-3">
+                {t("navTitle")}
+              </h3>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="/" className="hover:text-white">
-                    Home
+                    {t("nav.home")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/about" className="hover:text-white">
-                    About
+                    {t("nav.about")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/#services" className="hover:text-white">
-                    Services
+                    {t("nav.services")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/#contact" className="hover:text-white">
-                    Contact
+                    {t("nav.contact")}
                   </Link>
                 </li>
               </ul>
@@ -54,29 +62,28 @@ export default function Footer() {
 
             {/* Utility Pages */}
             <div>
-              <h3 className="text-white font-semibold mb-3">Utility Pages</h3>
+              <h3 className="text-white font-semibold mb-3">
+                {t("utilityTitle")}
+              </h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link
-                    href="/companies/aa-contracting"
-                    className="hover:text-white"
-                  >
-                    Our Companies
+                  <Link href="/companies/aa-contracting" className="hover:text-white">
+                    {t("utility.ourCompanies")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/about#mission" className="hover:text-white">
-                    Our Mission
+                    {t("utility.mission")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/about#vision" className="hover:text-white">
-                    Our Vision
+                    {t("utility.vision")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/projects" className="hover:text-white">
-                    Flagship Projects
+                    {t("utility.projects")}
                   </Link>
                 </li>
               </ul>
@@ -84,14 +91,16 @@ export default function Footer() {
 
             {/* Contact */}
             <div className="mt-6 md:mt-0">
-              <h3 className="text-white font-semibold mb-3">Contact</h3>
+              <h3 className="text-white font-semibold mb-3">
+                {t("contactTitle")}
+              </h3>
               <ul className="space-y-2 text-sm">
-                <li className="hover:text-white">+971 3733 0116 </li>
+                <li className="hover:text-white">{t("contact.phone")}</li>
                 <li className="hover:text-white">
-                  <a href="mailto:info@alaususgencont.com ">info@alaususgencont.com </a>
+                  <a href="mailto:info@alaususgencont.com">{t("contact.email")}</a>
                 </li>
-                <li className="hover:text-white">PO : 23113</li>
-                <li className="hover:text-white">Abu Dhabi, UAE</li>
+                <li className="hover:text-white">{t("contact.po")}</li>
+                <li className="hover:text-white">{t("contact.address")}</li>
               </ul>
             </div>
           </div>
@@ -99,14 +108,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-10 border-t border-muted pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
-          <p>© RDGroup {new Date().getFullYear()}</p>
+          <p>{t("copyright", { year: new Date().getFullYear() })}</p>
           <div className="flex space-x-6 mt-3 sm:mt-0">
-            <a href="/terms" className="hover:text-white">
-              Term of service
-            </a>
-            <a href="/policy" className="hover:text-white">
-              Privacy Policy
-            </a>
+            <Link href="/terms" className="hover:text-white">
+              {t("terms")}
+            </Link>
+            <Link href="/policy" className="hover:text-white">
+              {t("privacy")}
+            </Link>
           </div>
         </div>
       </div>

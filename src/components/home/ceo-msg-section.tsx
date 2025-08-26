@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Quote } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function CEOMessageSection() {
   const [scrollY, setScrollY] = useState(0);
+  const t = useTranslations("Home.CEOMessage");
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -23,7 +25,6 @@ export default function CEOMessageSection() {
         backgroundRepeat: "no-repeat",
       }}
     >
-
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto py-12 px-6">
         <div className="relative">
@@ -36,18 +37,14 @@ export default function CEOMessageSection() {
 
             {/* Content */}
             <div className="space-y-2">
-
               <div className="space-y-4 text-lg md:text-xl leading-relaxed">
-                <p className="text-white/90">
-                  More than projects, we create relationships rooted in trust and integrity.
-                  Excellence is not just a goal—it is the standard we live by.
-                </p>
+                <p className="text-white/90">{t("message")}</p>
               </div>
 
               {/* CEO Attribution */}
               <div className="mt-8 pt-6 border-t border-white/20">
                 <p className="text-right font-semibold text-white">
-                  Eng. Khaled Akhozahaya - CEO
+                  {t("ceoName")}
                 </p>
               </div>
             </div>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { ProjectDetail } from "@/components/projects/details";
 import { RelatedProjects } from "@/components/projects/related";
 import { notFound } from "next/navigation";
-import { projects } from "../../../../public/projectData";
+import { projects } from '../../../../../public/projectData'
 
 interface ProjectPageProps {
   params: Promise<{

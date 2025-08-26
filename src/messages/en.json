@@ -1,9 +1,889 @@
 {
   "Home": {
     "Hero": {
-      "title": "Shaping the Future of",
-      "words": "Technology, Innovation, Sustainability",
-      "subtitle": "Constructing, Protecting, and Connecting the Future through Technology and Expertise"
+      "title": "Shaping the Future with Excellence",
+      "subtitle": "Delivering technology-driven solutions for a smarter tomorrow.",
+      "exploreServices": "Explore Our Services",
+      "contactUs": "Contact Us",
+      "words": ["Technology", "Innovation", "Sustainability"],
+      "companies": {
+        "aa": {
+          "name": "AA Contracting",
+          "description": "Multi-disciplinary Contracting Excellence"
+        },
+        "rdtech": {
+          "name": "RDTech",
+          "description": "Security Systems & ELV/ICT Solutions"
+        },
+        "coregrid": {
+          "name": "CoreGrid Solutions",
+          "description": "Building Automation & Smart Solutions"
+        }
+      }
+    },
+    "CEOMessage": {
+      "message": "More than projects, we create relationships rooted in trust and integrity. Excellence is not just a goal—it is the standard we live by.",
+      "ceoName": "Eng. Khaled Akhozahaya - CEO"
+    },
+    "Companies": {
+        "title": "Our Ecosystem of Excellence",
+        "subTitle": "Three specialized companies working together to deliver comprehensive solutions across security, construction, and automation sectors.",
+        "keyServices": "Key Services:",
+        "explore": "Explore",
+        "aa": {
+          "name": "Al Ausus Al Arbaa General Contracting",
+          "tagline": "Multi-disciplinary Contracting Excellence",
+          "description": "Delivering comprehensive construction and contracting services with precision and reliability.",
+          "services": ["Civil Construction", "MEP Services", "Project Management", "Facility Maintenance"],
+          "buttonLabel": "AA Contracting"
+        },
+        "rdtech": {
+          "name": "RDTech",
+          "tagline": "Security Systems & ELV/ICT Solutions",
+          "description": "Pioneering advanced security technology to safeguard critical infrastructure across the UAE. From access control to comprehensive surveillance systems.",
+          "services": ["Access Control System", "CCTV & Surveillance", "Fire Alarm Systems", "Network Infrastructure"],
+          "buttonLabel": "RDTech"
+        },
+        "coregrid": {
+          "name": "CoreGrid Solutions",
+          "tagline": "Building Automation & Smart Solutions",
+          "description": "Transforming buildings into intelligent, efficient spaces through cutting-edge automation and control systems.",
+          "services": ["Lighting Control", "Home Automation", "Energy Management", "Building Management"],
+          "buttonLabel": "CoreGrid Solutions"
+        }
+      },
+    "Contact": {
+      "title": "CONTACT US",
+      "submit": "SUBMIT",
+      "emailSubject": "New Technical Support Request from",
+      "fields": {
+        "name": "NAME",
+        "phone": "PHONE NUMBER",
+        "email": "EMAIL",
+        "message": "MESSAGE"
+      }
+    },
+    "GlobalCountriesSection": {
+      "title": "Global Reach",
+      "subTitle": "Serving clients across the UAE and through strong partnerships with technology vendors in Europe, North America, and Asia.",
+      "mapAlt": "UAE Map",
+      "emiratesTitle": "UAE Emirates",
+      "emirates": {
+        "dubai": "Dubai",
+        "abuDhabi": "Abu Dhabi",
+        "sharjah": "Sharjah",
+        "fujairah": "Fujairah",
+        "rasAlKhaimah": "Ras Al Khaimah",
+        "ummAlQuwain": "Umm Al Quwain",
+        "ajman": "Ajman"
+      },
+      "stats": {
+        "projects": "Projects",
+        "clients": "Clients"
+      }
+    },
+    "IndustriesSection": {
+      "title": "Industries We Serve",
+      "subtitle": "Delivering specialized solutions across sectors — from critical infrastructure to consumers.",
+      "industries": {
+        "energy": {
+          "name": "Energy & Utilities / Industry / Ministries",
+          "description": "Secure and efficient solutions for energy providers, industries, and public ministries."
+        },
+        "publicSafety": {
+          "name": "Public Safety",
+          "description": "Management solutions for security, emergency response, and urban governance."
+        },
+        "airports": {
+          "name": "Airports / Transportation / Critical Infrastructures",
+          "description": "Safety and monitoring systems for airports, transport authorities, and vital infrastructures."
+        },
+        "business": {
+          "name": "Business Enterprise",
+          "description": "Integrated products and services for smarter, safer business operations."
+        },
+        "ngo": {
+          "name": "NGOs / Educational Institutions",
+          "description": "Technology support for NGOs and secure solutions for schools and universities."
+        },
+        "smb": {
+          "name": "Server Message Block",
+          "description": "Security products and cloud services tailored for small and medium businesses."
+        },
+        "civilDefense": {
+          "name": "Civil Defenses",
+          "description": "Defense and emergency readiness solutions for civil protection agencies."
+        },
+        "smartLife": {
+          "name": "Smart Lifestyle",
+          "description": "Smart-home and lifestyle products that make everyday living safer and easier."
+        }
+      }
+    },
+    "ProjectsSection": {
+      "title": "Flagship Projects",
+      "subtitle": "Showcasing our expertise in delivering mission-critical technology solutions across diverse industries",
+      "duration": "Duration",
+      "size": "Size",
+      "budget": "Budget",
+      "services": "Services",
+      "features": "Key Features",
+      "viewProject": "View Project",
+      "flagshipProjects": [
+        {
+          "id": "1",
+          "slug": "jw-marriott-marquis-security",
+          "title": "JW Marriott Marquis",
+          "description": "Installation of over 2,200 CCTV cameras and a state-of-the-art control room at one of the world’s tallest 5-star hotels.",
+          "category": "RDTech",
+          "location": "Dubai, UAE",
+          "year": "2021",
+          "thumbnail": "/projectPage/rdtech/jwHero.jpeg",
+          "heroImage": "/projectPage/rdtech/jwHero.jpeg",
+          "duration": "18 months",
+          "size": "1,608 rooms",
+          "client": "JW Marriott Marquis",
+          "budget": "$5M+",
+          "services": ["CCTV Installation", "Centralized Control Room", "Access Control Systems"],
+          "features": ["Over 2,200 CCTV cameras", "Centralized surveillance and monitoring", "Advanced threat detection"]
+        },
+        {
+          "id": "2",
+          "slug": "burj-khalifa-security-systems",
+          "title": "Burj Khalifa – Security Systems",
+          "description": "Comprehensive security integration at the tallest building in the world, including surveillance, access control, and monitoring systems.",
+          "category": "RDTech",
+          "location": "Dubai, UAE",
+          "year": "2018",
+          "thumbnail": "/projectPage/rdtech/burjHero.webp",
+          "heroImage": "/projectPage/rdtech/burjHero.webp",
+          "duration": "24 months",
+          "size": "mixed-use facility",
+          "client": "Emaar Properties",
+          "budget": "$20M+",
+          "services": [ "CCTV Systems", "Access Control", "Centralized Monitoring", "Intrusion Detection" ],
+          "features": [ "Advanced surveillance coverage", "Centralized security command center", "Biometric access control"]
+        },
+        {
+          "id": "3",
+          "slug": "expo-2020-dubai-bms",
+          "title": "Expo 2020 Dubai – Lighting Control",
+          "description": "KNX-based automation for 10 pavilions at Expo 2020 Dubai, integrating BMS, lighting, and energy efficiency systems.",
+          "category": "CoreGrid",
+          "location": "Dubai, UAE",
+          "year": "2020",
+          "thumbnail": "/projectPage/coregrid/expoHero.jpg",
+          "heroImage": "/projectPage/coregrid/expoHero.jpg",
+          "duration": "18 months",
+          "size": "10 Pavilions",
+          "client": "Expo 2020 Dubai",
+          "budget": "$20M+",
+          "services": ["BMS", "Lighting Control", "Facade Lighting", "Energy Optimization"],
+          "features": ["Integration with DMX, DALI & BACnet", "Up to 60% energy savings", "Future-proof automation for District 2020" ]
+        },
+        {
+          "id": "5",
+          "slug": "sharjah-sustainable-city-automation",
+          "title": "Sharjah Sustainable City",
+          "description": "Home automation and smart metering for 280 villas in the first Net Zero energy community of Sharjah.",
+          "category": "CoreGrid",
+          "location": "Sharjah, UAE",
+          "year": "2021",
+          "thumbnail": "/projectPage/coregrid/SharjahHero.jpg",
+          "heroImage": "/projectPage/coregrid/SharjahHero.jpg",
+          "duration": "24 months",
+          "size": "280 Villas",
+          "client": "Sharjah Sustainable City",
+          "budget": "$25M+",
+          "services": ["Home Automation", "Smart Metering", "Energy Optimization"],
+          "features": [ "280 smart villas with home automation", "Smart metering and energy monitoring", "Sustainable and future-ready housing"]
+        },
+        {
+          "id": "6",
+          "slug": "al-ain-club-restaurants",
+          "title": "Al Ain Club – Restaurants",
+          "description": "Development of a stylish, state-of-the-art restaurant located inside the Al Ain Sports Club premises.",
+          "category": "Al Ausus",
+          "location": "Al Ain – Al Sanaiya",
+          "year": "2020",
+          "thumbnail": "/projectPage/alAusus/alAinHero.jpeg",
+          "heroImage": "/projectPage/alAusus/alAinHero.jpeg",
+          "duration": "10 months",
+          "size": "3,500 sq m",
+          "client": "Al Ain Sports Club",
+          "budget": "$4M+",
+          "services": ["Civil Works", "Fit-out"],
+          "features": [ "High-quality dining facilities", "Structural construction", "Durable and sustainable building solutions" ]
+        },
+        {
+          "id": "7",
+          "slug": "emirates-post-office-construction",
+          "title": "Emirates Post Office Construction",
+          "description": "Civil works and building construction for Emirates Post Office facilities and infrastructure.",
+          "category": "Al Ausus",
+          "location": "Al Amera-Alhayar-Al Qoua-AlWagan",
+          "year": "2019",
+          "thumbnail": "/projectPage/alAusus/emiratesHero.webp",
+          "heroImage": "/projectPage/alAusus/emiratesHero.webp",
+          "duration": "16 months",
+          "size": "12,000 sq m",
+          "client": "Emirates Post",
+          "budget": "$12M+",
+          "services": ["Civil Works", "Structural Engineering", "Project Management"],
+          "features": ["Modern postal facilities", "High-quality building construction", "Integrated MEP systems"]
+        }
+      ]
+    },
+    "QuickCompany": {
+      "sectionHeader": {
+        "title": "Our Ecosystem of Excellence",
+        "subTitle": "Three specialized companies, one unified vision..."
+      },
+      "companies": {
+        "aa": {
+          "name": "AA Contracting",
+          "description": "Multi-disciplinary Contracting Excellence"
+        },
+        "rdtech": {
+          "name": "RDTech",
+          "description": "Security Systems & ELV/ICT Solutions"
+        },
+        "coregrid": {
+          "name": "CoreGrid Solutions",
+          "description": "Building Automation & Smart Solutions"
+        }
+      }
+    },
+    "WhyChooseUs": {
+      "sectionHeader": {
+        "title": "Why RDTech Group",
+        "subTitle": "The trusted technology partner delivering value-driven, reliable, and innovative solutions."
+      },
+      "features": {
+        "turnkey": { "title": "Turnkey Solutions", "subtitle": "End-to-end integration & delivery" },
+        "availability": { "title": "24/7 Availability", "subtitle": "Round-the-clock support always" },
+        "cost": { "title": "Cost-Effective", "subtitle": "Optimized & value-driven solutions" },
+        "modular": { "title": "Modular & Scalable", "subtitle": "Future-ready system level upgrades" },
+        "tech": { "title": "Cutting-Edge Technology", "subtitle": "Latest hardware & software" },
+        "fast": { "title": "Fast Implementation", "subtitle": "Providing Zero-downtime delivery" },
+        "cabling": { "title": "In-House Cabling", "subtitle": "Civil, MEP, networking expertise" },
+        "support": { "title": "Expert Support Team", "subtitle": "Certified engineers & specialists" }
+      }
+    },
+    "WeCare": {
+      "sectionHeader": {
+        "title": "We Care About Society",
+        "subTitle": "Smarter & Safer Society, More Efficient Business, Better Lives"
+      },
+      "services": {
+        "safeCity": "Safe City",
+        "transportation": "Transportation",
+        "utilities": "Utilities, Energy and Mining",
+        "retail": "Retail",
+        "banking": "Banking & Finance",
+        "manufacturing": "Manufacturing",
+        "education": "Education",
+        "healthcare": "Healthcare",
+        "community": "Community"
+      }
+    },
+    "Clients": {
+        "clientsSection": {
+          "title": "Our Clients",
+          "subTitle": "Trusted by leading organizations across industries for mission-critical technology solutions."
+        },
+        "clients": {
+          "commercial": {
+            "bakerHughes": "Baker Hughes",
+            "lulu": "Lulu",
+            "maiDubai": "MAI Dubai",
+            "meridien": "Meridien",
+            "nakheel": "Nakheel",
+            "nmc": "NMC",
+            "vfs": "VFS",
+            "warnerBros": "Warner Bros"
+          },
+          "banking": {
+            "adcb": "ADCB",
+            "adib": "ADIB",
+            "ajman": "Ajman Bank",
+            "bob": "BOB",
+            "citi": "Citi",
+            "commercial": "Commercial Bank",
+            "mashreq": "Mashreq",
+            "nbq": "NBQ",
+            "rakbank": "RAK Bank",
+            "sharjah": "Sharjah Bank"
+          },
+          "health": {
+            "alZahra": "Al Zahra",
+            "dubaiHealth": "Dubai Health",
+            "majid": "Majid",
+            "nextcare": "Nextcare",
+            "wellcare": "Wellcare",
+            "zulekha": "Zulekha"
+          },
+          "hotels": {
+            "anantara": "Anantara",
+            "armani": "Armani",
+            "conrad": "Conrad",
+            "habtoor": "Habtoor",
+            "ibis": "Ibis",
+            "jumeirah": "Jumeirah",
+            "marriott": "Marriott",
+            "pullman": "Pullman",
+            "renaissance": "Renaissance",
+            "sofitel": "Sofitel",
+            "stRegis": "St. Regis"
+          },
+          "infrastructure": {
+            "abuDhabiPolice": "Abu Dhabi Police",
+            "emaar": "Emaar",
+            "rashid": "Rashid",
+            "rta": "RTA",
+            "tdic": "TDIC",
+            "twofour54": "twofour54"
+          },
+          "security": {
+            "bosch": "Bosch",
+            "gantner": "Gantner",
+            "garrett": "Garrett",
+            "hid": "HID",
+            "honeywell": "Honeywell",
+            "imron": "Imron",
+            "samsung": "Samsung",
+            "sony": "Sony"
+          },
+          "topEnterprise": {
+            "accor": "Accor",
+            "dubaiHolding": "Dubai Holding",
+            "honeywell": "Honeywell",
+            "landmarkGroup": "Landmark Group",
+            "majid": "Majid",
+            "unionProperties": "Union Properties"
+          }
+      }
     }
+  },
+  "About": {
+    "Background": {
+      "title": "Who We Are",
+      "paragraph1": "Founded in 1993, RDTECH Group has established itself as a trusted leader in mission-critical technology and infrastructure solutions. With a strong focus on ‘Zero Downtime’ delivery, we empower businesses to operate without disruption, achieving over AED 100 million in annual turnover and the trust of leading enterprises across the region.",
+      "paragraph2": "Backed by a team of 120+ experts and recognized as one of the few Unified Partners in the Middle East, RDTECH combines deep industry expertise with the highest level of vendor partnerships. Our dedicated support and commitment to excellence continue to drive innovation, reliability, and customer success.",
+      "imageAlt": "Construction planning"
+    },
+    "Hero": {
+      "title": "Building a Legacy of <span>Innovation</span>",
+      "subtitle": "For over three decades, RDTech Group has been at the forefront of technological innovation, infrastructure excellence, and secure operations in the UAE and beyond."
+    },
+    "Mission": {
+      "title": "Our Mission",
+      "description": "To empower clients with innovative, reliable, and future-ready solutions that enhance safety, efficiency, and performance across diverse industries. We are dedicated to helping organizations stay ahead in a rapidly evolving world by blending human expertise with cutting-edge technology. Through our commitment to quality, innovation, and customer success, we ensure that every solution is designed to meet present needs while anticipating future challenges.",
+      "points": [
+        "Delivering Future-Ready Solutions Across Sectors",
+        "Enhancing Safety, Efficiency, and Performance",
+        "Combining Human Expertise with Technology",
+        "Adapting to Evolving Industry Challenges"
+      ],
+      "images": {
+        "planningAlt": "Construction planning",
+        "officeAlt": "Office"
+      }
+    },
+    "Newsletter": {
+      "title": "Let's Build the Future Together",
+      "description": "From iconic landmarks to mission-critical infrastructure, we partner with clients to create secure, efficient, and sustainable solutions.",
+      "emailPlaceholder": "Enter your Email",
+      "buttonText": "SUBSCRIBE"
+    },
+    "StatsSection": {
+      "completeProjects": "Complete Projects",
+      "yearsExperience": "Years of Experience",
+      "teamMembers": "Team Members",
+      "customerReviews": "Customer Reviews"
+    },
+    "ValuesSection": {
+      "title": "Our Values",
+      "subtitle": "We ensure every project reflects our commitment to excellence, trust, innovation, collaboration, and a sustainable future.",
+      "values": [
+        { "title": "Excellence", "description": "Delivering the highest quality outcomes on every project." },
+        { "title": "Integrity", "description": "Building trust through transparency and accountability." },
+        { "title": "Innovation", "description": "Embracing change and leading with new technologies." },
+        { "title": "Collaboration", "description": "Partnering with clients, vendors, teams for shared success." },
+        { "title": "Sustainability", "description": "Creating solutions that are mindful of environment." },
+        { "title": "Customer Focus", "description": "Putting client needs at the center of every decision." }
+      ]
+    },
+    "VisionSection": {
+      "title": "Our Vision",
+      "description": "To be the most trusted and respected partner for delivering innovative, reliable, and future-ready solutions that drive safety, efficiency, and performance across industries. We envision a future where technology and human expertise work hand in hand to create smarter, more sustainable systems and communities. By staying ahead of global trends and industry needs, we aim to progress, set new standards of excellence, and help our clients thrive in a world of constant change.",
+      "points": [
+        "Becoming the Most Trusted Industry Partner",
+        "Setting New Standards of Excellence",
+        "Driving Innovation and Sustainable Growth",
+        "Anticipating and Adapting to Future Needs"
+      ]
+    },
+    "WorkingSection": {
+      "title": "How We Work",
+      "subtitle": "A simple, structured process to turn ideas into results.",
+      "steps": [
+        { "title": "Discovery", "description": "Understanding your needs and goals" },
+        { "title": "Strategy", "description": "Planning the perfect solution approach" },
+        { "title": "Execution", "description": "Building with precision and care" },
+        { "title": "Delivery", "description": "Launching your vision to life" }
+      ]
+    }
+  },
+  "Project": {
+    "ProjectDetail": {
+      "backToProjects": "Back to Projects",
+      "heroAlt": "Hero image for project {title}",
+      "projectOverview": "Project Overview",
+      "keyFeatures": "Key Features",
+      "challengesSolutions": "Challenges & Solutions",
+      "projectDetails": "Project Details",
+      "duration": "Duration",
+      "size": "Size",
+      "client": "Client",
+      "budgetRange": "Budget Range",
+      "servicesProvided": "Services Provided",
+      "projectGallery": "Project Gallery",
+      "galleryAlt": "Gallery image {index} for project {title}"
+    },
+    "ProjectsGrid": {
+      "heading": "Our Projects",
+      "subheading": "A glimpse into the landmarks we’ve shaped.",
+      "description": "Discover our portfolio of exceptional construction projects, each showcasing our commitment to quality and innovation.",
+      "categories": ["All", "Al Ausus", "RDTech", "CoreGrid"]
+    },
+    "HeroSection": {
+      "heading": "Turning Vision Into <accent>Reality</accent>",
+      "description": "From government institutions to private enterprises, our track record reflects excellence, innovation, and trust across every sector we serve."
+    },
+    "RelatedProjects": {
+      "relatedProjects": "Related Projects"
+    }
+  },
+  "Company": {
+    "AaContracting": {
+      "metadata": {
+        "title": "AA Contracting | Al Ausus Al Arbaa General Contracting",
+        "description": "AA Contracting delivers comprehensive civil, electromechanical, and construction services across the UAE."
+      },
+      "hero": {
+        "companyName": "AA Contracting",
+        "slogan": "Al Ausus Al Arbaa General Contracting",
+        "description": "Delivering comprehensive construction and contracting services with precision and reliability. Building the infrastructure of tomorrow across the UAE."
+      },
+      "about": {
+        "title": "About AA Contracting",
+        "paragraphs": [
+          "Al Ausus Al Arbaa General Contracting is the construction arm of RDTech Group, specializing in multi-disciplinary contracting services. Guided by the values of integrity, safety, success, and teamwork, we combine traditional craftsmanship with modern construction techniques to deliver exceptional results.",
+          "From commercial buildings to residential complexes, our experienced team manages every aspect of construction with attention to detail, quality, and timely delivery."
+        ]
+      },
+      "servicesTitle": "Our Construction Services",
+      "projectsTitle": "Projects",
+      "services": {
+        "civilWorks": {
+          "title": "Civil Works",
+          "description": "Comprehensive civil engineering solutions including structural, road, and infrastructure development with a focus on durability and safety."
+        },
+        "electromechanical": {
+          "title": "Electromechanical Works",
+          "description": "Expertise in electrical and mechanical systems, covering installation, commissioning, and maintenance of essential building services."
+        },
+        "preliminary": {
+          "title": "Preliminary Investigations",
+          "description": "Thorough site surveys, feasibility studies, and initial assessments to ensure well-informed decision-making before project initiation."
+        },
+        "environment": {
+          "title": "Environment Assessment",
+          "description": "Detailed environmental impact studies and sustainability evaluations to ensure compliance with regulations and eco-friendly practices."
+        },
+        "designs": {
+          "title": "Detailed Designs",
+          "description": "Precise architectural and engineering designs tailored to project needs, ensuring efficiency, accuracy, and innovation."
+        },
+        "quality": {
+          "title": "Quality Assurance",
+          "description": "Rigorous testing, monitoring, and control measures to maintain the highest standards of quality across all project phases."
+        },
+        "surveying": {
+          "title": "Quantity Surveying and Estimating",
+          "description": "Accurate cost estimation, budgeting, and financial planning to deliver projects on time and within budget constraints."
+        },
+        "documents": {
+          "title": "Preparation of Contract Documents",
+          "description": "Comprehensive contract documentation including tender preparation, specifications, and legal compliance to support smooth execution."
+        },
+        "management": {
+          "title": "Project Management",
+          "description": "End-to-end project planning, execution, monitoring, and delivery with a focus on efficiency, risk management, and timely completion."
+        },
+        "supervision": {
+          "title": "Construction Supervision",
+          "description": "On-site supervision and oversight ensuring that all construction activities meet design specifications, safety standards, and deadlines."
+        }
+      },
+      "projects": {
+        "uaeuPlayground": "Al Ain - UAEU Playground",
+        "universitySharjah": "University of Sharjah - UAE",
+        "tawamHospital": "Tawam Hospital A/C Maintenance",
+        "unitedSchool": "Al Ain - United School",
+        "postOffice": "Emirates post Office Construction",
+        "islamicInstitute": "Al Aim - Islamic Institute UAEU",
+        "distillationPlant": "Abu Dhabi Distillation Plant",
+        "rotanaChallet": "Al Ain - Rotana Challet",
+        "villaConstruction": "Al Ain Villa Building Construction",
+        "hessaMosque": "Al Ain - Sheikha Hessa Mosque",
+        "alSanaiya": "Al Ain - Al Sanaiya Restaurant",
+        "culturalHouse": "Al Ain - Dar Zayed Cultural House",
+        "minorsBuilding": "Minors Affairs Building A/C Maintenance",
+        "alMarkhaniya": "Al Ain - Al Markhaniya School",
+        "aldhafraSchools": "Al Dhafra Private Schools"
+      },
+      "clients": {
+        "title": "Building Trust With Every Project",
+        "subtitle": "Partnering with developers, government agencies, and enterprises across the UAE to deliver world-class infrastructure and construction solutions."
+      },
+      "contact": {
+        "title": "Build Your Vision With Us",
+        "subtitle": "Ready to start your construction project? Let's discuss how we can bring your vision to life."
+      }
+    },
+    "CoreGrid": {
+      "metadata": {
+        "title": "CoreGrid | Building Automation & Smart Solutions",
+        "description": "CoreGrid transforms buildings into intelligent, efficient spaces with cutting-edge automation and control systems. Creating smarter, sustainable environments for better living and working."
+      },
+      "hero": {
+        "companyName": "CoreGrid Solutions",
+        "slogan": "Building Automation & Smart Solutions",
+        "description": "Transforming buildings into intelligent, efficient spaces through cutting-edge automation and control systems. Creating smarter environments for better living and working."
+      },
+      "about": {
+        "title": "About CoreGrid Solutions",
+        "paragraphs": [
+          "CoreGrid Solutions is the smart building and automation division of RDTech Group, specializing in intelligent building management systems, home automation, and energy optimization solutions.",
+          "We leverage IoT technology, AI-driven analytics, and advanced control systems to create environments that are not only smart but also sustainable, efficient, and user-friendly."
+        ]
+      },
+      "servicesTitle": "Our Smart Solutions",
+      "projectsTitle": "Projects",
+      "services": {
+        "userInterface": {
+          "title": "User Interface",
+          "description": "Intuitive and user-friendly interfaces that provide seamless interaction and control of automation systems across devices."
+        },
+        "homeAutomation": {
+          "title": "Home Automation",
+          "description": "Smart solutions for lighting, temperature, and appliance control, enhancing comfort, convenience, and energy efficiency in any room."
+        },
+        "lightingControl": {
+          "title": "Lighting Control System",
+          "description": "Advanced lighting management systems enabling dimming, scheduling, and mood-setting for residential, commercial, or industrial spaces."
+        },
+        "hvacControl": {
+          "title": "HVAC Control",
+          "description": "Integrated heating, ventilation, and air conditioning control for optimized climate management, improved efficiency, and reduced energy costs."
+        },
+        "ioController": {
+          "title": "I/O Controller",
+          "description": "Reliable input/output control devices that manage communication between field equipment and central automation systems."
+        },
+        "energyManagement": {
+          "title": "Energy Management & Metering",
+          "description": "Smart metering and monitoring systems that track energy consumption, reduce waste, and ensure sustainable energy usage."
+        },
+        "gateways": {
+          "title": "Gateways",
+          "description": "Secure and scalable gateways enabling seamless integration between different automation devices and communication protocols."
+        },
+        "networkInfrastructure": {
+          "title": "Network Infrastructure",
+          "description": "Robust networking solutions designed to support high-performance automation systems with reliability and security."
+        }
+      },
+      "projects": {
+        "sharjahCity": "Sharjah Sustainable City",
+        "residenceInn": "Residence Inn by Marriott",
+        "sustainableHomesHotel": "Sustainable Homes Hotel",
+        "dubaiExpo2020": "Dubai Expo 2020",
+        "ministry": "Ministry",
+        "aziziCreekView": "Azizi Creek View",
+        "platinumHotel": "Platinum Hotel Dubai",
+        "hiltonConrad": "Hilton Conrad Arzana",
+        "celiaResidence": "Celia Residence - Abou Eid",
+        "regaliaTower": "Regalia Tower- Deyaar",
+        "miramarHotel": "Miramar Hotel - Al Fujairah",
+        "qualityCouncil": "Abu Dhabi Quality and Conformity Council"
+      },
+      "clients": {
+        "title": "Empowering Smart Partnerships",
+        "subtitle": "Trusted by forward-thinking organizations to build intelligent, efficient, and sustainable spaces."
+      },
+      "contact": {
+        "title": "Make Your Building Smart",
+        "subtitle": "Ready to transform your space with intelligent automation? Let's create a smarter future together."
+      }
+    },
+    "RDTech": {
+      "metadata": {
+        "title": "RDTech | Security Systems & ELV/ICT Solutions",
+        "description": "RDTech delivers advanced security and ELV/ICT solutions across the UAE."
+      },
+      "hero": {
+        "name": "RDTech",
+        "slogan": "Security Systems & ELV/ICT Solutions",
+        "description": "Pioneering advanced security technology to safeguard critical infrastructure across the UAE. From access control to comprehensive surveillance systems."
+      },
+      "about": {
+        "title": "About RDTech",
+        "paragraphs": [
+          "RDTech is the security and technology arm of RDTech Group, specializing in cutting-edge security systems and ELV/ICT solutions. With over a decade of experience, we've secured some of the UAE's most critical infrastructure.",
+          "Our team of certified engineers and security specialists work with the latest technology from global leaders to deliver solutions that exceed industry standards and client expectations."
+        ]
+      },
+      "servicesTitle": "Our Security Solutions",
+      "services": {
+        "securityRMS": {
+          "title": "Security & RMS",
+          "description": "Comprehensive security systems and Remote Monitoring Solutions (RMS) to ensure safety, surveillance, and centralized control for enterprises and facilities."
+        },
+        "audioVisuals": {
+          "title": "Audio Visuals & IP TV",
+          "description": "State-of-the-art audio-visual systems and IPTV solutions delivering immersive experiences for entertainment, corporate communication, and hospitality sectors."
+        },
+        "networkCommunication": {
+          "title": "Network & Communication",
+          "description": "Robust networking and communication infrastructure providing seamless connectivity, high-speed data transfer, and reliable communication channels."
+        },
+        "structuredCabling": {
+          "title": "Structured Cabling",
+          "description": "Standardized cabling systems that support data, voice, and multimedia, ensuring scalability, flexibility, and easy maintenance for businesses."
+        },
+        "enterpriseComputing": {
+          "title": "Enterprise Computing",
+          "description": "High-performance computing solutions including servers, storage, and virtualization technologies to power enterprise applications and operations."
+        },
+        "aiIoT": {
+          "title": "AI, IoT & Command Control Center",
+          "description": "Smart solutions combining AI and IoT for real-time monitoring, automation, and centralized command centers that enhance security and operational efficiency."
+        }
+      },
+      "projects": {
+        "rtaDubai": "RTA Dubai",
+        "zayedUniversity": "Zayed University",
+        "dxbWorldTradeCentre": "DXB World Trade Centre",
+        "emiratesPalaceHotel": "Emirates Palace Hotel",
+        "palmJumeirah": "Palm Jumeirah",
+        "mazagonResort": "Mazagon Resort",
+        "khalidiyaPalace": "Khalidiya Palace",
+        "ferrariWorld": "Ferrari World",
+        "yasMarinaHotel": "Yas Marina Hotel",
+        "dubaiCargoTerminal": "Dubai Cargo Terminal",
+        "dubaiMall": "Dubai Mall",
+        "jumeirahEmiratesTowers": "Jumeirah Emirates Towers Dubai",
+        "etehadTowers": "Etehad Towers",
+        "burjAlArab": "Burj Al Arab",
+        "atlantisHotel": "Atlantis Hotel",
+        "burjKhalifa": "Burj Khalifa"
+      },
+      "clients": {
+        "title": "Trusted By Industry Leaders",
+        "subtitle": "Partnering with organizations across the UAE to deliver secure and innovative technology solutions."
+      },
+      "contact": {
+        "title": "Secure Your Future Today",
+        "subtitle": "Ready to implement world-class security solutions? Our experts are here to help."
+      }
+    }
+  },
+  "ReferenceSection": {
+    "title": "Clients & References",
+    "subtitle": "Trusted by leading organizations across industries and regions.",
+    "clients": {
+      "retail": "Retail & Commercial",
+      "banking": "Banking Sector",
+      "hospitality": "Hospitality",
+      "communication": "Communication",
+      "enterprises": "Top Enterprises",
+      "education": "Education"
+    }
+  },
+  "CoreGridOverview": {
+    "title": "Overview",
+    "subtitle": "Comprehensive technology solutions designed to power your business infrastructure with reliability, security, and scalability.",
+    "services": {
+      "structuredCabling": {
+        "title": "Structured Cabling Solutions",
+        "description": "Cabling infrastructure with intelligent monitoring",
+        "features": [
+          "End-to-end Cat6 and Cat6A Structured Cabling",
+          "Copper & Fibre Termination expertise",
+          "Data Centre Pre-terminated Solution",
+          "Intelligent Cabling Monitoring",
+          "Best Practices Installation & Documentation",
+          "Large Local Stock Available"
+        ]
+      },
+      "convergedSolutions": {
+        "title": "Structured Converged Data & Voice Solutions",
+        "description": "Top notch network solutions with redundancy and security",
+        "features": [
+          "Redundant solutions with sub-second failover",
+          "High Bandwidth & Multi-service Delivery",
+          "Digital, IP, Analog & SIP Telephony Support",
+          "Multi-layer Security Approach",
+          "Application Load Balancing",
+          "Single Monitoring Platform"
+        ]
+      },
+      "ucCcSolutions": {
+        "title": "UC / CC Solutions & Mobility Infrastructure",
+        "description": "Secure wireless coverage with advanced location services",
+        "features": [
+          "Secure Corporate Wireless Coverage",
+          "Wireless Internet for corporate networks",
+          "Voice over WLAN for mobile staff",
+          "Handheld device integration",
+          "Location Tracking (People & Equipment)",
+          "Location-based Service Delivery"
+        ]
+      },
+      "enterpriseSystems": {
+        "title": "Enterprise Systems, Storage & Security",
+        "description": "Reliable enterprise systems with backup and protection",
+        "features": [
+          "Enterprise Servers & Systems",
+          "Disaster Recovery & Backup Solutions",
+          "Multifunction & Large Format Printers",
+          "Advanced Spam & Security Protections"
+        ]
+      },
+      "audioVisual": {
+        "title": "Audio-Visual Solutions",
+        "description": "Smart AV systems for seamless experiences",
+        "features": [
+          "Background Music Systems",
+          "Professional AV Solutions",
+          "Centralized Music Servers"
+        ]
+      },
+      "securitySolutions": {
+        "title": "Security Solutions",
+        "description": "Comprehensive security for safer environments",
+        "features": [
+          "CCTV & Video Surveillance",
+          "Access Control & Gate Barriers",
+          "Intrusion & Threat Detection Systems",
+          "Fire Alarm & Public Address Systems",
+          "Nurse Call & Emergency Alerts",
+          "Biometric Time & Attendance",
+          "Centralized Clock Systems"
+        ]
+      }
+    }
+  },
+  "ContactSection": {
+    "title": "Get in Touch",
+    "subtitle": "We’d love to hear from you. Reach out through any of the following methods.",
+    "phone": {
+      "title": "Call Us",
+      "description": "We’re ready to help anytime"
+    },
+    "email": {
+      "title": "Email Us",
+      "description": "Detailed responses for inquiries"
+    },
+    "address": {
+      "title": "Visit Us",
+      "description": "Meet us for personalized service"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Choose your preferred way to connect with our team. We're here to help!",
+      "button": "Start Conversation"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "groupOverview": "Group Overview",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "aaContracting": {
+      "name": "AA Contracting",
+      "description": "Multi-disciplinary General Contracting",
+      "services": {
+        "civilConstruction": "Civil Construction",
+        "mepServices": "MEP Services",
+        "projectManagement": "Project Management",
+        "maintenance": "Maintenance"
+      }
+    },
+    "rdTech": {
+      "name": "RDTech",
+      "description": "Security Systems & ELV/ICT Solutions",
+      "services": {
+        "accessControl": "Access Control",
+        "cctvSystems": "CCTV Systems",
+        "fireAlarm": "Fire Alarm",
+        "networkInfrastructure": "Network Infrastructure"
+      }
+    },
+    "coreGrid": {
+      "name": "CoreGrid Solutions",
+      "description": "Building Automation & Smart Solutions",
+      "services": {
+        "bmsSystems": "BMS Systems",
+        "lightingControl": "Lighting Control",
+        "homeAutomation": "Home Automation",
+        "energyManagement": "Energy Management"
+      }
+    }
+  },
+  "Footer": {
+    "logoAlt": "RDTech Group Logo",
+    "groupName": "RDTech Group",
+    "description": "Uniting three industry leaders — RDTech Security Solutions, AL AUSUS AL ARBAA Contracting, and CoreGrid Automation — to deliver innovative, reliable, and future-ready solutions across security, construction, and smart building technologies.",
+    "navTitle": "Navigation",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "utilityTitle": "Utility Pages",
+    "utility": {
+      "ourCompanies": "Our Companies",
+      "mission": "Our Mission",
+      "vision": "Our Vision",
+      "projects": "Flagship Projects"
+    },
+    "contactTitle": "Contact",
+    "contact": {
+      "phone": "+971 3733 0116",
+      "email": "info@alaususgencont.com",
+      "po": "PO : 23113",
+      "address": "Abu Dhabi, UAE"
+    },
+    "copyright": "© RDGroup {year}",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ar {🇸🇦 العربية} en {🇺🇸 English} other {Unknown}}"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "We couldn’t find the page you’re looking for. LS4IT is all about innovation in fabrics—let’s get you back to where the magic happens.",
+    "home": "Back to Home",
+    "contact": "Contact Us"
   }
 }

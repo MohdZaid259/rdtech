@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Cable,
   Clock,
@@ -6,65 +8,65 @@ import {
   Gauge,
   Key,
   Layers,
-  ThumbsUp,
   Users,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
 import { FadeIn } from "../ui/fade-in";
 import SectionHeader from "./section-header";
+import { useTranslations } from "next-intl";
 
 const features = [
   {
     icon: Key,
-    title: "Turnkey Solutions",
-    subtitle: "End-to-end integration & delivery",
+    titleKey: "features.turnkey.title",
+    subtitleKey: "features.turnkey.subtitle",
   },
   {
     icon: Clock,
-    title: "24/7 Availability",
-    subtitle: "Round-the-clock support always",
+    titleKey: "features.availability.title",
+    subtitleKey: "features.availability.subtitle",
   },
   {
     icon: DollarSign,
-    title: "Cost-Effective",
-    subtitle: "Optimized & value-driven solutions",
+    titleKey: "features.cost.title",
+    subtitleKey: "features.cost.subtitle",
   },
   {
     icon: Layers,
-    title: "Modular & Scalable",
-    subtitle: "Future-ready system level upgrades",
+    titleKey: "features.modular.title",
+    subtitleKey: "features.modular.subtitle",
   },
   {
     icon: Cpu,
-    title: "Cutting-Edge Technology",
-    subtitle: "Latest hardware & software",
+    titleKey: "features.tech.title",
+    subtitleKey: "features.tech.subtitle",
   },
   {
     icon: Gauge,
-    title: "Fast Implementation",
-    subtitle: "Providing Zero-downtime delivery",
+    titleKey: "features.fast.title",
+    subtitleKey: "features.fast.subtitle",
   },
   {
     icon: Cable,
-    title: "In-House Cabling",
-    subtitle: "Civil, MEP, networking expertise",
+    titleKey: "features.cabling.title",
+    subtitleKey: "features.cabling.subtitle",
   },
   {
     icon: Users,
-    title: "Expert Support Team",
-    subtitle: "Certified engineers & specialists",
+    titleKey: "features.support.title",
+    subtitleKey: "features.support.subtitle",
   },
 ];
 
 export default function WhyRDTechGroup() {
+  const t = useTranslations("Home.WhyChooseUs");
+
   return (
     <section className="md:py-20 py-8 w-full bg-blue-50">
       {/* Section Header */}
       <SectionHeader
-        title="Why RDTech Group"
-        subTitle="The trusted technology partner delivering value-driven, reliable, and
-          innovative solutions."
+        title={t("sectionHeader.title")}
+        subTitle={t("sectionHeader.subTitle")}
       />
 
       {/* Enhanced Feature Grid */}
@@ -77,20 +79,17 @@ export default function WhyRDTechGroup() {
                 <FadeIn delay={i * 80}>
                   <Card className="w-64 h-full group relative overflow-hidden rounded-xl md:rounded-3xl border border-gray-200 bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 py-0">
                     <CardContent className="md:p-6 md:pt-4 p-2 pb-6 flex flex-col items-start">
-                      {/* Icon with gradient background */}
                       <div className="md:mb-4 mb-2 flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-900 to-primary text-white shadow-md group-hover:scale-110 transition-transform duration-300 opacity-90 group-hover:opacity-100">
                         <feature.icon className="h-5 w-5" />
                       </div>
 
-                      {/* Title */}
                       <h3 className="text-base md:text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                        {feature.title}
+                        {t(feature.titleKey)}
                       </h3>
 
-                      {/* Subtitle */}
-                      {feature.subtitle && (
+                      {feature.subtitleKey && (
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          {feature.subtitle}
+                          {t(feature.subtitleKey)}
                         </p>
                       )}
                     </CardContent>
@@ -101,7 +100,6 @@ export default function WhyRDTechGroup() {
               {i < features.length - 1 && (
                 <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                   <div className="flex items-center">
-                    {/* Dotted line */}
                     <div className="flex space-x-1">
                       {[...Array(6)].map((_, dotIndex) => (
                         <div
@@ -111,7 +109,6 @@ export default function WhyRDTechGroup() {
                         />
                       ))}
                     </div>
-                    {/* Arrow head */}
                     <svg
                       className="w-4 h-4 text-primary opacity-70 ml-2"
                       fill="currentColor"
@@ -130,26 +127,24 @@ export default function WhyRDTechGroup() {
           ))}
         </div>
 
+        {/* Mobile Grid */}
         <div className="lg:hidden grid grid-cols-2 gap-4 max-sm:px-4">
           {features.map((feature, i) => (
             <div key={i} className="max-sm:h-full relative">
               <FadeIn delay={i * 80}>
                 <Card className="h-full group relative overflow-hidden rounded-xl border border-gray-200 bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 py-0">
                   <CardContent className="p-4 flex flex-col items-start">
-                    {/* Icon with gradient background */}
                     <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-900 to-primary text-white shadow-md group-hover:scale-110 transition-transform duration-300">
                       <feature.icon className="h-5 w-5" />
                     </div>
 
-                    {/* Title */}
                     <h3 className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
-                      {feature.title}
+                      {t(feature.titleKey)}
                     </h3>
 
-                    {/* Subtitle */}
-                    {feature.subtitle && (
+                    {feature.subtitleKey && (
                       <p className="text-xs text-muted-foreground leading-relaxed">
-                        {feature.subtitle}
+                        {t(feature.subtitleKey)}
                       </p>
                     )}
                   </CardContent>

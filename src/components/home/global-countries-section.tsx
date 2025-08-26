@@ -1,30 +1,35 @@
+"use client";
+
 import { FadeIn } from "@/components/ui/fade-in";
 import { NumberTicker } from "../magicui/number-ticker";
 import { SafeImage } from "../ui/safe-image";
 import SectionHeader from "./section-header";
+import { useTranslations } from "next-intl";
 
 export default function GlobalCountriesSection() {
+  const t = useTranslations("Home.GlobalCountriesSection");
+
   const emirates = [
-    "Dubai",
-    "Abu Dhabi",
-    "Sharjah",
-    "Fujairah",
-    "Ras Al Khaimah",
-    "Umm Al Quwain",
-    "Ajman",
+    t("emirates.dubai"),
+    t("emirates.abuDhabi"),
+    t("emirates.sharjah"),
+    t("emirates.fujairah"),
+    t("emirates.rasAlKhaimah"),
+    t("emirates.ummAlQuwain"),
+    t("emirates.ajman"),
   ];
 
   const stats = [
-    { label: "Projects", value: 500 },
-    { label: "Clients", value: 200 },
+    { label: t("stats.projects"), value: 500 },
+    { label: t("stats.clients"), value: 200 },
   ];
 
   return (
     <section className="flex flex-col items-center py-8 md:py-20 container mx-auto">
       {/* Heading */}
       <SectionHeader
-        title="Global Reach"
-        subTitle="Serving clients across the UAE and through strong partnerships with technology vendors in Europe, North America, and Asia."
+        title={t("title")}
+        subTitle={t("subTitle")}
       />
 
       {/* Content Grid */}
@@ -35,7 +40,7 @@ export default function GlobalCountriesSection() {
             <div className="md:col-span-2">
               <SafeImage
                 src="/Home/uae-map.jpg?updatedAt=1755860716884"
-                alt="UAE Map"
+                alt={t("mapAlt")}
                 width={900}
                 height={500}
                 className="object-contain h-[300px] sm:h-[450px] w-full"
@@ -47,7 +52,7 @@ export default function GlobalCountriesSection() {
               {/* Emirates */}
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                  UAE Emirates
+                  {t("emiratesTitle")}
                 </h3>
                 <ul className="space-y-2">
                   {emirates.map((emirate, idx) => (
@@ -69,8 +74,7 @@ export default function GlobalCountriesSection() {
                     className="bg-primary text-white rounded-2xl shadow-lg flex flex-col items-center justify-center py-2"
                   >
                     <div className="text-2xl text-white font-bold flex items-center">
-                      <NumberTicker value={stat.value} className="text-white" />
-                      +
+                      <NumberTicker value={stat.value} className="text-white" />+
                     </div>
                     <div className="text-xs opacity-80">{stat.label}</div>
                   </div>

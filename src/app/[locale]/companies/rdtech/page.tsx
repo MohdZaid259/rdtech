@@ -9,6 +9,7 @@ import React from "react";
 import ServicesSection from "@/components/companies/services-section";
 import CoreGridOverview from "@/components/companies/overview";
 import RefrenceSection from "@/components/companies/reference";
+import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {
   title: "RDTech | Security Systems & ELV/ICT Solutions",
@@ -33,148 +34,81 @@ export const metadata: Metadata = {
 };
 
 export default function page() {
-  const services = [
-    {
-      title: "Security & RMS",
-      description:
-        "Comprehensive security systems and Remote Monitoring Solutions (RMS) to ensure safety, surveillance, and centralized control for enterprises and facilities.",
-      image: "/security.webp",
-    },
-    {
-      title: "Audio Visuals & IP TV",
-      description:
-        "State-of-the-art audio-visual systems and IPTV solutions delivering immersive experiences for entertainment, corporate communication, and hospitality sectors.",
-      image: "audio-visuals.webp",
-    },
-    {
-      title: "Network & Communication",
-      description:
-        "Robust networking and communication infrastructure providing seamless connectivity, high-speed data transfer, and reliable communication channels.",
-      image: "network-communication.webp",
-    },
-    {
-      title: "Structured Cabling",
-      description:
-        "Standardized cabling systems that support data, voice, and multimedia, ensuring scalability, flexibility, and easy maintenance for businesses.",
-      image: "structured-cabling.webp",
-    },
-    {
-      title: "Enterprise Computing",
-      description:
-        "High-performance computing solutions including servers, storage, and virtualization technologies to power enterprise applications and operations.",
-      image: "enterprise-computing.png",
-    },
-    {
-      title: "AI, IoT & Command Control Center",
-      description: 
-        "Smart solutions combining AI and IoT for real-time monitoring, automation, and centralized command centers that enhance security and operational efficiency.",
-        image: "ai.jpg"
-    },
-  ];
+  const t = useTranslations("Company.RDTech");
 
-  const projects = [
-    {
-      name: "RTA Dubai",
-      image: "rta.webp",
-    },
-    {
-      name: "Zayed University",
-      image: "zayed.webp",
-    },
-    {
-      name: "DXB World Trade Centre",
-      image: "trade.webp",
-    },
-    {
-      name: "Emirates Palace Hotel",
-      image: "palace.webp",
-    },
-    {
-      name: "Palm Jumeirah",
-      image: "palm.webp",
-    },
-    {
-      name: "Mazagon Resort",
-      image: "mazagon.webp",
-    },
-    {
-      name: "Khalidiya Palace",
-      image: "khalidiya.webp",
-    },
-    {
-      name: "Ferrari World",
-      image: "ferrari.webp",
-    },
-    {
-      name: "Yas Marina Hotel",
-      image: "marina.webp",
-    },
-    {
-      name: "Dubai Cargo Terminal",
-      image: "cargo.webp",
-    },
-    {
-      name: "Dubai Mall",
-      image: "dubaiMall.webp",
-    },
-    {
-      name: "Jumeirah Emirates Towers Dubai",
-      image: "emirates.webp",
-    },
-    {
-      name: "Etehad Towers",
-      image: "etehad.webp",
-    },
-    {
-      name: "Burj Al Arab",
-      image: "burjAlArab.webp",
-    },
-    {
-      name: "Atlantis Hotel",
-      image: "atlantis.webp",
-    },
-    {
-      name: "Burj Khalifa",
-      image: "burjKhalifa.webp",
-    },
-  ];
+  const services = [
+  { key: "securityRMS", image: "/security.webp" },
+  { key: "audioVisuals", image: "audio-visuals.webp" },
+  { key: "networkCommunication", image: "network-communication.webp" },
+  { key: "structuredCabling", image: "structured-cabling.webp" },
+  { key: "enterpriseComputing", image: "enterprise-computing.png" },
+  { key: "aiIoT", image: "ai.jpg" },
+];
+
+const projects = [
+  { key: "rtaDubai", image: "rta.webp" },
+  { key: "zayedUniversity", image: "zayed.webp" },
+  { key: "dxbWorldTradeCentre", image: "trade.webp" },
+  { key: "emiratesPalaceHotel", image: "palace.webp" },
+  { key: "palmJumeirah", image: "palm.webp" },
+  { key: "mazagonResort", image: "mazagon.webp" },
+  { key: "khalidiyaPalace", image: "khalidiya.webp" },
+  { key: "ferrariWorld", image: "ferrari.webp" },
+  { key: "yasMarinaHotel", image: "marina.webp" },
+  { key: "dubaiCargoTerminal", image: "cargo.webp" },
+  { key: "dubaiMall", image: "dubaiMall.webp" },
+  { key: "jumeirahEmiratesTowers", image: "emirates.webp" },
+  { key: "etehadTowers", image: "etehad.webp" },
+  { key: "burjAlArab", image: "burjAlArab.webp" },
+  { key: "atlantisHotel", image: "atlantis.webp" },
+  { key: "burjKhalifa", image: "burjKhalifa.webp" },
+];
 
   return (
     <main className="min-h-screen">
       <HeroSection
-        companyName="RDTech"
-        slogan="Security Systems & ELV/ICT Solutions"
-        description="Pioneering advanced security technology to safeguard critical infrastructure across the UAE. From access control to comprehensive surveillance systems."
+        companyName={t("hero.companyName")}
+        slogan={t("hero.slogan")}
+        description={t("hero.description")}
         backgroundImage="/Companies/RDTech/controlRoom.webp"
         companyLogo={<RDTechLogo />}
         projectsLink="/companies/rdtech/#projects"
       />
 
       <AboutSection
-        title="About RDTech"
-        description={[
-          "RDTech is the security and technology arm of RDTech Group, specializing in cutting-edge security systems and ELV/ICT solutions. With over a decade of experience, we've secured some of the UAE's most critical infrastructure.",
-          "Our team of certified engineers and security specialists work with the latest technology from global leaders to deliver solutions that exceed industry standards and client expectations.",
-        ]}
-        image={{
-          src: "/facial.jpg?updatedAt=1755786638264",
-          alt: "RDTech Team",
-        }}
-      />
+          title={t("about.title")}
+          description={t.raw("about.paragraphs")}
+          image={{
+            src: "/facial.jpg?updatedAt=1755786638264",
+            alt: t("companies.rdTech.aboutImageAlt"),
+          }}
+        />
+
 
       <CoreGridOverview/>
 
       <ServicesSection
-        title="Our Security Solutions"
-        services={services}
+        title={t("servicesTitle")}
+        services={services.map(s => ({
+          title: t(`services.${s.key}.title`),
+          description: t(`services.${s.key}.description`),
+          image: s.image
+        }))}
         companyName="RDTech"
       />
 
-      <ProjectsSection companyName="rdProjects" projects={projects} />
+
+      <ProjectsSection
+        companyName="rdProjects"
+        projects={projects.map(p => ({
+          name: t(`projects.${p.key}`),
+          image: p.image
+        }))}
+      />  
 
       <ClientsSection
-        title="Trusted By Industry Leaders"
-        subTitle="Partnering with organizations across the UAE to deliver secure and innovative technology solutions."
+        title={t("clients.title")}
+        subTitle={t("clients.subtitle")}
         rows={[
           {
             baseVelocity: 5,
@@ -202,12 +136,11 @@ export default function page() {
       />
       
       <RefrenceSection/>
+
       <ContactSection
-        title="Secure Your Future Today"
-        subtitle="Ready to implement world-class security solutions? Our experts are here to help."
         phone="+971 6524 1842"
-        email=" info@rdtech-group.com"
-        address="PO 23113, Sharjah, UAE"
+        email="info@rdtech-group.com"
+        address="PO 23113, Sharjah, UAE"
       />
     </main>
   );

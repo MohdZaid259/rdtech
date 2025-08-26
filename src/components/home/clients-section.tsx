@@ -1,15 +1,15 @@
+"use client";
+
 import {
   ScrollVelocityContainer,
   ScrollVelocityRow,
 } from "../magicui/scroll-based-velocity";
-
 import { SafeImage } from "../ui/safe-image";
 import SectionHeader from "./section-header";
+import { useTranslations } from "next-intl";
 
-export default function ClientsSection() {
-  // Define categories & logos
-  const clientCategories: Record<string, string[]> = {
-    Commercial: [
+const clientCategories: Record<string, string[]> = {
+    commercial: [
       "bakerHughes.webp",
       "lulu.webp",
       "maiDubai.webp",
@@ -80,10 +80,13 @@ export default function ClientsSection() {
     ],
   };
 
+export default function ClientsSection() {
+  const t = useTranslations("Home.Clients");
+
   // Convert categories into rows
   const clientRows = Object.entries(clientCategories).map(([category, logos]) =>
     logos.map((logo) => ({
-      name: logo.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+      name: t(`clients.${category}.${logo.replace(/\..+$/, "")}`),
       src: `/Clients/${category}/${logo}`,
     }))
   );
@@ -91,8 +94,8 @@ export default function ClientsSection() {
   return (
     <section className="relative py-8 md:py-20 overflow-hidden bg-primary">
       <SectionHeader
-        title="Our Clients"
-        subTitle="Trusted by leading organizations across industries for mission-critical technology solutions."
+        title={t("clientsSection.title")}
+        subTitle={t("clientsSection.subTitle")}
         titleColor="text-primary bg-white"
         subTitleColor="text-muted"
       />
