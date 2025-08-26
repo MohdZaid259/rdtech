@@ -32,7 +32,7 @@ export default function ProjectsSection() {
     }, 8000);
     return () => clearInterval(interval);
   }, [projects.length]);
-console.log('p',project)
+
   return (
     <section className="min-h-screen flex flex-col py-8 md:py-20 bg-primary">
       <div className="container mx-auto">

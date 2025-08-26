@@ -78,7 +78,8 @@ export default function Page() {
     { name: "culturalHouse", image: "cultural.png" },
     { name: "minorsBuilding", image: "minors.png" },
     { name: "alMarkhaniya", image: "almarkhaniya.png" },
-    { name: "aldhafraSchools", image: "aldhaher.webp" }
+    { name: "aldhafraSchools", image: "aldhaher.webp" },
+    { name: "uaeuPlayground", image: "uaeu.png" },
   ];
 
   return (

@@ -9,7 +9,6 @@ import {
 import { ChevronDown, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useEffect, useState } from "react";
-
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import CoreGridLogo from "../logos/core-grid-logo";
 import { Link } from "@/i18n/navigation";
