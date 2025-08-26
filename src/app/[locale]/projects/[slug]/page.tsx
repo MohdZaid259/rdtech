@@ -2,11 +2,13 @@ import { Metadata } from "next";
 import { ProjectDetail } from "@/components/projects/details";
 import { ProjectType } from "@/type";
 import { RelatedProjects } from "@/components/projects/related";
+import arMessages from "@/messages/ar.json";
 import enMessages from "@/messages/en.json";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 
-const projects = enMessages.Project.ProjectsGrid.projects;
+const enProjects = enMessages.Project.ProjectsGrid.projects;
+const arProjects = arMessages.Project.ProjectsGrid.projects;
 
 interface ProjectPageProps {
   params: Promise<{
@@ -19,7 +21,7 @@ export async function generateMetadata({
 }: ProjectPageProps): Promise<Metadata> {
   const slug = await params;
 
-  const project = projects.find((p) => p.slug === slug.slug);
+  const project = enProjects.find((p) => p.slug === slug.slug);
 
   if (!project) {
     return {
@@ -77,11 +79,8 @@ export default async function ProjectPage({
 }
 
 export function generateStaticParams() {
-  return projects
-    .filter(
-      (project) => typeof project.slug === "string" && project.slug.length > 0
-    )
-    .map((project) => ({
-      slug: project.slug,
-    }));
+  return [
+    ...enProjects.map((p) => ({ slug: p.slug, locale: "en" })),
+    ...arProjects.map((p) => ({ slug: p.slug, locale: "ar" })),
+  ];
 }
