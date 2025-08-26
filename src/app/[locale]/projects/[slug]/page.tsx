@@ -79,8 +79,13 @@ export default async function ProjectPage({
 }
 
 export function generateStaticParams() {
-  return [
-    ...enProjects.map((p) => ({ slug: p.slug, locale: "en" })),
-    ...arProjects.map((p) => ({ slug: p.slug, locale: "ar" })),
-  ];
+  const projects = [...enProjects, ...arProjects];
+
+  return projects
+    .filter(
+      (project) => typeof project.slug === "string" && project.slug.length > 0
+    )
+    .map((project) => ({
+      slug: project.slug,
+    }));
 }
