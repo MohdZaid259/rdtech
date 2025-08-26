@@ -1,8 +1,10 @@
 import { Metadata } from "next";
+import { Project } from "@/messages/en.json";
 import { ProjectDetail } from "@/components/projects/details";
+import { ProjectType } from "@/type";
 import { RelatedProjects } from "@/components/projects/related";
+import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { projects } from '../../../../../public/projectData'
 
 interface ProjectPageProps {
   params: Promise<{
@@ -15,7 +17,9 @@ export async function generateMetadata({
 }: ProjectPageProps): Promise<Metadata> {
   const slug = await params;
 
-  const project = projects.find((p) => p.slug === slug.slug);
+  const project = Project.ProjectsGrid.projects.find(
+    (p) => p.slug === slug.slug
+  );
 
   if (!project) {
     return {
@@ -54,8 +58,11 @@ export default async function ProjectPage({
   params,
 }: Readonly<ProjectPageProps>) {
   const slug = await params;
+  const t = await getTranslations("Project.ProjectsGrid");
 
-  const project = projects.find((p) => p.slug === slug.slug);
+  const project = t
+    .raw("projects")
+    .find((p: ProjectType) => p.slug === slug.slug);
 
   if (!project) {
     notFound();
@@ -70,8 +77,10 @@ export default async function ProjectPage({
 }
 
 export function generateStaticParams() {
-  return projects
-    .filter((project) => typeof project.slug === "string" && project.slug.length > 0)
+  return Project.ProjectsGrid.projects
+    .filter(
+      (project) => typeof project.slug === "string" && project.slug.length > 0
+    )
     .map((project) => ({
       slug: project.slug,
     }));

@@ -1,9 +1,10 @@
-'use client';
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import { Project } from "../../../public/projectData";
 import { SafeImage } from "../ui/safe-image";
-import { projects } from "../../../public/projectData";
 import { useTranslations } from "next-intl";
 
 interface RelatedProjectsProps {
@@ -12,9 +13,11 @@ interface RelatedProjectsProps {
 
 export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
   const t = useTranslations("Project.RelatedProjects");
+  const projectsT = useTranslations("Project.ProjectsGrid");
 
-  const relatedProjects = projects
-    .filter((project) => project.id !== currentProjectId)
+  const relatedProjects = projectsT
+    .raw("projects")
+    .filter((project: Project) => project.id !== currentProjectId)
     .slice(0, 3);
 
   return (
@@ -24,7 +27,7 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
           {t("relatedProjects")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          {relatedProjects.map((project) => (
+          {relatedProjects.map((project: Project) => (
             <Link
               key={project.id}
               href={`/projects/${project.slug}`}

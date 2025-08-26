@@ -1,24 +1,27 @@
-
 "use client";
 
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import { ProjectType } from "@/type";
 import { SafeImage } from "../ui/safe-image";
-import { projects } from "../../../public/projectData";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
 const categories = ["All", "Al Ausus", "RDTech", "CoreGrid"];
 
 export default function ProjectsGrid() {
-  const t = useTranslations('Project.ProjectsGrid')
+  const t = useTranslations("Project.ProjectsGrid");
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =
     activeCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category === activeCategory);
+      ? t.raw("projects")
+      : t
+          .raw("projects")
+          .filter(
+            (project: ProjectType) => project.category === activeCategory
+          );
 
   return (
     <section className="py-12 px-6 bg-muted/30">
@@ -49,7 +52,7 @@ export default function ProjectsGrid() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          {filteredProjects.map((project) => {
+          {filteredProjects.map((project: ProjectType) => {
             const CardContent = (
               <Card className="group hover:shadow-xl hover:scale-105 duration-500 py-0 flex gap-2 md:gap-0 flex-col h-full">
                 <div className="relative rounded-t-xl overflow-hidden">
@@ -63,7 +66,9 @@ export default function ProjectsGrid() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
                     <div className="flex text-shadow-2xs text-shadow-black justify-between items-center">
-                      <p className="text-white/80 text-sm">{project.location}</p>
+                      <p className="text-white/80 text-sm">
+                        {project.location}
+                      </p>
                       <Badge
                         variant="custom"
                         className="-mb-2 text-shadow-2xs text-shadow-black"
@@ -78,18 +83,28 @@ export default function ProjectsGrid() {
                     <h3 className="font-bold text-xl mb-2">
                       {project.title.split(" – ")[0]}
                     </h3>
-                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                    <p className="text-muted-foreground mb-4">
+                      {project.description}
+                    </p>
                   </div>
                   <div className="flex justify-between items-center mt-auto">
-                    <span className="text-sm text-muted-foreground">{project.location}</span>
-                    <span className="text-sm font-medium text-muted-foreground">{project.year}</span>
+                    <span className="text-sm text-muted-foreground">
+                      {project.location}
+                    </span>
+                    <span className="text-sm font-medium text-muted-foreground">
+                      {project.year}
+                    </span>
                   </div>
                 </div>
               </Card>
             );
 
             return project.slug ? (
-              <Link key={project.id} href={`/projects/${project.slug}`} className="h-full">
+              <Link
+                key={project.id}
+                href={`/projects/${project.slug}`}
+                className="h-full"
+              >
                 {CardContent}
               </Link>
             ) : (
@@ -98,7 +113,6 @@ export default function ProjectsGrid() {
               </div>
             );
           })}
-
         </div>
       </div>
     </section>

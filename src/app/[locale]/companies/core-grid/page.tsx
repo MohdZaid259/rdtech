@@ -5,8 +5,8 @@ import CoreGridLogo from "@/components/logos/core-grid-logo";
 import HeroSection from "@/components/companies/hero-section";
 import { Metadata } from "next";
 import ProjectsSection from "@/components/companies/projects-section";
-import ServicesSection from "@/components/companies/services-section";
 import RefrenceSection from "@/components/companies/reference";
+import ServicesSection from "@/components/companies/services-section";
 import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {
@@ -35,29 +35,61 @@ export default function Page() {
   const t = useTranslations("Company.CoreGrid");
 
   const services = [
-    { title: t("services.userInterface.title"), description: t("services.userInterface.description"), image: "user-interface.webp" },
-    { title: t("services.homeAutomation.title"), description: t("services.homeAutomation.description"), image: "room-automation.webp" },
-    { title: t("services.lightingControl.title"), description: t("services.lightingControl.description"), image: "lightning-control.jpg" },
-    { title: t("services.hvacControl.title"), description: t("services.hvacControl.description"), image: "HAVC.webp" },
-    { title: t("services.ioController.title"), description: t("services.ioController.description"), image: "io-control.png" },
-    { title: t("services.energyManagement.title"), description: t("services.energyManagement.description"), image: "energy-management.webp" },
-    { title: t("services.gateways.title"), description: t("services.gateways.description"), image: "gateways.webp" },
-    { title: t("services.networkInfrastructure.title"), description: t("services.networkInfrastructure.description"), image: "network-infrastructure.webp" },
+    {
+      title: t("services.userInterface.title"),
+      description: t("services.userInterface.description"),
+      image: "user-interface.webp",
+    },
+    {
+      title: t("services.homeAutomation.title"),
+      description: t("services.homeAutomation.description"),
+      image: "room-automation.webp",
+    },
+    {
+      title: t("services.lightingControl.title"),
+      description: t("services.lightingControl.description"),
+      image: "lightning-control.jpg",
+    },
+    {
+      title: t("services.hvacControl.title"),
+      description: t("services.hvacControl.description"),
+      image: "HAVC.webp",
+    },
+    {
+      title: t("services.ioController.title"),
+      description: t("services.ioController.description"),
+      image: "io-control.png",
+    },
+    {
+      title: t("services.energyManagement.title"),
+      description: t("services.energyManagement.description"),
+      image: "energy-management.webp",
+    },
+    {
+      title: t("services.gateways.title"),
+      description: t("services.gateways.description"),
+      image: "gateways.webp",
+    },
+    {
+      title: t("services.networkInfrastructure.title"),
+      description: t("services.networkInfrastructure.description"),
+      image: "network-infrastructure.webp",
+    },
   ];
 
   const projects = [
-    { name: 'sharjahSustainableCity', image: "sharjah.webp" },
-    { name: 'residenceInn', image: "residence.webp" },
-    { name: 'sustainableHomesHotel', image: "homes.webp" },
-    { name: 'dubaiExpo2020', image: "expo.webp" },
-    { name: 'ministry', image: "ministry.webp" },
-    { name: 'aziziCreekView', image: "azizi.webp" },
-    { name: 'platinumHotelDubai', image: "platinum.webp" },
-    { name: 'hiltonConradArzana', image: "conrad.webp" },
-    { name: 'celiaResidence', image: "celia.webp" },
-    { name: 'regaliaTowerDeyaar', image: "regalia.webp" },
-    { name: 'miramarHotel', image: "miramar.webp" },
-    { name: 'abuDhabiQualityCouncil', image: "abu.webp" },
+    { name: "sharjahCity", image: "sharjah.webp" },
+    { name: "residenceInn", image: "residence.webp" },
+    { name: "sustainableHomesHotel", image: "homes.webp" },
+    { name: "dubaiExpo2020", image: "expo.webp" },
+    { name: "ministry", image: "ministry.webp" },
+    { name: "aziziCreekView", image: "azizi.webp" },
+    { name: "platinumHotel", image: "platinum.webp" },
+    { name: "hiltonConrad", image: "conrad.webp" },
+    { name: "celiaResidence", image: "celia.webp" },
+    { name: "regaliaTower", image: "regalia.webp" },
+    { name: "miramarHotel", image: "miramar.webp" },
+    { name: "qualityCouncil", image: "abu.webp" },
   ];
 
   return (
@@ -76,7 +108,7 @@ export default function Page() {
         description={t.raw("about.paragraphs")}
         image={{
           src: "/Companies/Core%20Grid/control.webp",
-          alt: "aboutImageAlt",
+          alt: "CoreGrid Team",
         }}
       />
 
@@ -87,10 +119,10 @@ export default function Page() {
       />
 
       <ProjectsSection
-        companyName="coreProjects" 
-        projects={projects.map(p => ({
+        companyName="coreProjects"
+        projects={projects.map((p) => ({
           name: t(`projects.${p.name}`),
-          image: p.image
+          image: p.image,
         }))}
       />
 

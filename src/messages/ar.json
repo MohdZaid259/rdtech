@@ -34,21 +34,36 @@
         "name": "Al Ausus Al Arbaa General Contracting",
         "tagline": "تميّز في المقاولات متعددة التخصصات",
         "description": "نقدّم خدمات بناء ومقاولات شاملة بدقة وموثوقية.",
-        "services": ["الإنشاءات المدنية", "خدمات الميكانيكا والكهرباء والسباكة", "إدارة المشاريع", "صيانة المرافق"],
+        "services": [
+          "الإنشاءات المدنية",
+          "خدمات الميكانيكا والكهرباء والسباكة",
+          "إدارة المشاريع",
+          "صيانة المرافق"
+        ],
         "buttonLabel": "AA Contracting"
       },
       "rdtech": {
         "name": "RDTech",
         "tagline": "أنظمة الأمان وحلول ELV/ICT",
         "description": "ريادة في تقنيات الأمن المتقدمة لحماية البنى التحتية الحيوية في الإمارات. من أنظمة التحكم في الدخول إلى أنظمة المراقبة الشاملة.",
-        "services": ["نظام التحكم في الدخول", "كاميرات المراقبة CCTV", "أنظمة إنذار الحريق", "البنية التحتية للشبكات"],
+        "services": [
+          "نظام التحكم في الدخول",
+          "كاميرات المراقبة CCTV",
+          "أنظمة إنذار الحريق",
+          "البنية التحتية للشبكات"
+        ],
         "buttonLabel": "RDTech"
       },
       "coregrid": {
         "name": "CoreGrid Solutions",
         "tagline": "أتمتة المباني والحلول الذكية",
         "description": "نحوّل المباني إلى مساحات ذكية وفعّالة من خلال أحدث أنظمة الأتمتة والتحكم.",
-        "services": ["التحكم في الإضاءة", "أتمتة المنازل", "إدارة الطاقة", "إدارة المباني"],
+        "services": [
+          "التحكم في الإضاءة",
+          "أتمتة المنازل",
+          "إدارة الطاقة",
+          "إدارة المباني"
+        ],
         "buttonLabel": "CoreGrid Solutions"
       }
     },
@@ -121,118 +136,164 @@
       }
     },
     "ProjectsSection": {
-  "title": "المشاريع المميزة",
-  "subtitle": "إبراز خبرتنا في تقديم حلول تقنية حيوية وحرجة عبر صناعات متنوعة",
-  "duration": "المدة",
-  "size": "الحجم",
-  "budget": "الميزانية",
-  "services": "الخدمات",
-  "features": "الميزات الرئيسية",
-  "viewProject": "عرض المشروع",
-  "flagshipProjects": [
-    {
-      "id": "1",
-      "slug": "jw-marriott-marquis-security",
-      "title": "فندق جي دبليو ماريوت ماركيز",
-      "description": "تركيب أكثر من 2,200 كاميرا مراقبة وإنشاء غرفة تحكم متطورة في أحد أطول فنادق الخمس نجوم في العالم.",
-      "category": "RDTech",
-      "location": "دبي، الإمارات",
-      "year": "2021",
-      "thumbnail": "/projectPage/rdtech/jwHero.jpeg",
-      "heroImage": "/projectPage/rdtech/jwHero.jpeg",
-      "duration": "18 شهراً",
-      "size": "1,608 غرفة",
-      "client": "JW Marriott Marquis",
-      "budget": "+5 مليون دولار",
-      "services": ["تركيب كاميرات CCTV", "غرفة تحكم مركزية", "أنظمة التحكم في الدخول"],
-      "features": ["أكثر من 2,200 كاميرا CCTV", "مراقبة وتحكم مركزي", "اكتشاف متقدم للتهديدات"]
-    },
-    {
-      "id": "2",
-      "slug": "burj-khalifa-security-systems",
-      "title": "برج خليفة – أنظمة الأمن",
-      "description": "تكامل أمني شامل في أطول مبنى في العالم، بما في ذلك المراقبة وأنظمة التحكم في الدخول وأنظمة المتابعة.",
-      "category": "RDTech",
-      "location": "دبي، الإمارات",
-      "year": "2018",
-      "thumbnail": "/projectPage/rdtech/burjHero.webp",
-      "heroImage": "/projectPage/rdtech/burjHero.webp",
-      "duration": "24 شهراً",
-      "size": "منشأة متعددة الاستخدام",
-      "client": "إعمار العقارية",
-      "budget": "+20 مليون دولار",
-      "services": ["أنظمة CCTV", "التحكم في الدخول", "مراقبة مركزية", "كشف التسلل"],
-      "features": ["تغطية مراقبة متقدمة", "مركز قيادة أمني مركزي", "التحكم بالدخول باستخدام البصمة"]
-    },
-    {
-      "id": "3",
-      "slug": "expo-2020-dubai-bms",
-      "title": "إكسبو 2020 دبي – أنظمة التحكم في الإضاءة",
-      "description": "أتمتة قائمة على KNX لـ 10 أجنحة في إكسبو 2020 دبي، تتضمن أنظمة إدارة المباني، الإضاءة، وكفاءة الطاقة.",
-      "category": "CoreGrid",
-      "location": "دبي، الإمارات",
-      "year": "2020",
-      "thumbnail": "/projectPage/coregrid/expoHero.jpg",
-      "heroImage": "/projectPage/coregrid/expoHero.jpg",
-      "duration": "18 شهراً",
-      "size": "10 أجنحة",
-      "client": "إكسبو 2020 دبي",
-      "budget": "+20 مليون دولار",
-      "services": ["أنظمة BMS", "التحكم في الإضاءة", "إضاءة الواجهات", "تحسين استهلاك الطاقة"],
-      "features": ["تكامل مع DMX و DALI و BACnet", "توفير طاقة يصل إلى 60%", "أتمتة متطورة لمشروع District 2020"]
-    },
-    {
-      "id": "5",
-      "slug": "sharjah-sustainable-city-automation",
-      "title": "مدينة الشارقة المستدامة",
-      "description": "أتمتة المنازل والقياس الذكي لـ 280 فيلا في أول مجتمع يعمل بطاقة صافية صفرية في الشارقة.",
-      "category": "CoreGrid",
-      "location": "الشارقة، الإمارات",
-      "year": "2021",
-      "thumbnail": "/projectPage/coregrid/SharjahHero.jpg",
-      "heroImage": "/projectPage/coregrid/SharjahHero.jpg",
-      "duration": "24 شهراً",
-      "size": "280 فيلا",
-      "client": "مدينة الشارقة المستدامة",
-      "budget": "+25 مليون دولار",
-      "services": ["أتمتة المنازل", "العدادات الذكية", "تحسين استهلاك الطاقة"],
-      "features": ["280 فيلا ذكية مع أنظمة أتمتة", "قياس ذكي ومراقبة الطاقة", "مساكن مستدامة وجاهزة للمستقبل"]
-    },
-    {
-      "id": "6",
-      "slug": "al-ain-club-restaurants",
-      "title": "نادي العين – المطاعم",
-      "description": "تطوير مطعم عصري ومتطور داخل مقر نادي العين الرياضي.",
-      "category": "Al Ausus",
-      "location": "العين – الصناعية",
-      "year": "2020",
-      "thumbnail": "/projectPage/alAusus/alAinHero.jpeg",
-      "heroImage": "/projectPage/alAusus/alAinHero.jpeg",
-      "duration": "10 أشهر",
-      "size": "3,500 متر مربع",
-      "client": "نادي العين الرياضي",
-      "budget": "+4 مليون دولار",
-      "services": ["الأعمال المدنية", "التجهيزات الداخلية"],
-      "features": ["مرافق طعام عالية الجودة", "أعمال إنشائية متينة", "حلول بناء مستدامة"]
-    },
-    {
-      "id": "7",
-      "slug": "emirates-post-office-construction",
-      "title": "بناء مكاتب بريد الإمارات",
-      "description": "الأعمال المدنية والإنشائية لمرافق وبنى تحتية خاصة بمكاتب بريد الإمارات.",
-      "category": "Al Ausus",
-      "location": "العامرة – الهيار – القوع – الوقن",
-      "year": "2019",
-      "thumbnail": "/projectPage/alAusus/emiratesHero.webp",
-      "heroImage": "/projectPage/alAusus/emiratesHero.webp",
-      "duration": "16 شهراً",
-      "size": "12,000 متر مربع",
-      "client": "بريد الإمارات",
-      "budget": "+12 مليون دولار",
-      "services": ["الأعمال المدنية", "الهندسة الإنشائية", "إدارة المشاريع"],
-      "features": ["مرافق بريد حديثة", "بناء عالي الجودة", "أنظمة ميكانيكية وكهربائية متكاملة"]
-    }
-  ]
+      "title": "المشاريع المميزة",
+      "subtitle": "إبراز خبرتنا في تقديم حلول تقنية حيوية وحرجة عبر صناعات متنوعة",
+      "duration": "المدة",
+      "size": "الحجم",
+      "budget": "الميزانية",
+      "services": "الخدمات",
+      "features": "الميزات الرئيسية",
+      "viewProject": "عرض المشروع",
+      "flagshipProjects": [
+        {
+          "id": "1",
+          "slug": "jw-marriott-marquis-security",
+          "title": "فندق جي دبليو ماريوت ماركيز",
+          "description": "تركيب أكثر من 2,200 كاميرا مراقبة وإنشاء غرفة تحكم متطورة في أحد أطول فنادق الخمس نجوم في العالم.",
+          "category": "RDTech",
+          "location": "دبي، الإمارات",
+          "year": "2021",
+          "thumbnail": "/projectPage/rdtech/jwHero.jpeg",
+          "heroImage": "/projectPage/rdtech/jwHero.jpeg",
+          "duration": "18 شهراً",
+          "size": "1,608 غرفة",
+          "client": "JW Marriott Marquis",
+          "budget": "+5 مليون دولار",
+          "services": [
+            "تركيب كاميرات CCTV",
+            "غرفة تحكم مركزية",
+            "أنظمة التحكم في الدخول"
+          ],
+          "features": [
+            "أكثر من 2,200 كاميرا CCTV",
+            "مراقبة وتحكم مركزي",
+            "اكتشاف متقدم للتهديدات"
+          ]
+        },
+        {
+          "id": "2",
+          "slug": "burj-khalifa-security-systems",
+          "title": "برج خليفة – أنظمة الأمن",
+          "description": "تكامل أمني شامل في أطول مبنى في العالم، بما في ذلك المراقبة وأنظمة التحكم في الدخول وأنظمة المتابعة.",
+          "category": "RDTech",
+          "location": "دبي، الإمارات",
+          "year": "2018",
+          "thumbnail": "/projectPage/rdtech/burjHero.webp",
+          "heroImage": "/projectPage/rdtech/burjHero.webp",
+          "duration": "24 شهراً",
+          "size": "منشأة متعددة الاستخدام",
+          "client": "إعمار العقارية",
+          "budget": "+20 مليون دولار",
+          "services": [
+            "أنظمة CCTV",
+            "التحكم في الدخول",
+            "مراقبة مركزية",
+            "كشف التسلل"
+          ],
+          "features": [
+            "تغطية مراقبة متقدمة",
+            "مركز قيادة أمني مركزي",
+            "التحكم بالدخول باستخدام البصمة"
+          ]
+        },
+        {
+          "id": "3",
+          "slug": "expo-2020-dubai-bms",
+          "title": "إكسبو 2020 دبي – أنظمة التحكم في الإضاءة",
+          "description": "أتمتة قائمة على KNX لـ 10 أجنحة في إكسبو 2020 دبي، تتضمن أنظمة إدارة المباني، الإضاءة، وكفاءة الطاقة.",
+          "category": "CoreGrid",
+          "location": "دبي، الإمارات",
+          "year": "2020",
+          "thumbnail": "/projectPage/coregrid/expoHero.jpg",
+          "heroImage": "/projectPage/coregrid/expoHero.jpg",
+          "duration": "18 شهراً",
+          "size": "10 أجنحة",
+          "client": "إكسبو 2020 دبي",
+          "budget": "+20 مليون دولار",
+          "services": [
+            "أنظمة BMS",
+            "التحكم في الإضاءة",
+            "إضاءة الواجهات",
+            "تحسين استهلاك الطاقة"
+          ],
+          "features": [
+            "تكامل مع DMX و DALI و BACnet",
+            "توفير طاقة يصل إلى 60%",
+            "أتمتة متطورة لمشروع District 2020"
+          ]
+        },
+        {
+          "id": "5",
+          "slug": "sharjah-sustainable-city-automation",
+          "title": "مدينة الشارقة المستدامة",
+          "description": "أتمتة المنازل والقياس الذكي لـ 280 فيلا في أول مجتمع يعمل بطاقة صافية صفرية في الشارقة.",
+          "category": "CoreGrid",
+          "location": "الشارقة، الإمارات",
+          "year": "2021",
+          "thumbnail": "/projectPage/coregrid/SharjahHero.jpg",
+          "heroImage": "/projectPage/coregrid/SharjahHero.jpg",
+          "duration": "24 شهراً",
+          "size": "280 فيلا",
+          "client": "مدينة الشارقة المستدامة",
+          "budget": "+25 مليون دولار",
+          "services": [
+            "أتمتة المنازل",
+            "العدادات الذكية",
+            "تحسين استهلاك الطاقة"
+          ],
+          "features": [
+            "280 فيلا ذكية مع أنظمة أتمتة",
+            "قياس ذكي ومراقبة الطاقة",
+            "مساكن مستدامة وجاهزة للمستقبل"
+          ]
+        },
+        {
+          "id": "6",
+          "slug": "al-ain-club-restaurants",
+          "title": "نادي العين – المطاعم",
+          "description": "تطوير مطعم عصري ومتطور داخل مقر نادي العين الرياضي.",
+          "category": "Al Ausus",
+          "location": "العين – الصناعية",
+          "year": "2020",
+          "thumbnail": "/projectPage/alAusus/alAinHero.jpeg",
+          "heroImage": "/projectPage/alAusus/alAinHero.jpeg",
+          "duration": "10 أشهر",
+          "size": "3,500 متر مربع",
+          "client": "نادي العين الرياضي",
+          "budget": "+4 مليون دولار",
+          "services": ["الأعمال المدنية", "التجهيزات الداخلية"],
+          "features": [
+            "مرافق طعام عالية الجودة",
+            "أعمال إنشائية متينة",
+            "حلول بناء مستدامة"
+          ]
+        },
+        {
+          "id": "7",
+          "slug": "emirates-post-office-construction",
+          "title": "بناء مكاتب بريد الإمارات",
+          "description": "الأعمال المدنية والإنشائية لمرافق وبنى تحتية خاصة بمكاتب بريد الإمارات.",
+          "category": "Al Ausus",
+          "location": "العامرة – الهيار – القوع – الوقن",
+          "year": "2019",
+          "thumbnail": "/projectPage/alAusus/emiratesHero.webp",
+          "heroImage": "/projectPage/alAusus/emiratesHero.webp",
+          "duration": "16 شهراً",
+          "size": "12,000 متر مربع",
+          "client": "بريد الإمارات",
+          "budget": "+12 مليون دولار",
+          "services": [
+            "الأعمال المدنية",
+            "الهندسة الإنشائية",
+            "إدارة المشاريع"
+          ],
+          "features": [
+            "مرافق بريد حديثة",
+            "بناء عالي الجودة",
+            "أنظمة ميكانيكية وكهربائية متكاملة"
+          ]
+        }
+      ]
     },
     "QuickCompany": {
       "sectionHeader": {
@@ -260,14 +321,38 @@
         "subTitle": "شريك التكنولوجيا الموثوق الذي يقدّم حلولاً مبتكرة وموثوقة ذات قيمة مضافة."
       },
       "features": {
-        "turnkey": { "title": "حلول تسليم مفتاح", "subtitle": "تكامل وتسليم شامل من البداية للنهاية" },
-        "availability": { "title": "توفر على مدار الساعة", "subtitle": "دعم متواصل 24/7" },
-        "cost": { "title": "فعّالية من حيث التكلفة", "subtitle": "حلول محسّنة وقائمة على القيمة" },
-        "modular": { "title": "مرن وقابل للتوسع", "subtitle": "تحديثات مستقبلية على مستوى الأنظمة" },
-        "tech": { "title": "تكنولوجيا متقدمة", "subtitle": "أحدث الأجهزة والبرامج" },
-        "fast": { "title": "تنفيذ سريع", "subtitle": "تسليم بدون توقف للأعمال" },
-        "cabling": { "title": "تمديدات داخلية", "subtitle": "خبرة في الأعمال المدنية، الميكانيكية والكهربائية والشبكات" },
-        "support": { "title": "فريق دعم خبير", "subtitle": "مهندسون ومتخصصون معتمدون" }
+        "turnkey": {
+          "title": "حلول تسليم مفتاح",
+          "subtitle": "تكامل وتسليم شامل من البداية للنهاية"
+        },
+        "availability": {
+          "title": "توفر على مدار الساعة",
+          "subtitle": "دعم متواصل 24/7"
+        },
+        "cost": {
+          "title": "فعّالية من حيث التكلفة",
+          "subtitle": "حلول محسّنة وقائمة على القيمة"
+        },
+        "modular": {
+          "title": "مرن وقابل للتوسع",
+          "subtitle": "تحديثات مستقبلية على مستوى الأنظمة"
+        },
+        "tech": {
+          "title": "تكنولوجيا متقدمة",
+          "subtitle": "أحدث الأجهزة والبرامج"
+        },
+        "fast": {
+          "title": "تنفيذ سريع",
+          "subtitle": "تسليم بدون توقف للأعمال"
+        },
+        "cabling": {
+          "title": "تمديدات داخلية",
+          "subtitle": "خبرة في الأعمال المدنية، الميكانيكية والكهربائية والشبكات"
+        },
+        "support": {
+          "title": "فريق دعم خبير",
+          "subtitle": "مهندسون ومتخصصون معتمدون"
+        }
       }
     },
     "WeCare": {
@@ -406,12 +491,27 @@
       "title": "قيمنا",
       "subtitle": "نحرص على أن يعكس كل مشروع التزامنا بالتميز والثقة والابتكار والتعاون والمستقبل المستدام.",
       "values": [
-        { "title": "التميز", "description": "تقديم أعلى مستويات الجودة في كل مشروع." },
-        { "title": "النزاهة", "description": "بناء الثقة من خلال الشفافية والمساءلة." },
-        { "title": "الابتكار", "description": "احتضان التغيير والريادة بالتقنيات الجديدة." },
-        { "title": "التعاون", "description": "الشراكة مع العملاء والموردين والفرق لتحقيق نجاح مشترك." },
+        {
+          "title": "التميز",
+          "description": "تقديم أعلى مستويات الجودة في كل مشروع."
+        },
+        {
+          "title": "النزاهة",
+          "description": "بناء الثقة من خلال الشفافية والمساءلة."
+        },
+        {
+          "title": "الابتكار",
+          "description": "احتضان التغيير والريادة بالتقنيات الجديدة."
+        },
+        {
+          "title": "التعاون",
+          "description": "الشراكة مع العملاء والموردين والفرق لتحقيق نجاح مشترك."
+        },
         { "title": "الاستدامة", "description": "إنشاء حلول تراعي البيئة." },
-        { "title": "التركيز على العملاء", "description": "وضع احتياجات العميل في قلب كل قرار." }
+        {
+          "title": "التركيز على العملاء",
+          "description": "وضع احتياجات العميل في قلب كل قرار."
+        }
       ]
     },
     "VisionSection": {
@@ -455,7 +555,351 @@
       "heading": "مشاريعنا",
       "subheading": "لمحة عن المعالم التي قمنا بصناعتها.",
       "description": "استعرض محفظتنا من مشاريع البناء المتميزة، حيث يعكس كل مشروع التزامنا بالجودة والابتكار.",
-      "categories": ["الكل", "العُصُص", "RDTech", "CoreGrid"]
+      "categories": ["الكل", "العُصُص", "RDTech", "CoreGrid"],
+      "projects": [
+        {
+          "id": "1",
+          "slug": "jw-marriott-marquis-security",
+          "title": "فندق جي دبليو ماريوت ماركيز – الأمن والمراقبة",
+          "description": "تركيب أكثر من 2200 كاميرا مراقبة وغرفة تحكم متطورة في أحد أطول فنادق الخمس نجوم في العالم.",
+          "fullDescription": "نجحت RDTech في تنفيذ حل شامل للمراقبة والتحكم في فندق جي دبليو ماريوت ماركيز، مما عزز من سلامة الضيوف وكفاءة العمليات. شمل المشروع أكثر من 2200 كاميرا مراقبة، وأنظمة مراقبة مركزية، وميزات متقدمة لاكتشاف التهديدات، لضمان أمن على مدار الساعة في بيئة الضيافة الفاخرة.",
+          "category": "RDTech",
+          "location": "دبي، الإمارات العربية المتحدة",
+          "year": "2021",
+          "thumbnail": "/projectPage/rdtech/jwHero.jpeg",
+          "heroImage": "/projectPage/rdtech/jwHero.jpeg",
+          "gallery": [
+            "/projectPage/rdtech/jwG1.webp",
+            "/projectPage/rdtech/jwG2.webp",
+            "/projectPage/rdtech/jwG3.webp"
+          ],
+          "duration": "18 شهراً",
+          "size": "1,608 غرفة (تحت المراقبة)",
+          "client": "فندق جي دبليو ماريوت ماركيز",
+          "budget": "أكثر من 5 مليون دولار",
+          "services": [
+            "تركيب كاميرات المراقبة",
+            "غرفة تحكم مركزية",
+            "أنظمة التحكم في الدخول"
+          ],
+          "features": [
+            "أكثر من 2200 كاميرا مراقبة",
+            "مراقبة وتحكم مركزي",
+            "تكامل مع أنظمة التحكم في الدخول",
+            "اكتشاف متقدم للتهديدات"
+          ],
+          "challenges": "كان التنسيق في التركيب ضمن فندق فاخر يعمل بشكل كامل دون التأثير على تجربة النزلاء هو التحدي الأكبر. تم جدولة العمل على مراحل ونُفّذ بأقل قدر من الإزعاج."
+        },
+        {
+          "id": "3",
+          "slug": "burj-khalifa-security-systems",
+          "title": "برج خليفة – أنظمة أمنية متكاملة",
+          "description": "تكامل شامل للأنظمة الأمنية في أطول مبنى في العالم، يشمل المراقبة والتحكم في الدخول وأنظمة الرصد.",
+          "fullDescription": "نفذت RDTech حلاً أمنياً متكاملاً على مستوى عالمي لبرج خليفة. شمل المشروع أنظمة المراقبة بالكاميرات، أنظمة التحكم في الدخول، الكشف عن التسلل، وغرفة تحكم مركزية. ضمنت هذه المنظومة سلامة الزوار والمقيمين والشركات داخل أحد أبرز المعالم العالمية.",
+          "category": "RDTech",
+          "location": "دبي، الإمارات العربية المتحدة",
+          "year": "2018",
+          "thumbnail": "/projectPage/rdtech/burjHero.webp",
+          "heroImage": "/projectPage/rdtech/burjHero.webp",
+          "gallery": [
+            "/projectPage/rdtech/burjG1.webp",
+            "/projectPage/rdtech/burjG2.webp",
+            "/projectPage/rdtech/burjG3.jpg"
+          ],
+          "duration": "24 شهراً",
+          "size": "برج بارتفاع 828 متر – منشأة متعددة الاستخدامات",
+          "client": "إعمار العقارية",
+          "budget": "أكثر من 20 مليون دولار",
+          "services": [
+            "أنظمة كاميرات المراقبة",
+            "التحكم في الدخول",
+            "المراقبة المركزية",
+            "كشف التسلل"
+          ],
+          "features": [
+            "تغطية مراقبة متقدمة",
+            "مركز قيادة أمني مركزي",
+            "التحكم في الدخول بالبصمة",
+            "تصميم أنظمة احتياطية"
+          ],
+          "challenges": "نظراً لحجم وأهمية المشروع عالمياً، كان على RDTech ضمان انعدام التوقف وتكامل سلس للأنظمة المتعددة مع سير العمليات اليومية المستمرة."
+        },
+        {
+          "id": "0",
+          "title": "فندق أتلانتس",
+          "description": "تكامل شامل للأنظمة الأمنية في أحد أشهر المنتجعات الفاخرة بدبي، يشمل المراقبة بالكاميرات، التحكم في الدخول، وأنظمة مراقبة متقدمة لضمان سلامة الضيوف وموثوقية التشغيل.",
+          "fullDescription": "",
+          "category": "RDTech",
+          "location": "دبي، الإمارات العربية المتحدة",
+          "year": "2022",
+          "thumbnail": "/rdProjects/atlantis.webp",
+          "heroImage": "/rdProjects/atlantis.webp",
+          "gallery": [],
+          "duration": "",
+          "size": "",
+          "client": "",
+          "budget": "أكثر من 6 مليون دولار",
+          "services": [],
+          "features": [],
+          "challenges": ""
+        },
+        {
+          "id": "4",
+          "slug": "expo-2020-dubai-bms",
+          "title": "إكسبو 2020 دبي – المباني الذكية والتحكم في الإضاءة",
+          "description": "أتمتة تعتمد على KNX لـ 10 أجنحة في إكسبو 2020 دبي، تشمل BMS، التحكم في الإضاءة، وأنظمة كفاءة الطاقة.",
+          "fullDescription": "قدّم إكسبو 2020 في دبي عرضاً للابتكار والتكنولوجيا، موفراً تجربة زوار عالمية المستوى. نفذت شركة Controlrium Building Technology نظام KNX في 10 أجنحة مع تكامل سلس مع الأنظمة الأخرى. وفّر الحل مرونة للتحول المستقبلي إلى District 2020، وهي مدينة ذكية مستدامة. من أبرز الإنجازات التكامل مع DMX وDALI وBACnet، تحقيق وفورات في الطاقة تصل إلى 60%، وبنية تحتية ذكية فعالة من حيث التكلفة وقابلة للتطوير في المستقبل.",
+          "category": "CoreGrid",
+          "location": "دبي، الإمارات العربية المتحدة",
+          "year": "2020",
+          "thumbnail": "/projectPage/coregrid/expoHero.jpg",
+          "heroImage": "/projectPage/coregrid/expoHero.jpg",
+          "gallery": [
+            "/projectPage/coregrid/expoG1.jpg",
+            "/projectPage/coregrid/expoG2.jpg",
+            "/projectPage/coregrid/expoG3.jpg"
+          ],
+          "duration": "18 شهراً",
+          "size": "10 أجنحة",
+          "client": "إكسبو 2020 دبي",
+          "budget": "أكثر من 20 مليون دولار",
+          "services": [
+            "BMS",
+            "التحكم في الإضاءة",
+            "إضاءة الواجهات",
+            "تحسين الطاقة"
+          ],
+          "features": [
+            "10 أجنحة مجهزة بنظام KNX",
+            "تكامل مع DMX وDALI وBACnet",
+            "توفير طاقة يصل إلى 60%",
+            "أتمتة ذكية جاهزة لـ District 2020"
+          ],
+          "challenges": "ضمان التكامل السلس مع أنظمة متعددة مع الحفاظ على المرونة للتحديثات المستقبلية."
+        },
+        {
+          "id": "5",
+          "slug": "miramar-al-aqah-beach-resort-bms",
+          "title": "منتجع ميرامار العقة بيتش – GRMS والإضاءة الذكية",
+          "description": "أتمتة ضيافة ذكية مع GRMS وBMS والتحكم في الإضاءة لمنتجع فاخر على الواجهة البحرية.",
+          "fullDescription": "يقع منتجع ميرامار العقة بيتش بين جبال الحجر والمحيط الهندي، وهو مزيج فريد من التصميم العربي والمغربي والمتوسطي. شمل المشروع تنفيذ أنظمة GRMS وBMS وحلول الإضاءة الذكية، مما عزز راحة الضيوف وكفاءة الطاقة. ضمنت الأتمتة خدمات ضيافة أنيقة وموثوقة وفاخرة مع تكامل سلس للتكنولوجيا.",
+          "category": "CoreGrid",
+          "location": "الفجيرة، الإمارات العربية المتحدة",
+          "year": "2019",
+          "thumbnail": "/projectPage/coregrid/miramarHero.webp",
+          "heroImage": "/projectPage/coregrid/miramarHero.webp",
+          "gallery": [
+            "/projectPage/coregrid/miramarG1.webp",
+            "/projectPage/coregrid/miramarG2.webp",
+            "/projectPage/coregrid/miramarG3.webp"
+          ],
+          "duration": "16 شهراً",
+          "size": "منتجع 5 نجوم، 321 غرفة",
+          "client": "منتجع ميرامار العقة بيتش",
+          "budget": "أكثر من 10 مليون دولار",
+          "services": ["GRMS", "BMS", "التحكم في الإضاءة"],
+          "features": [
+            "أتمتة الغرف باستخدام GRMS",
+            "إضاءة ذكية وتحكم في الأجواء",
+            "تكامل موفر للطاقة مع BMS",
+            "تقنية راحة سلسة للنزلاء"
+          ],
+          "challenges": "دمج الأتمتة الحديثة في منتجع فاخر بطراز بوتيك مع الحفاظ على الطابع العربي التقليدي."
+        },
+        {
+          "id": "6",
+          "slug": "sharjah-sustainable-city-automation",
+          "title": "المدينة المستدامة في الشارقة – المنازل الذكية وأنظمة الطاقة",
+          "description": "أتمتة المنازل والقياس الذكي لـ 280 فيلا في أول مجتمع خالٍ من الطاقة في الشارقة.",
+          "fullDescription": "المدينة المستدامة في الشارقة، المستوحاة من نموذج المدينة المستدامة الأيقوني، هي أول مجتمع متكامل خالٍ من الطاقة في الإمارات. يغطي المشروع 280 فيلا من 3 إلى 5 غرف نوم مزودة بأتمتة منزلية متقدمة وأنظمة قياس ذكية. صُمم المجتمع لنمط حياة مستدام وسعيد، مع مرافق استثنائية معززة بكفاءة الطاقة والاعتماد على الطاقة المتجددة.",
+          "category": "CoreGrid",
+          "location": "الشارقة، الإمارات العربية المتحدة",
+          "year": "2021",
+          "thumbnail": "/projectPage/coregrid/SharjahHero.jpg",
+          "heroImage": "/projectPage/coregrid/SharjahHero.jpg",
+          "gallery": [
+            "/projectPage/coregrid/sharjahG1.jpg",
+            "/projectPage/coregrid/SharjahG3.jpg",
+            "/projectPage/coregrid/expoG2.jpg"
+          ],
+          "duration": "24 شهراً",
+          "size": "280 فيلا",
+          "client": "المدينة المستدامة في الشارقة",
+          "budget": "أكثر من 25 مليون دولار",
+          "services": ["أتمتة المنازل", "القياس الذكي", "تحسين الطاقة"],
+          "features": [
+            "280 فيلا ذكية مزودة بأتمتة منزلية",
+            "أنظمة قياس ذكية ومراقبة للطاقة",
+            "بنية تحتية جاهزة للطاقة الصفرية",
+            "مساكن مستدامة وقابلة للتطوير في المستقبل"
+          ],
+          "challenges": "تقديم حلول أتمتة منزلية قابلة للتوسع لمجتمع كبير مع ضمان كفاءة الطاقة والالتزام بالطاقة الصفرية."
+        },
+        {
+          "id": "7",
+          "slug": "emirates-post-office-construction",
+          "title": "إنشاء مكتب بريد الإمارات",
+          "description": "أعمال مدنية وإنشاء مبانٍ لمرافق مكتب بريد الإمارات.",
+          "fullDescription": "نفذت شركة العُصُص للأعمال الكاملة الإنشائية لمجمع مكتب بريد الإمارات، بما في ذلك التصميم المعماري، تنسيق MEP، والتنفيذ الهيكلي. عزز المشروع البنية التحتية للخدمات البريدية بمرافق حديثة ومتينة.",
+          "category": "Al Ausus",
+          "location": "العين – العامرة-الحَيَّار-القوع-الوقن",
+          "year": "2019",
+          "thumbnail": "/projectPage/alAusus/emiratesHero.webp",
+          "heroImage": "/projectPage/alAusus/emiratesHero.webp",
+          "gallery": [
+            "/projectPage/alAusus/emiratesG1.webp",
+            "/projectPage/alAusus/emiratesG2.webp",
+            "/projectPage/alAusus/emiratesG3.webp"
+          ],
+          "duration": "16 شهراً",
+          "size": "12,000 متر مربع",
+          "client": "بريد الإمارات",
+          "budget": "أكثر من 12 مليون دولار",
+          "services": [
+            "الأعمال المدنية",
+            "الهندسة الإنشائية",
+            "إدارة المشاريع"
+          ],
+          "features": [
+            "مرافق بريدية حديثة",
+            "بناء عالي الجودة",
+            "أنظمة MEP متكاملة"
+          ],
+          "challenges": "تمثل التحدي في البناء عبر مواقع متعددة في الوقت نفسه، مما تطلب جدولة دقيقة وإدارة لوجستية صارمة."
+        },
+        {
+          "id": "8",
+          "slug": "al-ain-club-restaurants",
+          "title": "نادي العين – المطاعم",
+          "description": "إنشاء مطاعم حديثة ضمن مرافق نادي العين الرياضي.",
+          "fullDescription": "نفذت شركة العُصُص الأعمال المدنية الكاملة لمجمعات المطاعم داخل نادي العين، مع توفير بنية تحتية متينة وتشطيبات عالية الجودة تناسب المساحات المخصصة للضيافة ذات الإقبال العالي.",
+          "category": "Al Ausus",
+          "location": "العين – الصناعية",
+          "year": "2020",
+          "thumbnail": "/projectPage/alAusus/alAinHero.jpeg",
+          "heroImage": "/projectPage/alAusus/alAinHero.jpeg",
+          "gallery": [
+            "/projectPage/alAusus/alAinG1.webp",
+            "/projectPage/alAusus/alAinG2.webp",
+            "/projectPage/alAusus/alAinG3.webp"
+          ],
+          "duration": "10 أشهر",
+          "size": "3,500 متر مربع",
+          "client": "نادي العين الرياضي",
+          "budget": "أكثر من 4 مليون دولار",
+          "services": ["الأعمال المدنية", "التشطيبات الداخلية"],
+          "features": [
+            "مرافق طعام عالية الجودة",
+            "إنشاءات هيكلية",
+            "تشطيبات حديثة"
+          ],
+          "challenges": "تم فرض جداول زمنية صارمة لإكمال المشروع قبل افتتاح موسم رياضي، مما تطلّب إدارة فعّالة للموارد."
+        },
+        {
+          "id": "9",
+          "slug": "al-ain-dar-zayed-cultural-house",
+          "title": "البيت الثقافي – العين دار زايد",
+          "description": "أعمال مدنية وكهروميكانيكية لمشروع البيت الثقافي البارز في العين.",
+          "fullDescription": "نفذت شركة العُصُص أعمال الإنشاءات المدنية الكاملة والتركيبات الكهروميكانيكية لمشروع البيت الثقافي في العين – دار زايد. شمل المشروع الأعمال الهيكلية، أنظمة التكييف والتهوية والتدفئة (HVAC)، الأنظمة الكهربائية، والتشطيبات المصممة للاستخدام الثقافي والمجتمعي.",
+          "category": "Al Ausus",
+          "location": "العين – دار زايد",
+          "year": "2020",
+          "thumbnail": "/projectPage/alAusus/culturalHero.jpeg",
+          "heroImage": "/projectPage/alAusus/culturalHero.jpeg",
+          "gallery": [
+            "/projectPage/alAusus/culturalG1.webp",
+            "/projectPage/alAusus/culturalG2.webp",
+            "/projectPage/alAusus/culturalG3.webp"
+          ],
+          "duration": "14 شهراً",
+          "size": "8,000 متر مربع",
+          "client": "حكومة العين",
+          "budget": "أكثر من 6 مليون دولار",
+          "services": ["الأعمال المدنية", "التركيبات الكهروميكانيكية"],
+          "features": [
+            "مرافق ثقافية ومجتمعية حديثة",
+            "أنظمة HVAC وأنظمة كهربائية متكاملة",
+            "إنشاءات متينة تلائم الاستخدام الكثيف"
+          ],
+          "challenges": "تطلّب المشروع توافقاً دقيقاً مع الإرشادات الثقافية وإنجازه ضمن جداول زمنية صارمة ليتماشى مع الفعاليات العامة."
+        },
+        {
+          "id": "10",
+          "title": "جامعة الشارقة",
+          "description": "أعمال الإنشاء لمرافق أكاديمية في جامعة الشارقة، تشمل إنشاءات هيكلية وتشطيبات عالية الجودة وأعمال MEP لدعم بنية تعليمية حديثة.",
+          "fullDescription": "",
+          "category": "Al Ausus",
+          "location": "الشارقة، الإمارات العربية المتحدة",
+          "year": "2019",
+          "thumbnail": "/aaProjects/university.webp",
+          "heroImage": "/aaProjects/university.webp",
+          "gallery": [],
+          "duration": "",
+          "size": "",
+          "client": "",
+          "budget": "أكثر من 6 مليون دولار",
+          "services": [],
+          "features": [],
+          "challenges": ""
+        },
+        {
+          "id": "11",
+          "title": "مدارس الظفرة الخاصة",
+          "description": "مقاولات عامة وأعمال مدنية لمدارس الظفرة الخاصة، تشمل الفصول الدراسية والمباني الإدارية والمرافق المساندة لخلق بيئة تعليمية آمنة وعملية.",
+          "fullDescription": "",
+          "category": "Al Ausus",
+          "location": "أبوظبي، الإمارات العربية المتحدة",
+          "year": "2020",
+          "thumbnail": "/aaProjects/aldhaher.webp",
+          "heroImage": "/aaProjects/aldhaher.webp",
+          "gallery": [],
+          "duration": "",
+          "size": "",
+          "client": "",
+          "budget": "أكثر من 6 مليون دولار",
+          "services": [],
+          "features": [],
+          "challenges": ""
+        },
+        {
+          "id": "12",
+          "title": "مركز المرخانية",
+          "description": "تنفيذ أعمال البناء والتشطيبات في مركز المرخانية، مع ضمان هياكل متينة وتشطيبات عالية الجودة للاستخدام الحكومي والعام.",
+          "fullDescription": "",
+          "category": "العوصوص",
+          "location": "العين، الإمارات العربية المتحدة",
+          "year": "2018",
+          "thumbnail": "/aaProjects/almarkhaniya.png",
+          "heroImage": "/aaProjects/almarkhaniya.png",
+          "gallery": [],
+          "duration": "",
+          "size": "",
+          "client": "",
+          "budget": "6 مليون دولار +",
+          "services": [],
+          "features": [],
+          "challenges": ""
+        },
+        {
+          "id": "13",
+          "title": "فيلا سكنية في العين",
+          "description": "تنفيذ أعمال البناء والتشطيبات في فيلا سكنية بالعين، مع ضمان هياكل متينة وتشطيبات عالية الجودة للاستخدام السكني.",
+          "fullDescription": "",
+          "category": "العوصوص",
+          "location": "العين، الإمارات العربية المتحدة",
+          "year": "2021",
+          "thumbnail": "/aaProjects/alain.png",
+          "heroImage": "/aaProjects/alain.png",
+          "gallery": [],
+          "duration": "",
+          "size": "",
+          "client": "",
+          "budget": "6 مليون دولار +",
+          "services": [],
+          "features": [],
+          "challenges": ""
+        }
+      ]
     },
     "HeroSection": {
       "heading": "تحويل الرؤية إلى <accent>واقع</accent>",

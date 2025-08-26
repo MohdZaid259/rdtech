@@ -6,17 +6,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ChevronDown, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useEffect, useState } from "react";
+
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import CoreGridLogo from "../logos/core-grid-logo";
+import { Link } from "@/i18n/navigation";
+import LocaleSwitcher from "../localSwitcher";
 import RDTechGroupLogo from "../logos/rdtech-group-logo";
 import RDTechLogo from "../logos/rdtech-logo";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import LocaleSwitcher from "../localSwitcher";
 
 export function Header() {
   const t = useTranslations("Header");
@@ -36,8 +37,11 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const pathWithoutLocale = "/" + pathname.split("/").slice(2).join("/");
+
   const isProjectsPage =
-    pathname.startsWith("/projects/") && pathname !== "/projects";
+    pathWithoutLocale.startsWith("/projects/") &&
+    pathWithoutLocale !== "/projects";
   const showBg = isProjectsPage ? true : isScrolled;
 
   const linkClass = () =>
@@ -97,10 +101,18 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" onMouseEnter={() => setShowOverview(false)} className={linkClass()}>
+            <Link
+              href="/"
+              onMouseEnter={() => setShowOverview(false)}
+              className={linkClass()}
+            >
               {t("nav.home")}
             </Link>
-            <Link href="/about" onMouseEnter={() => setShowOverview(false)} className={linkClass()}>
+            <Link
+              href="/about"
+              onMouseEnter={() => setShowOverview(false)}
+              className={linkClass()}
+            >
               {t("nav.about")}
             </Link>
             <button
@@ -112,10 +124,18 @@ export function Header() {
               {t("nav.groupOverview")}
               <ChevronDown className="w-4 -mb-1" />
             </button>
-            <Link href="/projects" onMouseEnter={() => setShowOverview(false)} className={linkClass()}>
+            <Link
+              href="/projects"
+              onMouseEnter={() => setShowOverview(false)}
+              className={linkClass()}
+            >
               {t("nav.projects")}
             </Link>
-            <Link href="/#contact" onMouseEnter={() => setShowOverview(false)} className={linkClass()}>
+            <Link
+              href="/#contact"
+              onMouseEnter={() => setShowOverview(false)}
+              className={linkClass()}
+            >
               {t("nav.contact")}
             </Link>
             <LocaleSwitcher />
@@ -143,8 +163,12 @@ export function Header() {
                         <Logo />
                       </div>
                       <div>
-                        <h3 className="font-semibold group-hover:text-accent text-white">{company.name}</h3>
-                        <p className="text-sm text-zinc-50">{company.description}</p>
+                        <h3 className="font-semibold group-hover:text-accent text-white">
+                          {company.name}
+                        </h3>
+                        <p className="text-sm text-zinc-50">
+                          {company.description}
+                        </p>
                       </div>
                     </div>
                     <ul className="space-y-1 text-sm text-zinc-50">
@@ -165,17 +189,36 @@ export function Header() {
                 <Menu className="h-6 w-6 text-white" />
               </SheetTrigger>
 
-              <SheetContent side="right" className="p-6 gap-6 z-[100] bg-primary text-white">
+              <SheetContent
+                side="right"
+                className="p-6 gap-6 z-[100] bg-primary text-white"
+              >
                 <div className="flex flex-col h-full">
-                  <Link href="/" onClick={() => setOpen(false)} className="flex items-center mb-6">
-                    <RDTechGroupLogo iconSize={45} textSize={80} className="invert" />
+                  <Link
+                    href="/"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center mb-6"
+                  >
+                    <RDTechGroupLogo
+                      iconSize={45}
+                      textSize={80}
+                      className="invert"
+                    />
                   </Link>
 
                   <nav className="flex flex-col gap-4 flex-1">
-                    <Link href="/" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-accent transition">
+                    <Link
+                      href="/"
+                      onClick={() => setOpen(false)}
+                      className="text-lg font-medium hover:text-accent transition"
+                    >
                       {t("nav.home")}
                     </Link>
-                    <Link href="/about" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-accent transition">
+                    <Link
+                      href="/about"
+                      onClick={() => setOpen(false)}
+                      className="text-lg font-medium hover:text-accent transition"
+                    >
                       {t("nav.about")}
                     </Link>
 
@@ -200,8 +243,12 @@ export function Header() {
                                     <Logo />
                                   </div>
                                   <div>
-                                    <h3 className="text-sm font-semibold text-white">{company.name}</h3>
-                                    <p className="text-xs text-zinc-200">{company.description}</p>
+                                    <h3 className="text-sm font-semibold text-white">
+                                      {company.name}
+                                    </h3>
+                                    <p className="text-xs text-zinc-200">
+                                      {company.description}
+                                    </p>
                                   </div>
                                 </Link>
                               );
@@ -211,7 +258,11 @@ export function Header() {
                       </AccordionItem>
                     </Accordion>
 
-                    <Link href="/projects" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-accent transition">
+                    <Link
+                      href="/projects"
+                      onClick={() => setOpen(false)}
+                      className="text-lg font-medium hover:text-accent transition"
+                    >
                       {t("nav.projects")}
                     </Link>
 

@@ -1,14 +1,14 @@
 import AboutSection from "@/components/companies/about-section";
 import ClientsSection from "@/components/companies/clients-section";
 import ContactSection from "@/components/companies/contact-section";
+import CoreGridOverview from "@/components/companies/overview";
 import HeroSection from "@/components/companies/hero-section";
 import { Metadata } from "next";
 import ProjectsSection from "@/components/companies/projects-section";
 import RDTechLogo from "@/components/logos/rdtech-logo";
 import React from "react";
-import ServicesSection from "@/components/companies/services-section";
-import CoreGridOverview from "@/components/companies/overview";
 import RefrenceSection from "@/components/companies/reference";
+import ServicesSection from "@/components/companies/services-section";
 import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {
@@ -37,32 +37,32 @@ export default function page() {
   const t = useTranslations("Company.RDTech");
 
   const services = [
-  { key: "securityRMS", image: "/security.webp" },
-  { key: "audioVisuals", image: "audio-visuals.webp" },
-  { key: "networkCommunication", image: "network-communication.webp" },
-  { key: "structuredCabling", image: "structured-cabling.webp" },
-  { key: "enterpriseComputing", image: "enterprise-computing.png" },
-  { key: "aiIoT", image: "ai.jpg" },
-];
+    { key: "securityRMS", image: "/security.webp" },
+    { key: "audioVisuals", image: "audio-visuals.webp" },
+    { key: "networkCommunication", image: "network-communication.webp" },
+    { key: "structuredCabling", image: "structured-cabling.webp" },
+    { key: "enterpriseComputing", image: "enterprise-computing.png" },
+    { key: "aiIoT", image: "ai.jpg" },
+  ];
 
-const projects = [
-  { key: "rtaDubai", image: "rta.webp" },
-  { key: "zayedUniversity", image: "zayed.webp" },
-  { key: "dxbWorldTradeCentre", image: "trade.webp" },
-  { key: "emiratesPalaceHotel", image: "palace.webp" },
-  { key: "palmJumeirah", image: "palm.webp" },
-  { key: "mazagonResort", image: "mazagon.webp" },
-  { key: "khalidiyaPalace", image: "khalidiya.webp" },
-  { key: "ferrariWorld", image: "ferrari.webp" },
-  { key: "yasMarinaHotel", image: "marina.webp" },
-  { key: "dubaiCargoTerminal", image: "cargo.webp" },
-  { key: "dubaiMall", image: "dubaiMall.webp" },
-  { key: "jumeirahEmiratesTowers", image: "emirates.webp" },
-  { key: "etehadTowers", image: "etehad.webp" },
-  { key: "burjAlArab", image: "burjAlArab.webp" },
-  { key: "atlantisHotel", image: "atlantis.webp" },
-  { key: "burjKhalifa", image: "burjKhalifa.webp" },
-];
+  const projects = [
+    { key: "rtaDubai", image: "rta.webp" },
+    { key: "zayedUniversity", image: "zayed.webp" },
+    { key: "dxbWorldTradeCentre", image: "trade.webp" },
+    { key: "emiratesPalaceHotel", image: "palace.webp" },
+    { key: "palmJumeirah", image: "palm.webp" },
+    { key: "mazagonResort", image: "mazagon.webp" },
+    { key: "khalidiyaPalace", image: "khalidiya.webp" },
+    { key: "ferrariWorld", image: "ferrari.webp" },
+    { key: "yasMarinaHotel", image: "marina.webp" },
+    { key: "dubaiCargoTerminal", image: "cargo.webp" },
+    { key: "dubaiMall", image: "dubaiMall.webp" },
+    { key: "jumeirahEmiratesTowers", image: "emirates.webp" },
+    { key: "etehadTowers", image: "etehad.webp" },
+    { key: "burjAlArab", image: "burjAlArab.webp" },
+    { key: "atlantisHotel", image: "atlantis.webp" },
+    { key: "burjKhalifa", image: "burjKhalifa.webp" },
+  ];
 
   return (
     <main className="min-h-screen">
@@ -76,35 +76,33 @@ const projects = [
       />
 
       <AboutSection
-          title={t("about.title")}
-          description={t.raw("about.paragraphs")}
-          image={{
-            src: "/facial.jpg?updatedAt=1755786638264",
-            alt: t("companies.rdTech.aboutImageAlt"),
-          }}
-        />
+        title={t("about.title")}
+        description={t.raw("about.paragraphs")}
+        image={{
+          src: "/facial.jpg?updatedAt=1755786638264",
+          alt: "RDTech Team",
+        }}
+      />
 
-
-      <CoreGridOverview/>
+      <CoreGridOverview />
 
       <ServicesSection
         title={t("servicesTitle")}
-        services={services.map(s => ({
+        services={services.map((s) => ({
           title: t(`services.${s.key}.title`),
           description: t(`services.${s.key}.description`),
-          image: s.image
+          image: s.image,
         }))}
         companyName="RDTech"
       />
 
-
       <ProjectsSection
         companyName="rdProjects"
-        projects={projects.map(p => ({
+        projects={projects.map((p) => ({
           name: t(`projects.${p.key}`),
-          image: p.image
+          image: p.image,
         }))}
-      />  
+      />
 
       <ClientsSection
         title={t("clients.title")}
@@ -134,8 +132,8 @@ const projects = [
           },
         ]}
       />
-      
-      <RefrenceSection/>
+
+      <RefrenceSection />
 
       <ContactSection
         phone="+971 6524 1842"

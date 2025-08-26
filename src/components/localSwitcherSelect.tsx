@@ -41,7 +41,7 @@ export default function LocaleSwitcherSelect({
 
   return (
     <Select defaultValue={defaultValue} onValueChange={onSelectChange}>
-      <SelectTrigger className="w-full flex items-center gap-2  rounded-lg border border-slate-300 bg-transparent shadow-sm px-3 focus:ring-2 focus:ring-primary/70">
+      <SelectTrigger className="w-full flex items-center gap-2 rounded-lg border border-slate-300 bg-transparent px-3 focus:ring-2 focus:ring-primary/70">
         <Globe className="w-6 h-6 text-white" />
         <div className="inline-block md:hidden">
           <SelectValue placeholder={label} />

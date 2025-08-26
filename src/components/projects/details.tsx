@@ -1,14 +1,15 @@
 "use client";
 
 import { ArrowLeft, CheckCircle } from "lucide-react";
+
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
-import type { Project } from "../../../public/projectData";
+import type { ProjectType } from "@/type";
 import { SafeImage } from "../ui/safe-image";
+import { useTranslations } from "next-intl";
 
-export function ProjectDetail({ project }: { project: Project }) {
+export function ProjectDetail({ project }: { project: ProjectType }) {
   const t = useTranslations("Project.ProjectDetail");
 
   return (
@@ -78,7 +79,9 @@ export function ProjectDetail({ project }: { project: Project }) {
                 ))}
               </ul>
 
-              <h3 className="text-xl font-bold mb-4">{t("challengesSolutions")}</h3>
+              <h3 className="text-xl font-bold mb-4">
+                {t("challengesSolutions")}
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
                 {project.challenges}
               </p>
@@ -91,19 +94,27 @@ export function ProjectDetail({ project }: { project: Project }) {
               <h3 className="font-bold text-xl">{t("projectDetails")}</h3>
               <div className="space-y-4">
                 <div>
-                  <span className="text-sm text-muted-foreground">{t("duration")}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {t("duration")}
+                  </span>
                   <p className="font-medium">{project.duration}</p>
                 </div>
                 <div>
-                  <span className="text-sm text-muted-foreground">{t("size")}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {t("size")}
+                  </span>
                   <p className="font-medium">{project.size}</p>
                 </div>
                 <div>
-                  <span className="text-sm text-muted-foreground">{t("client")}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {t("client")}
+                  </span>
                   <p className="font-medium">{project.client}</p>
                 </div>
                 <div>
-                  <span className="text-sm text-muted-foreground">{t("budgetRange")}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {t("budgetRange")}
+                  </span>
                   <p className="font-medium">{project.budget}</p>
                 </div>
               </div>
@@ -124,7 +135,9 @@ export function ProjectDetail({ project }: { project: Project }) {
 
         {/* Image Gallery */}
         <div className="mt-12 md:mt-16">
-          <h2 className="text-3xl font-bold mb-4 md:mb-8">{t("projectGallery")}</h2>
+          <h2 className="text-3xl font-bold mb-4 md:mb-8">
+            {t("projectGallery")}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {project?.gallery?.map((image, index) => (
               <div
@@ -133,7 +146,10 @@ export function ProjectDetail({ project }: { project: Project }) {
               >
                 <SafeImage
                   src={image || ""}
-                  alt={t("galleryAlt", { title: project.title, index: index + 1 })}
+                  alt={t("galleryAlt", {
+                    title: project.title,
+                    index: index + 1,
+                  })}
                   width={600}
                   height={400}
                   className="w-full h-64 object-cover rounded-lg"
