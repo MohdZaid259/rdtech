@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import { Project } from "../../../public/projectData";
+import { ProjectType } from "@/type";
 import { SafeImage } from "../ui/safe-image";
 import { useTranslations } from "next-intl";
 
@@ -17,7 +17,7 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
 
   const relatedProjects = projectsT
     .raw("projects")
-    .filter((project: Project) => project.id !== currentProjectId)
+    .filter((project: ProjectType) => project.id !== currentProjectId)
     .slice(0, 3);
 
   return (
@@ -27,7 +27,7 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
           {t("relatedProjects")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          {relatedProjects.map((project: Project) => (
+          {relatedProjects.map((project: ProjectType) => (
             <Link
               key={project.id}
               href={`/projects/${project.slug}`}
