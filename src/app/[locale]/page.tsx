@@ -1,3 +1,5 @@
+import { use } from "react";
+import { setRequestLocale } from "next-intl/server";
 import CEOMessageSection from "@/components/home/ceo-msg-section";
 import ClientsSection from "@/components/home/clients-section";
 import CompaniesSection from "@/components/home/companies-section";
@@ -9,7 +11,9 @@ import ProjectsSection from "@/components/home/projects-section";
 import WeCareSection from "@/components/home/we-care-section";
 import WhyRDTechSection from "@/components/home/whyRDTech-group-section";
 
-export default function HomePage() {
+export default function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
   return (
     <main className="min-h-screen">
       <HeroSection />

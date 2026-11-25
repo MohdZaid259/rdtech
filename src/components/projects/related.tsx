@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ProjectType } from "@/type";
 import { SafeImage } from "../ui/safe-image";
 import { useTranslations } from "next-intl";
@@ -31,6 +31,7 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
             <Link
               key={project.id}
               href={`/projects/${project.slug}`}
+              prefetch={false}
               className="h-full"
             >
               <Card className="group hover:shadow-xl hover:scale-105 duration-500 py-0 flex gap-2 md:gap-0 flex-col h-full">

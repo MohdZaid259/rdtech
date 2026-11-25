@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import CoreGridLogo from "../logos/core-grid-logo";
 import RDTechLogo from "../logos/rdtech-logo";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import SectionHeader from "./section-header";
 
 const companies = [

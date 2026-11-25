@@ -1,3 +1,5 @@
+import { use } from "react";
+import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import AAContractingLogo from "@/components/logos/aa-contracting-logo";
 import AboutSection from "@/components/companies/about-section";
@@ -7,7 +9,9 @@ import HeroSection from "@/components/companies/hero-section";
 import ProjectsSection from "@/components/companies/projects-section";
 import ServicesSection from "@/components/companies/services-section";
 
-export default function Page() {
+export default function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
   const t = useTranslations("Company.AaContracting");
 
   const services = [

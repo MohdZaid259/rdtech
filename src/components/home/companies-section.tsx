@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CoreGridLogo from "@/components/logos/core-grid-logo";
 import { FadeIn } from "@/components/ui/fade-in";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import RDTechLogo from "@/components/logos/rdtech-logo";
 import { SafeImage } from "../ui/safe-image";
 import SectionHeader from "./section-header";

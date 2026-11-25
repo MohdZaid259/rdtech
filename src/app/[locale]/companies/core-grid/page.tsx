@@ -1,3 +1,5 @@
+import { use } from "react";
+import { setRequestLocale } from "next-intl/server";
 import AboutSection from "@/components/companies/about-section";
 import ClientsSection from "@/components/companies/clients-section";
 import ContactSection from "@/components/companies/contact-section";
@@ -31,7 +33,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
+export default function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
   const t = useTranslations("Company.CoreGrid");
 
   const services = [

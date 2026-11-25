@@ -2,7 +2,7 @@ import { Globe, MoveRightIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/fade-in";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import React from "react";
 
 interface HeroSectionProps {

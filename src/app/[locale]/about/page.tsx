@@ -1,3 +1,5 @@
+import { use } from "react";
+import { setRequestLocale } from "next-intl/server";
 
 import BackgroundSection from "@/components/about/background";
 import HeroSection from "@/components/about/hero-section";
@@ -25,7 +27,9 @@ export const metadata: Metadata = {
   },
 };
 
-function page() {
+function page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
   return (
     <>
       <HeroSection/>

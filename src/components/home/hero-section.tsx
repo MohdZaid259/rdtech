@@ -2,7 +2,7 @@ import { ChevronRight, PhoneCallIcon } from "lucide-react";
 import AAContractingLogo from "../logos/aa-contracting-logo";
 import { Button } from "@/components/ui/button";
 import CoreGridLogo from "../logos/core-grid-logo";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import RDTechLogo from "../logos/rdtech-logo";
 import React from "react";
 import { WordRotate } from "../magicui/word-rotate";

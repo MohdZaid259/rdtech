@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
+// Plain next/link on purpose: this component also renders in the root 404 (no locale) and in the
+// [locale] not-found boundary, where a locale-aware Link would read request headers and force
+// every page to render dynamically. "/" is redirected to the visitor's language by the middleware.
 import Link from "next/link";
 
 interface NotFoundPageProps {

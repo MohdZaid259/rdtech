@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ProjectType } from "@/type";
 import { SafeImage } from "../ui/safe-image";
 import { useState } from "react";
@@ -103,6 +103,7 @@ export default function ProjectsGrid() {
               <Link
                 key={project.id}
                 href={`/projects/${project.slug}`}
+                prefetch={false}
                 className="h-full"
               >
                 {CardContent}

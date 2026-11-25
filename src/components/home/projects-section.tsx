@@ -88,7 +88,7 @@ export default function ProjectsSection() {
                   </div>
 
                   <Button asChild className="w-full mt-auto">
-                    <a href={`/projects/${proj.slug}`}>{t("viewProject")}</a>
+                    <Link href={`/projects/${proj.slug}`} prefetch={false}>{t("viewProject")}</Link>
                   </Button>
                 </div>
               </Card>
@@ -211,7 +211,7 @@ export default function ProjectsSection() {
                       variant="default"
                       className="float-right mb-4 md:bottom-16 md:right-10 cursor-pointer"
                     >
-                      <a href={`/projects/${project.slug}`}>{t("viewProject")}</a>
+                      <Link href={`/projects/${project.slug}`} prefetch={false}>{t("viewProject")}</Link>
                     </Button>                    
                   </div>
                 </div>

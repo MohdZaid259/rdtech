@@ -25,6 +25,10 @@ const poppins = Poppins({
   display: "swap",
 });
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 type Props = {
   children: ReactNode;
   params: Promise<{ locale: Locale }>;

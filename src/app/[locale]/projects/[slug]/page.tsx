@@ -4,7 +4,8 @@ import { ProjectType } from "@/type";
 import { RelatedProjects } from "@/components/projects/related";
 import arMessages from "@/messages/ar.json";
 import enMessages from "@/messages/en.json";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
 const enProjects = enMessages.Project.ProjectsGrid.projects;
@@ -12,6 +13,7 @@ const arProjects = arMessages.Project.ProjectsGrid.projects;
 
 interface ProjectPageProps {
   params: Promise<{
+    locale: string;
     slug: string;
   }>;
 }
@@ -60,6 +62,7 @@ export default async function ProjectPage({
   params,
 }: Readonly<ProjectPageProps>) {
   const slug = await params;
+  setRequestLocale(slug.locale);
   const t = await getTranslations("Project.ProjectsGrid");
 
   const project = t
@@ -79,13 +82,15 @@ export default async function ProjectPage({
 }
 
 export function generateStaticParams() {
-  const projects = [...enProjects, ...arProjects];
-
-  return projects
-    .filter(
-      (project) => typeof project.slug === "string" && project.slug.length > 0
+  const slugs = Array.from(
+    new Set(
+      [...enProjects, ...arProjects]
+        .map((project) => project.slug)
+        .filter((slug): slug is string => typeof slug === "string" && slug.length > 0)
     )
-    .map((project) => ({
-      slug: project.slug,
-    }));
+  );
+
+  return routing.locales.flatMap((locale) =>
+    slugs.map((slug) => ({ locale, slug }))
+  );
 }

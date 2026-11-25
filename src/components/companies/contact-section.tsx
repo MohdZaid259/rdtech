@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "../ui/button";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 interface ContactSectionProps {
