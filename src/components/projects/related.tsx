@@ -17,7 +17,8 @@ export function RelatedProjects({ currentProjectId }: RelatedProjectsProps) {
 
   const relatedProjects = projectsT
     .raw("projects")
-    .filter((project: ProjectType) => project.id !== currentProjectId)
+    // Only projects with a detail page (a slug); the rest linked to /projects/undefined
+    .filter((project: ProjectType) => project.id !== currentProjectId && !!project.slug)
     .slice(0, 3);
 
   return (
